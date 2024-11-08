@@ -1,0 +1,43 @@
+repos:
+    - repo: local
+      hooks:
+          - id: isort
+            name: isort
+            stages: [commit]
+            language: system
+            entry: isort
+            types: [python]
+            always_run: true
+
+          - id: black
+            name: black
+            stages: [commit]
+            language: system
+            entry: black
+            types: [python]
+            always_run: true
+
+          - id: flake8
+            name: flake8
+            stages: [commit]
+            language: system
+            entry: flake8
+            types: [python]
+            always_run: true
+
+          - id: pytest
+            name: pytest
+            stages: [commit]
+            language: system
+            entry: pytest -s tests
+            types: [python]
+            always_run: true
+
+          - id: pytest-cov
+            name: pytest
+            stages: [push]
+            language: system
+            entry: pytest --cov --cov-fail-under=0
+            types: [python]
+            pass_filenames: false
+            always_run: true
