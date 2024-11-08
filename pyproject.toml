@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "runemu-backend"
+name = "backend"
 version = "0.1.0"
 description = "Backend for runemu website for discovering races."
 authors = ["sammy-may <samuel.james.may1@gmail.com>"]
