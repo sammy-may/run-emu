@@ -3,14 +3,17 @@ import "./App.css";
 
 import Header from "./components/Header";
 import RaceFeed from "./components/RaceFeed";
+import RaceType from "./types/race";
 
 import api from "./api/races";
 
 function App() {
-    const [races, setRaces] = useState<any[]>([]);
+    const [races, setRaces] = useState<RaceType[]>([]);
+    const [search, setSearch] = useState<string>("");
+    const [searchResults, setSearchResults] = useState<RaceType[]>([]);
 
-    const [name, setName] = useState("");
-    const [distance, setDistance] = useState(0);
+    const [name, setName] = useState<string>("");
+    const [distance, setDistance] = useState<number>(0);
 
     const fetchRaces = async () => {
         try {
@@ -22,13 +25,15 @@ function App() {
     };
 
     const addRace = async () => {
-        const raceData = {
+        const raceData: RaceType = {
             name: name,
             distance: distance,
+            location: "none",
+            latitude: 20.0,
+            longitude: 20.0,
+            date: new Date(),
         };
 
-        console.log("Race data");
-        console.log(raceData);
         try {
             const response = await api.post("/create/", raceData, {
                 headers: {},
@@ -38,9 +43,22 @@ function App() {
         }
     };
 
+    const filterRaces = () => {
+        const filteredRaces = races.filter((race) =>
+            race.name.toLowerCase().includes(search.toLowerCase())
+        );
+        setSearchResults(filteredRaces.reverse());
+    };
+
+    // Load race data on page load
     useEffect(() => {
         fetchRaces();
     }, []);
+
+    // Update search results whenever race data or search data changes
+    useEffect(() => {
+        filterRaces();
+    }, [races, search]);
 
     return (
         <>
@@ -63,7 +81,11 @@ function App() {
                 />
                 <button onClick={() => addRace()}> Add Race </button>
             </div>
-            <RaceFeed races={races} />
+            <RaceFeed
+                races={searchResults}
+                search={search}
+                setSearch={setSearch}
+            />
         </>
     );
 }

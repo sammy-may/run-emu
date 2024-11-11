@@ -1,15 +1,34 @@
-import React from "react";
-import RaceCard from "./RaceCard";
+import { useEffect, useState } from "react";
 
-const RaceFeed = ({ races }) => {
+import RaceCard from "./RaceCard";
+import RaceType from "../types/race";
+
+const RaceFeed = ({
+    races,
+    search,
+    setSearch,
+}: {
+    races: RaceType[];
+    search: string;
+    setSearch: React.Dispatch<React.SetStateAction<string>>;
+}) => {
     return (
         <>
-            {races.map((race) => (
-                <RaceCard
-                    key={race.id}
-                    name={race.name}
-                    distance={race.distance}
+            <form
+                className="search_form"
+                onSubmit={(evt) => evt.preventDefault()}
+            >
+                <label htmlFor="search"> Search Races </label>
+                <input
+                    id="search"
+                    type="text"
+                    placeholder="Find a race..."
+                    value={search}
+                    onChange={(evt) => setSearch(evt.target.value)}
                 />
+            </form>
+            {races.map((race) => (
+                <RaceCard race={race} />
             ))}
         </>
     );
