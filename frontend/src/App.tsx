@@ -3,15 +3,36 @@ import "./App.css";
 
 import Header from "./components/Header";
 
+import api from "./api/races";
+
 function App() {
     const [count, setCount] = useState(0);
     const [races, setRaces] = useState<any[]>([]);
 
+    const [name, setName] = useState("");
+    const [distance, setDistance] = useState(0);
+
     const fetchRaces = async () => {
         try {
-            const response = await fetch("http://127.0.0.1:8000/");
-            const data = await response.json();
-            setRaces(data);
+            const response = await api.get("");
+            setRaces(response.data);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    const addRace = async () => {
+        const raceData = {
+            name: name,
+            distance: distance,
+        };
+
+        console.log("Race data");
+        console.log(raceData);
+        try {
+            const response = await api.post("/create/", raceData, {
+                headers: {},
+            });
         } catch (err) {
             console.log(err);
         }
@@ -32,9 +53,21 @@ function App() {
             </div>
 
             <div>
-                <input type="text" placeholder="Race title..." />
-                <input type="number" placeholder="Race distance..." />
-                <button> Add Race </button>
+                <input
+                    type="text"
+                    placeholder="Race title..."
+                    onChange={(evt) => {
+                        setName(evt.target.value);
+                    }}
+                />
+                <input
+                    type="number"
+                    placeholder="Race distance..."
+                    onChange={(evt) => {
+                        setDistance(Number(evt.target.value));
+                    }}
+                />
+                <button onClick={() => addRace()}> Add Race </button>
             </div>
             {races.map((race) => (
                 <div>
