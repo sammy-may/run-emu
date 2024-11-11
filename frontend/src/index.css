@@ -54,7 +54,15 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
-ul {
+.race_card {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 20%;
+}
+
+.race_card:hover {
+    border-color: #646cff;
 }
 
 @media (prefers-color-scheme: light) {
