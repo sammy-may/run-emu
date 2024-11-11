@@ -31,4 +31,5 @@ repos:
             language: system
             entry: pytest -s tests
             types: [python]
+            pass_filenames: false
             always_run: true

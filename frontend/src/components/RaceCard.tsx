@@ -1,10 +1,10 @@
-import React from "react";
+import RaceType from "../types/race";
 
-const RaceCard = ({ name, distance }) => {
+const RaceCard = ({ race }: { race: RaceType }) => {
     return (
         <article className="race_card">
-            <h2>{name}</h2>
-            <p>Distance: {distance}</p>
+            <h2>{race.name}</h2>
+            <p>Distance: {race.distance}</p>
         </article>
     );
 };
