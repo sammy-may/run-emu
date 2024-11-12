@@ -3,7 +3,7 @@ type ButtonProps = {
 };
 
 const Button = ({ name }: ButtonProps) => {
-    return <button>{name}</button>;
+    return <button className="rounded-full">{name}</button>;
 };
 
 export default Button;

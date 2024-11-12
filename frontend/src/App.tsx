@@ -3,6 +3,7 @@ import "./App.css";
 
 import Header from "./components/Header";
 import RaceFeed from "./components/RaceFeed";
+import OptionsBar from "./components/OptionsBar";
 import RaceType from "./types/race";
 
 import api from "./api/races";
@@ -14,6 +15,9 @@ function App() {
 
     const [name, setName] = useState<string>("");
     const [distance, setDistance] = useState<number>(0);
+
+    const [distanceMin, setDistanceMin] = useState<number>(0);
+    const [distanceMax, setDistanceMax] = useState<number>(1000);
 
     const fetchRaces = async () => {
         try {
@@ -44,8 +48,11 @@ function App() {
     };
 
     const filterRaces = () => {
-        const filteredRaces = races.filter((race) =>
-            race.name.toLowerCase().includes(search.toLowerCase())
+        const filteredRaces = races.filter(
+            (race) =>
+                race.name.toLowerCase().includes(search.toLowerCase()) &&
+                race.distance >= distanceMin &&
+                race.distance <= distanceMax
         );
         setSearchResults(filteredRaces.reverse());
     };
@@ -53,12 +60,12 @@ function App() {
     // Load race data on page load
     useEffect(() => {
         fetchRaces();
-    }, []);
+    }, [races]);
 
     // Update search results whenever race data or search data changes
     useEffect(() => {
         filterRaces();
-    }, [races, search]);
+    }, [races, search, distanceMin, distanceMax]);
 
     return (
         <>
@@ -81,11 +88,15 @@ function App() {
                 />
                 <button onClick={() => addRace()}> Add Race </button>
             </div>
-            <RaceFeed
-                races={searchResults}
+            <OptionsBar
                 search={search}
                 setSearch={setSearch}
-            />
+                distanceMin={distanceMin}
+                setDistanceMin={setDistanceMin}
+                distanceMax={distanceMax}
+                setDistanceMax={setDistanceMax}
+            ></OptionsBar>
+            <RaceFeed races={searchResults} />
         </>
     );
 }

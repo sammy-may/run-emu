@@ -3,15 +3,17 @@ import Button from "./Button";
 const Header = () => {
     return (
         <>
-            <ul className="card">
-                <li>Run Emu</li>
-                <li>
-                    <Button name={"Home"}></Button>
-                </li>
-                <li>
+            <div className="flex h-12 min-w-full justify-end">
+                <div>
+                    <Button name={"Run Emu"}></Button>
+                </div>
+                <div>
+                    <Button name={"About"}></Button>
+                </div>
+                <div>
                     <Button name={"Login"}></Button>
-                </li>
-            </ul>
+                </div>
+            </div>
         </>
     );
 };
