@@ -3,7 +3,7 @@ import RaceType from "../types/race";
 import DataContext from "../context/RaceFeedContext";
 
 const SortDropdown = () => {
-    const { searchResults, setSearchResults } = useContext(DataContext);
+    const { races, searchResults, setSearchResults } = useContext(DataContext);
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -24,12 +24,14 @@ const SortDropdown = () => {
     const sortByDistance = () => {
         const sortedRaces = [...searchResults];
         sortedRaces.sort(compareByDistance);
+        races.sort(compareByDistance);
         setSearchResults(sortedRaces);
     };
 
     const sortByName = () => {
         const sortedRaces = [...searchResults];
         sortedRaces.sort(compareByName);
+        races.sort(compareByName);
         setSearchResults(sortedRaces);
     };
 
