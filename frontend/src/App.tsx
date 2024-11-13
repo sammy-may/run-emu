@@ -23,6 +23,7 @@ function App() {
         try {
             const response = await api.get("");
             setRaces(response.data);
+            setSearchResults(response.data);
         } catch (err) {
             console.log(err);
         }
@@ -54,16 +55,18 @@ function App() {
                 race.distance >= distanceMin &&
                 race.distance <= distanceMax
         );
-        setSearchResults(filteredRaces.reverse());
+        setSearchResults(filteredRaces);
     };
 
-    // Load race data on page load
+    // Load race data
     useEffect(() => {
+        console.log("fetching");
         fetchRaces();
-    }, [races]);
+    }, []);
 
     // Update search results whenever race data or search data changes
     useEffect(() => {
+        console.log("filtering");
         filterRaces();
     }, [races, search, distanceMin, distanceMax]);
 
@@ -95,6 +98,8 @@ function App() {
                 setDistanceMin={setDistanceMin}
                 distanceMax={distanceMax}
                 setDistanceMax={setDistanceMax}
+                searchResults={searchResults}
+                setSearchResults={setSearchResults}
             ></OptionsBar>
             <RaceFeed races={searchResults} />
         </>
