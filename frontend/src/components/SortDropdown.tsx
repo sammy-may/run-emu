@@ -2,6 +2,10 @@ import { useState, useContext } from "react";
 import RaceType from "../types/race";
 import DataContext from "../context/RaceFeedContext";
 
+import { PiPathBold } from "react-icons/pi";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { TiSortAlphabetically } from "react-icons/ti";
+
 const SortDropdown = () => {
     const { races, searchResults, setSearchResults } = useContext(DataContext);
 
@@ -26,6 +30,7 @@ const SortDropdown = () => {
         sortedRaces.sort(compareByDistance);
         races.sort(compareByDistance);
         setSearchResults(sortedRaces);
+        toggleDropdown();
     };
 
     const sortByName = () => {
@@ -33,16 +38,17 @@ const SortDropdown = () => {
         sortedRaces.sort(compareByName);
         races.sort(compareByName);
         setSearchResults(sortedRaces);
+        toggleDropdown();
     };
 
     return (
-        <div>
+        <div className="relative">
             <button
                 id="sortInfo"
                 data-dropdown-toggle="dropdownInformation"
                 type="button"
                 onClick={toggleDropdown}
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="flex text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 min-w-32"
             >
                 Sort by
                 <svg
@@ -65,9 +71,8 @@ const SortDropdown = () => {
             {isOpen && (
                 <div
                     id="dropdownInformation"
-                    className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                    className=" bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute"
                 >
-                    <div>Ascending?</div>
                     <ul
                         className="py-2 text-sm text-gray-700 dark:text-gray-200"
                         aria-labelledby="sortInfo"
@@ -77,12 +82,22 @@ const SortDropdown = () => {
                                 onClick={() => sortByDistance()}
                                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
-                                Distance
+                                <div className="flex items-center space-x-2">
+                                    <div>
+                                        <PiPathBold />
+                                    </div>{" "}
+                                    <div>Distance</div>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Date
+                                <div className="flex items-center space-x-2">
+                                    <div>
+                                        <FaRegCalendarAlt />
+                                    </div>
+                                    <div>Date</div>
+                                </div>
                             </button>
                         </li>
                         <li>
@@ -90,7 +105,12 @@ const SortDropdown = () => {
                                 onClick={() => sortByName()}
                                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
-                                Alphabetical
+                                <div className="flex items-center space-x-2">
+                                    <div>
+                                        <TiSortAlphabetically />
+                                    </div>
+                                    <div>Alphabetical</div>
+                                </div>
                             </button>
                         </li>
                     </ul>

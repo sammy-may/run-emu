@@ -3,7 +3,7 @@ import Button from "./Button";
 const Header = () => {
     return (
         <>
-            <div className="flex h-12 min-w-full justify-end">
+            <div className="flex h-12 min-w-full justify-end mb-8 bg-gray-800 rounded-lg">
                 <div>
                     <Button name={"Run Emu"}></Button>
                 </div>

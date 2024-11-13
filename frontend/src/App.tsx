@@ -36,24 +36,24 @@ function App() {
     return (
         <DataProvider>
             <Header />
-            <h1>Run Emu</h1>
-            <div>
-                <input
-                    type="text"
-                    placeholder="Race title..."
-                    onChange={(evt) => {
-                        setName(evt.target.value);
-                    }}
-                />
-                <input
-                    type="number"
-                    placeholder="Race distance..."
-                    onChange={(evt) => {
-                        setDistance(Number(evt.target.value));
-                    }}
-                />
-                <button onClick={() => addRace()}> Add Race </button>
-            </div>
+            {/* <h1>Run Emu</h1>
+      <div>
+        <input
+          type="text"
+          placeholder="Race title..."
+          onChange={(evt) => {
+            setName(evt.target.value);
+          }}
+        />
+        <input
+          type="number"
+          placeholder="Race distance..."
+          onChange={(evt) => {
+            setDistance(Number(evt.target.value));
+          }}
+        />
+        <button onClick={() => addRace()}> Add Race </button>
+      </div> */}
             <OptionsBar></OptionsBar>
             <RaceFeed />
         </DataProvider>

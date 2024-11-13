@@ -2,9 +2,9 @@ import SearchBar from "./SearchBar";
 import RangeSlider from "./RangeSlider";
 import SortDropdown from "./SortDropdown";
 
-const OptionsBar = ({}: {}) => {
+const OptionsBar = () => {
     return (
-        <div className="flex h-12 min-w-full">
+        <div className="flex items-center h-12 min-w-full space-x-4">
             <SearchBar></SearchBar>
             <SortDropdown></SortDropdown>
             <RangeSlider></RangeSlider>

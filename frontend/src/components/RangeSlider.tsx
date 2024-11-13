@@ -6,8 +6,11 @@ const RangeSlider = () => {
         useContext(DataContext);
 
     return (
-        <div className="flex h-12 min-w-full">
-            <label htmlFor="min-distance">
+        <div className="flex h-12 min-w-full items-center space-x-4">
+            <label
+                htmlFor="min-distance"
+                className="block mb-2 text-sm font-medium text-white"
+            >
                 Minimum distance: {distanceMin}
             </label>
             <input
@@ -15,11 +18,14 @@ const RangeSlider = () => {
                 type="range"
                 min="0"
                 max="100"
-                className="h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 max-w-30"
+                className="h-2 rounded-lg appearance-none cursor-pointer bg-gray-700 max-w-30"
                 value={distanceMin}
                 onChange={(evt) => setDistanceMin(Number(evt.target.value))}
             ></input>
-            <label htmlFor="max-distance">
+            <label
+                htmlFor="max-distance"
+                className="block mb-2 text-sm font-medium text-white"
+            >
                 Maximum distance: {distanceMax}
             </label>
             <input
@@ -27,7 +33,7 @@ const RangeSlider = () => {
                 type="range"
                 min="0"
                 max="100"
-                className="h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 max-w-30"
+                className="h-2 rounded-lg appearance-none cursor-pointer bg-gray-700 max-w-30"
                 value={distanceMax}
                 onChange={(evt) => setDistanceMax(Number(evt.target.value))}
             ></input>

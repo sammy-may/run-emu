@@ -24,7 +24,7 @@ const DataContext = createContext<DataContextType>({
     setSearch: () => {},
     distanceMin: 0,
     setDistanceMin: () => {},
-    distanceMax: 1000000,
+    distanceMax: 1000,
     setDistanceMax: () => {},
 });
 
@@ -44,7 +44,7 @@ export const DataProvider: React.FC<DataProviderProps> = ({
     const [searchResults, setSearchResults] = useState<RaceType[]>([]);
 
     const [distanceMin, setDistanceMin] = useState<number>(0);
-    const [distanceMax, setDistanceMax] = useState<number>(1000000);
+    const [distanceMax, setDistanceMax] = useState<number>(1000);
 
     const fetchRaces = async () => {
         try {

@@ -1,3 +1,6 @@
+# FIXME: not sure if this is right
+backend/explorer/migrations/*.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
