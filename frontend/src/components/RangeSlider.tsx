@@ -1,16 +1,10 @@
-import React from "react";
+import { useContext } from "react";
+import DataContext from "../context/RaceFeedContext";
 
-const RangeSlider = ({
-    distanceMin,
-    setDistanceMin,
-    distanceMax,
-    setDistanceMax,
-}: {
-    distanceMin: number;
-    setDistanceMin: React.Dispatch<React.SetStateAction<number>>;
-    distanceMax: number;
-    setDistanceMax: React.Dispatch<React.SetStateAction<number>>;
-}) => {
+const RangeSlider = () => {
+    const { distanceMin, setDistanceMin, distanceMax, setDistanceMax } =
+        useContext(DataContext);
+
     return (
         <div className="flex h-12 min-w-full">
             <label htmlFor="min-distance">

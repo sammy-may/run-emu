@@ -1,13 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import RaceType from "../types/race";
+import DataContext from "../context/RaceFeedContext";
 
-const SortDropdown = ({
-    searchResults,
-    setSearchResults,
-}: {
-    searchResults: RaceType[];
-    setSearchResults: React.Dispatch<React.SetStateAction<RaceType[]>>;
-}) => {
+const SortDropdown = () => {
+    const { searchResults, setSearchResults } = useContext(DataContext);
+
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const toggleDropdown = () => {

@@ -1,10 +1,8 @@
-const SearchBar = ({
-    search,
-    setSearch,
-}: {
-    search: string;
-    setSearch: React.Dispatch<React.SetStateAction<string>>;
-}) => {
+import { useContext } from "react";
+import DataContext from "../context/RaceFeedContext";
+
+const SearchBar = () => {
+    const { search, setSearch } = useContext(DataContext);
     return (
         <>
             <form

@@ -5,6 +5,7 @@ interface RaceType {
     latitude: number;
     longitude: number;
     date: Date;
+    id?: number;
 }
 
 export default RaceType;

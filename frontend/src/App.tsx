@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 
 import Header from "./components/Header";
@@ -6,28 +6,13 @@ import RaceFeed from "./components/RaceFeed";
 import OptionsBar from "./components/OptionsBar";
 import RaceType from "./types/race";
 
+import { DataProvider } from "./context/RaceFeedContext";
+
 import api from "./api/races";
 
 function App() {
-    const [races, setRaces] = useState<RaceType[]>([]);
-    const [search, setSearch] = useState<string>("");
-    const [searchResults, setSearchResults] = useState<RaceType[]>([]);
-
     const [name, setName] = useState<string>("");
     const [distance, setDistance] = useState<number>(0);
-
-    const [distanceMin, setDistanceMin] = useState<number>(0);
-    const [distanceMax, setDistanceMax] = useState<number>(1000);
-
-    const fetchRaces = async () => {
-        try {
-            const response = await api.get("");
-            setRaces(response.data);
-            setSearchResults(response.data);
-        } catch (err) {
-            console.log(err);
-        }
-    };
 
     const addRace = async () => {
         const raceData: RaceType = {
@@ -40,7 +25,7 @@ function App() {
         };
 
         try {
-            const response = await api.post("/create/", raceData, {
+            await api.post("/create/", raceData, {
                 headers: {},
             });
         } catch (err) {
@@ -48,30 +33,8 @@ function App() {
         }
     };
 
-    const filterRaces = () => {
-        const filteredRaces = races.filter(
-            (race) =>
-                race.name.toLowerCase().includes(search.toLowerCase()) &&
-                race.distance >= distanceMin &&
-                race.distance <= distanceMax
-        );
-        setSearchResults(filteredRaces);
-    };
-
-    // Load race data
-    useEffect(() => {
-        console.log("fetching");
-        fetchRaces();
-    }, []);
-
-    // Update search results whenever race data or search data changes
-    useEffect(() => {
-        console.log("filtering");
-        filterRaces();
-    }, [races, search, distanceMin, distanceMax]);
-
     return (
-        <>
+        <DataProvider>
             <Header />
             <h1>Run Emu</h1>
             <div>
@@ -91,18 +54,9 @@ function App() {
                 />
                 <button onClick={() => addRace()}> Add Race </button>
             </div>
-            <OptionsBar
-                search={search}
-                setSearch={setSearch}
-                distanceMin={distanceMin}
-                setDistanceMin={setDistanceMin}
-                distanceMax={distanceMax}
-                setDistanceMax={setDistanceMax}
-                searchResults={searchResults}
-                setSearchResults={setSearchResults}
-            ></OptionsBar>
-            <RaceFeed races={searchResults} />
-        </>
+            <OptionsBar></OptionsBar>
+            <RaceFeed />
+        </DataProvider>
     );
 }
 
