@@ -6,6 +6,7 @@ import Layout from "./pages/Layout";
 import RaceType from "./types/race";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Login from "./pages/Login";
 
 import { DataProvider } from "./context/RaceFeedContext";
 
@@ -40,6 +41,7 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="about" element={<About />} />
+                    <Route path="login" element={<Login />} />
                     <Route
                         path="*"
                         element={
