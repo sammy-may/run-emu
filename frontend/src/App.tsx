@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 
-import Header from "./components/Header";
-import RaceFeed from "./components/RaceFeed";
-import OptionsBar from "./components/OptionsBar";
+import Layout from "./pages/Layout";
 import RaceType from "./types/race";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 import { DataProvider } from "./context/RaceFeedContext";
 
@@ -35,27 +36,20 @@ function App() {
 
     return (
         <DataProvider>
-            <Header />
-            {/* <h1>Run Emu</h1>
-      <div>
-        <input
-          type="text"
-          placeholder="Race title..."
-          onChange={(evt) => {
-            setName(evt.target.value);
-          }}
-        />
-        <input
-          type="number"
-          placeholder="Race distance..."
-          onChange={(evt) => {
-            setDistance(Number(evt.target.value));
-          }}
-        />
-        <button onClick={() => addRace()}> Add Race </button>
-      </div> */}
-            <OptionsBar></OptionsBar>
-            <RaceFeed />
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="about" element={<About />} />
+                    <Route
+                        path="*"
+                        element={
+                            <div>
+                                <h1>Missing</h1>
+                            </div>
+                        }
+                    />
+                </Route>
+            </Routes>
         </DataProvider>
     );
 }

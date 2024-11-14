@@ -1,9 +1,14 @@
 type ButtonProps = {
-  name: string;
+    name: string;
+    onClick?: () => void;
 };
 
-const Button = ({ name }: ButtonProps) => {
-  return <button className="rounded-full">{name}</button>;
+const Button = ({ name, onClick }: ButtonProps) => {
+    return (
+        <button className="rounded-full" onClick={onClick}>
+            {name}
+        </button>
+    );
 };
 
 export default Button;

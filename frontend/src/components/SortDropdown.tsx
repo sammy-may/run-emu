@@ -5,6 +5,7 @@ import DataContext from "../context/RaceFeedContext";
 import { PiPathBold } from "react-icons/pi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { TiSortAlphabetically } from "react-icons/ti";
+import { TbArrowsCross } from "react-icons/tb";
 
 const SortDropdown = () => {
     const { races, searchResults, setSearchResults } = useContext(DataContext);
@@ -41,32 +42,49 @@ const SortDropdown = () => {
         toggleDropdown();
     };
 
+    const reverse = () => {
+        const reversedRaces = [...searchResults];
+        reversedRaces.reverse();
+        races.reverse();
+        setSearchResults(reversedRaces);
+    };
+
     return (
         <div className="relative">
-            <button
-                id="sortInfo"
-                data-dropdown-toggle="dropdownInformation"
-                type="button"
-                onClick={toggleDropdown}
-                className="flex text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 min-w-32"
-            >
-                Sort by
-                <svg
-                    className="w-2.5 h-2.5 ms-3"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
+            <div className="inline-flex rounded-md shadow-sm">
+                <button
+                    id="sortInfo"
+                    data-dropdown-toggle="dropdownInformation"
+                    type="button"
+                    onClick={toggleDropdown}
+                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-s-lg text-sm px-5 py-2.5 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 min-w-28"
                 >
-                    <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m1 1 4 4 4-4"
-                    />
-                </svg>
-            </button>
+                    Sort by
+                    <svg
+                        className="w-2.5 h-2.5 ms-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                    >
+                        <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="m1 1 4 4 4-4"
+                        />
+                    </svg>
+                </button>
+                <button
+                    id="reverse"
+                    type="button"
+                    onClick={reverse}
+                    className="flex text-white focus:ring-4 focus:outline-none font-medium border-t border-b rounded-lg text-sm px-5 py-2.5 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 min-w-12"
+                >
+                    <TbArrowsCross />
+                </button>
+            </div>
 
             {isOpen && (
                 <div
@@ -80,7 +98,7 @@ const SortDropdown = () => {
                         <li>
                             <button
                                 onClick={() => sortByDistance()}
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full"
                             >
                                 <div className="flex items-center space-x-2">
                                     <div>
@@ -91,7 +109,7 @@ const SortDropdown = () => {
                             </button>
                         </li>
                         <li>
-                            <button className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            <button className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full">
                                 <div className="flex items-center space-x-2">
                                     <div>
                                         <FaRegCalendarAlt />
@@ -103,7 +121,7 @@ const SortDropdown = () => {
                         <li>
                             <button
                                 onClick={() => sortByName()}
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full"
                             >
                                 <div className="flex items-center space-x-2">
                                     <div>
