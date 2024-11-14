@@ -7,7 +7,7 @@ const About = () => {
                 <img src="/images/logos/emu_color.webp" alt="RunEmu Logo" />
             </div>
             <div className="basis-1/2">
-                <div className="text-xl text-justify">
+                <div className="text-xl text-justify border rounded-lg bg-gray-800 border-gray-700 p-12">
                     <p className="text-3xl font-medium py-4">
                         RunEmu's mission is to help people run more and make
                         lots of money off ads.
