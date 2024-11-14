@@ -51,13 +51,13 @@ const SortDropdown = () => {
 
     return (
         <div className="relative">
-            <div className="inline-flex rounded-md shadow-sm">
+            <div className="inline-flex rounded-md shadow-sm space-x-2">
                 <button
                     id="sortInfo"
                     data-dropdown-toggle="dropdownInformation"
                     type="button"
                     onClick={toggleDropdown}
-                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-s-lg text-sm px-5 py-2.5 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 min-w-28"
+                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-lg text-sm px-5 py-2.5 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 min-w-28"
                 >
                     Sort by
                     <svg
@@ -80,8 +80,9 @@ const SortDropdown = () => {
                     id="reverse"
                     type="button"
                     onClick={reverse}
-                    className="flex text-white focus:ring-4 focus:outline-none font-medium border-t border-b rounded-lg text-sm px-5 py-2.5 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 min-w-12"
+                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-lg text-sm px-5 py-2.5 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 min-w-28 space-x-2"
                 >
+                    <div>Reverse</div>
                     <TbArrowsCross />
                 </button>
             </div>

@@ -13,6 +13,10 @@ interface DataContextType {
     setDistanceMin: React.Dispatch<React.SetStateAction<number>>;
     distanceMax: number;
     setDistanceMax: React.Dispatch<React.SetStateAction<number>>;
+    dateMin: Date;
+    setDateMin: React.Dispatch<React.SetStateAction<Date>>;
+    dateMax: Date;
+    setDateMax: React.Dispatch<React.SetStateAction<Date>>;
 }
 
 const DataContext = createContext<DataContextType>({
@@ -26,6 +30,10 @@ const DataContext = createContext<DataContextType>({
     setDistanceMin: () => {},
     distanceMax: 1000,
     setDistanceMax: () => {},
+    dateMin: new Date(),
+    setDateMin: () => {},
+    dateMax: new Date(),
+    setDateMax: () => {},
 });
 
 export const useDataContext = () => useContext(DataContext);
@@ -45,6 +53,9 @@ export const DataProvider: React.FC<DataProviderProps> = ({
 
     const [distanceMin, setDistanceMin] = useState<number>(0);
     const [distanceMax, setDistanceMax] = useState<number>(1000);
+
+    const [dateMin, setDateMin] = useState<Date>(new Date("2000-01-01"));
+    const [dateMax, setDateMax] = useState<Date>(new Date("3000-01-01"));
 
     const fetchRaces = async () => {
         try {
@@ -89,6 +100,10 @@ export const DataProvider: React.FC<DataProviderProps> = ({
                 setDistanceMin,
                 distanceMax,
                 setDistanceMax,
+                dateMin,
+                setDateMin,
+                dateMax,
+                setDateMax,
             }}
         >
             {children}

@@ -1,13 +1,13 @@
 import SearchBar from "./SearchBar";
-import RangeSlider from "./RangeSlider";
-import SortDropdown from "./SortDropdown";
+import DistanceDropdown from "./DistanceDropdown";
+import DateDropdown from "./DateDropdown";
 
 const OptionsBar = () => {
     return (
-        <div className="flex items-center h-12 min-w-full space-x-4">
+        <div className="flex items-center h-12 min-w-full place-content-start space-x-12 mb-4">
             <SearchBar></SearchBar>
-            <SortDropdown></SortDropdown>
-            <RangeSlider></RangeSlider>
+            <DistanceDropdown />
+            <DateDropdown />
         </div>
     );
 };
