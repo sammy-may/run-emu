@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import "./App.css";
 
 import Layout from "./pages/Layout";
 import RaceType from "./types/race";

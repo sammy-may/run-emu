@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Layout = () => {
     return (
-        <div>
+        <div className="m-3 max-h-screen">
             <Header />
             <Outlet />
             <Footer />

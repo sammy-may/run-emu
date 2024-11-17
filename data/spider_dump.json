@@ -1,0 +1,4993 @@
+{
+    "Ricochets_Riot": {
+        "title": "Ricochet's Riot",
+        "distances": [
+            "50k",
+            "25k",
+            "25k Ruck",
+            "10k",
+            "5k",
+            "Beer Mile"
+        ],
+        "location": "Killeen, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55014",
+        "date": "June 1, 2024 07:00:00",
+        "website": "https://www.facebook.com/profile.php?id=100088481274896"
+    },
+    "The_Lewiston_Ultra_Race": {
+        "title": "The Lewiston Ultra Race",
+        "distances": [
+            "60K"
+        ],
+        "location": "Salmon Arm, BC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55015",
+        "date": "September 29, 2018 00:00:00",
+        "website": "http://www.thelewistonultra.com/"
+    },
+    "Swiss_Valley_Trail_Races": {
+        "title": "Swiss Valley Trail Races",
+        "distances": [
+            "10.35 Miler"
+        ],
+        "location": "Peosta, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55018",
+        "date": "October 7, 2017 00:00:00",
+        "website": "http://www.swissvalleytrailraces.com"
+    },
+    "Terrapin_Mountain": {
+        "title": "Terrapin Mountain",
+        "distances": [
+            "50k",
+            "Half-marathon"
+        ],
+        "location": "Sedalia, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55020",
+        "date": "March 16, 2024 07:00:00",
+        "website": "https://www.windingwayrunco.com/"
+    },
+    "Jackson_5k_Turkey_Trot_&_Kids_Fun_Run": {
+        "title": "Jackson 5k Turkey Trot & Kids Fun Run",
+        "distances": [
+            "Jackson Turkey Trot",
+            "Kids Fun Run (10 and under)"
+        ],
+        "location": "Jackson, NH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55021",
+        "date": "November 23, 2023 09:30:00",
+        "website": "https://whitemountainski.co/pages/jackson-turkey-trot"
+    },
+    "Alaska:_A_Quest_for_Life": {
+        "title": "Alaska: A Quest for Life",
+        "distances": [
+            ""
+        ],
+        "location": "Wasilla, AK",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55023",
+        "date": "December 14, 2023 18:30:00",
+        "website": "https://aktivesoles.com/aktivities/"
+    },
+    "SPACEROCK_Trail_Race": {
+        "title": "SPACEROCK Trail Race",
+        "distances": [
+            "Half Marathon",
+            "15K",
+            "10K",
+            "5K"
+        ],
+        "location": "Agua Dulce, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55024",
+        "date": "October 21, 2023 00:00:00",
+        "website": "https://spacerocktrailrace.com/"
+    },
+    "Paradise_Backyard_Ultra": {
+        "title": "Paradise Backyard Ultra",
+        "distances": [
+            "Paradise Backyard Ultra"
+        ],
+        "location": "Paradise, NL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55025",
+        "date": "May 25, 2024 10:00:00",
+        "website": "https://tinyurl.com/ParadiseBackyardUltra"
+    },
+    "Wasatch_100": {
+        "title": "Wasatch 100",
+        "distances": [
+            "100 Miler"
+        ],
+        "location": "Kaysville, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55027",
+        "date": "September 6, 2024 05:00:00",
+        "website": "http://www.wasatch100.com/"
+    },
+    "The_Bullshit_Backyard_Ultra": {
+        "title": "The Bullshit Backyard Ultra",
+        "distances": [
+            "Last Person Standing"
+        ],
+        "location": "Lenoxville, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55028",
+        "date": "March 23, 2024 07:00:00",
+        "website": "https://thebullshitbackyardultra.com/"
+    },
+    "Fox_Trot_5K_Utah": {
+        "title": "Fox Trot 5K Utah",
+        "distances": [
+            "5K in Person",
+            "Virtual 5K"
+        ],
+        "location": ", ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55029",
+        "date": "October 5, 2024 08:00:00",
+        "website": "https://foxtrot5kutah.wixsite.com/race"
+    },
+    "Katcina_Mosa_100K_Mountain_Run": {
+        "title": "Kat'cina Mosa 100K Mountain Run",
+        "distances": [
+            "100 K"
+        ],
+        "location": "Springville, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55031",
+        "date": "August 3, 2024 03:00:00",
+        "website": "http://www.squawpeak50.com/"
+    },
+    "Arches_Marathon": {
+        "title": "Arches Marathon",
+        "distances": [
+            "50K",
+            "Marathon",
+            "1/2 Marathon",
+            "15K"
+        ],
+        "location": "Moab, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55032",
+        "date": "October 5, 2024 07:00:00",
+        "website": "https://www.madmooseevents.com/archeshalfmarathon"
+    },
+    "Texas_Ultra_Series": {
+        "title": "Texas Ultra Series",
+        "distances": [
+            ""
+        ],
+        "location": "Multiple Cities, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55033",
+        "date": "February 17, 2024 07:00:00",
+        "website": "https://www.texasoutlawrunning.com/texasultraseries"
+    },
+    "Ozarks_Mountain_Challenge-_Hiking_(Ascent_only)": {
+        "title": "Ozark's Mountain Challenge- Hiking (Ascent only)",
+        "distances": [
+            "17 Miler"
+        ],
+        "location": "Patterson, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55034",
+        "date": "May 4, 2024 07:00:00",
+        "website": "https://www.facebook.com/events/457424323640218/?active_tab=discussion"
+    },
+    "Sonoma_Coast_Trail_Runs": {
+        "title": "Sonoma Coast Trail Runs",
+        "distances": [
+            "50K",
+            "Trail Marathon",
+            "30K"
+        ],
+        "location": "Duncans Mills, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54999",
+        "date": "June 8, 2024 08:00:00",
+        "website": "https://www.skybreakerracing.com/sonoma-coast-trail-runs"
+    },
+    "North_Bend_Trail_Fest": {
+        "title": "North Bend Trail Fest",
+        "distances": [
+            "30k Elite",
+            "30k Sport",
+            "30k Masters 45+",
+            "Little Si 10k"
+        ],
+        "location": "North Bend, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54873",
+        "date": "October 12, 2024 08:00:00",
+        "website": "https://northbendtrailfest.com/mountain-running-events/"
+    },
+    "24_Hour_-_Adventure_Trail": {
+        "title": "24 Hour - Adventure Trail",
+        "distances": [
+            "24hrs",
+            "4 Person Relay",
+            "8 HR Night"
+        ],
+        "location": "Triangle, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55035",
+        "date": "April 20, 2024 07:00:00",
+        "website": "https://athletic-equation.com/endurance-events/the-ultrail-series/24-hr/"
+    },
+    "Chopawamsic_50K_and_100K": {
+        "title": "Chopawamsic 50K and 100K",
+        "distances": [
+            "100K",
+            "50K",
+            "CHOPAWAMSIC HALF MARATHON"
+        ],
+        "location": "Triangle, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55036",
+        "date": "April 21, 2024 07:00:00",
+        "website": "https://athletic-equation.com/endurance-events/the-ultrail-series/chopawamsic-100k-challenge/"
+    },
+    "Trail_Trashed_Ultra": {
+        "title": "Trail Trashed Ultra",
+        "distances": [
+            ""
+        ],
+        "location": "Henderson, NV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=51963",
+        "date": "March 23, 2024 07:00:00",
+        "website": "http://www.tripledareruns.com/events/?cid1=7&date=1457769600&self=1"
+    },
+    "Andys_Backyard_Ultra": {
+        "title": "Andy's Backyard Ultra",
+        "distances": [
+            "Last Runner Standing"
+        ],
+        "location": "Earlysville, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55038",
+        "date": "October 14, 2023 00:00:00",
+        "website": "https://ultrasignup.com/events/search.aspx"
+    },
+    "Boulder_Beast": {
+        "title": "Boulder Beast",
+        "distances": [
+            "24 Miler",
+            "25K"
+        ],
+        "location": "Lock Haven, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55039",
+        "date": "September 21, 2024 07:00:00",
+        "website": "https://www.patraildogs.com/"
+    },
+    "Little_Pine_5_Miler": {
+        "title": "Little Pine 5 Miler",
+        "distances": [
+            "5 Miler",
+            "5 Miler--14 and Under"
+        ],
+        "location": "Waterville, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55040",
+        "date": "October 19, 2024 10:00:00",
+        "website": "https://www.patraildogs.com/"
+    },
+    "The_Lone_Wolf_Backyard_Ultra": {
+        "title": "The Lone Wolf Backyard Ultra",
+        "distances": [
+            "Lone Wolf",
+            "Coyotes"
+        ],
+        "location": "Fernie, BC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55041",
+        "date": "September 21, 2024 09:00:00",
+        "website": "http://www.stagleaprunning.com/stag-leap-services/races/lone-wolf/"
+    },
+    "Shake_Your_Trail_Feather_Trail_Run": {
+        "title": "Shake Your Trail Feather Trail Run",
+        "distances": [
+            "50K",
+            "1/2 Marathon",
+            "10K",
+            "5K"
+        ],
+        "location": "Charleston, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55042",
+        "date": "October 19, 2024 08:00:00",
+        "website": "http://www.shakeyourtrailfeather.com"
+    },
+    "Elsa_Chicken_Plucker_Backyard_Ultra": {
+        "title": "Elsa Chicken Plucker Backyard Ultra",
+        "distances": [
+            "Backyard Ultra"
+        ],
+        "location": "Charleston, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55043",
+        "date": "May 25, 2024 09:00:00",
+        "website": "http://www.elsachickenplucker.com"
+    },
+    "Cottontail_6_&_12_Hour": {
+        "title": "Cottontail 6 & 12 Hour",
+        "distances": [
+            "12hrs",
+            "6hrs"
+        ],
+        "location": "Seattle, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55044",
+        "date": "April 13, 2024 07:00:00",
+        "website": "http://www.endlesstrails.us/cottontail-6-12-hour.html"
+    },
+    "Cottontail_6_&_12_Hour_(Virtual)": {
+        "title": "Cottontail 6 & 12 Hour (Virtual)",
+        "distances": [
+            "12 Hour - Virtual",
+            "6 Hour - Virtual"
+        ],
+        "location": ", ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55045",
+        "date": "April 1, 2024 07:00:00",
+        "website": "http://www.endlesstrails.us/cottontail-6-12-hour.html"
+    },
+    "Sharlie_Shuffle": {
+        "title": "Sharlie Shuffle",
+        "distances": [
+            "12HR",
+            "6HR"
+        ],
+        "location": "McCall, ID",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55046",
+        "date": "June 1, 2024 07:00:00",
+        "website": "http://www.endlesstrails.us/sharlie-shuffle.html"
+    },
+    "Sharlie_Shuffle_(Virtual)": {
+        "title": "Sharlie Shuffle (Virtual)",
+        "distances": [
+            "12 Hour - Virtual",
+            "6 Hour - Virtual"
+        ],
+        "location": ", ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55047",
+        "date": "June 30, 2024 09:00:00",
+        "website": "http://www.endlesstrails.us/sharlie-shuffle.html"
+    },
+    "Summer_Shuffle_12_Hour_(Virtual)": {
+        "title": "Summer Shuffle 12 Hour (Virtual)",
+        "distances": [
+            "12 Hour - Virtual",
+            "6 Hour - Virtual"
+        ],
+        "location": ", ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55048",
+        "date": "July 1, 2024 07:00:00",
+        "website": "http://www.endlesstrails.us/races.html"
+    },
+    "Sasquatch_Shuffle": {
+        "title": "Sasquatch Shuffle",
+        "distances": [
+            "Triple Threat",
+            "50K",
+            "30K",
+            "20K"
+        ],
+        "location": "McCall, ID",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55049",
+        "date": "October 12, 2024 08:00:00",
+        "website": "http://www.endlesstrails.us/sasquatch-shuffle.html"
+    },
+    "Apex_Aries": {
+        "title": "Apex Aries",
+        "distances": [
+            ""
+        ],
+        "location": ", ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55050",
+        "date": "April 19, 2024 07:00:00",
+        "website": "http://www.endlesstrails.us/apex-aries.html"
+    },
+    "Carkeek_12_Hour": {
+        "title": "Carkeek 12 Hour",
+        "distances": [
+            "12HR",
+            "6HR"
+        ],
+        "location": "Seattle, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55051",
+        "date": "October 19, 2024 07:00:00",
+        "website": "http://www.endlesstrails.us/carkeek-12-hour.html"
+    },
+    "Sante_Fe_Jornado": {
+        "title": "Sante Fe Jornado",
+        "distances": [
+            "50 Miler",
+            "50k",
+            "12 Miler"
+        ],
+        "location": "Durham, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55052",
+        "date": "January 27, 2024 09:00:00",
+        "website": "https://www.santefejornado.com/"
+    },
+    "McNotAgain_Trail_Runs": {
+        "title": "McNotAgain Trail Runs",
+        "distances": [
+            "30 Miler",
+            "10 Miler",
+            "5 Miler"
+        ],
+        "location": "Pekin, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55053",
+        "date": "October 28, 2023 00:00:00",
+        "website": "http://www.mayhemracemanagement.com/mcnotagain/"
+    },
+    "Elk_Valley_Ultra": {
+        "title": "Elk Valley Ultra",
+        "distances": [
+            "50K",
+            "15K"
+        ],
+        "location": "Fernie, BC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55054",
+        "date": "July 27, 2024 08:00:00",
+        "website": "http://www.stagleaprunning.com/stag-leap-services/races/elk-valley-ultra/"
+    },
+    "The_New_Orleans_Ultramarathon_and_Half": {
+        "title": "The New Orleans Ultramarathon and Half",
+        "distances": [
+            "50 Miler",
+            "50K",
+            "Half Marathon"
+        ],
+        "location": "New Orleans, LA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55055",
+        "date": "October 19, 2024 06:00:00",
+        "website": "https://www.lazyhoundracing.com/the-new-orleans-ultramarathon"
+    },
+    "Little_Backyard_Adventure": {
+        "title": "Little Backyard Adventure",
+        "distances": [
+            "12 Hours",
+            "6 Hours"
+        ],
+        "location": "Olympia, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55056",
+        "date": "March 9, 2024 07:00:00",
+        "website": "http://rockcandyrunning.com/lba"
+    },
+    "Telluride_Mountain_Run": {
+        "title": "Telluride Mountain Run",
+        "distances": [
+            "40 Miler",
+            "24 Miler",
+            "13 Miler"
+        ],
+        "location": "Telluride, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55057",
+        "date": "August 24, 2024 05:00:00",
+        "website": "http://www.runtelluride.com/"
+    },
+    "Frigus_Snowshoe_Festival": {
+        "title": "Frigus Snowshoe Festival",
+        "distances": [
+            "30HR Ultra",
+            "Marathon",
+            "15K",
+            "5K",
+            "Kid's 1 Miler"
+        ],
+        "location": "Gansevoort, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55058",
+        "date": "February 2, 2024 08:00:00",
+        "website": "https://www.endurancesociety.org/"
+    },
+    "Streakers_Marathon": {
+        "title": "Streakers Marathon",
+        "distances": [
+            "Marathon"
+        ],
+        "location": "Provo, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55059",
+        "date": "April 13, 2024 07:00:00",
+        "website": "http://squawpeak50.com/streakers-marathon/"
+    },
+    "Cappys_Backyard_Ultra": {
+        "title": "Cappy's Backyard Ultra",
+        "distances": [
+            "58.3 Miler",
+            "LAST MAN STANDING"
+        ],
+        "location": "Panaca, NV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55060",
+        "date": "April 6, 2024 08:00:00",
+        "website": "https://rockyroadadventuresnv.com/cappys-backyard-ultra/"
+    },
+    "Run_Under_The_Stars_TM_-_Oak_Ridge": {
+        "title": "Run Under The Stars TM - Oak Ridge",
+        "distances": [
+            "6hrs",
+            "3hrs"
+        ],
+        "location": "Oak Ridge, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=44892",
+        "date": "May 15, 2021 00:00:00",
+        "website": "http://www.durbinracemanagement.com"
+    },
+    "Surf_the_Murph": {
+        "title": "Surf the Murph",
+        "distances": [
+            "50 Miler",
+            "50K",
+            "Marathon",
+            "25K"
+        ],
+        "location": "Savage, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55061",
+        "date": "October 21, 2023 00:00:00",
+        "website": "http://surfthemurph.org"
+    },
+    "Hood_Hundred": {
+        "title": "Hood Hundred",
+        "distances": [
+            "100 Miler"
+        ],
+        "location": "Mt. Hood, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55063",
+        "date": "August 3, 2024 06:00:00",
+        "website": "https://www.daybreakracing.com/hood-hundred"
+    },
+    "Ultra_Donut_Dash": {
+        "title": "Ultra Donut Dash",
+        "distances": [
+            "Ultra Donut Dash 5k"
+        ],
+        "location": "Birmingham, AL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55064",
+        "date": "February 10, 2024 09:00:00",
+        "website": "https://www.facebook.com/zombietrailraces"
+    },
+    "Noche_Trail_Runs": {
+        "title": "Noche Trail Runs",
+        "distances": [
+            "40 Miler",
+            "27 Miler",
+            "Half Marathon"
+        ],
+        "location": "Junction, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55065",
+        "date": "July 13, 2024 19:00:00",
+        "website": "https://www.texasoutlawrunning.com/noche"
+    },
+    "Dick_Collins_Firetrails": {
+        "title": "Dick Collins Firetrails",
+        "distances": [
+            ""
+        ],
+        "location": "Castro Valley, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55068",
+        "date": "September 29, 2024 06:00:00",
+        "website": "http://scenaperformance.com/events/dick-collins-firetrails/"
+    },
+    "3_of_7_Project_Trail_Race": {
+        "title": "3 of 7 Project Trail Race",
+        "distances": [
+            "8hrs",
+            "6hrs",
+            "4hrs"
+        ],
+        "location": "Summerville, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55069",
+        "date": "February 10, 2024 08:00:00",
+        "website": "https://www.3of7project.com/"
+    },
+    "Georgia_Ultrarunning_and_Trailrunning_Society_Membership": {
+        "title": "Georgia Ultrarunning and Trailrunning Society Membership",
+        "distances": [
+            ""
+        ],
+        "location": "Marietta, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55070",
+        "date": "January 1, 2024 08:00:00",
+        "website": "http://www.getguts.com/"
+    },
+    "Fancy_Nonsense_25k/50k": {
+        "title": "Fancy Nonsense 25k/50k",
+        "distances": [
+            "50K",
+            "25K",
+            "5 Miler"
+        ],
+        "location": "Willow Springs, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55071",
+        "date": "October 26, 2024 08:00:00",
+        "website": "http://www.cussingrunner.com"
+    },
+    "St._Pats_24_Hour_Race": {
+        "title": "St. Pats 24 Hour Race",
+        "distances": [
+            "St. Pats 24 Hour",
+            "St. Pats 12 Hour"
+        ],
+        "location": "South Bend, IN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55073",
+        "date": "October 19, 2024 08:00:00",
+        "website": "http://www.facebook.com/stpats24hour/?ref=page_internal"
+    },
+    "ECT_50_Ultra_Marathon": {
+        "title": "ECT 50 Ultra Marathon",
+        "distances": [
+            "50K"
+        ],
+        "location": "Pouch Cove, NL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55074",
+        "date": "October 26, 2024 07:40:00",
+        "website": "http://www.eastcoasttrailultra.ca"
+    },
+    "Aspire_Adventure_Running:_Custom": {
+        "title": "Aspire Adventure Running: Custom",
+        "distances": [
+            "Custom Wonderland"
+        ],
+        "location": "Bellingham, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55075",
+        "date": "January 1, 2024 17:00:00",
+        "website": "http://www.aspireadventurerunning.com"
+    },
+    "Mt._Umunhum_Trail_Conquest-Fall": {
+        "title": "Mt. Umunhum Trail Conquest-Fall",
+        "distances": [
+            "50K",
+            "Trail Marathon",
+            "30K",
+            "Half Marathon",
+            "7 Miler",
+            "5K"
+        ],
+        "location": "San Jose, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55076",
+        "date": "October 12, 2024 08:00:00",
+        "website": "https://tctruns.com/mt-umunhum-trail-conquest-fall/"
+    },
+    "SGFMC_Turkey_Trot": {
+        "title": "SGFMC Turkey Trot",
+        "distances": [
+            "5k - Kids: 10 & Under",
+            "5k - Adult: 11 & Up"
+        ],
+        "location": "Oak Park, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54967",
+        "date": "November 23, 2023 09:30:00",
+        "website": "https://www.facebook.com/SGFMCTurkeyTrot"
+    },
+    "Kilkenny_Ridge_Race": {
+        "title": "Kilkenny Ridge Race",
+        "distances": [
+            "50 Miler",
+            "25 Miler",
+            "25K"
+        ],
+        "location": "Stark, NH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55077",
+        "date": "September 14, 2024 05:00:00",
+        "website": "https://www.aravaiparunning.com/white-mountain-endurance/"
+    },
+    "Run_the_Rut": {
+        "title": "Run the Rut",
+        "distances": [
+            "Trifecta",
+            "50K",
+            "28K",
+            "Lone Peak VK"
+        ],
+        "location": "Big Sky, MT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=45741",
+        "date": "September 5, 2021 00:00:00",
+        "website": "http://runtherut.com/"
+    },
+    "Childish_Nonsense": {
+        "title": "Childish Nonsense",
+        "distances": [
+            "50 Miler",
+            "50K",
+            "25K",
+            "10K"
+        ],
+        "location": "Palatine, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55072",
+        "date": "April 27, 2024 07:00:00",
+        "website": "https://cussingrunner.com/"
+    },
+    "Last_Paddler_Standing": {
+        "title": "Last Paddler Standing",
+        "distances": [
+            "Last Paddler Standing"
+        ],
+        "location": "Sarasota, FL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55078",
+        "date": "December 2, 2023 09:00:00",
+        "website": "https://lastpaddlerstanding.com/"
+    },
+    "Ram_Party": {
+        "title": "Ram Party",
+        "distances": [
+            "Sat 55 Mile",
+            "Sat 60K",
+            "Sat 50K",
+            "Sat 24K",
+            "Sat 15K",
+            "Sun 33K",
+            "Sun 24K",
+            "Sun 16K"
+        ],
+        "location": "Colorado Springs, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55079",
+        "date": "May 18, 2024 06:00:00",
+        "website": "https://www.aravaiparunning.com/ram-party/"
+    },
+    "Lastest_Not_Fastest": {
+        "title": "Lastest Not Fastest",
+        "distances": [
+            "Last Person Standing"
+        ],
+        "location": "North Bonneville, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55081",
+        "date": "October 5, 2024 09:00:00",
+        "website": "https://gobeyondracing.com/races/lastest-not-fastest"
+    },
+    "Fire_Fest_Ultra": {
+        "title": "Fire Fest Ultra",
+        "distances": [
+            ""
+        ],
+        "location": "Logandale, NV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=50614",
+        "date": "November 19, 2023 09:00:00",
+        "website": "http://www.tripledareruns.com/events/valley-of-fire"
+    },
+    "Arc_of_Attrition": {
+        "title": "Arc of Attrition",
+        "distances": [
+            "100 Miler",
+            "50 Miler"
+        ],
+        "location": "Porthtowan, Great Britain",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55085",
+        "date": "January 27, 2023 00:00:00",
+        "website": "http://mudcrew.co.uk/event/the-arc-of-attrition/"
+    },
+    "Almira_50": {
+        "title": "Almira 50",
+        "distances": [
+            "50 Miler",
+            "Marathon"
+        ],
+        "location": "Wynne, AR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55086",
+        "date": "April 27, 2024 06:00:00",
+        "website": "https://www.facebook.com/traildawgrunningco/"
+    },
+    "The_Naturalist": {
+        "title": "The Naturalist",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Franklin, NC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55087",
+        "date": "October 5, 2024 08:00:00",
+        "website": "http://www.outdoor76.com"
+    },
+    "Ramble_In_The_Brambles": {
+        "title": "Ramble In The Brambles",
+        "distances": [
+            "29 Miler",
+            "19 Miler",
+            "9 Miler",
+            "9 Miler RUCK",
+            "5K (3.2 Miles)"
+        ],
+        "location": "Muenster, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=52324",
+        "date": "March 23, 2024 07:45:00",
+        "website": "https://www.texasoutlawrunning.com/ramble"
+    },
+    "Pony_Express_Trail_Run": {
+        "title": "Pony Express Trail Run",
+        "distances": [
+            "100 Miler",
+            "50 Miler"
+        ],
+        "location": "West of Faust, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55088",
+        "date": "October 18, 2024 05:00:00",
+        "website": "http://www.PonyExpress100.org/"
+    },
+    "Rattlerock_Ultra": {
+        "title": "Rattlerock Ultra",
+        "distances": [
+            "50k",
+            "25k"
+        ],
+        "location": "Morgantown, WV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55089",
+        "date": "July 27, 2024 06:30:00",
+        "website": "https://rattlerockultra.blogspot.com/"
+    },
+    "Bimblers_Bluff": {
+        "title": "Bimblers Bluff",
+        "distances": [
+            "50K"
+        ],
+        "location": "Guilford, CT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55090",
+        "date": "October 22, 2023 00:00:00",
+        "website": "http://mrbimble.com/WordPress/bluff/"
+    },
+    "Indian_Creek_Fifties": {
+        "title": "Indian Creek Fifties",
+        "distances": [
+            "55K",
+            "50 Miler"
+        ],
+        "location": "Sedalia, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55008",
+        "date": "October 14, 2023 00:00:00",
+        "website": "Http://UltraSignup.com"
+    },
+    "The_Kerry_Way_Ultra": {
+        "title": "The Kerry Way Ultra",
+        "distances": [
+            "193K",
+            "101K",
+            "58K"
+        ],
+        "location": "Killarney, Ireland",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55091",
+        "date": "September 1, 2023 00:00:00",
+        "website": "http://www.kerrywayultra.com"
+    },
+    "Frosty_Fireman_5k": {
+        "title": "Frosty Fireman 5k",
+        "distances": [
+            "5k",
+            "1 Mile Fun Run"
+        ],
+        "location": "Franklin, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55093",
+        "date": "February 17, 2024 08:00:00",
+        "website": "http://www.bmfjevents.com"
+    },
+    "Lone_Star_Night_Run": {
+        "title": "Lone Star Night Run",
+        "distances": [
+            "Half Marathon",
+            "10K",
+            "5K"
+        ],
+        "location": "Weatherford, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55094",
+        "date": "September 14, 2024 20:30:00",
+        "website": "https://www.texasoutlawrunning.com/lonestar"
+    },
+    "Little_Su_50K": {
+        "title": "Little Su 50K",
+        "distances": [
+            "50K Run",
+            "50K Bike",
+            "50K Ski"
+        ],
+        "location": "Big Lake, AK",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55095",
+        "date": "February 17, 2024 11:00:00",
+        "website": "http://www.susitna100.com/"
+    },
+    "Death_by_5k_Little_Rock": {
+        "title": "Death by 5k Little Rock",
+        "distances": [
+            "24 Hour Challenge"
+        ],
+        "location": "North Little Rock, AR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55096",
+        "date": "March 16, 2024 08:00:00",
+        "website": "http://www.deathby5k.com"
+    },
+    "Trail_of_Terror": {
+        "title": "Trail of Terror",
+        "distances": [
+            ""
+        ],
+        "location": "Las Vegas, NV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55097",
+        "date": "October 26, 2024 06:00:00",
+        "website": "http://www.tripledareruns.com"
+    },
+    "MFn_Trail_Club": {
+        "title": "MF'n Trail Club",
+        "distances": [
+            "Membership"
+        ],
+        "location": "Franklin, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55099",
+        "date": "October 31, 2024 12:00:00",
+        "website": "http://www.bmfjevents.com"
+    },
+    "Deja_Vu": {
+        "title": "Deja Vu",
+        "distances": [
+            ""
+        ],
+        "location": "Henderson, NV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=53443",
+        "date": "April 13, 2024 07:30:00",
+        "website": "http://www.tripledareruns.com/events/"
+    },
+    "California_Gold_Rush_Trail_Run_-_Fall": {
+        "title": "California Gold Rush Trail Run - Fall",
+        "distances": [
+            "Half Marathon",
+            "15K",
+            "10K",
+            "5K",
+            "Mile",
+            "Kids Run"
+        ],
+        "location": "Coloma, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55100",
+        "date": "October 19, 2024 08:30:00",
+        "website": "https://tctruns.com/californiagoldrushtrailrun-fall/"
+    },
+    "Rancho_Hills_Trail_Run_-_Fall": {
+        "title": "Rancho Hills Trail Run - Fall",
+        "distances": [
+            "50K",
+            "Marathon",
+            "30K",
+            "Half Marathon",
+            "10 Miler",
+            "8 Mile",
+            "10K",
+            "5K"
+        ],
+        "location": "Morgan Hill, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55101",
+        "date": "October 5, 2024 08:00:00",
+        "website": "https://tctruns.com/rancho-hills-trail-run-fall/"
+    },
+    "Trail_Run_at_Sly_Park_-_Fall": {
+        "title": "Trail Run at Sly Park - Fall",
+        "distances": [
+            "50K",
+            "Trail Marathon",
+            "17 Miler",
+            "Half Marathon",
+            "8 Miler",
+            "10K",
+            "5K"
+        ],
+        "location": "Pollock Pines, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55102",
+        "date": "October 26, 2024 08:00:00",
+        "website": "https://tctruns.com/trailrunatslypark_fall/"
+    },
+    "TPK_Chasing_Rabbits": {
+        "title": "TPK Chasing Rabbits",
+        "distances": [
+            "100K",
+            "12 Hours",
+            "12 Hours RUCKING DIVISION",
+            "5 Mile"
+        ],
+        "location": "Stanhope, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55103",
+        "date": "October 26, 2024 20:00:00",
+        "website": "https://twopunkkids.com/chasing-rabbits"
+    },
+    "Equalizer": {
+        "title": "Equalizer",
+        "distances": [
+            "24hrs",
+            "12hrs",
+            "6hrs"
+        ],
+        "location": "Des Moines, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55104",
+        "date": "October 28, 2023 00:00:00",
+        "website": "http://www.equalizerdsm.com/"
+    },
+    "Cougar_Mountain_Trail_Runs": {
+        "title": "Cougar Mountain Trail Runs",
+        "distances": [
+            "50K",
+            "14.5 Miler",
+            "19.5 Miler"
+        ],
+        "location": "Bellevue, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=53635",
+        "date": "May 13, 2023 00:00:00",
+        "website": "https://cougar.seattlerunningclub.org/"
+    },
+    "The_Summit_200": {
+        "title": "The Summit 200",
+        "distances": [
+            "The Summit 200"
+        ],
+        "location": "Frisco, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55105",
+        "date": "July 22, 2024 05:00:00",
+        "website": "https://ultraversesupplements.com/our-races/summit-200"
+    },
+    "Ultra_Race_of_Champions": {
+        "title": "Ultra Race of Champions",
+        "distances": [
+            "50-Miler",
+            "50K",
+            "Half Marathon"
+        ],
+        "location": "Skylark, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55106",
+        "date": "April 27, 2024 05:00:00",
+        "website": "http://ultraroc.com/"
+    },
+    "Hokey_Pokey_in_the_Goethe": {
+        "title": "Hokey Pokey in the Goethe",
+        "distances": [
+            "50 Miler"
+        ],
+        "location": "Dunnellon, FL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55107",
+        "date": "January 27, 2024 06:00:00",
+        "website": "http://ridesandruns.net/do-the-hokey-pokey/"
+    },
+    "Yosemite:_Tuolumne_Meadows": {
+        "title": "Yosemite: Tuolumne Meadows",
+        "distances": [
+            "June 19 - 23",
+            "June 26 - 30",
+            "July 3 - 7"
+        ],
+        "location": "Yosemite National Park, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55108",
+        "date": "July 1, 2024 17:00:00",
+        "website": "https://www.aspireadventurerunning.com/yosemite-tuolumne-meadows/"
+    },
+    "Oakadoke_Trail_Runs": {
+        "title": "Oakadoke Trail Runs",
+        "distances": [
+            "18 Mile",
+            "9 Mile",
+            "4 Mile"
+        ],
+        "location": "Valparaiso, IN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55109",
+        "date": "August 3, 2024 07:00:00",
+        "website": "https://www.trailblazerrunning.co/oakadoke-trail-runs"
+    },
+    "Marine_Corps_Marathon_-_50K": {
+        "title": "Marine Corps Marathon - 50K",
+        "distances": [
+            "50K"
+        ],
+        "location": "Washington, DC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55110",
+        "date": "October 29, 2023 00:00:00",
+        "website": "https://www.marinemarathon.com/"
+    },
+    "Arbor_Day_15k": {
+        "title": "Arbor Day 15k",
+        "distances": [
+            "15k Run/Hike"
+        ],
+        "location": "Williamsburg, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55111",
+        "date": "April 28, 2024 09:00:00",
+        "website": "https://happycatevents.com/"
+    },
+    "The_Bad_Thing": {
+        "title": "The Bad Thing",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Goderich, ON",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55112",
+        "date": "October 21, 2023 00:00:00",
+        "website": "https://www.racethebadthing.com"
+    },
+    "Georgia_Sky_to_Summit": {
+        "title": "Georgia Sky to Summit",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Sky Valley, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55114",
+        "date": "October 26, 2024 07:30:00",
+        "website": "https://www.runbumtours.com"
+    },
+    "Squirrelly_Tail_Twail_Wun": {
+        "title": "Squirrelly Tail Twail Wun",
+        "distances": [
+            "1/2 Marathon"
+        ],
+        "location": "Lewisberry, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55115",
+        "date": "February 18, 2024 10:00:00",
+        "website": "http://squirrellytailtwailwun.webs.com/"
+    },
+    "Kickin_it_Route_66_Color_Run_5k": {
+        "title": "Kickin' it Route 66 Color Run 5k",
+        "distances": [
+            "5K"
+        ],
+        "location": "St. Robert, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55116",
+        "date": "March 22, 2024 17:30:00",
+        "website": "https://www.facebook.com/hfpcmo"
+    },
+    "Racing_for_Daylight": {
+        "title": "Racing for Daylight",
+        "distances": [
+            "12hrs"
+        ],
+        "location": "Waynesville, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55117",
+        "date": "March 9, 2024 18:00:00",
+        "website": "https://www.facebook.com/racingfordaylight"
+    },
+    "County_Fair_Color_Run_5k": {
+        "title": "County Fair Color Run 5k",
+        "distances": [
+            "5K"
+        ],
+        "location": "St. Robert, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55118",
+        "date": "June 15, 2024 08:00:00",
+        "website": "https://www.facebook.com/hfpcmo"
+    },
+    "Ultra_Sweaty_Santa": {
+        "title": "Ultra Sweaty Santa",
+        "distances": [
+            "6hrs"
+        ],
+        "location": "Devils Elbow, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55119",
+        "date": "July 13, 2024 06:00:00",
+        "website": "https://www.facebook.com/events/1220909042140053"
+    },
+    "Assault_on_BlackRock": {
+        "title": "Assault on BlackRock",
+        "distances": [
+            "7 Miler"
+        ],
+        "location": "Sylva, NC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55120",
+        "date": "March 16, 2024 09:00:00",
+        "website": "https://www.facebook.com/Assault-on-BlackRock-189988924357412/"
+    },
+    "Bad_Dawg_100/50/100k/50k": {
+        "title": "Bad Dawg 100/50/100k/50k",
+        "distances": [
+            "Bad Dawg Hundred",
+            "100K",
+            "50 Miler",
+            "50K",
+            "12 Miler"
+        ],
+        "location": "Waynesville, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55121",
+        "date": "August 17, 2024 06:00:00",
+        "website": "https://www.facebook.com/baddawgultra"
+    },
+    "Vashon_Island_Ultramarathon_&_Trail_Run": {
+        "title": "Vashon Island Ultramarathon & Trail Run",
+        "distances": [
+            "50K",
+            "20 Miler",
+            "10 Miler"
+        ],
+        "location": "Vashon Island, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55122",
+        "date": "June 8, 2024 08:30:00",
+        "website": "https://ultrasignup.com/register.aspx?did=110296"
+    },
+    "Carkeek_12_Hour_(Virtual)": {
+        "title": "Carkeek 12 Hour (Virtual)",
+        "distances": [
+            "12 Hour - Virtual",
+            "6 Hour - Virtual"
+        ],
+        "location": ", ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55123",
+        "date": "October 31, 2024 07:00:00",
+        "website": "http://www.endlesstrails.us/carkeek-12-hour.html"
+    },
+    "Sasquatch_Shuffle_(Virtual)": {
+        "title": "Sasquatch Shuffle (Virtual)",
+        "distances": [
+            "50K - virtual",
+            "30K - virtual",
+            "20K - virtual"
+        ],
+        "location": ", ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55124",
+        "date": "October 1, 2024 08:00:00",
+        "website": "http://www.endlesstrails.us/sasquatch-shuffle.html"
+    },
+    "Whiterock_Ultra": {
+        "title": "Whiterock Ultra",
+        "distances": [
+            "50 Miler",
+            "50K"
+        ],
+        "location": "Coon Rapids, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55125",
+        "date": "July 27, 2024 07:00:00",
+        "website": "https://whiterockultra.com/"
+    },
+    "Grossglockner": {
+        "title": "Grossglockner",
+        "distances": [
+            "100K",
+            "55K"
+        ],
+        "location": "Kaprun, Austria",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55126",
+        "date": "July 28, 2023 00:00:00",
+        "website": "https://www.ultratrail.at/english/"
+    },
+    "Frozen_Gnome": {
+        "title": "Frozen Gnome",
+        "distances": [
+            "50k Relay | 5 Person",
+            "50k Relay | 2 Person",
+            "50K",
+            "10K"
+        ],
+        "location": "Crystal Lake, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=53978",
+        "date": "January 6, 2024 07:45:00",
+        "website": "http://www.runfrozengnome.com/"
+    },
+    "Iron_Furnace_Trail_Run": {
+        "title": "Iron Furnace Trail Run",
+        "distances": [
+            "1/2 Marathon",
+            "4.5 Miler"
+        ],
+        "location": "McArthur, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55127",
+        "date": "April 6, 2024 09:00:00",
+        "website": "https://www.seotrevents.com/ironfurnace"
+    },
+    "Wildstrubel_by_UTMB": {
+        "title": "Wildstrubel by UTMB",
+        "distances": [
+            "113K",
+            "70K",
+            "50K"
+        ],
+        "location": "Crans-Montana, Switzerland",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54981",
+        "date": "September 15, 2023 00:00:00",
+        "website": "https://utmb.world/wildstrubel"
+    },
+    "Steel_Rail_Fitness_Turkey_Day_5k": {
+        "title": "Steel Rail Fitness Turkey Day 5k",
+        "distances": [
+            "3.1 Miler",
+            "Mile"
+        ],
+        "location": "Summit, MS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54672",
+        "date": "November 25, 2023 08:45:00",
+        "website": "https://www.facebook.com/crossfitmccomb/"
+    },
+    "Chippewa_Trail_Races": {
+        "title": "Chippewa Trail Races",
+        "distances": [
+            "50K",
+            "20 Miler",
+            "10K"
+        ],
+        "location": "New Auburn, WI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55128",
+        "date": "April 27, 2024 08:00:00",
+        "website": "https://www.facebook.com/Chippewa50k%20/"
+    },
+    "Hare_Mountain_100": {
+        "title": "Hare Mountain 100",
+        "distances": [
+            "100 Miler",
+            "50 Miler B",
+            "50 Miler",
+            "55K",
+            "50K",
+            "Marathon"
+        ],
+        "location": "Hagarville, AR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55129",
+        "date": "November 1, 2024 07:00:00",
+        "website": "https://www.haremountain100.com/"
+    },
+    "Mindy_Creek_Trail_Races": {
+        "title": "Mindy Creek Trail Races",
+        "distances": [
+            "Marathon",
+            "Half-Marathon",
+            "10K"
+        ],
+        "location": "St. Croix Falls, WI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55130",
+        "date": "August 24, 2024 07:00:00",
+        "website": "https://www.facebook.com/profile.php?id=100064002546731"
+    },
+    "Trail_of_Fears": {
+        "title": "Trail of Fears",
+        "distances": [
+            "Variable Distance"
+        ],
+        "location": "Jackson, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55131",
+        "date": "December 9, 2023 07:00:00",
+        "website": "http://runitfast.com/trail-of-fears-the-day-after-the-world-ended/"
+    },
+    "The_Guzzler_Ultra": {
+        "title": "The Guzzler Ultra",
+        "distances": [
+            "50K",
+            "100K"
+        ],
+        "location": "Brisbane, Australia",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55132",
+        "date": "July 22, 2023 00:00:00",
+        "website": "https://www.theguzzlerultra.com.au"
+    },
+    "Rogue_Gorge": {
+        "title": "Rogue Gorge",
+        "distances": [
+            "50K",
+            "Half Marathon",
+            "12K"
+        ],
+        "location": "Union Creek, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55133",
+        "date": "October 19, 2024 08:00:00",
+        "website": "https://www.daybreakracing.com/rogue-gorge"
+    },
+    "Firewater_Ultra": {
+        "title": "Firewater Ultra",
+        "distances": [
+            "100K",
+            "50K - 2 Per Relay",
+            "50K Sunrise",
+            "50K Sunset"
+        ],
+        "location": "Greenback, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55135",
+        "date": "October 26, 2024 08:00:00",
+        "website": "https://www.facebook.com/pages/Firewater-50k-and-100-Mile-Trail-Race/878874482154672"
+    },
+    "Cedro_Peak": {
+        "title": "Cedro Peak",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Tijeras, NM",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55136",
+        "date": "April 20, 2024 07:00:00",
+        "website": "https://cedropeaktrailevent.wordpress.com"
+    },
+    "Ultraverse_Kansas_Slam": {
+        "title": "Ultraverse Kansas Slam",
+        "distances": [
+            "Triple Slam"
+        ],
+        "location": "Sylvan Grove, KS, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55137",
+        "date": "April 20, 2024 08:00:00",
+        "website": "https://ultraversesupplements.com/ultraverse-kansas-slam"
+    },
+    "Fallapple": {
+        "title": "Fallapple",
+        "distances": [
+            "50 Miler",
+            "50K"
+        ],
+        "location": "South Orange, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55138",
+        "date": "September 9, 2023 00:00:00",
+        "website": "https://sites.google.com/site/njtrailseries/"
+    },
+    "Ozark_Trail": {
+        "title": "Ozark Trail",
+        "distances": [
+            "100 Miler"
+        ],
+        "location": "Steelville, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55139",
+        "date": "October 28, 2023 00:00:00",
+        "website": "http://www.ozarktrail100.com/"
+    },
+    "Creede_100": {
+        "title": "Creede 100",
+        "distances": [
+            "100 Miler"
+        ],
+        "location": "Creede, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55140",
+        "date": "July 27, 2024 08:00:00",
+        "website": "https://www.tempestadventures.com"
+    },
+    "Jump_Off_Joe_Marathon": {
+        "title": "Jump Off Joe Marathon",
+        "distances": [
+            "Marathon",
+            "1/2 Marathon",
+            "10k"
+        ],
+        "location": "Kennewick, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55141",
+        "date": "September 7, 2024 07:00:00",
+        "website": "https://www.deltaendurancellc.com/races/jump-off-joe-marathon"
+    },
+    "Rio_Grande_100": {
+        "title": "Rio Grande 100",
+        "distances": [
+            "Rio Grande 100"
+        ],
+        "location": "South Fork, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55142",
+        "date": "August 24, 2024 08:00:00",
+        "website": "https://www.tempestadventures.com/"
+    },
+    "Quad_Killer_Vertical_Kilometer": {
+        "title": "Quad Killer Vertical Kilometer",
+        "distances": [
+            "Virtual VK"
+        ],
+        "location": "Benton City, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55143",
+        "date": "October 7, 2024 10:00:00",
+        "website": "https://www.deltaendurancellc.com/races/quad-killer-vk"
+    },
+    "Take_The_(b)Ridge": {
+        "title": "Take The (b)Ridge",
+        "distances": [
+            "5.25 Miler"
+        ],
+        "location": "Tahoe City, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55144",
+        "date": "June 22, 2023 00:00:00",
+        "website": "https://bit.ly/3MtA8uB"
+    },
+    "Sovev_Emek": {
+        "title": "Sovev Emek",
+        "distances": [
+            "166K"
+        ],
+        "location": "Zorea, Israel",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55145",
+        "date": "October 14, 2021 00:00:00",
+        "website": "https://sovev-emek.org/"
+    },
+    "East_Fork_100_mi/100K/50K/15_mi": {
+        "title": "East Fork 100 mi/100K/50K/15 mi",
+        "distances": [
+            "100 Miler",
+            "100K",
+            "50K",
+            "15 Miler"
+        ],
+        "location": "Bethel, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55146",
+        "date": "August 24, 2024 07:00:00",
+        "website": "http://www.empowerultras.com"
+    },
+    "Teanaway_Country_100_&_Teeny-Way_50k": {
+        "title": "Teanaway Country 100 & Teeny-Way 50k",
+        "distances": [
+            "100 Miler",
+            "Teeny-Way 50k"
+        ],
+        "location": "Cle Elum, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55148",
+        "date": "September 21, 2024 05:00:00",
+        "website": "http://www.teanawaycountry100.com"
+    },
+    "Antelope_Canyon_X_Half_Marathon": {
+        "title": "Antelope Canyon X Half Marathon",
+        "distances": [
+            "1/2 Marathon"
+        ],
+        "location": "LeChee Rock, AZ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55150",
+        "date": "April 21, 2024 07:00:00",
+        "website": "https://www.facebook.com/groups/Moccasin-Running-Rainbow-Bridge-Trail-Ultra-421456151290592/"
+    },
+    "Sugg_Farm_Ultra": {
+        "title": "Sugg Farm Ultra",
+        "distances": [
+            "50 Miler",
+            "40 Miler",
+            "20 Miler",
+            "Pacer"
+        ],
+        "location": "Holly Springs, NC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55151",
+        "date": "September 14, 2024 07:05:00",
+        "website": "https://www.suggfarmultra.com"
+    },
+    "Cactus_Rose": {
+        "title": "Cactus Rose",
+        "distances": [
+            "100 Miler",
+            "50 Miler"
+        ],
+        "location": "Bandera, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55152",
+        "date": "October 28, 2023 00:00:00",
+        "website": "http://www.tejastrails.com/#/cactus-rose/"
+    },
+    "Portland_Trail_Series_-_Spring": {
+        "title": "Portland Trail Series - Spring",
+        "distances": [
+            "April 10",
+            "April 24",
+            "May 8",
+            "May 22",
+            "June 5",
+            "Race Series"
+        ],
+        "location": "Portland, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55153",
+        "date": "April 10, 2024 18:15:00",
+        "website": "https://gobeyondracing.com/races/portland-trail-series/"
+    },
+    "The_Great_North_Caper": {
+        "title": "The Great North Caper",
+        "distances": [
+            "15K",
+            "4.25M"
+        ],
+        "location": "Gold Beach, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55154",
+        "date": "April 13, 2024 09:00:00",
+        "website": "https://www.allterrainadventures.net"
+    },
+    "Secret_Beach_100K/50K": {
+        "title": "Secret Beach 100K/50K",
+        "distances": [
+            "100K",
+            "50K"
+        ],
+        "location": "Gold Beach, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55155",
+        "date": "May 11, 2024 06:00:00",
+        "website": "https://www.allterrainadventures.net/"
+    },
+    "Golden_Ring": {
+        "title": "Golden Ring",
+        "distances": [
+            "100K",
+            "80K",
+            "50K"
+        ],
+        "location": "Susdal, Russian Federation",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55156",
+        "date": "July 23, 2023 00:00:00",
+        "website": "http://www.goldenultra.ru/en"
+    },
+    "Restonica_Trail_by_UTMB": {
+        "title": "Restonica Trail by UTMB",
+        "distances": [
+            "110K"
+        ],
+        "location": "Corte, France",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55159",
+        "date": "July 5, 2023 00:00:00",
+        "website": "https://www.restonicatrail.fr/"
+    },
+    "Ultra_Trail_du_Fjord-du-Saguenay": {
+        "title": "Ultra Trail du Fjord-du-Saguenay",
+        "distances": [
+            "160K",
+            "100K",
+            "50K"
+        ],
+        "location": "L'Anse-Saint-Jean, QC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55160",
+        "date": "August 12, 2023 00:00:00",
+        "website": "https://www.ultratrailfjord.com/"
+    },
+    "Crush_Cary_12_Hour": {
+        "title": "Crush Cary 12 Hour",
+        "distances": [
+            "12hrs"
+        ],
+        "location": "Cary, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55161",
+        "date": "August 10, 2024 00:00:00",
+        "website": "https://www.facebook.com/events/s/final-tuneup-midwest-states-10/1384560512438808/?mibextid=RQdjqZ"
+    },
+    "Weekend_at_Burney": {
+        "title": "Weekend at Burney",
+        "distances": [
+            ""
+        ],
+        "location": "Burney, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=53120",
+        "date": "October 25, 2024 08:00:00",
+        "website": "https://jeniferrishel.wixsite.com/intermountain-endura"
+    },
+    "Rocky_Gap_25K,_50K,_Relay_Trail_Run": {
+        "title": "Rocky Gap 25K, 50K, Relay Trail Run",
+        "distances": [
+            "50K"
+        ],
+        "location": "Flintstone, MD",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55163",
+        "date": "October 14, 2023 00:00:00",
+        "website": "https://ex2adventures.com/trail-running/rocky-gap-25k-50k-relay-trail-run/"
+    },
+    "Canyonlands_Ultra": {
+        "title": "Canyonlands Ultra",
+        "distances": [
+            "100K",
+            "50 Mile",
+            "50K",
+            "Marathon",
+            "Half Marathon",
+            "15k"
+        ],
+        "location": "Moab, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55165",
+        "date": "October 26, 2024 06:00:00",
+        "website": "https://www.madmooseevents.com/canyonlands-ultra"
+    },
+    "Old_Dominion": {
+        "title": "Old Dominion",
+        "distances": [
+            "100 Miler"
+        ],
+        "location": "Fort Valley, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55166",
+        "date": "June 1, 2024 04:00:00",
+        "website": "http://www.olddominionrun.com/"
+    },
+    "Resolution_5K": {
+        "title": "Resolution 5K",
+        "distances": [
+            "5K"
+        ],
+        "location": "Mint Hill, NC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55167",
+        "date": "January 1, 2024 08:00:00",
+        "website": "http://www.omrultra.com"
+    },
+    "Tyoga_Running_Club": {
+        "title": "Tyoga Running Club",
+        "distances": [
+            ""
+        ],
+        "location": "Wellsboro, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55168",
+        "date": "December 31, 2024 07:00:00",
+        "website": "http://www.tyogarunningclub.com"
+    },
+    "Mantario_Marathon": {
+        "title": "Mantario Marathon",
+        "distances": [
+            "2-Day Stage Event"
+        ],
+        "location": "Whiteshell, MB",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55169",
+        "date": "September 28, 2024 10:00:00",
+        "website": "https://mantario-marathon.webnode.page"
+    },
+    "Team_Red_Shamrock_Trail_Challenge": {
+        "title": "Team Red Shamrock Trail Challenge",
+        "distances": [
+            "10 mile",
+            "5K"
+        ],
+        "location": "Coralville, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55170",
+        "date": "April 6, 2024 09:00:00",
+        "website": "https://www.facebook.com/TeamRedShamrockTrailChallenge"
+    },
+    "Echappee_Belle": {
+        "title": "Echappee Belle",
+        "distances": [
+            "85K",
+            "145K"
+        ],
+        "location": "Pleynet, France",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55172",
+        "date": "August 29, 2014 00:00:00",
+        "website": "https://www.lechappeebelledonne.com/en/"
+    },
+    "Iron_Will_Double_Slam": {
+        "title": "Iron Will Double Slam",
+        "distances": [
+            "Iron Will Double Slam 849"
+        ],
+        "location": "Enterprise, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55171",
+        "date": "September 7, 2024 06:00:00",
+        "website": "https://www.facebook.com"
+    },
+    "Capitol_Hill_Bois_Winter_Ultra_#1": {
+        "title": "Capitol Hill Bois Winter Ultra #1",
+        "distances": [
+            "50K"
+        ],
+        "location": "Seattle, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55173",
+        "date": "December 16, 2023 08:30:00",
+        "website": "https://www.facebook.com/events/1666094747200909/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_l"
+    },
+    "Frosty_Mountain": {
+        "title": "Frosty Mountain",
+        "distances": [
+            "50K"
+        ],
+        "location": "Manning Park, BC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55174",
+        "date": "September 16, 2023 00:00:00",
+        "website": "http://www.trailwhisperer.ca/FrostyMountain/"
+    },
+    "Black_River_Trail_Classic": {
+        "title": "Black River Trail Classic",
+        "distances": [
+            "85K",
+            "50K"
+        ],
+        "location": "Millston, WI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55175",
+        "date": "October 21, 2023 00:00:00",
+        "website": "https://nurun.co/brtc"
+    },
+    "Lake_Chabot": {
+        "title": "Lake Chabot",
+        "distances": [
+            "50K"
+        ],
+        "location": "Castro Valley, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55176",
+        "date": "November 4, 2023 00:00:00",
+        "website": "http://www.coastaltrailruns.com/lc_lake_chabot.html"
+    },
+    "Silver_Falls": {
+        "title": "Silver Falls",
+        "distances": [
+            "50K",
+            "Marathon",
+            "1/2 Marathon"
+        ],
+        "location": "Silverton, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55177",
+        "date": "November 5, 2023 00:00:00",
+        "website": "http://www.silverfallsmarathon.com"
+    },
+    "Ultra_Trail_Cape_Town": {
+        "title": "Ultra Trail Cape Town",
+        "distances": [
+            "100K",
+            "65K"
+        ],
+        "location": "Cape Town, WC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=49646",
+        "date": "November 11, 2021 00:00:00",
+        "website": "http://www.ultratrailcapetown.com"
+    },
+    "Austin_Rattler_Run": {
+        "title": "Austin Rattler Run",
+        "distances": [
+            "50K"
+        ],
+        "location": "Smithville, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55178",
+        "date": "November 4, 2023 00:00:00",
+        "website": "http://www.austinrattlermtb.com"
+    },
+    "Zumbro_Endurance_Run": {
+        "title": "Zumbro Endurance Run",
+        "distances": [
+            "100 Miler",
+            "50 Miler",
+            "34 Miler",
+            "17 Miler"
+        ],
+        "location": "Theilman, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55179",
+        "date": "April 11, 2024 08:00:00",
+        "website": "http://www.zumbroendurancerun.com/"
+    },
+    "Run_the_Ridge_5K": {
+        "title": "Run the Ridge 5K",
+        "distances": [
+            "5K",
+            "5k Virtual Runners",
+            "1-MILE TURTLE TROT"
+        ],
+        "location": "Fayetteville, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55180",
+        "date": "February 10, 2024 09:30:00",
+        "website": "https://sctlandtrust.org/run-the-ridge-5k/"
+    },
+    "Trail_Prom": {
+        "title": "Trail Prom",
+        "distances": [
+            "Team Trail Race"
+        ],
+        "location": "Fabius, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55181",
+        "date": "May 26, 2024 08:00:00",
+        "website": "https://www.reluctantrunnerracing.com/madness-elimination-trail"
+    },
+    "Swamp_Stomper_50k/25k": {
+        "title": "Swamp Stomper 50k/25k",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Millington, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55183",
+        "date": "January 13, 2024 07:30:00",
+        "website": "https://ultrasignup.com/register.aspx?did=120958"
+    },
+    "Pike_Lake_Ultramarathon": {
+        "title": "Pike Lake Ultramarathon",
+        "distances": [
+            "60K"
+        ],
+        "location": "Bainbridge, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55184",
+        "date": "October 28, 2023 00:00:00",
+        "website": "https://ultrasignup.com/events/search.aspx"
+    },
+    "Afton_Trail_Run": {
+        "title": "Afton Trail Run",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Afton, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55185",
+        "date": "July 6, 2024 06:30:00",
+        "website": "http://www.AftonTrailRun.com/"
+    },
+    "Rio_Del_Lago": {
+        "title": "Rio Del Lago",
+        "distances": [
+            "50K",
+            "100 Miler"
+        ],
+        "location": "Granite Bay, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55186",
+        "date": "November 4, 2023 00:00:00",
+        "website": "http://www.rio100mile.com"
+    },
+    "Brazos_Bend_100": {
+        "title": "Brazos Bend 100",
+        "distances": [
+            "100 Miler",
+            "100K",
+            "100 Mile Pacer",
+            "100K Pacer",
+            "Marathon",
+            "1/2 Marathon",
+            "10k"
+        ],
+        "location": "Needville, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=51369",
+        "date": "January 6, 2024 12:00:00",
+        "website": "http://www.trailracingovertexas.com/brazos-100/"
+    },
+    "Superior_Spring_Trail_Race": {
+        "title": "Superior Spring Trail Race",
+        "distances": [
+            "50K",
+            "25K",
+            "12.5K"
+        ],
+        "location": "Lutsen, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55187",
+        "date": "May 18, 2024 07:00:00",
+        "website": "http://www.superiorspringtrailrace.com"
+    },
+    "Superior_Fall_Trail_Race": {
+        "title": "Superior Fall Trail Race",
+        "distances": [
+            "100 Miler",
+            "50 Miler",
+            "Marathon"
+        ],
+        "location": "Lutsen, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55188",
+        "date": "September 6, 2024 08:00:00",
+        "website": "http://www.superiorfalltrailrace.com"
+    },
+    "Endless_Summer_Trail_Run_Series": {
+        "title": "Endless Summer Trail Run Series",
+        "distances": [
+            "Lebanon 10K",
+            "French 5K",
+            "Lebanon 7 Mile",
+            "Spring Lake 5 Mile"
+        ],
+        "location": "Multiple Locations, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55189",
+        "date": "May 22, 2024 18:30:00",
+        "website": "http://www.endlesssummertrailrunseries.com/"
+    },
+    "Egg_Nog_Slog_1_Mile_All_Star_Classic": {
+        "title": "Egg Nog Slog 1 Mile All Star Classic",
+        "distances": [
+            "Dairy Division",
+            "Non-Dairy Division"
+        ],
+        "location": "West Orange, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55191",
+        "date": "December 3, 2023 10:00:00",
+        "website": "https://www.sassquadtrailrunning.com/eggnog"
+    },
+    "TrailsRoc_Last_Runner_Standing": {
+        "title": "TrailsRoc Last Runner Standing",
+        "distances": [
+            "Time Loop"
+        ],
+        "location": "Rochester, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55193",
+        "date": "March 9, 2024 08:00:00",
+        "website": "https://trailsroc.org/last-runner-standing/"
+    },
+    "Bridgeport_Trail_Run": {
+        "title": "Bridgeport Trail Run",
+        "distances": [
+            "54K",
+            "36K",
+            "18K",
+            "10K"
+        ],
+        "location": "Bridgeport, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55195",
+        "date": "February 17, 2024 07:30:00",
+        "website": "https://blazetrails.com/bridgeport-trail-run/?utm_source=ultrasignup&utm_medium=web&utm_campaign=website-link"
+    },
+    "Gone_Fir_A_Run_50K": {
+        "title": "Gone Fir A Run 50K",
+        "distances": [
+            "Gone Fir A Run 50K"
+        ],
+        "location": "Spokane, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55196",
+        "date": "September 28, 2024 08:00:00",
+        "website": "https://www.facebook.com/gonefirarun50k"
+    },
+    "Machete_Trail_Madness_100k": {
+        "title": "Machete Trail Madness 100k",
+        "distances": [
+            "100k",
+            "50K",
+            "10K"
+        ],
+        "location": "Perris, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55197",
+        "date": "April 13, 2024 06:00:00",
+        "website": "https://www.machetemadness.com/"
+    },
+    "Machete_Trail_Madness_100_Miler": {
+        "title": "Machete Trail Madness 100 Miler",
+        "distances": [
+            "100 Miler",
+            "50 Miler",
+            "10 Miler"
+        ],
+        "location": "Perris, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55198",
+        "date": "November 1, 2024 18:30:00",
+        "website": "https://www.machetemadness.com/"
+    },
+    "Drummer_Hill_Trail_Races": {
+        "title": "Drummer Hill Trail Races",
+        "distances": [
+            "50K",
+            "37.5K",
+            "25K",
+            "12.5K"
+        ],
+        "location": "Keene, NH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55199",
+        "date": "June 8, 2024 08:00:00",
+        "website": "https://www.scoresrunningclub.com/drummer-hill-trail-race.html"
+    },
+    "3_Legged_Monster_Race": {
+        "title": "3 Legged Monster Race",
+        "distances": [
+            "55M 2 Per Relay",
+            "33M 2 Per Relay"
+        ],
+        "location": "Steelville, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55201",
+        "date": "August 17, 2024 07:30:00",
+        "website": "http://www.ozarktrail.com"
+    },
+    "Sri_Chinmoy_6_Day_Race_-_NY": {
+        "title": "Sri Chinmoy 6 Day Race - NY",
+        "distances": [
+            "6 Days"
+        ],
+        "location": "Queens, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55202",
+        "date": "April 18, 2022 00:00:00",
+        "website": "http://www.srichinmoyraces.us/"
+    },
+    "Hiihto_Relay_Race": {
+        "title": "Hiihto Relay Race",
+        "distances": [
+            "13.2 K Relay"
+        ],
+        "location": "Saint Paul, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55209",
+        "date": "January 1, 2024 12:00:00",
+        "website": "https://www.finnsisu.com/blogs/news/finn-sisu-hiihto-relay-race/"
+    },
+    "Frog_Hill_Half/10k/5k_and_Frog_Hill_Challenge": {
+        "title": "Frog Hill Half/10k/5k and Frog Hill Challenge",
+        "distances": [
+            ""
+        ],
+        "location": "Waynesville, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55212",
+        "date": "October 5, 2024 08:00:00",
+        "website": "http://www.froghillhalf.com"
+    },
+    "Corner_Canyon_5k_Series": {
+        "title": "Corner Canyon 5k Series",
+        "distances": [
+            ""
+        ],
+        "location": "Draper, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55213",
+        "date": "May 1, 2024 09:00:00",
+        "website": "https://www.happytrailsrace.com/happy-trails-5k-series"
+    },
+    "Walk_in_the_Park": {
+        "title": "Walk in the Park",
+        "distances": [
+            "50K",
+            "25K",
+            "14K"
+        ],
+        "location": "Kamloops, BC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55214",
+        "date": "September 8, 2024 07:00:00",
+        "website": "https://www.solepursuitrunning.ca/walk-in-the-park"
+    },
+    "OSS/CIA_50_Mile_Night_Run": {
+        "title": "OSS/CIA 50 Mile Night Run",
+        "distances": [
+            "50 Miler",
+            "25M"
+        ],
+        "location": "Triangle, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55215",
+        "date": "June 8, 2024 23:55:00",
+        "website": "https://athletic-equation.com/endurance-events/the-ultrail-series/osscia-50-mile-night-run-2/"
+    },
+    "12_Hour_-_Adventure_Trail_Run": {
+        "title": "12 Hour - Adventure Trail Run",
+        "distances": [
+            "30KM",
+            "12hrs",
+            "2 Person Relay"
+        ],
+        "location": "Triangle, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55216",
+        "date": "September 14, 2024 06:00:00",
+        "website": "https://athletic-equation.com/endurance-events/the-ultrail-series/12-hr-adventure-trail-run/"
+    },
+    "High_Lea_6/12/24_hour": {
+        "title": "High Lea 6/12/24 hour",
+        "distances": [
+            "100 Mile",
+            "24 Hour",
+            "12 Hour",
+            "6 Hour"
+        ],
+        "location": "Richfield, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54856",
+        "date": "May 18, 2024 06:00:00",
+        "website": "http://www.fastgirlsrunningcompany.com"
+    },
+    "NEB_Pink_Panther_5K": {
+        "title": "NEB Pink Panther 5K",
+        "distances": [
+            "5K"
+        ],
+        "location": "Rome, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55217",
+        "date": "April 6, 2024 09:30:00",
+        "website": "https://www.facebook.com/pinkpanther5k"
+    },
+    "Sage_Burner_Trail_Race": {
+        "title": "Sage Burner Trail Race",
+        "distances": [
+            "50K",
+            "28K",
+            "15K"
+        ],
+        "location": "Gunnison, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55218",
+        "date": "October 12, 2024 08:00:00",
+        "website": "https://www.oneloveendurance.com/sageburnertrailrace"
+    },
+    "Rockin_Choccolocco_50K_-_1/2_Marathon_-_10K": {
+        "title": "Rockin Choccolocco 50K - 1/2 Marathon - 10K",
+        "distances": [
+            "50K",
+            "1/2 Marathon",
+            "10K"
+        ],
+        "location": "Heflin , AL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54943",
+        "date": "April 27, 2024 08:00:00",
+        "website": "http://www.pinhotitrailseries.com"
+    },
+    "Green_K_Run": {
+        "title": "Green K Run",
+        "distances": [
+            "5Miler"
+        ],
+        "location": "Girdwood, AK",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55221",
+        "date": "December 17, 2023 05:00:00",
+        "website": "http://automationtestrefund.com"
+    },
+    "Truth_or_Consequences_Ultra": {
+        "title": "Truth or Consequences Ultra",
+        "distances": [
+            "50K",
+            "Half Marathon",
+            "10K"
+        ],
+        "location": "Truth or Consequences, NM",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55222",
+        "date": "October 26, 2024 07:00:00",
+        "website": "http://runtorc.com"
+    },
+    "Tava_Canyons_Trail_Runs": {
+        "title": "Tava Canyons Trail Runs",
+        "distances": [
+            "26 Miler",
+            "13 Miler"
+        ],
+        "location": "Colorado Springs, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55223",
+        "date": "May 11, 2024 08:00:00",
+        "website": "https://www.revenantrunning.com/tava-canons-ultra"
+    },
+    "The_Osprey_Trail_Run": {
+        "title": "The Osprey Trail Run",
+        "distances": [
+            "25K",
+            "8K",
+            "8k Walk"
+        ],
+        "location": "Ft. Pierce, FL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55226",
+        "date": "September 21, 2024 07:00:00",
+        "website": "https://runtheosprey.com"
+    },
+    "The_Gemini_100": {
+        "title": "The Gemini 100",
+        "distances": [
+            "100 Miler",
+            "Pacer Registration",
+            "50 Miler",
+            "36hrs",
+            "24hrs"
+        ],
+        "location": "Smyrna, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55010",
+        "date": "September 21, 2024 09:00:00",
+        "website": "https://www.facebook.com/jamz524.jmgmail/"
+    },
+    "The_Great_North_Walk": {
+        "title": "The Great North Walk",
+        "distances": [
+            "100 Miler",
+            "100K",
+            "50 Miler",
+            "50K"
+        ],
+        "location": "Newcastle, Australia",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55229",
+        "date": "October 29, 2023 00:00:00",
+        "website": "http://www.terrigaltrotters.com.au/GNW100s_Home_Page.htm"
+    },
+    "Coyote_Trail_Run": {
+        "title": "Coyote Trail Run",
+        "distances": [
+            ""
+        ],
+        "location": "Cleburne, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55230",
+        "date": "June 8, 2024 06:00:00",
+        "website": "https://blazetrails.com"
+    },
+    "Possums_Revenge": {
+        "title": "Possum's Revenge",
+        "distances": [
+            "69 Miler",
+            "52 Miler",
+            "56K",
+            "17 Miler",
+            "8 Miler",
+            "4 Miler"
+        ],
+        "location": "Graford, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55231",
+        "date": "May 18, 2024 06:00:00",
+        "website": "https://blazetrails.com"
+    },
+    "Wingfoot_Lake_Run": {
+        "title": "Wingfoot Lake Run",
+        "distances": [
+            "4 hour run"
+        ],
+        "location": "Mogadore, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55234",
+        "date": "December 17, 2023 10:00:00",
+        "website": "https://fastgirlsrunningcompany.com/"
+    },
+    "Marquette_Trail_50": {
+        "title": "Marquette Trail 50",
+        "distances": [
+            "50 Miler",
+            "50K",
+            "Adult 5K",
+            "Kids 5K",
+            "1 Miler"
+        ],
+        "location": "Marquette, MI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55235",
+        "date": "August 16, 2024 05:30:00",
+        "website": "http://www.marquettetrail50.com/"
+    },
+    "USU_Demo_Event": {
+        "title": "USU Demo Event",
+        "distances": [
+            ""
+        ],
+        "location": "Denver, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55236",
+        "date": "February 15, 2024 07:00:00",
+        "website": "https://ultrasignup.com"
+    },
+    "West_Virginia_Trilogy": {
+        "title": "West Virginia Trilogy",
+        "distances": [
+            "94 Miler",
+            "50 Miler",
+            "50K",
+            "1/2 Marathon"
+        ],
+        "location": "Circleville, WV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55237",
+        "date": "September 13, 2023 00:00:00",
+        "website": "http://www.wvmtr.org/races/"
+    },
+    "TPK_Adventurous_AF": {
+        "title": "TPK Adventurous AF",
+        "distances": [
+            "6 Hour",
+            "5K"
+        ],
+        "location": "Sparta, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55241",
+        "date": "April 13, 2024 09:00:00",
+        "website": "https://twopunkkids.com/adventurous-af"
+    },
+    "Damon_S._Young_Memorial_Race": {
+        "title": "Damon S. Young Memorial Race",
+        "distances": [
+            "1/2 Marathon",
+            "10K Run",
+            "5K Run/Walk",
+            "2 Mile Fun Walk"
+        ],
+        "location": "Tunkhannock, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55242",
+        "date": "June 15, 2024 09:30:00",
+        "website": "https://www.facebook.com/damon.race"
+    },
+    "Pinhoti": {
+        "title": "Pinhoti",
+        "distances": [
+            "Pinhoti 100"
+        ],
+        "location": "Sylacauga, AL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55243",
+        "date": "November 2, 2024 06:00:00",
+        "website": "http://www.pinhotitrailseries.com"
+    },
+    "Crown_of_the_Crest": {
+        "title": "Crown of the Crest",
+        "distances": [
+            "Double Crown",
+            "100 Mile",
+            "26.2 Mile",
+            "Crown Half Marathon",
+            "Lucky 13"
+        ],
+        "location": "Fremont, NE",
+        "register": "https://ultrasignup.com/register.aspx?dtid=53595",
+        "date": "May 25, 2024 07:00:00",
+        "website": "https://goatz.org/"
+    },
+    "Weiser_River_50k_Ultra_&_Relay": {
+        "title": "Weiser River 50k Ultra & Relay",
+        "distances": [
+            "50K",
+            "50k Relay",
+            "Adaptive Athletes"
+        ],
+        "location": "Council, ID",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55244",
+        "date": "April 27, 2024 08:00:00",
+        "website": "https://www.pulserunning.com/weiser-river-50k"
+    },
+    "La_Nuit": {
+        "title": "La Nuit",
+        "distances": [
+            "9hrs",
+            "9 Hour Relay",
+            "6hrs",
+            "3hrs",
+            "10K",
+            "5K",
+            "1 Miler"
+        ],
+        "location": "Dallas, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55245",
+        "date": "July 26, 2024 19:30:00",
+        "website": "http://beta.equipdisciples.org/run4bibles/night"
+    },
+    "Red_Rocks_of_Sedona": {
+        "title": "Red Rocks of Sedona",
+        "distances": [
+            "Marathon",
+            "20 Miler",
+            "10 Miler"
+        ],
+        "location": "Sedona, AZ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55246",
+        "date": "October 19, 2024 07:45:00",
+        "website": "http://www.trailrunningescapes.com/rrs.html"
+    },
+    "Dawn_to_Dusk_Endurance_Run": {
+        "title": "Dawn to Dusk Endurance Run",
+        "distances": [
+            "24hrs",
+            "15.5hrs",
+            "Dusk to Dawn",
+            "8hrs",
+            "6hrs"
+        ],
+        "location": "Valders, WI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55249",
+        "date": "June 22, 2024 05:07:00",
+        "website": "http://www.DawntoDuskEnduranceRun.com/"
+    },
+    "Chief_Wetona_Challenges": {
+        "title": "Chief Wetona Challenges",
+        "distances": [
+            "7 Miler",
+            "4 Miler"
+        ],
+        "location": "Ulster, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55251",
+        "date": "May 19, 2024 10:30:00",
+        "website": "https://www.facebook.com/groups/570121143067993"
+    },
+    "Popple_Shoot_Trail_Races": {
+        "title": "Popple Shoot Trail Races",
+        "distances": [
+            "87K",
+            "62K",
+            "25K",
+            "10K"
+        ],
+        "location": "Minong, WI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55252",
+        "date": "May 4, 2024 06:00:00",
+        "website": "https://www.bigslorunning.com/"
+    },
+    "Ugly_Sweater_Run": {
+        "title": "Ugly Sweater Run",
+        "distances": [
+            "10K",
+            "5K"
+        ],
+        "location": "Del Rio, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55253",
+        "date": "December 23, 2023 08:00:00",
+        "website": "https://www.facebook.com/bruniruni"
+    },
+    "The_Endless_Mile": {
+        "title": "The Endless Mile",
+        "distances": [
+            "72hrs",
+            "48hrs",
+            "24hrs",
+            "12hrs",
+            "6hrs",
+            "Endless Mile 50K",
+            "Endless Mile Marathon"
+        ],
+        "location": "Alabaster, AL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55254",
+        "date": "October 24, 2024 09:00:00",
+        "website": "http://www.southeasterntrailruns.com"
+    },
+    "Mamba_100": {
+        "title": "Mamba 100",
+        "distances": [
+            "100 Miler",
+            "100K",
+            "50K",
+            "25K"
+        ],
+        "location": "Memphis, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55255",
+        "date": "November 8, 2024 07:00:00",
+        "website": "http://www.mambatrailrunners.com"
+    },
+    "Rim_to_River_100": {
+        "title": "Rim to River 100",
+        "distances": [
+            "100 Miler",
+            "Pacer Registration"
+        ],
+        "location": "New River Gorge, WV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55256",
+        "date": "October 26, 2024 06:00:00",
+        "website": "http://www.rimtoriverendurance.com"
+    },
+    "Quad_Rock_50": {
+        "title": "Quad Rock 50",
+        "distances": [
+            "50 Miler",
+            "25 Miler"
+        ],
+        "location": "Fort Collins, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55257",
+        "date": "May 11, 2024 05:30:00",
+        "website": "http://gnarrunners.com/quad-rock-50/"
+    },
+    "Shinetsu_Five_Mountains_Trail": {
+        "title": "Shinetsu Five Mountains Trail",
+        "distances": [
+            "100 Miler",
+            "110K"
+        ],
+        "location": "Myoko, Japan",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55258",
+        "date": "September 16, 2023 00:00:00",
+        "website": "http://www.sfmt100.com/en/"
+    },
+    "Never_Summer_100km": {
+        "title": "Never Summer 100km",
+        "distances": [
+            "The Double",
+            "100K",
+            "60K"
+        ],
+        "location": "Gould, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55259",
+        "date": "July 27, 2024 05:30:00",
+        "website": "http://gnarrunners.com/never-summer-100k/"
+    },
+    "Bigfoot_Snowshoe_Festival": {
+        "title": "Bigfoot Snowshoe Festival",
+        "distances": [
+            "50K",
+            "Marathon",
+            "25K",
+            "15K",
+            "10K",
+            "5K"
+        ],
+        "location": "Midway, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55260",
+        "date": "January 25, 2025 08:00:00",
+        "website": "http://www.squawpeak50.com/"
+    },
+    "Bell_Ringer_5_Hour": {
+        "title": "Bell Ringer 5 Hour",
+        "distances": [
+            "5hrs"
+        ],
+        "location": "Morden, MB",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55261",
+        "date": "September 21, 2024 10:00:00",
+        "website": "https://www.matr.ca/"
+    },
+    "Cmon_Armageddon": {
+        "title": "C'mon Armageddon",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "West Milford, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55262",
+        "date": "October 13, 2024 07:00:00",
+        "website": "https://therunningkind.net/"
+    },
+    "Chicago_Lakefront:_Fall_Version": {
+        "title": "Chicago Lakefront: Fall Version",
+        "distances": [
+            "50 Miler",
+            "50K"
+        ],
+        "location": "Chicago, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55263",
+        "date": "October 28, 2023 00:00:00",
+        "website": "http://www.ChicagoUltra.org/"
+    },
+    "Leavenworth_Trail_Fest": {
+        "title": "Leavenworth Trail Fest",
+        "distances": [
+            ""
+        ],
+        "location": "Leavenworth, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54310",
+        "date": "May 25, 2024 07:00:00",
+        "website": "https://leavenworthtrailfestival.com/mountain-running/"
+    },
+    "Singletrack_Stampede": {
+        "title": "Singletrack Stampede",
+        "distances": [
+            "22K",
+            "10K"
+        ],
+        "location": "Calabasas, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55266",
+        "date": "March 2, 2024 07:30:00",
+        "website": "https://www.socaltrail.events/singletrack-stampede"
+    },
+    "Mingo_Madness": {
+        "title": "Mingo Madness",
+        "distances": [
+            "15K"
+        ],
+        "location": "Akron, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55267",
+        "date": "June 9, 2024 07:00:00",
+        "website": "https://www.fastgirlsrunningcompany.com"
+    },
+    "Jed_Smith": {
+        "title": "Jed Smith",
+        "distances": [
+            "50 Miler",
+            "50K",
+            "Marathon",
+            "30K",
+            "Half Marathon"
+        ],
+        "location": "Sacramento, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55268",
+        "date": "February 3, 2024 07:30:00",
+        "website": "https://www.buffalochips.com/jedsmith"
+    },
+    "Akron_Trail_Marathon": {
+        "title": "Akron Trail Marathon",
+        "distances": [
+            "Marathon",
+            "Half Marathon",
+            "10 K"
+        ],
+        "location": "Akron, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55269",
+        "date": "July 14, 2024 07:00:00",
+        "website": "http://www.fastgirlsrunningcompany.com"
+    },
+    "Crowell_Hilaka_Trail_Run": {
+        "title": "Crowell Hilaka Trail Run",
+        "distances": [
+            "50K",
+            "1/2 Marathon",
+            "10K"
+        ],
+        "location": "Richfield, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55270",
+        "date": "September 15, 2024 08:00:00",
+        "website": "https://www.fastgirlsrunningcompany.com"
+    },
+    "Joy_Run_50": {
+        "title": "Joy Run 50",
+        "distances": [
+            "50k",
+            "50k Relay"
+        ],
+        "location": "St. John's, NL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55271",
+        "date": "August 10, 2024 07:30:00",
+        "website": "https://joyrun.ca/"
+    },
+    "Howl_at_the_Moon_8-hour_Ultra_Run_&_Walk": {
+        "title": "Howl at the Moon 8-hour Ultra Run & Walk",
+        "distances": [
+            "8hrs"
+        ],
+        "location": "Danville, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55272",
+        "date": "August 12, 2023 00:00:00",
+        "website": "http://www.kennekuk.com/events.htm"
+    },
+    "Shelli_Huether_Veterans_Day_Honor_Run": {
+        "title": "Shelli Huether Veterans Day Honor Run",
+        "distances": [
+            "8hrs"
+        ],
+        "location": "Brentwood, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55273",
+        "date": "November 11, 2023 00:00:00",
+        "website": "https://www.shellihuetherhonorrun.com/"
+    },
+    "Stone_Mill_50M": {
+        "title": "Stone Mill 50M",
+        "distances": [
+            "50 Miler"
+        ],
+        "location": "Montgomery County, MD",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55274",
+        "date": "November 11, 2023 00:00:00",
+        "website": "http://stone-mill-50-mile.org/"
+    },
+    "KTA_Trail_Challenge": {
+        "title": "KTA Trail Challenge",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Drumore, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=51280",
+        "date": "September 10, 2022 00:00:00",
+        "website": "https://www.kta-hike.org/kta-trail-challenge.html"
+    },
+    "Lynchburg_Ultra_Series": {
+        "title": "Lynchburg Ultra Series",
+        "distances": [
+            "Lynchburg Series",
+            "Blue Ridge Series"
+        ],
+        "location": "Lynchburg, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55275",
+        "date": "February 17, 2024 06:30:00",
+        "website": "https://enduranceeventsva.com/lynchburg-ultra-series/"
+    },
+    "Run_For_Hunt": {
+        "title": "Run For Hunt",
+        "distances": [
+            "24hr"
+        ],
+        "location": ", ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55276",
+        "date": "December 9, 2023 08:00:00",
+        "website": "https://www.facebook.com/groups/300239552839873"
+    },
+    "Lost_Forester_Runs_of_Pine_Valley": {
+        "title": "Lost Forester Runs of Pine Valley",
+        "distances": [
+            "12.5M",
+            "15K",
+            "15K Virtual",
+            "5.5K",
+            "Virtual 5.5K"
+        ],
+        "location": "Cloquet, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55277",
+        "date": "August 24, 2024 08:30:00",
+        "website": "http://www.blue-house.org/lost-forester.html"
+    },
+    "Equinox": {
+        "title": "Equinox",
+        "distances": [
+            "Marathon"
+        ],
+        "location": "Fairbanks, AK",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55278",
+        "date": "September 9, 2023 00:00:00",
+        "website": "http://www.equinoxmarathon.org/"
+    },
+    "Fuzzy_Fandango": {
+        "title": "Fuzzy Fandango",
+        "distances": [
+            "50K"
+        ],
+        "location": "Perrysville, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55280",
+        "date": "November 11, 2023 00:00:00",
+        "website": "http://nuhop.org/fuzzy"
+    },
+    "Miola_Madness_-_Spring_Into_Daylight_Savings": {
+        "title": "Miola Madness - Spring Into Daylight Savings",
+        "distances": [
+            "12hrs",
+            "9hrs",
+            "6hrs",
+            "3hrs",
+            "10K"
+        ],
+        "location": "Paola, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55282",
+        "date": "March 9, 2024 07:00:00",
+        "website": "https://www.mwerc.com"
+    },
+    "Charlie_Horse_Trail_Half-Marathon_&_Dirty_Pony_5K": {
+        "title": "Charlie Horse Trail Half-Marathon & Dirty Pony 5K",
+        "distances": [
+            "1/2 Marathon",
+            "Dirty Pony 5K"
+        ],
+        "location": "Mohnton, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55283",
+        "date": "May 26, 2024 09:00:00",
+        "website": "https://pagodapacers.com/Races-Results/Races/Charlie-Horse-Half-Marathon.aspx"
+    },
+    "Sierra_Vista_Trail_Runs": {
+        "title": "Sierra Vista Trail Runs",
+        "distances": [
+            "50k",
+            "1/2 Marathon",
+            "10K",
+            "5K"
+        ],
+        "location": "Las Cruces, NM",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55285",
+        "date": "March 2, 2024 07:00:00",
+        "website": "http://sierravistatrailrun.wordpress.com/"
+    },
+    "The_Back_40_Trail_Run_&_Ride": {
+        "title": "The Back 40 Trail Run & Ride",
+        "distances": [
+            "40 Miler",
+            "20 Miler",
+            "1/2 Marathon",
+            "5 Miler"
+        ],
+        "location": "Bella Vista, AR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55287",
+        "date": "November 11, 2023 00:00:00",
+        "website": "http://www.back40trailrace.com/"
+    },
+    "Mines_of_Spain_100": {
+        "title": "Mines of Spain 100",
+        "distances": [
+            "100 Miler",
+            "100K"
+        ],
+        "location": "Dubuque, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55288",
+        "date": "October 18, 2024 08:00:00",
+        "website": "https://minesofspain100.com/"
+    },
+    "Mt_Yonah_Vertical_Race": {
+        "title": "Mt Yonah Vertical Race",
+        "distances": [
+            "10k Feet",
+            "5K Feet"
+        ],
+        "location": "Cleveland, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55286",
+        "date": "February 17, 2024 09:00:00",
+        "website": "https://summitproracing.com/yonah"
+    },
+    "Lake_Hodges_Trail_Fest": {
+        "title": "Lake Hodges Trail Fest",
+        "distances": [
+            "50K"
+        ],
+        "location": "San Diego, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55289",
+        "date": "October 19, 2023 00:00:00",
+        "website": "https://www.elevationculture.com/lakehodgestrailfest"
+    },
+    "Sunderbruch_B&B_Trail_Races": {
+        "title": "Sunderbruch B&B Trail Races",
+        "distances": [
+            "10K",
+            "5K"
+        ],
+        "location": "Davenport, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55290",
+        "date": "May 18, 2024 09:00:00",
+        "website": "https://www.facebook.com/sunderbruchBB"
+    },
+    "The_Ks_of_Convenience": {
+        "title": "The K's of Convenience",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Davenport, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55291",
+        "date": "March 9, 2024 08:00:00",
+        "website": "https://www.facebook.com/groups/231958396991791"
+    },
+    "Schuetzen_NEIN!_Hour_Endurance_Run": {
+        "title": "Schuetzen NEIN! Hour Endurance Run",
+        "distances": [
+            "9hrs",
+            "9hr Relay"
+        ],
+        "location": "Davenport, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55292",
+        "date": "June 15, 2024 08:00:00",
+        "website": "https://suntrailrunning.com/"
+    },
+    "Kanawha_Trace_Trail_Run": {
+        "title": "Kanawha Trace Trail Run",
+        "distances": [
+            "50K",
+            "25K",
+            "10K"
+        ],
+        "location": "Ona, WV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55293",
+        "date": "April 6, 2024 07:00:00",
+        "website": "https://wvmtr.org/races/kanawha-trace/"
+    },
+    "SISU_24_Hour_Ultra": {
+        "title": "SISU 24 Hour Ultra",
+        "distances": [
+            "100 Miler",
+            "SISU Challenge",
+            "24hr",
+            "Monrovia Night Dash 30k",
+            "MT Bliss 21K"
+        ],
+        "location": "Monrovia, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=50857",
+        "date": "July 6, 2024 21:00:00",
+        "website": "https://sisu-endurance.com/pages/sisu-24-ultra-ca"
+    },
+    "Salt_Creek_24": {
+        "title": "Salt Creek 24",
+        "distances": [
+            "24hrs"
+        ],
+        "location": "Port Angeles, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55294",
+        "date": "October 28, 2023 00:00:00",
+        "website": "https://peninsulaadventuresports.com/events/salt-creek-24/"
+    },
+    "Fire_on_the_Mountain_50K_Trail_Race": {
+        "title": "Fire on the Mountain 50K Trail Race",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Little Orleans, MD",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55295",
+        "date": "November 3, 2024 07:00:00",
+        "website": "http://2lowerunco.com"
+    },
+    "Miola_Madness_-_Hot_Summer_Nights": {
+        "title": "Miola Madness - Hot Summer Nights",
+        "distances": [
+            "12hrs",
+            "10K",
+            "9hrs",
+            "6hrs",
+            "3hrs"
+        ],
+        "location": "Paola, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55296",
+        "date": "June 29, 2024 19:00:00",
+        "website": "https://www.facebook.com/midwestenduranceraceco"
+    },
+    "Lakeland": {
+        "title": "Lakeland",
+        "distances": [
+            "50 Miler",
+            "100 Miler"
+        ],
+        "location": "Coniston, Great Britain",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55297",
+        "date": "July 28, 2023 00:00:00",
+        "website": "http://www.lakeland100.com/"
+    },
+    "Miola_Madness_-_Fall_Edition": {
+        "title": "Miola Madness - Fall Edition",
+        "distances": [
+            "12hrs",
+            "10K",
+            "9hrs",
+            "6hrs",
+            "3hrs"
+        ],
+        "location": "Paola, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55300",
+        "date": "November 9, 2024 07:00:00",
+        "website": "https://www.facebook.com/midwestenduranceraceco"
+    },
+    "In_Yan_Teopa_5_&_10_miler": {
+        "title": "In Yan Teopa 5 & 10 miler",
+        "distances": [
+            "10 Miler",
+            "5 Miler"
+        ],
+        "location": "Frontenac, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55302",
+        "date": "September 21, 2024 09:00:00",
+        "website": "https://www.stcroixrunningcompany.com/in-yan-teopa"
+    },
+    "Texas_Switchback": {
+        "title": "Texas Switchback",
+        "distances": [
+            "Marathon",
+            "Half Marathon",
+            "10k",
+            "5k"
+        ],
+        "location": "Johnson City, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55301",
+        "date": "May 11, 2024 09:00:00",
+        "website": "https://trailroots.com/texas-switchback"
+    },
+    "Thriller_Lake": {
+        "title": "Thriller Lake",
+        "distances": [
+            "12 Hour",
+            "6 Hour",
+            "3 Hour",
+            "Trick or Treat Run"
+        ],
+        "location": "Dacula, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55303",
+        "date": "October 26, 2024 10:00:00",
+        "website": "https://summitproracing.com/thrillerlake"
+    },
+    "Rebecca_Mountain_50_Mile": {
+        "title": "Rebecca Mountain 50 Mile",
+        "distances": [
+            "50 Miler"
+        ],
+        "location": "Sylacauga, AL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55304",
+        "date": "September 7, 2024 07:30:00",
+        "website": "http://www.pinhotitrailseries.com/rebecca-mountain-50-mile--50k.html"
+    },
+    "Barn_Creek_Backyard_Ultra": {
+        "title": "Barn Creek Backyard Ultra",
+        "distances": [
+            "Last Man Standing"
+        ],
+        "location": "Jamestown, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55305",
+        "date": "November 8, 2024 07:00:00",
+        "website": "https://www.facebook.com/barncreekbackyardultra"
+    },
+    "Spring_Fever_5K_|_5M_|_8H": {
+        "title": "Spring Fever 5K | 5M | 8H",
+        "distances": [
+            "5M",
+            "8HR",
+            "5K"
+        ],
+        "location": "Hingham, MA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55306",
+        "date": "April 20, 2024 08:10:00",
+        "website": "https://teamawesomefit.com/springfever.html"
+    },
+    "McCoy_Flats_Trail_Events": {
+        "title": "McCoy Flats Trail Events",
+        "distances": [
+            "15K",
+            "10K",
+            "5K"
+        ],
+        "location": "Vernal, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55307",
+        "date": "April 20, 2024 07:20:00",
+        "website": "https://sites.google.com/madmanraces.com/madmanraces/home"
+    },
+    "Siskiyou_Out_Back_Running_Festival": {
+        "title": "Siskiyou Out Back Running Festival",
+        "distances": [
+            "100K",
+            "50 Miler",
+            "50K",
+            "15K",
+            "8K"
+        ],
+        "location": "Ashland, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55309",
+        "date": "July 13, 2024 05:00:00",
+        "website": "http://www.siskiyououtback.com/"
+    },
+    "Hell_Hole_Hundred": {
+        "title": "Hell Hole Hundred",
+        "distances": [
+            "100M",
+            "50 Miler",
+            "50K Night Run",
+            "50K",
+            "16.3 miler",
+            "10k"
+        ],
+        "location": "Bethera, SC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=52956",
+        "date": "June 2, 2024 07:00:00",
+        "website": "http://www.palmettoultras.com"
+    },
+    "Ute_100_Mile_&_50_Mile": {
+        "title": "Ute 100 Mile & 50 Mile",
+        "distances": [
+            "100 Miler",
+            "50 Miler",
+            "50K"
+        ],
+        "location": "La Sal, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55310",
+        "date": "August 24, 2024 05:30:00",
+        "website": "https://www.revenantrunning.com/"
+    },
+    "Red_Rock_Canyon_Ultra": {
+        "title": "Red Rock Canyon Ultra",
+        "distances": [
+            "100K",
+            "50K",
+            "17K"
+        ],
+        "location": "Blue Diamond, NV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55311",
+        "date": "November 9, 2024 07:00:00",
+        "website": "https://www.desertdash.com/red-rock-canyon-100k"
+    },
+    "Sri_Chinmoy_Canberra_Centenary_Trail_Run": {
+        "title": "Sri Chinmoy Canberra Centenary Trail Run",
+        "distances": [
+            "100K"
+        ],
+        "location": "Canberra, Australia",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55312",
+        "date": "September 14, 2019 00:00:00",
+        "website": "https://au.srichinmoyraces.org/canberratrailultra"
+    },
+    "Race_The_Cog": {
+        "title": "Race The Cog",
+        "distances": [
+            ""
+        ],
+        "location": "Bretton Woods, NH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54831",
+        "date": "August 4, 2024 09:00:00",
+        "website": "https://www.aravaiparunning.com/white-mountain-endurance/"
+    },
+    "Born_to_Adapt_New_Zealand": {
+        "title": "Born to Adapt New Zealand",
+        "distances": [
+            "Running Clinic",
+            "Trail Challenge"
+        ],
+        "location": "Rotorua, New Zealand",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55316",
+        "date": "February 9, 2024 10:00:00",
+        "website": "https://www.borntoadapt.org/"
+    },
+    "Little_Loco": {
+        "title": "Little Loco",
+        "distances": [
+            "LAST RUNNER STANDING",
+            "12 Hour Event",
+            "6 Hour Event",
+            "3 Hour Event",
+            "1 Hour Event"
+        ],
+        "location": "Forest Ranch, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55317",
+        "date": "May 4, 2024 09:00:00",
+        "website": "https://www.Loco.Run"
+    },
+    "Mt_Si_Hill_Climb": {
+        "title": "Mt Si Hill Climb",
+        "distances": [
+            "17k Elite",
+            "17k Sport",
+            "17k Masters 45+",
+            "Mt Si VK"
+        ],
+        "location": "North Bend, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54872",
+        "date": "September 7, 2024 07:00:00",
+        "website": "https://mountainrunningraces.com/mt-si-vert-fest/"
+    },
+    "Trails_4_Tails": {
+        "title": "Trails 4 Tails",
+        "distances": [
+            "40 Mile Ultra",
+            "40 Mile Relay",
+            "25K"
+        ],
+        "location": "Hanover, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55318",
+        "date": "September 21, 2024 07:00:00",
+        "website": "http://www.trails4tails.com/"
+    },
+    "TPK_Winter_Camp": {
+        "title": "TPK Winter Camp",
+        "distances": [
+            "TPK Winter Camp"
+        ],
+        "location": "Stanhope, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55319",
+        "date": "January 12, 2024 21:00:00",
+        "website": "http://www.twopunkkids.com"
+    },
+    "Condor_25K_Trail_Run": {
+        "title": "Condor 25K Trail Run",
+        "distances": [
+            "25K"
+        ],
+        "location": "Corvallis, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55320",
+        "date": "October 6, 2024 09:00:00",
+        "website": "http://condor25k.org/"
+    },
+    "Palisades_Punisher_or_Promenade": {
+        "title": "Palisades Punisher or Promenade",
+        "distances": [
+            "8HR Punisher",
+            "4.8M Promenade",
+            "Punisher Mini"
+        ],
+        "location": "Mt. Vernon, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55321",
+        "date": "June 8, 2024 08:00:00",
+        "website": "https://sites.google.com/view/palisadespunisherorpromenade/home"
+    },
+    "Wild_Duluth_Races": {
+        "title": "Wild Duluth Races",
+        "distances": [
+            "100 K",
+            "50K",
+            "13.1M",
+            "10K"
+        ],
+        "location": "Duluth, MN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55322",
+        "date": "October 19, 2024 06:00:00",
+        "website": "https://www.wildduluthraces.com"
+    },
+    "The_Bootlegger_100_Mile_Trail_Race": {
+        "title": "The Bootlegger 100 Mile Trail Race",
+        "distances": [
+            "100 Mile",
+            "50 Mile",
+            "10 Mile 8AM/SUN",
+            "10 Mile 8PM/SAT"
+        ],
+        "location": "Flovilla, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=52317",
+        "date": "April 6, 2024 20:00:00",
+        "website": "http://revolutionrunning.net"
+    },
+    "Mt._Ashland_Hill_Climb": {
+        "title": "Mt. Ashland Hill Climb",
+        "distances": [
+            "Mountain Bike",
+            "Hike",
+            "13.3 Miler"
+        ],
+        "location": "Ashland, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55323",
+        "date": "June 8, 2024 07:30:00",
+        "website": "https://www.ashlanduphillraces.com"
+    },
+    "The_Great_Glen_Ultra": {
+        "title": "The Great Glen Ultra",
+        "distances": [
+            "42 Miler",
+            "71 Miler"
+        ],
+        "location": "Fort William, Great Britain",
+        "register": "https://ultrasignup.com/register.aspx?dtid=53778",
+        "date": "July 1, 2023 00:00:00",
+        "website": "https://runyarocket.com/great-glen/"
+    },
+    "Staunton_Rocks!_Marathon_&_Half_Marathon": {
+        "title": "Staunton Rocks! Marathon & Half Marathon",
+        "distances": [
+            "Marathon",
+            "Half Marathon"
+        ],
+        "location": "Pine, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55324",
+        "date": "August 24, 2024 07:00:00",
+        "website": "https://gnarrunners.com/staunton-rocks/"
+    },
+    "Trail_Running_Film_Festival_-_Suwanee,_GA": {
+        "title": "Trail Running Film Festival - Suwanee, GA",
+        "distances": [
+            "Film Festival"
+        ],
+        "location": "Suwanee, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55325",
+        "date": "March 24, 2024 17:00:00",
+        "website": "http://www.TrailFilmFest.com"
+    },
+    "TPK_FAFO": {
+        "title": "TPK FAFO",
+        "distances": [
+            "22 Mile"
+        ],
+        "location": "Hope, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55326",
+        "date": "March 2, 2024 07:00:00",
+        "website": "http://www.twopunkkids.com"
+    },
+    "Santa_Chase_at_Lake_Sonoma": {
+        "title": "Santa Chase at Lake Sonoma",
+        "distances": [
+            "10K",
+            "5K"
+        ],
+        "location": "Healdsburg, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55327",
+        "date": "December 16, 2023 09:00:00",
+        "website": "https://www.healdsburgrunningcompany.com"
+    },
+    "Big_Bear_Squatch_North": {
+        "title": "Big Bear Squatch North",
+        "distances": [
+            "Half Marathon",
+            "10K"
+        ],
+        "location": "Bear Mountain, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54710",
+        "date": "April 6, 2024 09:00:00",
+        "website": "https://www.sassquadtrailrunning.com/bigbearsquatchnorth"
+    },
+    "Night_Wolf_5K/10K": {
+        "title": "Night Wolf 5K/10K",
+        "distances": [
+            "Night Wolf Double",
+            "Night Wolf 10k",
+            "Night Wolf 5k"
+        ],
+        "location": "Kansas City, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55328",
+        "date": "August 3, 2024 19:00:00",
+        "website": "http://www.wycowolfpack.com/nightwolf/"
+    },
+    "Black_Mountain_Trail_Races": {
+        "title": "Black Mountain Trail Races",
+        "distances": [
+            "50K",
+            "25K",
+            "1/2 Marathon"
+        ],
+        "location": "San Diego, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55329",
+        "date": "June 22, 2024 06:30:00",
+        "website": "http://www.blackmtn50k.com"
+    },
+    "Southern_Singletrack_Trail_Series": {
+        "title": "Southern Singletrack Trail Series",
+        "distances": [
+            "Long Series with 8hr option",
+            "Long Series",
+            "Short Series"
+        ],
+        "location": "Columbus, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55330",
+        "date": "January 31, 2024 08:00:00",
+        "website": "https://www.facebook.com/SouthernSingletrackTrailSeries/"
+    },
+    "TPK_Disparate_Fun": {
+        "title": "TPK Disparate Fun",
+        "distances": [
+            "50K Pay Your Dues",
+            "5K"
+        ],
+        "location": "Lake Hopatcong, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55331",
+        "date": "July 13, 2024 08:00:00",
+        "website": "http://www.twopunkkids.com"
+    },
+    "Throwing_Bones_Trail_Races": {
+        "title": "Throwing Bones Trail Races",
+        "distances": [
+            "Trail Races 5k",
+            "Virtual 5K"
+        ],
+        "location": "Black Mountain, NC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55332",
+        "date": "May 18, 2024 08:00:00",
+        "website": "https://throwing-bones.org/"
+    },
+    "Grand_Ridge": {
+        "title": "Grand Ridge",
+        "distances": [
+            "50K"
+        ],
+        "location": "Issaquah, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55333",
+        "date": "November 11, 2023 00:00:00",
+        "website": "http://www.evergreentrailruns.com/"
+    },
+    "Ragged_75_Stage_Race_and_50k": {
+        "title": "Ragged 75 Stage Race and 50k",
+        "distances": [
+            "Stage 1",
+            "Stage 2",
+            "Stage 3/50k",
+            "Stage Race"
+        ],
+        "location": "Danbury, NH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55334",
+        "date": "August 3, 2024 07:00:00",
+        "website": "http://six03endurance.com/ragged75/"
+    },
+    "Sulphur_Springs": {
+        "title": "Sulphur Springs",
+        "distances": [
+            "100 Miler",
+            "50 Miler",
+            "50K"
+        ],
+        "location": "Ancaster, ON",
+        "register": "https://ultrasignup.com/register.aspx?dtid=5162",
+        "date": "May 24, 2003 00:00:00",
+        "website": "http://www.burlingtonrunners.com/races/sulphur-springs-trail-race/"
+    },
+    "Manchester_to_Liverpool_Ultra": {
+        "title": "Manchester to Liverpool Ultra",
+        "distances": [
+            "50 Miler"
+        ],
+        "location": "Manchester, Great Britain",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55335",
+        "date": "April 7, 2023 00:00:00",
+        "website": "https://www.gbultras.com"
+    },
+    "Salmon_Falls_50K": {
+        "title": "Salmon Falls 50K",
+        "distances": [
+            "50K",
+            "Trail Half Marathon"
+        ],
+        "location": "Pilot Hill, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55339",
+        "date": "February 24, 2024 07:30:00",
+        "website": "http://www.salmonfalls50k.com"
+    },
+    "Mammoth_Trailfest": {
+        "title": "Mammoth Trailfest",
+        "distances": [
+            "Mammoth Triple",
+            "tenkay",
+            "Dragon Ascent",
+            "50k",
+            "Kids Run",
+            "26k"
+        ],
+        "location": "Mammoth Lakes, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55340",
+        "date": "September 20, 2024 07:30:00",
+        "website": "https://www.mammothtrailfest.com"
+    },
+    "Butte_Buster": {
+        "title": "Butte Buster",
+        "distances": [
+            "8 Miler"
+        ],
+        "location": "Ashland, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55341",
+        "date": "May 11, 2024 08:00:00",
+        "website": "https://ultraexcuses.com/butte-buster"
+    },
+    "Broken_Arrow_Skyrace_NYD_Training_Run": {
+        "title": "Broken Arrow Skyrace NYD Training Run",
+        "distances": [
+            "New Year's Day Mt. Diablo Training Run"
+        ],
+        "location": "Walnut Creek, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55342",
+        "date": "January 1, 2024 09:00:00",
+        "website": "http://www.brokenarrowskyrace.com"
+    },
+    "Broken_Arrow_Skyrace_Mt._Diablo_Training_Run": {
+        "title": "Broken Arrow Skyrace Mt. Diablo Training Run",
+        "distances": [
+            "Mt. Diablo Training Run"
+        ],
+        "location": "Walnut Creek, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55343",
+        "date": "March 23, 2024 09:00:00",
+        "website": "http://www.brokenarrowskyrace.com"
+    },
+    "Broken_Arrow_Skyrace_Marin_Headlands_Training_Run": {
+        "title": "Broken Arrow Skyrace Marin Headlands Training Run",
+        "distances": [
+            "Retreat"
+        ],
+        "location": "Mill Valley, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55344",
+        "date": "April 20, 2024 08:00:00",
+        "website": "http://www.brokenarrowskyrace.com"
+    },
+    "Black_Squirrel_Half": {
+        "title": "Black Squirrel Half",
+        "distances": [
+            "1/2 Marathon"
+        ],
+        "location": "Bellvue, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55345",
+        "date": "September 7, 2024 07:00:00",
+        "website": "http://gnarrunners.com/black-squirrel-half/"
+    },
+    "Old_Tom_Backyard": {
+        "title": "Old Tom Backyard",
+        "distances": [
+            "Last Runner Standing"
+        ],
+        "location": "Blumenort, MB",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55347",
+        "date": "July 6, 2024 08:00:00",
+        "website": "https://www.oldtombackyard.com/"
+    },
+    "Loco_Trail_Camp_Fall_Edition": {
+        "title": "Loco Trail Camp Fall Edition",
+        "distances": [
+            "Loco Trail Camp Oct 11-13"
+        ],
+        "location": "Butte Meadows, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55348",
+        "date": "October 11, 2024 16:00:00",
+        "website": "https://www.intrepidadventuresevents.com/loco-trail-camp"
+    },
+    "Path_of_the_Flood_Historic_Races": {
+        "title": "Path of the Flood Historic Races",
+        "distances": [
+            "14 Miler",
+            "Youth 14 Miler",
+            "8 Miler",
+            "Youth 8 Miler",
+            "5k",
+            "Youth 5k",
+            "5k POF"
+        ],
+        "location": "Johnstown, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55349",
+        "date": "May 25, 2024 08:00:00",
+        "website": "https://www.jaha.org/events/path-flood-races/"
+    },
+    "Tooele_Turkey_Trail_Trot_Til_You_Drop": {
+        "title": "Tooele Turkey Trail Trot 'Til You Drop",
+        "distances": [
+            "10hrs"
+        ],
+        "location": "Tooele, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=53899",
+        "date": "November 25, 2023 08:00:00",
+        "website": "https://tooeletrailracing.com/turkey-trot.html"
+    },
+    "Red_Feather_Trail_Jamboree": {
+        "title": "Red Feather Trail Jamboree",
+        "distances": [
+            "Three Day Challenge",
+            "50K",
+            "50 Mile",
+            "Half Marathon"
+        ],
+        "location": "Red Feather Lakes, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55351",
+        "date": "September 21, 2024 06:00:00",
+        "website": "https://gnarrunners.com/red-feather/"
+    },
+    "Garmin_Gravel_Worlds": {
+        "title": "Garmin Gravel Worlds",
+        "distances": [
+            "25K",
+            "50K"
+        ],
+        "location": "Lincoln, NE",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55352",
+        "date": "August 25, 2023 00:00:00",
+        "website": "https://www.gravel-worlds.com"
+    },
+    "BURT_100": {
+        "title": "BURT 100",
+        "distances": [
+            "100 Miler",
+            "110K",
+            "55K"
+        ],
+        "location": "Bainbridge Island, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55353",
+        "date": "February 10, 2024 08:00:00",
+        "website": "http://www.burt100.com"
+    },
+    "Dogwood_Canyon": {
+        "title": "Dogwood Canyon",
+        "distances": [
+            "50K"
+        ],
+        "location": "Lampe, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55354",
+        "date": "November 11, 2023 00:00:00",
+        "website": "http://fitness.basspro.com/"
+    },
+    "Paleozoic_Trail_Runs_-_Carboniferous_Fall_II": {
+        "title": "Paleozoic Trail Runs - Carboniferous Fall II",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Palos Park, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55355",
+        "date": "November 11, 2023 00:00:00",
+        "website": "http://www.RunRace.net/paleozoic/"
+    },
+    "Blue_Sky_Trail_Marathon": {
+        "title": "Blue Sky Trail Marathon",
+        "distances": [
+            "Marathon",
+            "Half Marathon"
+        ],
+        "location": "Fort Collins, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55356",
+        "date": "October 19, 2024 07:00:00",
+        "website": "https://gnarrunners.com/blue-sky-marathon/"
+    },
+    "Bold_Coast_Bash": {
+        "title": "Bold Coast Bash",
+        "distances": [
+            "50K Ultra",
+            "10.5 Mile Fun Run"
+        ],
+        "location": "Cutler, ME",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55358",
+        "date": "November 10, 2024 06:00:00",
+        "website": "http://www.boldcoastrunners.org"
+    },
+    "Tunnel_Hill_100": {
+        "title": "Tunnel Hill 100",
+        "distances": [
+            "PACER ENTRY",
+            "100 Miler",
+            "50 Miler",
+            "Marathon"
+        ],
+        "location": "Vienna, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55359",
+        "date": "November 9, 2024 07:00:00",
+        "website": "http://www.durbinracemanagement.com/"
+    },
+    "The_Saddleback_Marathon": {
+        "title": "The Saddleback Marathon",
+        "distances": [
+            "Marathon",
+            "Half Marathon",
+            "10K"
+        ],
+        "location": "Lake Elsinore, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55357",
+        "date": "November 9, 2024 07:30:00",
+        "website": "https://otrraces.com/saddleback-marathon"
+    },
+    "Patriot_Power_5k": {
+        "title": "Patriot Power 5k",
+        "distances": [
+            "Virtual 5K",
+            "5K",
+            "1 Mile Fun Run"
+        ],
+        "location": "Reading, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55360",
+        "date": "June 12, 2024 18:30:00",
+        "website": "https://www.race-brimstone.com/"
+    },
+    "TARCkey_Trot": {
+        "title": "TARCkey Trot",
+        "distances": [
+            "6hrs"
+        ],
+        "location": "Winchester/Lexington, MA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55361",
+        "date": "November 11, 2023 00:00:00",
+        "website": "http://trailanimals.com/"
+    },
+    "Go_Big": {
+        "title": "Go Big",
+        "distances": [
+            ""
+        ],
+        "location": "Hilo, HI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=51948",
+        "date": "December 31, 2023 05:00:00",
+        "website": "https://hawaiimountainrunning.org"
+    },
+    "JFK": {
+        "title": "JFK",
+        "distances": [
+            "50 Miler"
+        ],
+        "location": "Boonsboro, MD",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55362",
+        "date": "November 18, 2023 00:00:00",
+        "website": "http://www.jfk50mile.org/"
+    },
+    "Peacock_Challenge": {
+        "title": "Peacock Challenge",
+        "distances": [
+            "27.5 Miler",
+            "55 Miler"
+        ],
+        "location": "Waialua, HI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55365",
+        "date": "October 14, 2023 00:00:00",
+        "website": "https://hurthawaii.com"
+    },
+    "Taskinas_Creek_Half_Marathon": {
+        "title": "Taskinas Creek Half Marathon",
+        "distances": [
+            "Half Marathon"
+        ],
+        "location": "Williamsburg, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55366",
+        "date": "June 2, 2024 08:00:00",
+        "website": "https://happycatevents.com/"
+    },
+    "Whistler_Alpine_Meadows_(WAM)": {
+        "title": "Whistler Alpine Meadows (WAM)",
+        "distances": [
+            "50K"
+        ],
+        "location": "Whistler, BC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55367",
+        "date": "October 14, 2023 00:00:00",
+        "website": "https://trailrunning.ca/"
+    },
+    "Suffer_Better_Fall_Trail_Run": {
+        "title": "Suffer Better Fall Trail Run",
+        "distances": [
+            "50K"
+        ],
+        "location": "PINE, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55368",
+        "date": "October 14, 2023 00:00:00",
+        "website": "https://www.facebook.com/events/317469916601190/"
+    },
+    "Night_Owl_9k": {
+        "title": "Night Owl 9k",
+        "distances": [
+            "9K"
+        ],
+        "location": "Williamsburg, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55369",
+        "date": "June 29, 2024 18:00:00",
+        "website": "http://www.happycatevents.com"
+    },
+    "Tahoe_Midnight_Express_Ultra_72": {
+        "title": "Tahoe Midnight Express Ultra 72",
+        "distances": [
+            "72 Miler"
+        ],
+        "location": "Lake Tahoe, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55370",
+        "date": "October 14, 2023 00:00:00",
+        "website": "http://runtahoe.com/"
+    },
+    "Alphabet_Soup_Race": {
+        "title": "Alphabet Soup Race",
+        "distances": [
+            "7 Hour",
+            "7K Run"
+        ],
+        "location": "Williamsburg, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55372",
+        "date": "July 27, 2024 07:00:00",
+        "website": "https://happycatevents.com/"
+    },
+    "Shenanigains": {
+        "title": "Shenanigains",
+        "distances": [
+            "10 Hrs"
+        ],
+        "location": "Albuquerque, NM",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55373",
+        "date": "March 16, 2024 08:00:00",
+        "website": "https://www.liveultrarunning.com/events-1/shenanigains"
+    },
+    "Translantau_by_UTMB": {
+        "title": "Translantau by UTMB",
+        "distances": [
+            "140K",
+            "100K",
+            "50K"
+        ],
+        "location": "Lantau, Hong Kong",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55374",
+        "date": "November 11, 2023 00:00:00",
+        "website": "http://translantau.transasiaseries.com/"
+    },
+    "Twisted_Branch_Trail_Run": {
+        "title": "Twisted Branch Trail Run",
+        "distances": [
+            "100K"
+        ],
+        "location": "Naples, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55375",
+        "date": "August 24, 2024 04:00:00",
+        "website": "http://www.twistedbranchtrail.com/"
+    },
+    "Tunnel_Vision_Marathon_&_Half_Marathon": {
+        "title": "Tunnel Vision Marathon & Half Marathon",
+        "distances": [
+            "Marathon",
+            "Half Marathon"
+        ],
+        "location": "North Bend, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55376",
+        "date": "August 11, 2024 08:00:00",
+        "website": "https://www.tunnelmarathon.com/"
+    },
+    "Tunnel_Light_Marathon": {
+        "title": "Tunnel Light Marathon",
+        "distances": [
+            "Marathon"
+        ],
+        "location": "North Bend, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55377",
+        "date": "September 8, 2024 08:00:00",
+        "website": "https://www.tunnelmarathon.com/"
+    },
+    "Casa_Candy_Cane_5K/1_Mile_Walk": {
+        "title": "Casa Candy Cane 5K/1 Mile Walk",
+        "distances": [
+            "CASA Candy Cane 5k",
+            "1 Mile Walk"
+        ],
+        "location": "Leitchfield, KY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55378",
+        "date": "December 2, 2023 08:00:00",
+        "website": "https://ultrasignup.com/register.aspx?did=60637"
+    },
+    "The_Black_Fly_Trail_Run": {
+        "title": "The Black Fly Trail Run",
+        "distances": [
+            "Half Marathon",
+            "10 Miler",
+            "Adult 5k",
+            "5K"
+        ],
+        "location": "Westmore, VT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55379",
+        "date": "May 18, 2024 09:00:00",
+        "website": "http://crosscycleadventures.com/dirt/theblackfly.html"
+    },
+    "Great_Hill_Ultra": {
+        "title": "Great Hill Ultra",
+        "distances": [
+            "100K",
+            "Great Hill 50k"
+        ],
+        "location": "Middlesex, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55380",
+        "date": "July 13, 2024 06:00:00",
+        "website": "https://www.ironwoodadventureworks.com/great-hill"
+    },
+    "Survivorfest_Running_Event": {
+        "title": "Survivorfest Running Event",
+        "distances": [
+            ""
+        ],
+        "location": "Sherwood Park, AB",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54712",
+        "date": "June 8, 2024 09:00:00",
+        "website": "http://www.survivorfest24.com"
+    },
+    "Manitou\u2019s_Revenge": {
+        "title": "Manitou\u2019s Revenge",
+        "distances": [
+            "53 Miler"
+        ],
+        "location": "Windham, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55381",
+        "date": "June 22, 2024 05:00:00",
+        "website": "http://www.manitousrevengeultra.com/race-info/"
+    },
+    "Storybook_Half_Marathon": {
+        "title": "Storybook Half Marathon",
+        "distances": [
+            "1/2 Marathon"
+        ],
+        "location": "Stratford, CT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55382",
+        "date": "November 23, 2024 10:00:00",
+        "website": "https://rooseveltforestultras.com/storybook-run"
+    },
+    "GFRC_Busa_Bushwhack_Trail_Race": {
+        "title": "GFRC Busa Bushwhack Trail Race",
+        "distances": [
+            "10 Miler"
+        ],
+        "location": "Framingham, MA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55383",
+        "date": "October 29, 2023 00:00:00",
+        "website": "http://gfrcrun.org/bushwhack/bushwhack.htm"
+    },
+    "Stone_Cat_Trail_Festival": {
+        "title": "Stone Cat Trail Festival",
+        "distances": [
+            "100K",
+            "50 Miler",
+            "Marathon"
+        ],
+        "location": "Ipswich, MA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55384",
+        "date": "November 4, 2023 00:00:00",
+        "website": "http://ultrasignup.com"
+    },
+    "BadgerPalooza": {
+        "title": "BadgerPalooza",
+        "distances": [
+            "24HR",
+            "24HR Relay",
+            "12HR",
+            "12HR Relay",
+            "6HR",
+            "6HR Relay"
+        ],
+        "location": "WILLIAMSTOWN, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55386",
+        "date": "October 18, 2024 18:00:00",
+        "website": "https://ultrasignup.com/racedirectors/rd_summary.aspx?dtid=50572"
+    },
+    "Cook_Forest_25k_Trail_Challenge": {
+        "title": "Cook Forest 25k Trail Challenge",
+        "distances": [
+            "16.5 Miler"
+        ],
+        "location": "Cooksburg, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55387",
+        "date": "August 17, 2024 09:00:00",
+        "website": "http://www.cookforesttrailracing.com"
+    },
+    "Cook_Forest,_Highland_Fall_Scramble": {
+        "title": "Cook Forest, Highland Fall Scramble",
+        "distances": [
+            "12 Miler"
+        ],
+        "location": "Cooksburg, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55388",
+        "date": "October 27, 2024 09:00:00",
+        "website": "http://www.cookforesttrailracing.com/"
+    },
+    "Golden_Gate_Trail_Classic": {
+        "title": "Golden Gate Trail Classic",
+        "distances": [
+            "50 Miler",
+            "50K",
+            "21K",
+            "10K"
+        ],
+        "location": "San Francisco, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=52208",
+        "date": "November 18, 2023 00:00:00",
+        "website": "https://www.goldengatetrailclassic.com/"
+    },
+    "Polar_Plunge_and_Fun_Run": {
+        "title": "Polar Plunge and Fun Run",
+        "distances": [
+            "Polar Plunger"
+        ],
+        "location": "Lookout Mountain, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55390",
+        "date": "January 20, 2024 10:30:00",
+        "website": "https://www.lulalake.org"
+    },
+    "Rudolphs_Runderland_Experience": {
+        "title": "Rudolph's Runderland Experience",
+        "distances": [
+            "8:00 PM 5K",
+            "5:00 PM 1-Mile Stroll",
+            "6:30 PM 1-Mile Stroll"
+        ],
+        "location": "Las Vegas, NV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55391",
+        "date": "December 22, 2023 20:00:00",
+        "website": "http://www.beyondlimitsrunning.com"
+    },
+    "Greenwood_Furnace_Snowfest_5-miler": {
+        "title": "Greenwood Furnace Snowfest 5-miler",
+        "distances": [
+            "5 Miler"
+        ],
+        "location": "Huntingdon, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55392",
+        "date": "January 20, 2024 13:00:00",
+        "website": "http://www.facebook.com/greenwoodfurn"
+    },
+    "Grasshopper_Peak_Redwoods_Run": {
+        "title": "Grasshopper Peak Redwoods Run",
+        "distances": [
+            "30K",
+            "10.5 Miler"
+        ],
+        "location": "Weott, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55393",
+        "date": "June 1, 2024 08:00:00",
+        "website": "http://grasshopperpeakredwoodsrun.com/home"
+    },
+    "The_Wild_Hare": {
+        "title": "The Wild Hare",
+        "distances": [
+            "50 Miler",
+            "50K"
+        ],
+        "location": "Warda, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55394",
+        "date": "November 18, 2023 00:00:00",
+        "website": "http://www.tejastrails.com/#/wild/"
+    },
+    "Western_Pleasure_Snowshoe_Roundup": {
+        "title": "Western Pleasure Snowshoe Roundup",
+        "distances": [
+            "10K",
+            "5K"
+        ],
+        "location": "Sandpoint, ID",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55395",
+        "date": "February 3, 2024 10:30:00",
+        "website": "http://www.westernpleasureranch.com"
+    },
+    "Med_Bow_Rail_Marathon_&_Half_Marathon": {
+        "title": "Med Bow Rail Marathon & Half Marathon",
+        "distances": [
+            "Marathon",
+            "1/2 Marathon"
+        ],
+        "location": "Laramie, WY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55396",
+        "date": "August 10, 2024 07:00:00",
+        "website": "https://medbowrailmarathon.org/"
+    },
+    "KUS_6/12/24_Hour_Run": {
+        "title": "KUS 6/12/24 Hour Run",
+        "distances": [
+            "24hrs",
+            "Night 12 Hour",
+            "12hrs",
+            "6hrs"
+        ],
+        "location": "Valley Center, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55397",
+        "date": "June 12, 2024 06:00:00",
+        "website": "http://www.ksultrarunners.org"
+    },
+    "Bobcat_Trail_Race": {
+        "title": "Bobcat Trail Race",
+        "distances": [
+            "50K",
+            "25K",
+            "10K",
+            "5K"
+        ],
+        "location": "Colorado Springs, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55400",
+        "date": "October 19, 2024 07:00:00",
+        "website": "https://www.aravaiparunning.com/bobcat/"
+    },
+    "Rogue_Resolution_Run": {
+        "title": "Rogue Resolution Run",
+        "distances": [
+            "5K"
+        ],
+        "location": "Gold Beach, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55398",
+        "date": "January 6, 2024 10:00:00",
+        "website": "https://www.allterrainadventures.net/"
+    },
+    "Frost_Town_Trail_Festival": {
+        "title": "Frost Town Trail Festival",
+        "distances": [
+            "25K",
+            "10K"
+        ],
+        "location": "Naples, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55401",
+        "date": "June 8, 2024 09:00:00",
+        "website": "https://www.ironwoodadventureworks.com/frost-town-trail-fest"
+    },
+    "Wine_Country_Trail_Runs": {
+        "title": "Wine Country Trail Runs",
+        "distances": [
+            "Half Marathon",
+            "10k",
+            "Adaptive 10k",
+            "5k"
+        ],
+        "location": "Gaston, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55402",
+        "date": "July 28, 2024 09:00:00",
+        "website": "https://nwdirtchurners.com/wine-country-trail-runs/"
+    },
+    "Oxbow_Trail_Runs": {
+        "title": "Oxbow Trail Runs",
+        "distances": [
+            "Half Marathon",
+            "10K",
+            "5K"
+        ],
+        "location": "Gresham, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55403",
+        "date": "April 28, 2024 09:00:00",
+        "website": "https://nwdirtchurners.com/oxbow/"
+    },
+    "Cuyamaca_100k": {
+        "title": "Cuyamaca 100k",
+        "distances": [
+            "100K"
+        ],
+        "location": "Julian, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55404",
+        "date": "October 5, 2024 06:30:00",
+        "website": "http://www.cuyamaca100k.com/"
+    },
+    "Dead_Horse_Ultra": {
+        "title": "Dead Horse Ultra",
+        "distances": [
+            "50 Miler",
+            "50K",
+            "30K",
+            "15K"
+        ],
+        "location": "Moab, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55406",
+        "date": "November 16, 2024 06:00:00",
+        "website": "https://www.madmooseevents.com/dead-horse-ultra"
+    },
+    "Kessel_Run_Ultra": {
+        "title": "Kessel Run Ultra",
+        "distances": [
+            "50 Miler",
+            "60K",
+            "20 Miler",
+            "10 Miler"
+        ],
+        "location": "Fruita, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55407",
+        "date": "November 9, 2024 06:00:00",
+        "website": "https://www.madmooseevents.com/kessel-run-ultra"
+    },
+    "Call_of_the_Wilds_Mountain_Fest": {
+        "title": "Call of the Wilds Mountain Fest",
+        "distances": [
+            "50K",
+            "25K"
+        ],
+        "location": "Waterville, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55408",
+        "date": "October 20, 2024 06:00:00",
+        "website": "https://www.patraildogs.com/"
+    },
+    "The_View_Trail_Race": {
+        "title": "The View Trail Race",
+        "distances": [
+            "25K",
+            "15K"
+        ],
+        "location": "North Bend , PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55409",
+        "date": "November 3, 2024 09:00:00",
+        "website": "http://www.patraildogs.com"
+    },
+    "Griffith_Park_Trail_Marathon": {
+        "title": "Griffith Park Trail Marathon",
+        "distances": [
+            "50k",
+            "Marathon",
+            "30K",
+            "1/2 Marathon",
+            "10k"
+        ],
+        "location": "Los Angeles, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55410",
+        "date": "March 23, 2024 07:00:00",
+        "website": "https://www.khraces.com/"
+    },
+    "Mountaineer_Rumble_Half_Marathon_&_5K": {
+        "title": "Mountaineer Rumble Half Marathon & 5K",
+        "distances": [
+            "Half Marathon",
+            "5K"
+        ],
+        "location": "Clover, SC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55411",
+        "date": "April 20, 2024 09:10:00",
+        "website": "https://www.facebook.com/Mountaineer-Rumble-420009962132503"
+    },
+    "Mountaineer_Rumble_12_Hour": {
+        "title": "Mountaineer Rumble 12 Hour",
+        "distances": [
+            "12hrs"
+        ],
+        "location": "Clover, SC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55413",
+        "date": "September 14, 2024 20:00:00",
+        "website": "https://www.facebook.com/Mountaineer-Rumble-420009962132503/"
+    },
+    "Cape_5K_and_10k": {
+        "title": "Cape 5K and 10k",
+        "distances": [
+            "10K",
+            "5K"
+        ],
+        "location": "Cordova, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55414",
+        "date": "June 15, 2024 07:00:00",
+        "website": "http://www.mambatrailrunners.com"
+    },
+    "Joshua_Tree_Traverse_60K": {
+        "title": "Joshua Tree Traverse 60K",
+        "distances": [
+            "60K"
+        ],
+        "location": "Yucca Valley, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55416",
+        "date": "March 17, 2024 07:00:00",
+        "website": "https://joshuatreetraversetrailrunning.godaddysites.com/"
+    },
+    "Thunderbolt_Creek": {
+        "title": "Thunderbolt Creek",
+        "distances": [
+            "30K",
+            "12K"
+        ],
+        "location": "Helena, MT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55417",
+        "date": "July 13, 2024 08:00:00",
+        "website": "http://www.bquickrunning.com/1thunderbolt-creek-races/"
+    },
+    "Little_Blackfoot": {
+        "title": "Little Blackfoot",
+        "distances": [
+            "20k",
+            "10K"
+        ],
+        "location": "Helena, MT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55418",
+        "date": "July 27, 2024 08:00:00",
+        "website": "https://www.bquickrunning.com/"
+    },
+    "Goats_In_The_Dark": {
+        "title": "Goats In The Dark",
+        "distances": [
+            "5k"
+        ],
+        "location": "Helena, MT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55419",
+        "date": "August 24, 2024 21:00:00",
+        "website": "http://www.bquickrunning.com"
+    },
+    "Ridge_Rumble": {
+        "title": "Ridge Rumble",
+        "distances": [
+            "12k"
+        ],
+        "location": "Helena, MT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55420",
+        "date": "September 8, 2024 11:00:00",
+        "website": "http://www.bquickrunning.com"
+    },
+    "FLATS_Trail_Half_Marathon": {
+        "title": "FLATS Trail Half Marathon",
+        "distances": [
+            "1/2 Marathon"
+        ],
+        "location": "Kirksville, MO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55421",
+        "date": "October 5, 2024 08:30:00",
+        "website": "https://www.facebook.com/flatstrailhalfmarathon/"
+    },
+    "Turkey_Trot_10K": {
+        "title": "Turkey Trot 10K",
+        "distances": [
+            "10K"
+        ],
+        "location": ", ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55422",
+        "date": "November 23, 2023 07:00:00",
+        "website": "https://outkast-shop.com/"
+    },
+    "Samar_4_and_8_Miler": {
+        "title": "Samar 4 and 8 Miler",
+        "distances": [
+            "4 Miler",
+            "8 Miler"
+        ],
+        "location": "Memphis, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55423",
+        "date": "June 29, 2024 07:00:00",
+        "website": "http://www.mambatrailrunners.com"
+    },
+    "Cobra_Den_Series": {
+        "title": "Cobra Den Series",
+        "distances": [
+            "Short Series",
+            "Long Series"
+        ],
+        "location": "Memphis, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55200",
+        "date": "June 15, 2024 07:00:00",
+        "website": "http://www.mambatrailrunners.com"
+    },
+    "Big_Texas_Ultra": {
+        "title": "Big Texas Ultra",
+        "distances": [
+            "100K Championship (Qualifiers Only)",
+            "100K",
+            "50K",
+            "15K"
+        ],
+        "location": "Georgetown, TX",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55424",
+        "date": "November 16, 2024 07:00:00",
+        "website": "https://www.texasoutlawrunning.com/texasultra"
+    },
+    "Caspian_5_and_10_miler": {
+        "title": "Caspian 5 and 10 miler",
+        "distances": [
+            "10 Miler",
+            "5 Miler"
+        ],
+        "location": "Cordova, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55425",
+        "date": "July 13, 2024 07:00:00",
+        "website": "http://www.mambatrailrunners.com"
+    },
+    "King_7-miler_and_1/2_Marathon": {
+        "title": "King 7-miler and 1/2 Marathon",
+        "distances": [
+            "1/2 Marathon",
+            "7-Miler"
+        ],
+        "location": "Memphis, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55426",
+        "date": "August 3, 2024 07:00:00",
+        "website": "http://www.mambatrailrunners.com"
+    },
+    "Stone_Steps": {
+        "title": "Stone Steps",
+        "distances": [
+            "50K",
+            "27K"
+        ],
+        "location": "Cincinnati, OH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55427",
+        "date": "October 29, 2023 00:00:00",
+        "website": "http://www.stonesteps50k.com/"
+    },
+    "Wild_Florida_Trail_Run": {
+        "title": "Wild Florida Trail Run",
+        "distances": [
+            "50K",
+            "25K",
+            "10K"
+        ],
+        "location": "White Springs, FL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55428",
+        "date": "November 16, 2024 06:45:00",
+        "website": "http://runbumtours.com"
+    },
+    "Woodside/Purisima_Creek_Crossover": {
+        "title": "Woodside/Purisima Creek Crossover",
+        "distances": [
+            "50K",
+            "35K",
+            "1/2 Marathon",
+            "10K"
+        ],
+        "location": "Redwood City, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55429",
+        "date": "April 13, 2024 08:30:00",
+        "website": "http://insidetrail.com/calendar/woodside-crossover-trail-run/"
+    },
+    "Folsom_Lake_Trail_Run": {
+        "title": "Folsom Lake Trail Run",
+        "distances": [
+            "50K",
+            "35K",
+            "1/2 Marathon",
+            "10K"
+        ],
+        "location": "Folsom, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55430",
+        "date": "May 4, 2024 08:00:00",
+        "website": "https://insidetrail.com/calendar/folsom-lake-trail-run/"
+    },
+    "Stockholm_trail": {
+        "title": "Stockholm trail",
+        "distances": [
+            "21K",
+            "10k"
+        ],
+        "location": "Stockholm, Sweden",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55232",
+        "date": "August 31, 2024 10:00:00",
+        "website": "https://stockholmtrail.se/"
+    },
+    "Skunk_Ape_Trail_Run": {
+        "title": "Skunk Ape Trail Run",
+        "distances": [
+            "10 Miler",
+            "5 Miler"
+        ],
+        "location": "Huntsville, AL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55431",
+        "date": "July 27, 2024 07:00:00",
+        "website": "http://www.runninglane.com/events"
+    },
+    "Chupacabra_Trail_Race": {
+        "title": "Chupacabra Trail Race",
+        "distances": [
+            "1/2 Marathon",
+            "10K"
+        ],
+        "location": "Huntsville, AL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55432",
+        "date": "August 17, 2024 07:00:00",
+        "website": "http://www.runninglane.com/events"
+    },
+    "Swinging_Bridge_Trail_Run": {
+        "title": "Swinging Bridge Trail Run",
+        "distances": [
+            "Half Marathon",
+            "10K"
+        ],
+        "location": "Winchester, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55433",
+        "date": "August 24, 2024 08:00:00",
+        "website": "https://runninglane.com/events"
+    },
+    "Wade_Mountain_Marathon": {
+        "title": "Wade Mountain Marathon",
+        "distances": [
+            "Marathon",
+            "1/2 Marathon",
+            "10K"
+        ],
+        "location": "Huntsville, AL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55434",
+        "date": "October 20, 2024 08:00:00",
+        "website": "https://runninglane.com"
+    },
+    "Mrs._McCormicks_Ice_House": {
+        "title": "Mrs. McCormick's Ice House",
+        "distances": [
+            "7M Trail Race"
+        ],
+        "location": "Naples, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55435",
+        "date": "January 20, 2024 09:00:00",
+        "website": "https://www.gofarfetched.com/mccormicks-icehouse-tonic"
+    },
+    "Buckys_Boot_Top_Prohibition_Run": {
+        "title": "Bucky's Boot Top Prohibition Run",
+        "distances": [
+            "21 K",
+            "14 K",
+            "7 K"
+        ],
+        "location": "Pine Mountain, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55436",
+        "date": "April 13, 2024 08:00:00",
+        "website": "http://project42running.com"
+    },
+    "West_Point_Break": {
+        "title": "West Point Break",
+        "distances": [
+            "10K",
+            "5K"
+        ],
+        "location": "West Point, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55437",
+        "date": "February 11, 2024 09:00:00",
+        "website": "https://www.facebook.com/SouthernSingletrackTrailSeries/"
+    },
+    "The_Widow_Maker_Ultra_and_Whiskey_Still_5k": {
+        "title": "The Widow Maker Ultra and Whiskey Still 5k",
+        "distances": [
+            "10K",
+            "8hrs",
+            "5K"
+        ],
+        "location": "Thomaston, GA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55438",
+        "date": "March 23, 2024 08:00:00",
+        "website": "http://www.southernsingletracktrailseries.com"
+    },
+    "Rockin_K": {
+        "title": "Rockin K",
+        "distances": [
+            "50K",
+            "Marathon",
+            "21 Miler",
+            "4 Miler"
+        ],
+        "location": "Ellsworth, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55439",
+        "date": "April 6, 2024 07:00:00",
+        "website": "http://www.ksultrarunners.org/"
+    },
+    "Ironbull_Ultra_Trail": {
+        "title": "Ironbull Ultra Trail",
+        "distances": [
+            "50k",
+            "25K",
+            "15k (1 pm start)"
+        ],
+        "location": "Wausau, WI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55441",
+        "date": "September 28, 2024 07:00:00",
+        "website": "https://www.ironbull.org/ultra-marathon-details"
+    },
+    "Lost_Sierra_Endurance_Race": {
+        "title": "Lost Sierra Endurance Race",
+        "distances": [
+            "100K",
+            "50K"
+        ],
+        "location": "Downieville, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55442",
+        "date": "July 27, 2024 06:00:00",
+        "website": "https://badluckrunclub.com/lost-sierra"
+    },
+    "NorCal_Backyard_Ultra": {
+        "title": "NorCal Backyard Ultra",
+        "distances": [
+            "Last Person Standing",
+            "Mini Last Person"
+        ],
+        "location": "Granite Bay, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55443",
+        "date": "November 8, 2024 17:00:00",
+        "website": "https://www.badluckrunclub.com/the-backyard"
+    },
+    "The_DUC": {
+        "title": "The DUC",
+        "distances": [
+            "100K"
+        ],
+        "location": "Pocomoke, MD",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55444",
+        "date": "February 9, 2024 21:00:00",
+        "website": "https://www.alqultras.org/races"
+    },
+    "Patapsco_Valley_50K": {
+        "title": "Patapsco Valley 50K",
+        "distances": [
+            "50k",
+            "50k Virtual",
+            "25k",
+            "25k Virtual"
+        ],
+        "location": "Baltimore, MD",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55445",
+        "date": "October 19, 2024 07:30:00",
+        "website": "https://white-oak-running-company.mailchimpsites.com/"
+    },
+    "Mana_Road_Mahalo_Run": {
+        "title": "Mana Road Mahalo Run",
+        "distances": [
+            "5K Student",
+            "50K- Adult",
+            "Marathon- Adult",
+            "Half Marathon",
+            "10K",
+            "5K"
+        ],
+        "location": "Waimea, HI",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54533",
+        "date": "November 26, 2023 00:00:00",
+        "website": "http://www.hawaiimountainrunning.org"
+    },
+    "Dam_Yeti_50": {
+        "title": "Dam Yeti 50",
+        "distances": [
+            "50 Miler",
+            "55K"
+        ],
+        "location": "Abingdon, VA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=52995",
+        "date": "June 1, 2024 07:00:00",
+        "website": "https://www.yetitrailrunners.com/"
+    },
+    "Pi_Day_River_Rotation": {
+        "title": "Pi Day River Rotation",
+        "distances": [
+            "42.42 Miler",
+            "29.35 Miler",
+            "Marathon",
+            "16.24 Miler",
+            "1/2 Marathon",
+            "Pi Miler"
+        ],
+        "location": "Lawrence, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55446",
+        "date": "March 9, 2024 07:30:00",
+        "website": "https://trailhawks.com/races/2019/mar/09/pi-day-9/"
+    },
+    "Star_City_San_Bruno_Mountain_Half_Marathon_&_5K": {
+        "title": "Star City San Bruno Mountain Half Marathon & 5K",
+        "distances": [
+            "5K",
+            "1/2 Marathon"
+        ],
+        "location": "Brisbane, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55447",
+        "date": "October 5, 2024 09:00:00",
+        "website": "https://starcityhalfmarathon.wordpress.com/"
+    },
+    "Honey_Badger_100": {
+        "title": "Honey Badger 100",
+        "distances": [
+            "100 Miler",
+            "100 Mile 5 Person Relay",
+            "50 Miler"
+        ],
+        "location": "Wichita, KS",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55448",
+        "date": "July 27, 2024 06:00:00",
+        "website": "http://honeybadger100.com/"
+    },
+    "Jigger_Johnson_Ultras": {
+        "title": "Jigger Johnson Ultras",
+        "distances": [
+            "100 Mile",
+            "50 Mile",
+            "20 Mile"
+        ],
+        "location": "Waterville valley, NH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54832",
+        "date": "July 19, 2024 09:00:00",
+        "website": "https://www.aravaiparunning.com/white-mountain-endurance/"
+    },
+    "Cotter_Bridge_Ultra": {
+        "title": "Cotter Bridge Ultra",
+        "distances": [
+            "24 Hour",
+            "12 Hour",
+            "6 Hour",
+            "1 Hour"
+        ],
+        "location": "Cotter, AR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55450",
+        "date": "June 8, 2024 07:00:00",
+        "website": "https://www.syllamoevents.com/cbu"
+    },
+    "Post_Canyon_Half_Marathon": {
+        "title": "Post Canyon Half Marathon",
+        "distances": [
+            "1/2 Marathon"
+        ],
+        "location": "Hood River, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55451",
+        "date": "August 17, 2024 07:00:00",
+        "website": "http://www.postcanyon50k.com"
+    },
+    "Cotton_Pickin_50K": {
+        "title": "Cotton Pickin 50K",
+        "distances": [
+            "50K"
+        ],
+        "location": "Mercer, TN",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55452",
+        "date": "October 19, 2024 07:00:00",
+        "website": "https://www.facebook.com/Cotton-Pickin-50K-112789834373905"
+    },
+    "Crimson_Canyons_Ultra": {
+        "title": "Crimson Canyons Ultra",
+        "distances": [
+            "Spinal Tap 50 Miler",
+            "Spinal Tap 60k",
+            "25K",
+            "10K"
+        ],
+        "location": "Richfield, UT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55453",
+        "date": "September 21, 2024 07:30:00",
+        "website": "http://www.crimsoncanyons.com/"
+    },
+    "Blades_Trail_Race": {
+        "title": "Blades Trail Race",
+        "distances": [
+            "10 Miler"
+        ],
+        "location": "Pocomoke, MD",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55454",
+        "date": "March 17, 2024 08:15:00",
+        "website": "https://www.alqultras.org"
+    },
+    "Laurel_Highlands_Ultra": {
+        "title": "Laurel Highlands Ultra",
+        "distances": [
+            "70.5 Miler",
+            "70.5 5 Person Relay",
+            "50K",
+            "50K 3 Person Relay"
+        ],
+        "location": "Ohiopyle, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55455",
+        "date": "June 8, 2024 05:30:00",
+        "website": "http://www.laurelultra.com"
+    },
+    "Chestnut_Ridge_Trail_Races": {
+        "title": "Chestnut Ridge Trail Races",
+        "distances": [
+            "4 Miler"
+        ],
+        "location": "Efland, NC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55456",
+        "date": "November 18, 2023 00:00:00",
+        "website": "https://www.campchestnutridge.org/trail-run"
+    },
+    "Ring_In_The_New_Year": {
+        "title": "Ring In The New Year",
+        "distances": [
+            "10K",
+            "5K"
+        ],
+        "location": "Fort Mill, SC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54177",
+        "date": "January 1, 2024 10:15:00",
+        "website": "https://www.rockhillstriders.org"
+    },
+    "The_Citadel_Challenge": {
+        "title": "The Citadel Challenge",
+        "distances": [
+            "the Citadel Challenge 50K",
+            "30K",
+            "25K",
+            "Marathon",
+            "30K",
+            "25K"
+        ],
+        "location": "Fort Totten, Queens, NY",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54473",
+        "date": "November 19, 2023 00:00:00",
+        "website": "http://www.newyorkultrarunning.org/2023Events/2023_CitadelChallenge/2023-CitadelChallenge.pdf"
+    },
+    "Badger_Mountain_Challenge": {
+        "title": "Badger Mountain Challenge",
+        "distances": [
+            ""
+        ],
+        "location": "Richland, WA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=54397",
+        "date": "March 22, 2024 07:15:00",
+        "website": "http://www.badgermountainchallenge.com/"
+    },
+    "Lead_King_Loop_Charity_Races": {
+        "title": "Lead King Loop Charity Races",
+        "distances": [
+            "25K"
+        ],
+        "location": "Marble, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55457",
+        "date": "September 17, 2023 00:00:00",
+        "website": "http://leadkingloop25k.com/"
+    },
+    "Collegiate_Peaks_Trail_Run": {
+        "title": "Collegiate Peaks Trail Run",
+        "distances": [
+            "50 Miler",
+            "25 Miler"
+        ],
+        "location": "Buena Vista, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55459",
+        "date": "May 4, 2024 06:30:00",
+        "website": "http://www.CollegiatePeaksTrailRun.org/"
+    },
+    "Route_66_UltraRun": {
+        "title": "Route 66 UltraRun",
+        "distances": [
+            "Relay Team",
+            "Crewed Runner",
+            "Journey Runner",
+            "Crew Person"
+        ],
+        "location": "SELIGMAN, AZ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55460",
+        "date": "November 9, 2024 07:00:00",
+        "website": "https://route66ultrarun.com/"
+    },
+    "Ghost_Train_Trail_Races": {
+        "title": "Ghost Train Trail Races",
+        "distances": [
+            ""
+        ],
+        "location": "Brookline, NH",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55461",
+        "date": "October 19, 2024 17:00:00",
+        "website": "http://sites.google.com/site/ghosttrainrailtrailrace/"
+    },
+    "North_Rim_Ramble_6-Hour_Mountain_Bike_Race": {
+        "title": "North Rim Ramble 6-Hour Mountain Bike Race",
+        "distances": [
+            "6HR Mtn Bike Race"
+        ],
+        "location": "Jacob Lake, AZ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55462",
+        "date": "September 28, 2024 08:00:00",
+        "website": "https://runazt.org/north-rim-ramble/6hr-mountain-bike-race-info/"
+    },
+    "AZT_North_Rim_Ramble": {
+        "title": "AZT North Rim Ramble",
+        "distances": [
+            "Marathon",
+            "1/2 Marathon",
+            "10K"
+        ],
+        "location": "Jacob Lake, AZ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55463",
+        "date": "September 29, 2024 07:00:00",
+        "website": "https://runazt.org/north-rim-ramble/"
+    },
+    "Death_by_5k_Oak_Mountain": {
+        "title": "Death by 5k Oak Mountain",
+        "distances": [
+            "24 Hour Challenge"
+        ],
+        "location": "Pelham, AL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55464",
+        "date": "November 23, 2024 08:00:00",
+        "website": "http://www.deathby5k.com"
+    },
+    "Front_Range_Ultra_Dayze": {
+        "title": "Front Range Ultra Dayze",
+        "distances": [
+            "200-miler",
+            "100-miler",
+            "100-hour",
+            "72-hour",
+            "48-hour",
+            "24-hour",
+            "12-hour",
+            "6-hour"
+        ],
+        "location": "Loveland, CO",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55465",
+        "date": "August 29, 2024 10:00:00",
+        "website": "https://ultraversesupplements.com/our-races"
+    },
+    "Ultra_Pirineu": {
+        "title": "Ultra Pirineu",
+        "distances": [
+            "100K"
+        ],
+        "location": "Baga, Spain",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55350",
+        "date": "October 1, 2023 00:00:00",
+        "website": "http://ultrapirineu.com/"
+    },
+    "The_Owyhee_Off-Road_Challenge": {
+        "title": "The Owyhee Off-Road Challenge",
+        "distances": [
+            "55k",
+            "Half Marathon",
+            "10k",
+            "5k"
+        ],
+        "location": "Adrian, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55466",
+        "date": "March 23, 2024 07:00:00",
+        "website": "https://www.owyheeoffroadchallenge.com/"
+    },
+    "The_Krrbrrr": {
+        "title": "The Krrbrrr",
+        "distances": [
+            "8hrs"
+        ],
+        "location": "Palmer, AK",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55467",
+        "date": "April 6, 2024 10:00:00",
+        "website": "https://thekrrbrrr.wordpress.com/"
+    },
+    "Notos_Ultra": {
+        "title": "Notos Ultra",
+        "distances": [
+            "65K",
+            "45K"
+        ],
+        "location": "Victoriaville, QC",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55468",
+        "date": "June 17, 2022 00:00:00",
+        "website": "https://granddefi.qc.ca/notos-ultra-trail/"
+    },
+    "Iron_Legs_Mountain_Races": {
+        "title": "Iron Legs Mountain Races",
+        "distances": [
+            "100K",
+            "50 Mile Solo",
+            "60K",
+            "20K"
+        ],
+        "location": "Calgary, AB",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55469",
+        "date": "August 17, 2024 06:00:00",
+        "website": "http://www.ironlegs.ca"
+    },
+    "Booneville_Backroads_Ultra": {
+        "title": "Booneville Backroads Ultra",
+        "distances": [
+            "100 Miler",
+            "100K",
+            "50K",
+            "10K"
+        ],
+        "location": "Booneville, IA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55470",
+        "date": "August 31, 2024 05:00:00",
+        "website": "http://boonevillebackroadsultra.com/"
+    },
+    "Copper_Canyons_Endurance_Runs": {
+        "title": "Copper Canyons Endurance Runs",
+        "distances": [
+            "Camp Corre Libre",
+            "50K Ultramarathon",
+            "Marathon",
+            "1/2 Marathon"
+        ],
+        "location": "Cerocahui, Mexico",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55471",
+        "date": "October 27, 2024 07:30:00",
+        "website": "http://www.coppercanyons.com"
+    },
+    "Squatchy_Leftovers_Trail_Race": {
+        "title": "Squatchy Leftovers Trail Race",
+        "distances": [
+            ""
+        ],
+        "location": "West Orange, NJ",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55472",
+        "date": "November 30, 2024 08:00:00",
+        "website": "https://www.sassquadtrailrunning.com/squatchyleftovers"
+    },
+    "Las_Virgenes_Canyon_Trail_Races": {
+        "title": "Las Virgenes Canyon Trail Races",
+        "distances": [
+            "12K",
+            "6K"
+        ],
+        "location": "Los Angeles (West Hills), CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55473",
+        "date": "April 27, 2024 07:30:00",
+        "website": "https://www.strava.com/clubs/451238/discussion?num_entries=20"
+    },
+    "The_Raven_50_Ultra_&_Relay": {
+        "title": "The Raven 50 Ultra & Relay",
+        "distances": [
+            "50 Miler",
+            "50 Mile - 2 Person Relay"
+        ],
+        "location": "Whitehorse, YT",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55475",
+        "date": "July 7, 2024 06:00:00",
+        "website": "https://raven.runforlife.ca/"
+    },
+    "Resolution_Run": {
+        "title": "Resolution Run",
+        "distances": [
+            "10K",
+            "Virtual 10k",
+            "Virtual 5k",
+            "5K",
+            "Mile",
+            "Virtual 1 Mile"
+        ],
+        "location": "Las Vegas, NV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=51683",
+        "date": "December 31, 2023 16:00:00",
+        "website": "http://www.tripledareruns.com/events/resolution-run/"
+    },
+    "Angwin_to_Angwish": {
+        "title": "Angwin to Angwish",
+        "distances": [
+            "26K",
+            "10k",
+            "1 Mile Kids Run"
+        ],
+        "location": "Angwin, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55476",
+        "date": "May 5, 2024 08:30:00",
+        "website": "http://www.angwintoangwish.com"
+    },
+    "Revolution_Run": {
+        "title": "Revolution Run",
+        "distances": [
+            "10K",
+            "5K",
+            "1M Kids' Run",
+            "10K Virtual",
+            "5K Virtual",
+            "1M Virtual"
+        ],
+        "location": "Las Vegas, NV",
+        "register": "https://ultrasignup.com/register.aspx?dtid=51684",
+        "date": "January 1, 2024 12:30:00",
+        "website": "http://www.tripledareruns.com/events/revolution-run/"
+    },
+    "The_Hennepin_Hundred": {
+        "title": "The Hennepin Hundred",
+        "distances": [
+            "100 Miler",
+            "50 Miler",
+            "50K",
+            "100 mile team relay",
+            "Pacer"
+        ],
+        "location": "Sterling, IL",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55477",
+        "date": "October 5, 2024 07:00:00",
+        "website": "http://hennepinhundred.com"
+    },
+    "The_Long_Run_-_Spring_Forward": {
+        "title": "The Long Run - Spring Forward",
+        "distances": [
+            "6hrs",
+            "3hrs",
+            "5 Miler"
+        ],
+        "location": "Wind Gap, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55478",
+        "date": "November 3, 2024 10:30:00",
+        "website": "https://therunningkind.squarespace.com/the-long-run"
+    },
+    "Lag_Bon_10K": {
+        "title": "Lag Bon 10K",
+        "distances": [
+            "10K"
+        ],
+        "location": "Fairfax, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55479",
+        "date": "March 24, 2024 08:00:00",
+        "website": "https://trailrunningwater.com/"
+    },
+    "The_Long_Run_-_Fall_Back": {
+        "title": "The Long Run - Fall Back",
+        "distances": [
+            "6hrs",
+            "3hrs",
+            "5 Miler"
+        ],
+        "location": "Wind Gap, PA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55480",
+        "date": "November 3, 2024 07:30:00",
+        "website": "https://therunningkind.squarespace.com/the-long-run"
+    },
+    "The_Racing_Gnome_Snowshoe_Race": {
+        "title": "The Racing Gnome Snowshoe Race",
+        "distances": [
+            "10K",
+            "5km"
+        ],
+        "location": "Truckee, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55481",
+        "date": "February 11, 2024 10:00:00",
+        "website": "https://donnerpartymountainrunners.com/racing-gnome-snowshoe-race/"
+    },
+    "Ultramook_50k_on_the_Tillamook_Ridge": {
+        "title": "Ultramook 50k on the Tillamook Ridge",
+        "distances": [
+            "50K",
+            "30K"
+        ],
+        "location": "Tillamook, OR",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55482",
+        "date": "July 13, 2024 08:00:00",
+        "website": "https://ultramook50k.oregoncoastalflowers.com/"
+    },
+    "Coyote_Two_Moon": {
+        "title": "Coyote Two Moon",
+        "distances": [
+            "100 Miler",
+            "100K",
+            "30K",
+            "10K"
+        ],
+        "location": "Ojai, CA",
+        "register": "https://ultrasignup.com/register.aspx?dtid=55483",
+        "date": "May 3, 2024 18:00:00",
+        "website": "https://www.coyote2moon.com/"
+    }
+}

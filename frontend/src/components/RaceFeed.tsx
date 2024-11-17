@@ -8,9 +8,9 @@ const RaceFeed = () => {
     const { searchResults } = useContext(DataContext);
 
     return (
-        <div className="mt-8 text-left">
+        <div className="mt-3 text-left">
             <SortDropdown />
-            <div className="grid grid-cols-3 gap-3 my-4 z-0">
+            <div className="grid grid-cols-2 gap-4 mt-3 z-0">
                 {searchResults.map((race) => (
                     <RaceCard key={race.id} race={race} />
                 ))}

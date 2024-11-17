@@ -23,7 +23,7 @@ const DateDropdown = () => {
                         id="min_date"
                         placeholder="No Min"
                         data-dropdown-toggle="dropdownInfoMin"
-                        className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
+                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
                         onChange={(evt) =>
                             setDateMin(new Date(evt.target.value))
                         }
@@ -45,7 +45,7 @@ const DateDropdown = () => {
                         id="max_date"
                         placeholder="No Max"
                         data-dropdown-toggle="dropdownInfoMax"
-                        className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
+                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
                         onChange={(evt) =>
                             setDateMax(new Date(evt.target.value))
                         }

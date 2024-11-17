@@ -19,7 +19,7 @@ const Login = () => {
                         name="email"
                         id="email"
                         placeholder="name@company.com"
-                        className="border rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
+                        className="border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
                     />
                 </div>
                 <div>
@@ -34,7 +34,7 @@ const Login = () => {
                         name="password"
                         id="password"
                         placeholder="••••••••••••"
-                        className="border rounded-lg focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
+                        className="border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
                     />
                 </div>
                 <div className="flex items-center justify-between">
@@ -44,7 +44,7 @@ const Login = () => {
                                 type="checkbox"
                                 id="remember"
                                 aria-describedby="remember"
-                                className="w-4 h-4 border rounded focus:ring-3 bg-gray-700 border-gray-600 ring-offset-gray-800 focus:ring-blue-600"
+                                className="w-4 h-4 border rounded focus:ring-3 bg-gray-700 border-gray-600 ring-offset-gray-800 focus:ring-indigo-600"
                             />
                         </div>
                         <div className="ml-3 text-sm">
@@ -55,14 +55,14 @@ const Login = () => {
                     </div>
                     <a
                         href="#"
-                        className="text-sm font-medium hover:underline text-blue-500"
+                        className="text-sm font-medium hover:underline text-indigo-500"
                     >
                         Forgot password?
                     </a>
                 </div>
                 <button
                     type="submit"
-                    className="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                    className="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-800"
                 >
                     Sign in
                 </button>
@@ -70,7 +70,7 @@ const Login = () => {
                     Don't have an account yet?{" "}
                     <a
                         href="#"
-                        className="font-medium hover:underline text-blue-500"
+                        className="font-medium hover:underline text-indigo-500"
                     >
                         Sign up
                     </a>

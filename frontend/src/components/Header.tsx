@@ -10,11 +10,17 @@ const Header = () => {
 
     return (
         <>
-            <div className="flex h-12 min-w-full mb-8 bg-gray-800 rounded-lg place-content-between">
+            <div className="flex items-center h-12 min-w-full mb-8 bg-gray-800 rounded-lg place-content-between">
                 <div>
                     <Button
-                        name={"Run Emu"}
-                        icon={<FaHome />}
+                        name={"RunEmu"}
+                        icon={
+                            <img
+                                src="/images/logos/emu_wb.svg"
+                                className="h-8 filter-"
+                                alt="RunEmu Logo"
+                            />
+                        }
                         onClick={() => {
                             navigate("/");
                         }}
