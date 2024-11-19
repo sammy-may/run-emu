@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import RaceType from "../types/race";
-import DataContext from "../context/RaceFeedContext";
+import { RaceContext } from "../context/RaceFeedContext";
 
 import { PiPathBold } from "react-icons/pi";
 import { FaRegCalendarAlt } from "react-icons/fa";
@@ -8,7 +8,10 @@ import { TiSortAlphabetically } from "react-icons/ti";
 import { TbArrowsCross } from "react-icons/tb";
 
 const SortDropdown = () => {
-    const { races, searchResults, setSearchResults } = useContext(DataContext);
+    const {
+        state: { allResults, searchResults, mapResults },
+        updateSearchResults,
+    } = useContext(RaceContext);
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -26,38 +29,56 @@ const SortDropdown = () => {
         return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
     };
 
+    const compareByDate = (a: RaceType, b: RaceType) => {
+        if (a.date > b.date) return 1;
+        if (a.date < b.date) return -1;
+        return 0;
+    };
+
     const sortByDistance = () => {
         const sortedRaces = [...searchResults];
         sortedRaces.sort(compareByDistance);
-        races.sort(compareByDistance);
-        setSearchResults(sortedRaces);
+        allResults.sort(compareByDistance);
+        mapResults.sort(compareByDistance);
+        updateSearchResults(sortedRaces);
         toggleDropdown();
     };
 
     const sortByName = () => {
         const sortedRaces = [...searchResults];
         sortedRaces.sort(compareByName);
-        races.sort(compareByName);
-        setSearchResults(sortedRaces);
+        allResults.sort(compareByName);
+        mapResults.sort(compareByName);
+        updateSearchResults(sortedRaces);
+        toggleDropdown();
+    };
+
+    const sortByDate = () => {
+        const sortedRaces = [...searchResults];
+        sortedRaces.sort(compareByDate);
+        allResults.sort(compareByDate);
+        mapResults.sort(compareByDate);
+        updateSearchResults(sortedRaces);
         toggleDropdown();
     };
 
     const reverse = () => {
         const reversedRaces = [...searchResults];
         reversedRaces.reverse();
-        races.reverse();
-        setSearchResults(reversedRaces);
+        allResults.reverse();
+        mapResults.reverse();
+        updateSearchResults(reversedRaces);
     };
 
     return (
         <div className="relative">
-            <div className="inline-flex rounded-md shadow-sm space-x-2">
+            <div className="flex items-center rounded-md shadow-sm space-x-2">
                 <button
                     id="sortInfo"
                     data-dropdown-toggle="dropdownInformation"
                     type="button"
                     onClick={toggleDropdown}
-                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-lg text-sm px-3 pb-2 text-center items-center bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-800"
+                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-lg text-sm px-3 mb-2 text-center items-center bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-800"
                 >
                     Sort by
                     <svg
@@ -80,7 +101,7 @@ const SortDropdown = () => {
                     id="reverse"
                     type="button"
                     onClick={reverse}
-                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-lg text-sm px-3 pb-2 text-center items-center bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-800 space-x-2"
+                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-lg text-sm px-3 mb-2 text-center items-center bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-800 space-x-2"
                 >
                     <div>Reverse</div>
                     <TbArrowsCross />
@@ -110,7 +131,10 @@ const SortDropdown = () => {
                             </button>
                         </li>
                         <li>
-                            <button className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full">
+                            <button
+                                onClick={() => sortByDate()}
+                                className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full"
+                            >
                                 <div className="flex items-center space-x-2">
                                     <div>
                                         <FaRegCalendarAlt />

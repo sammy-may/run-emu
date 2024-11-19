@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.shortcuts import render  # noqa: F401
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -10,7 +12,11 @@ from .serializers import RaceSerializer
 # Create your views here.
 @api_view(["GET"])
 def get_races(request):
-    races = Race.objects.all()
+    active_only = request.GET.get("active_only")
+    if active_only:
+        races = Race.objects.filter(date__gte=datetime.today())
+    else:
+        races = Race.objects.all()
     serializedData = RaceSerializer(races, many=True).data
     return Response(serializedData)
 

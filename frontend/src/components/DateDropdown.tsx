@@ -1,8 +1,13 @@
 import { useContext } from "react";
-import DataContext from "../context/RaceFeedContext";
+import { RaceContext } from "../context/RaceFeedContext";
 
 const DateDropdown = () => {
-    const { setDateMin, setDateMax } = useContext(DataContext);
+    const {
+        state: { dateMin },
+        updateDateMin,
+        updateDateMax,
+    } = useContext(RaceContext);
+
     return (
         <div className="min-w-24 text-left relative">
             <form
@@ -24,9 +29,8 @@ const DateDropdown = () => {
                         placeholder="No Min"
                         data-dropdown-toggle="dropdownInfoMin"
                         className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
-                        onChange={(evt) =>
-                            setDateMin(new Date(evt.target.value))
-                        }
+                        defaultValue={dateMin.toISOString().slice(0, 10)}
+                        onChange={updateDateMin}
                     />
                 </div>
                 <div className="relative">
@@ -46,9 +50,7 @@ const DateDropdown = () => {
                         placeholder="No Max"
                         data-dropdown-toggle="dropdownInfoMax"
                         className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
-                        onChange={(evt) =>
-                            setDateMax(new Date(evt.target.value))
-                        }
+                        onChange={updateDateMax}
                     />
                 </div>
             </form>

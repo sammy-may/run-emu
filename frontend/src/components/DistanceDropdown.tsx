@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import DataContext from "../context/RaceFeedContext";
+import { RaceContext } from "../context/RaceFeedContext";
 
 const DistanceDropdown = () => {
-    const { setDistanceMin, setDistanceMax } = useContext(DataContext);
+    const { updateDistanceMin, updateDistanceMax } = useContext(RaceContext);
 
     return (
         <div className="min-w-24 text-left relative">
@@ -25,9 +25,7 @@ const DistanceDropdown = () => {
                         placeholder="No Min"
                         data-dropdown-toggle="dropdownInfoMin"
                         className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
-                        onChange={(evt) =>
-                            setDistanceMin(Number(evt.target.value))
-                        }
+                        onChange={updateDistanceMin}
                     />
                 </div>
                 <div className="relative">
@@ -47,9 +45,7 @@ const DistanceDropdown = () => {
                         placeholder="No Max"
                         data-dropdown-toggle="dropdownInfoMax"
                         className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
-                        onChange={(evt) =>
-                            setDistanceMax(Number(evt.target.value))
-                        }
+                        onChange={updateDistanceMax}
                     />
                 </div>
             </form>

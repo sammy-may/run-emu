@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import DataContext from "../context/RaceFeedContext";
+import { RaceContext } from "../context/RaceFeedContext";
 
 const SearchBar = () => {
-    const { search, setSearch } = useContext(DataContext);
+    const { updateSearch } = useContext(RaceContext);
+
     return (
         <div className="min-w-48 text-left relative">
             <form onSubmit={(evt) => evt.preventDefault()}>
@@ -17,8 +18,7 @@ const SearchBar = () => {
                     type="text"
                     placeholder="Try 'marathon'..."
                     className="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-indigo-500 focus:border-indigo-500"
-                    value={search}
-                    onChange={(evt) => setSearch(evt.target.value)}
+                    onChange={updateSearch}
                 />
             </form>
         </div>

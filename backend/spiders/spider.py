@@ -1,6 +1,8 @@
 import json
 import logging
 
+import geopy
+import geopy.geocoders
 import requests
 from bs4 import BeautifulSoup
 
@@ -12,6 +14,8 @@ class Spider:
         self.urls = urls
         self.races = {}
         self.f_out = "data/spider_dump.json"
+
+        self.geo_locator = geopy.geocoders.Nominatim(user_agent="my_geocoder")
 
     def crawl(self):
         for i in range(10000):
@@ -26,22 +30,22 @@ class Spider:
                 if not ("ace_btn" in line and "addcalevent" in line):
                     continue
                 else:
-                    race = {}
-                    info = "\n".join(lines[idx : idx + 15])
-                    info = (
-                        info[info.find("({") : info.find(")};")]
-                        .strip()[1:-2]
-                        .replace("'data'", '"data"')
-                    )
-                    info = "\n".join(
-                        [
-                            x
-                            for x in info.split("\n")
-                            if not ("'apps':" in x or "'ics':" in x)
-                        ]
-                    ).replace("},", "}")
-                    info = json.loads(info)["data"]
                     try:
+                        race = {}
+                        info = "\n".join(lines[idx : idx + 15])
+                        info = (
+                            info[info.find("({") : info.find(")};")]
+                            .strip()[1:-2]
+                            .replace("'data'", '"data"')
+                        )
+                        info = "\n".join(
+                            [
+                                x
+                                for x in info.split("\n")
+                                if not ("'apps':" in x or "'ics':" in x)
+                            ]
+                        ).replace("},", "}")
+                        info = json.loads(info)["data"]
                         race["title"] = info["title"]
                         title, dists, location, register, website = info["desc"].split(
                             "\n"
@@ -49,6 +53,12 @@ class Spider:
                         dists = [x.strip() for x in dists.split(",")]
                         race["distances"] = dists
                         race["location"] = info["location"]
+
+                        loc = self.geo_locator.geocode(race["location"])
+                        if loc:
+                            race["latitude"] = loc.latitude
+                            race["longitude"] = loc.longitude
+
                         race["register"] = info["url"]
                         race["date"] = info["time"]["start"]
                         race["website"] = website.split(" ")[-1]
@@ -59,8 +69,7 @@ class Spider:
                             .replace(" ", "_")
                         )
                     except:  # noqa: E722
-                        logger.warning("Trouble with this json")
-                        logger.warning(info)
+                        logger.warning("Skipping")
                     if race_name not in self.races:
                         logger.info("Adding race '{:s}'".format(race_name))
                         self.races[race_name] = race

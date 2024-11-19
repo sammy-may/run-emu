@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
 
-import { DataProvider } from "./context/RaceFeedContext";
+import { RaceDataProvider } from "./context/RaceFeedContext";
 
 import api from "./api/races";
 
@@ -35,7 +35,7 @@ function App() {
     };
 
     return (
-        <DataProvider>
+        <RaceDataProvider>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
@@ -51,7 +51,7 @@ function App() {
                     />
                 </Route>
             </Routes>
-        </DataProvider>
+        </RaceDataProvider>
     );
 }
 

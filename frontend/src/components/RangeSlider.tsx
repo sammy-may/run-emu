@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import DataContext from "../context/RaceFeedContext";
+import { RaceContext } from "../context/RaceFeedContext";
 
 const RangeSlider = () => {
     const { distanceMin, setDistanceMin, distanceMax, setDistanceMax } =

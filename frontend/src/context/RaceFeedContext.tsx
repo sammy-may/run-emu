@@ -1,114 +1,278 @@
-import { createContext, useEffect, useState, useContext } from "react";
+import {
+    createContext,
+    useEffect,
+    useState,
+    useContext,
+    useReducer,
+    ReactElement,
+    useCallback,
+    ChangeEvent,
+} from "react";
 import RaceType from "../types/race";
 import api from "../api/races";
+import { useMap } from "react-leaflet";
 
-interface DataContextType {
-    races: RaceType[];
-    setRaces: React.Dispatch<React.SetStateAction<RaceType[]>>;
+enum RaceActionKind {
+    UPDATE_DISTANCE_MIN = "UPDATE_DISTANCE_MIN",
+    UPDATE_DISTANCE_MAX = "UPDATE_DISTANCE_MAX",
+    UPDATE_DATE_MIN = "UPDATE_DATE_MIN",
+    UPDATE_DATE_MAX = "UPDATE_DATE_MAX",
+    UPDATE_SEARCH = "UPDATE_SEARCH",
+    POPULATE_RACES = "POPULATE_RACES",
+    UPDATE_MAP_RESULTS = "UPDATE_MAP_RESULTS",
+    UPDATE_SEARCH_RESULTS = "UPDATE_SEARCH_RESULTS",
+    UPDATE_HOVER = "UPDATE_HOVER",
+}
+interface RaceAction {
+    type: RaceActionKind;
+    new_distance?: number;
+    new_date?: Date;
+    search?: string;
+    new_races?: RaceType[];
+    index?: number;
+    new_bool?: boolean;
+}
+interface RaceState {
+    allResults: RaceType[];
+    nAll: number;
     searchResults: RaceType[];
-    setSearchResults: React.Dispatch<React.SetStateAction<RaceType[]>>;
+    nSearch: number;
+    mapResults: RaceType[];
+    nMap: number;
     search: string;
-    setSearch: React.Dispatch<React.SetStateAction<string>>;
     distanceMin: number;
-    setDistanceMin: React.Dispatch<React.SetStateAction<number>>;
     distanceMax: number;
-    setDistanceMax: React.Dispatch<React.SetStateAction<number>>;
     dateMin: Date;
-    setDateMin: React.Dispatch<React.SetStateAction<Date>>;
     dateMax: Date;
-    setDateMax: React.Dispatch<React.SetStateAction<Date>>;
 }
 
-const DataContext = createContext<DataContextType>({
-    races: [],
-    setRaces: () => {},
+const initState: RaceState = {
+    allResults: [],
     searchResults: [],
-    setSearchResults: () => {},
+    mapResults: [],
+    nAll: 0,
+    nSearch: 0,
+    nMap: 0,
     search: "",
-    setSearch: () => {},
     distanceMin: 0,
-    setDistanceMin: () => {},
     distanceMax: 1000,
-    setDistanceMax: () => {},
     dateMin: new Date(),
-    setDateMin: () => {},
-    dateMax: new Date(),
-    setDateMax: () => {},
-});
+    dateMax: new Date("3000-01-01"),
+};
 
-export const useDataContext = () => useContext(DataContext);
+const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
+    switch (action.type) {
+        case RaceActionKind.UPDATE_HOVER:
+            return {
+                ...state,
+                mapResults: state.mapResults.map((x, idx) =>
+                    idx == action.index!
+                        ? { ...x, isHovered: action.new_bool! }
+                        : x
+                ),
+            };
+        case RaceActionKind.UPDATE_DISTANCE_MIN:
+            return { ...state, distanceMin: action.new_distance! };
+        case RaceActionKind.UPDATE_DISTANCE_MAX:
+            return { ...state, distanceMax: action.new_distance! };
+        case RaceActionKind.UPDATE_DATE_MIN:
+            return { ...state, dateMin: action.new_date! };
+        case RaceActionKind.UPDATE_DATE_MAX:
+            return { ...state, dateMax: action.new_date! };
+        case RaceActionKind.UPDATE_SEARCH:
+            return { ...state, search: action.search! };
+        case RaceActionKind.POPULATE_RACES:
+            return {
+                ...state,
+                allResults: action.new_races!,
+                searchResults: action.new_races!,
+                mapResults: action.new_races!,
+                nAll: action.new_races!.length,
+                nSearch: action.new_races!.length,
+                nMap: action.new_races!.length,
+            };
+        case RaceActionKind.UPDATE_MAP_RESULTS:
+            return {
+                ...state,
+                mapResults: action.new_races!,
+                nMap: action.new_races!.length,
+            };
+        case RaceActionKind.UPDATE_SEARCH_RESULTS:
+            return {
+                ...state,
+                searchResults: action.new_races!,
+                nSearch: action.new_races!.length,
+            };
+        default:
+            return state;
+    }
+};
 
-interface DataProviderProps {
-    children: React.ReactNode;
-}
+const useRaceContext = (initState: RaceState) => {
+    const [state, dispatch] = useReducer(raceReducer, initState);
 
-export const DataProvider: React.FC<DataProviderProps> = ({
-    children,
-}: {
-    children: any;
-}) => {
-    const [races, setRaces] = useState<RaceType[]>([]);
-    const [search, setSearch] = useState<string>("");
-    const [searchResults, setSearchResults] = useState<RaceType[]>([]);
+    const updateHover = useCallback((index: number, isHovered: boolean) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_HOVER,
+            index: index,
+            new_bool: isHovered,
+        });
+    }, []);
 
-    const [distanceMin, setDistanceMin] = useState<number>(0);
-    const [distanceMax, setDistanceMax] = useState<number>(1000);
+    const updateDistanceMin = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_DISTANCE_MIN,
+                new_distance: Number(evt.target.value),
+            });
+        },
+        []
+    );
 
-    const [dateMin, setDateMin] = useState<Date>(new Date("2000-01-01"));
-    const [dateMax, setDateMax] = useState<Date>(new Date("3000-01-01"));
+    const updateDistanceMax = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            const new_distance = Number(evt.target.value);
+            dispatch({
+                type: RaceActionKind.UPDATE_DISTANCE_MAX,
+                new_distance: new_distance > 0 ? new_distance : -1,
+            });
+        },
+        []
+    );
+
+    const updateSearch = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_SEARCH,
+            search: evt.target.value,
+        });
+    }, []);
+
+    const updateDateMin = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_DATE_MIN,
+            new_date: new Date(evt.target.value),
+        });
+    }, []);
+
+    const updateDateMax = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_DATE_MAX,
+            new_date: new Date(evt.target.value),
+        });
+    }, []);
+
+    const updateSearchResults = useCallback((races: RaceType[]) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_SEARCH_RESULTS,
+            new_races: races,
+        });
+        updateMapResults(races.filter((race) => race.onMap));
+    }, []);
+
+    const updateMapResults = useCallback((races: RaceType[]) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_MAP_RESULTS,
+            new_races: races,
+        });
+    }, []);
 
     const fetchRaces = async () => {
         try {
-            const response = await api.get("");
-            setRaces(response.data);
-            setSearchResults(response.data);
+            const response = await api.get("", {
+                params: { active_only: true },
+            });
+            const races: RaceType[] = response.data;
+            dispatch({
+                type: RaceActionKind.POPULATE_RACES,
+                new_races: races,
+            });
         } catch (err) {
             console.log(err);
         }
     };
 
-    const filterRaces = () => {
-        const filteredRaces = races.filter(
-            (race) =>
-                race.name.toLowerCase().includes(search.toLowerCase()) &&
-                race.distance >= distanceMin &&
-                race.distance <= distanceMax
-        );
-        setSearchResults(filteredRaces);
+    const filterRaces = (races: RaceType[]) => {
+        if (state.distanceMax < 0) {
+            races = races.filter(
+                (race) =>
+                    race.name
+                        .toLowerCase()
+                        .includes(state.search.toLowerCase()) &&
+                    race.distance >= state.distanceMin &&
+                    new Date(race.date) >= state.dateMin &&
+                    new Date(race.date) <= state.dateMax
+            );
+        } else {
+            races = races.filter(
+                (race) =>
+                    race.name
+                        .toLowerCase()
+                        .includes(state.search.toLowerCase()) &&
+                    race.distance >= state.distanceMin &&
+                    race.distance <= state.distanceMax &&
+                    new Date(race.date) >= state.dateMin &&
+                    new Date(race.date) <= state.dateMax
+            );
+        }
+        return races;
     };
 
-    // Load race data
+    const applyFilters = () => {
+        const newSearch = filterRaces(state.allResults);
+        updateSearchResults(newSearch);
+    };
+
     useEffect(() => {
         fetchRaces();
     }, []);
 
-    // Update search results whenever race data or search data changes
     useEffect(() => {
-        filterRaces();
-    }, [races, search, distanceMin, distanceMax]);
+        applyFilters();
+    }, [
+        state.search,
+        state.distanceMin,
+        state.distanceMax,
+        state.dateMin,
+        state.dateMax,
+    ]);
 
-    return (
-        <DataContext.Provider
-            value={{
-                races,
-                setRaces,
-                searchResults,
-                setSearchResults,
-                search,
-                setSearch,
-                distanceMin,
-                setDistanceMin,
-                distanceMax,
-                setDistanceMax,
-                dateMin,
-                setDateMin,
-                dateMax,
-                setDateMax,
-            }}
-        >
-            {children}
-        </DataContext.Provider>
-    );
+    return {
+        state,
+        updateDistanceMin,
+        updateDistanceMax,
+        updateSearch,
+        updateDateMin,
+        updateDateMax,
+        updateMapResults,
+        updateSearchResults,
+        updateHover,
+    };
 };
 
-export default DataContext;
+type UseRaceContextType = ReturnType<typeof useRaceContext>;
+
+const initContextState: UseRaceContextType = {
+    state: initState,
+    updateDistanceMin: () => {},
+    updateDistanceMax: () => {},
+    updateDateMin: () => {},
+    updateDateMax: () => {},
+    updateSearch: () => {},
+    updateMapResults: () => {},
+    updateSearchResults: () => {},
+    updateHover: () => {},
+};
+
+export const RaceContext = createContext<UseRaceContextType>(initContextState);
+
+type ChildrenType = {
+    children?: ReactElement | ReactElement[] | undefined;
+};
+
+export const RaceDataProvider = ({ children }: ChildrenType): ReactElement => {
+    return (
+        <RaceContext.Provider value={useRaceContext(initState)}>
+            {children}
+        </RaceContext.Provider>
+    );
+};

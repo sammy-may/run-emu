@@ -12,11 +12,13 @@ def run():
         for race, info in races.items():
             print(race, info)
 
-            my_race = Race(
-                name=info["title"],
-                distance=len(info["distances"]),
-                date=datetime.strptime(info["date"], "%B %d, %Y %H:%M:%S"),
-                location=info["location"],
-            )
+            my_race, created = Race.objects.get_or_create(name=info["title"])
+
+            my_race.distance = len(info["distances"])
+            my_race.date = datetime.strptime(info["date"], "%B %d, %Y %H:%M:%S")
+            my_race.location = info["location"]
+            if "latitude" in info and "longitude" in info:
+                my_race.latitude = info["latitude"]
+                my_race.longitude = info["longitude"]
 
             my_race.save()
