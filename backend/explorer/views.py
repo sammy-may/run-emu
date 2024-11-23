@@ -14,7 +14,7 @@ from .serializers import RaceSerializer
 def get_races(request):
     active_only = request.GET.get("active_only")
     if active_only:
-        races = Race.objects.filter(date__gte=datetime.today())
+        races = Race.objects.filter(date__gte=datetime.today(), distance__gt=0)
     else:
         races = Race.objects.all()
     serializedData = RaceSerializer(races, many=True).data

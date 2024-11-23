@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import { RaceDataProvider } from "./context/RaceFeedContext";
 
 import api from "./api/races";
+import RaceFocus from "./pages/RaceFocus";
 
 function App() {
     const [name, setName] = useState<string>("");
@@ -41,6 +42,7 @@ function App() {
                     <Route index element={<Home />} />
                     <Route path="about" element={<About />} />
                     <Route path="login" element={<Login />} />
+                    <Route path="races/:name" element={<RaceFocus />} />
                     <Route
                         path="*"
                         element={

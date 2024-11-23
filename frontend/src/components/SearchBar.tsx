@@ -5,7 +5,7 @@ const SearchBar = () => {
     const { updateSearch } = useContext(RaceContext);
 
     return (
-        <div className="min-w-48 text-left relative">
+        <div className="text-left relative w-full">
             <form onSubmit={(evt) => evt.preventDefault()}>
                 <label
                     htmlFor="search"

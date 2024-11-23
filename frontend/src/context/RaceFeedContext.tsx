@@ -1,8 +1,6 @@
 import {
     createContext,
     useEffect,
-    useState,
-    useContext,
     useReducer,
     ReactElement,
     useCallback,
@@ -10,7 +8,6 @@ import {
 } from "react";
 import RaceType from "../types/race";
 import api from "../api/races";
-import { useMap } from "react-leaflet";
 
 enum RaceActionKind {
     UPDATE_DISTANCE_MIN = "UPDATE_DISTANCE_MIN",
@@ -25,39 +22,50 @@ enum RaceActionKind {
 }
 interface RaceAction {
     type: RaceActionKind;
-    new_distance?: number;
-    new_date?: Date;
+    new_distance?: number | null;
+    new_date?: Date | null;
     search?: string;
     new_races?: RaceType[];
     index?: number;
     new_bool?: boolean;
+    sort?: boolean;
 }
 interface RaceState {
     allResults: RaceType[];
-    nAll: number;
     searchResults: RaceType[];
-    nSearch: number;
     mapResults: RaceType[];
-    nMap: number;
-    search: string;
-    distanceMin: number;
-    distanceMax: number;
-    dateMin: Date;
-    dateMax: Date;
+    search: string | null;
+    distanceMin: number | null;
+    distanceMax: number | null;
+    dateMin: Date | null;
+    dateMax: Date | null;
 }
 
 const initState: RaceState = {
     allResults: [],
     searchResults: [],
     mapResults: [],
-    nAll: 0,
-    nSearch: 0,
-    nMap: 0,
-    search: "",
-    distanceMin: 0,
-    distanceMax: 1000,
+    search: null,
+    distanceMin: null,
+    distanceMax: null,
     dateMin: new Date(),
-    dateMax: new Date("3000-01-01"),
+    dateMax: null,
+};
+
+const compareByHover = (a: RaceType, b: RaceType) => {
+    let a_hover = a.isHovered === undefined ? false : a.isHovered;
+    let b_hover = b.isHovered === undefined ? false : b.isHovered;
+    if (a_hover > b_hover) {
+        return -1;
+    }
+    if (a_hover < b_hover) {
+        return 1;
+    }
+    return 0;
+};
+
+const compareByNone = (a: RaceType, b: RaceType) => {
+    return 0;
 };
 
 const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
@@ -65,11 +73,17 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
         case RaceActionKind.UPDATE_HOVER:
             return {
                 ...state,
-                mapResults: state.mapResults.map((x, idx) =>
-                    idx == action.index!
-                        ? { ...x, isHovered: action.new_bool! }
-                        : x
-                ),
+                searchResults: state.searchResults
+                    .map((x, idx) => {
+                        if (idx == action.index!) {
+                            return { ...x, isHovered: action.new_bool! };
+                        } else if (action.new_bool && x.isHovered) {
+                            return { ...x, isHovered: false };
+                        } else {
+                            return x;
+                        }
+                    })
+                    .sort(action.sort! ? compareByHover : compareByNone),
             };
         case RaceActionKind.UPDATE_DISTANCE_MIN:
             return { ...state, distanceMin: action.new_distance! };
@@ -87,21 +101,16 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
                 allResults: action.new_races!,
                 searchResults: action.new_races!,
                 mapResults: action.new_races!,
-                nAll: action.new_races!.length,
-                nSearch: action.new_races!.length,
-                nMap: action.new_races!.length,
             };
         case RaceActionKind.UPDATE_MAP_RESULTS:
             return {
                 ...state,
                 mapResults: action.new_races!,
-                nMap: action.new_races!.length,
             };
         case RaceActionKind.UPDATE_SEARCH_RESULTS:
             return {
                 ...state,
                 searchResults: action.new_races!,
-                nSearch: action.new_races!.length,
             };
         default:
             return state;
@@ -111,19 +120,25 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
 const useRaceContext = (initState: RaceState) => {
     const [state, dispatch] = useReducer(raceReducer, initState);
 
-    const updateHover = useCallback((index: number, isHovered: boolean) => {
-        dispatch({
-            type: RaceActionKind.UPDATE_HOVER,
-            index: index,
-            new_bool: isHovered,
-        });
-    }, []);
+    const updateHover = useCallback(
+        (index: number, isHovered: boolean, sort: boolean) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_HOVER,
+                index: index,
+                new_bool: isHovered,
+                sort: sort,
+            });
+        },
+        []
+    );
 
     const updateDistanceMin = useCallback(
         (evt: ChangeEvent<HTMLInputElement>) => {
             dispatch({
                 type: RaceActionKind.UPDATE_DISTANCE_MIN,
-                new_distance: Number(evt.target.value),
+                new_distance: evt.target.value
+                    ? Number(evt.target.value)
+                    : null,
             });
         },
         []
@@ -131,10 +146,11 @@ const useRaceContext = (initState: RaceState) => {
 
     const updateDistanceMax = useCallback(
         (evt: ChangeEvent<HTMLInputElement>) => {
-            const new_distance = Number(evt.target.value);
             dispatch({
                 type: RaceActionKind.UPDATE_DISTANCE_MAX,
-                new_distance: new_distance > 0 ? new_distance : -1,
+                new_distance: evt.target.value
+                    ? Number(evt.target.value)
+                    : null,
             });
         },
         []
@@ -155,10 +171,17 @@ const useRaceContext = (initState: RaceState) => {
     }, []);
 
     const updateDateMax = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
-        dispatch({
-            type: RaceActionKind.UPDATE_DATE_MAX,
-            new_date: new Date(evt.target.value),
-        });
+        if (evt.target.value === "") {
+            dispatch({
+                type: RaceActionKind.UPDATE_DATE_MAX,
+                new_date: new Date("3000-01-01"),
+            });
+        } else {
+            dispatch({
+                type: RaceActionKind.UPDATE_DATE_MAX,
+                new_date: new Date(evt.target.value),
+            });
+        }
     }, []);
 
     const updateSearchResults = useCallback((races: RaceType[]) => {
@@ -166,7 +189,7 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_SEARCH_RESULTS,
             new_races: races,
         });
-        updateMapResults(races.filter((race) => race.onMap));
+        updateMapResults([...races.filter((race) => race.onMap)]);
     }, []);
 
     const updateMapResults = useCallback((races: RaceType[]) => {
@@ -192,28 +215,36 @@ const useRaceContext = (initState: RaceState) => {
     };
 
     const filterRaces = (races: RaceType[]) => {
-        if (state.distanceMax < 0) {
-            races = races.filter(
-                (race) =>
-                    race.name
-                        .toLowerCase()
-                        .includes(state.search.toLowerCase()) &&
-                    race.distance >= state.distanceMin &&
-                    new Date(race.date) >= state.dateMin &&
-                    new Date(race.date) <= state.dateMax
-            );
-        } else {
-            races = races.filter(
-                (race) =>
-                    race.name
-                        .toLowerCase()
-                        .includes(state.search.toLowerCase()) &&
-                    race.distance >= state.distanceMin &&
-                    race.distance <= state.distanceMax &&
-                    new Date(race.date) >= state.dateMin &&
-                    new Date(race.date) <= state.dateMax
+        if (state.search !== null) {
+            races = races.filter((race) =>
+                race.name.toLowerCase().includes(state.search!.toLowerCase())
             );
         }
+
+        if (state.distanceMax !== null) {
+            races = races.filter(
+                (race) => race.distance_min <= state.distanceMax!
+            );
+        }
+
+        if (state.distanceMin !== null) {
+            races = races.filter(
+                (race) => race.distance_max >= state.distanceMin!
+            );
+        }
+
+        if (state.dateMax !== null) {
+            races = races.filter(
+                (race) => new Date(race.date) <= state.dateMax!
+            );
+        }
+
+        if (state.dateMin !== null) {
+            races = races.filter(
+                (race) => new Date(race.date) >= state.dateMin!
+            );
+        }
+
         return races;
     };
 

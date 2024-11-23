@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Layout = () => {
     return (
-        <div className="m-3 max-h-screen">
+        <div className="flex-row items-center place-content-between justify-between m-3 max-h-screen min-h-screen">
             <Header />
             <Outlet />
             <Footer />

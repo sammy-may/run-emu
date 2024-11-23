@@ -14,6 +14,7 @@ const SortDropdown = () => {
     } = useContext(RaceContext);
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [sortText, setSortText] = useState<string>("");
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -41,6 +42,7 @@ const SortDropdown = () => {
         allResults.sort(compareByDistance);
         mapResults.sort(compareByDistance);
         updateSearchResults(sortedRaces);
+        setSortText(": Distance");
         toggleDropdown();
     };
 
@@ -50,6 +52,7 @@ const SortDropdown = () => {
         allResults.sort(compareByName);
         mapResults.sort(compareByName);
         updateSearchResults(sortedRaces);
+        setSortText(": A-Z");
         toggleDropdown();
     };
 
@@ -59,6 +62,7 @@ const SortDropdown = () => {
         allResults.sort(compareByDate);
         mapResults.sort(compareByDate);
         updateSearchResults(sortedRaces);
+        setSortText(": Date");
         toggleDropdown();
     };
 
@@ -78,9 +82,9 @@ const SortDropdown = () => {
                     data-dropdown-toggle="dropdownInformation"
                     type="button"
                     onClick={toggleDropdown}
-                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-lg text-sm px-3 mb-2 text-center items-center bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-800"
+                    className="flex whitespace-nowrap text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                 >
-                    Sort by
+                    Sort by {sortText}
                     <svg
                         className="w-2.5 h-2.5 ms-3"
                         aria-hidden="true"
@@ -101,7 +105,7 @@ const SortDropdown = () => {
                     id="reverse"
                     type="button"
                     onClick={reverse}
-                    className="flex text-white focus:ring-4 focus:outline-none font-medium border rounded-lg text-sm px-3 mb-2 text-center items-center bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-800 space-x-2"
+                    className="flex text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 space-x-2"
                 >
                     <div>Reverse</div>
                     <TbArrowsCross />
@@ -111,10 +115,10 @@ const SortDropdown = () => {
             {isOpen && (
                 <div
                     id="dropdownInformation"
-                    className=" bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute"
+                    className=" divide-y divide-gray-600 rounded-lg shadow w-44 bg-gray-700 absolute z-50"
                 >
                     <ul
-                        className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        className="py-2 text-sm text-gray-200"
                         aria-labelledby="sortInfo"
                     >
                         <li>
