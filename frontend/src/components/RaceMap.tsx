@@ -65,7 +65,7 @@ const RaceMap = () => {
 
     return (
         <div className="flex items-center relative pt-2">
-            <p className="absolute -top-8 rounded-lg border px-3 mb-2 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
+            <p className="absolute -top-6 rounded-lg border px-3 mb-2 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
                 Showing{" "}
                 <span className="text-indigo-200 font-medium px-1">
                     {mapResults.length}

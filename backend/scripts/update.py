@@ -13,7 +13,7 @@ def build_distances(dist_strs: list[str]) -> dict:
         name, distance = parse_distance(x)
         if name is None or distance is None:
             continue
-        res["data"].append({"name": name, "distance": distance})
+        res["data"].append({"name": name, "distance": round(distance, 1)})
     return res
 
 

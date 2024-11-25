@@ -2,6 +2,7 @@ import SearchBar from "./SearchBar";
 import DistanceDropdown from "./DistanceDropdown";
 import DateDropdown from "./DateDropdown";
 import SortDropdown from "./SortDropdown";
+import MoreDropdown from "./MoreDropdown";
 
 const OptionsBar = () => {
     return (
@@ -13,6 +14,7 @@ const OptionsBar = () => {
                 <SortDropdown />
                 <DistanceDropdown />
                 <DateDropdown />
+                <MoreDropdown />
             </div>
         </div>
     );

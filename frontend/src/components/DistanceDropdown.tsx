@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 import { PiPathBold } from "react-icons/pi";
 import DistanceBadge from "./DistanceBadge";
+import { FaRegTimesCircle } from "react-icons/fa";
 
 const DistanceDropdown = () => {
     const {
@@ -31,6 +32,7 @@ const DistanceDropdown = () => {
             setActiveDistance(-1);
             unsetDistance();
         }
+        toggleDropdown();
     };
 
     return (
@@ -66,8 +68,18 @@ const DistanceDropdown = () => {
 
                 {isOpen && (
                     <div className="absolute z-50 rounded-lg bg-gray-800 border border-gray-700 py-3 px-3 min-w-96 mt-1 space-y-1">
-                        <div className="text-sm font-light text-gray-400 pb-2">
-                            Choose distance:
+                        <div className="flex items-start place-content-between">
+                            <div className="text-sm font-light text-gray-400 pb-2">
+                                Choose distance:
+                            </div>
+                            <button
+                                onClick={() => {
+                                    setIsOpen(false);
+                                }}
+                                className="text-gray-400"
+                            >
+                                <FaRegTimesCircle />
+                            </button>
                         </div>
                         <div className="flex items-center place-content-center rounded-full">
                             {[
