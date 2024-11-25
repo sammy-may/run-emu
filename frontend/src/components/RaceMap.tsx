@@ -35,13 +35,13 @@ const RaceMap = () => {
 
     const markers = useMemo(
         () =>
-            searchResults.map((race, index) => (
+            searchResults.map((race) => (
                 <Marker
                     key={"marker" + race.name}
                     longitude={race.longitude}
                     latitude={race.latitude}
                     onClick={() => {
-                        updateHover(index, !race.isHovered, true);
+                        updateHover(race.id!, !race.isHovered, true);
                     }}
                     className={race.isHovered ? "z-50" : ""}
                 >
@@ -64,7 +64,7 @@ const RaceMap = () => {
     );
 
     return (
-        <div className="flex items-center relative mt-2">
+        <div className="flex items-center relative pt-2">
             <p className="absolute -top-8 rounded-lg border px-3 mb-2 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
                 Showing{" "}
                 <span className="text-indigo-200 font-medium px-1">
@@ -84,7 +84,7 @@ const RaceMap = () => {
                 }}
                 ref={mapRef}
                 style={{ width: "100%", height: "84vh" }}
-                mapStyle={`https://api.maptiler.com/maps/streets-v2/style.json?key=${API_KEY}`}
+                mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
                 onZoomEnd={() => filterOnMap()}
                 onMoveEnd={() => filterOnMap()}
                 onIdle={() => filterOnMap()}

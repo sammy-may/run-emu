@@ -74,8 +74,8 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
             return {
                 ...state,
                 searchResults: state.searchResults
-                    .map((x, idx) => {
-                        if (idx == action.index!) {
+                    .map((x) => {
+                        if (x.id! == action.index!) {
                             return { ...x, isHovered: action.new_bool! };
                         } else if (action.new_bool && x.isHovered) {
                             return { ...x, isHovered: false };
@@ -131,6 +131,31 @@ const useRaceContext = (initState: RaceState) => {
         },
         []
     );
+
+    const setDistance = useCallback(
+        (dist1: number | null, dist2: number | null = dist1) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_DISTANCE_MIN,
+                new_distance: dist1,
+            });
+            dispatch({
+                type: RaceActionKind.UPDATE_DISTANCE_MAX,
+                new_distance: dist2,
+            });
+        },
+        []
+    );
+
+    const unsetDistance = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.UPDATE_DISTANCE_MIN,
+            new_distance: null,
+        });
+        dispatch({
+            type: RaceActionKind.UPDATE_DISTANCE_MAX,
+            new_distance: null,
+        });
+    }, []);
 
     const updateDistanceMin = useCallback(
         (evt: ChangeEvent<HTMLInputElement>) => {
@@ -204,7 +229,13 @@ const useRaceContext = (initState: RaceState) => {
             const response = await api.get("", {
                 params: { active_only: true },
             });
-            const races: RaceType[] = response.data;
+            let races: RaceType[] = response.data;
+            races = races.map((race, index) => ({
+                ...race,
+                isHovered: false,
+                onMap: false,
+                id: index,
+            }));
             dispatch({
                 type: RaceActionKind.POPULATE_RACES,
                 new_races: races,
@@ -221,17 +252,7 @@ const useRaceContext = (initState: RaceState) => {
             );
         }
 
-        if (state.distanceMax !== null) {
-            races = races.filter(
-                (race) => race.distance_min <= state.distanceMax!
-            );
-        }
-
-        if (state.distanceMin !== null) {
-            races = races.filter(
-                (race) => race.distance_max >= state.distanceMin!
-            );
-        }
+        races = races.filter((race) => race.valid_distance!);
 
         if (state.dateMax !== null) {
             races = races.filter(
@@ -248,8 +269,33 @@ const useRaceContext = (initState: RaceState) => {
         return races;
     };
 
+    const filterDistances = (races: RaceType[]) => {
+        let min_dist = state.distanceMin ?? -1;
+        let max_dist = state.distanceMax ?? 99999999;
+        races.forEach((race, r_index) => {
+            race.distances.data.forEach((dist, d_index) => {
+                races[r_index].distances.data[d_index] = {
+                    ...dist,
+                    match:
+                        dist.distance >= min_dist && dist.distance <= max_dist,
+                };
+            });
+            races[r_index].valid_distance = race.distances.data.some(
+                (dist) => dist.match!
+            );
+        });
+        return races;
+    };
+
     const applyFilters = () => {
         const newSearch = filterRaces(state.allResults);
+        updateSearchResults(newSearch);
+    };
+
+    const applyDistanceFilters = () => {
+        const updatedRaces = filterDistances(state.allResults);
+        const newSearch = filterRaces(updatedRaces);
+        console.log(newSearch.length);
         updateSearchResults(newSearch);
     };
 
@@ -259,18 +305,18 @@ const useRaceContext = (initState: RaceState) => {
 
     useEffect(() => {
         applyFilters();
-    }, [
-        state.search,
-        state.distanceMin,
-        state.distanceMax,
-        state.dateMin,
-        state.dateMax,
-    ]);
+    }, [state.search, state.dateMin, state.dateMax]);
+
+    useEffect(() => {
+        applyDistanceFilters();
+    }, [state.distanceMin, state.distanceMax]);
 
     return {
         state,
         updateDistanceMin,
         updateDistanceMax,
+        setDistance,
+        unsetDistance,
         updateSearch,
         updateDateMin,
         updateDateMax,

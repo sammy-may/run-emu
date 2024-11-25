@@ -4,6 +4,7 @@ from datetime import datetime
 from explorer.models import Race
 
 SPIDER_DUMP_FILE = "../data/spider_dump.json"
+KM_TO_MILE = 1.60934
 
 
 def build_distances(dist_strs: list[str]) -> dict:
@@ -45,6 +46,7 @@ def parse_distance(x: str) -> tuple[str, float]:
     elif units == "k":
         distance = float("".join([ch for ch in x if ch.isdigit() or ch == "."]))
         name = str(distance) + "K"
+        distance *= 1.0 / KM_TO_MILE
     elif units == "m":
         distance = float("".join([ch for ch in x if ch.isdigit() or ch == "."]))
         name = str(distance) + "M"

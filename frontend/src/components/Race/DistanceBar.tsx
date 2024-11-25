@@ -15,6 +15,7 @@ const DistanceBar = ({ race }: { race: RaceType }) => {
                         <DistanceBadge
                             key={"mainbadge" + String(index) + race.name}
                             title={dist.name}
+                            active={dist.match ?? true}
                         />
                     ))
                 ) : (

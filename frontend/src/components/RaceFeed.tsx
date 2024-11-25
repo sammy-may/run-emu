@@ -64,12 +64,12 @@ const RaceFeed = () => {
     return (
         <div className="mt-3 text-left">
             <div className="grid xl:grid-cols-2 grid-cols-1 gap-4 mt-3 z-0">
-                {pageResults.map((race, index) => {
+                {pageResults.map((race) => {
                     if (race.onMap) {
                         return (
                             <RaceCard
                                 key={"card" + race.name}
-                                index={index}
+                                index={race.id!}
                                 race={race}
                             />
                         );

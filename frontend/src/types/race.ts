@@ -2,6 +2,7 @@ interface Distance {
     id?: number;
     name: string;
     distance: number;
+    match?: boolean;
 }
 interface DistanceData {
     data: Distance[];
@@ -26,6 +27,7 @@ interface RaceType {
     id?: number;
     onMap?: boolean;
     isHovered?: boolean;
+    valid_distance?: boolean;
 }
 
 export default RaceType;

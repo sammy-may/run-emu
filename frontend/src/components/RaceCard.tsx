@@ -8,6 +8,8 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 import { LuClipboardEdit } from "react-icons/lu";
 import { IoIosAddCircle } from "react-icons/io";
+import { MdLibraryAdd } from "react-icons/md";
+
 
 import { MdDiscount } from "react-icons/md";
 import { useContext } from "react";
@@ -28,11 +30,9 @@ const RaceCardContent = ({race, className} : { race: RaceType; className: string
         <div className={`rounded-lg pb-3 shadow border border-gray-700 hover:bg-gray-700 hover:border-indigo-400 ${className}`}>
             <Link to={`races/${race.name_url}`}>
                 <Carousel imgs={race.images.data} swiperClass="swiper"/>
-                <Link to={`races/${race.name_url}`}>
-                <RaceTitle title={race.name}/>
-                </Link>
-                <DateLocationBar race={race} />
-                <DistanceBar race={race}/>
+                        <RaceTitle title={race.name}/>
+                        <DateLocationBar race={race} />
+                        <DistanceBar race={race}/>
             </Link>
         </div>
     );

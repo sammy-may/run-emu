@@ -55,9 +55,9 @@ const DateDropdown = () => {
                             <div className="flex-col items-start">
                                 <label
                                     htmlFor="min_date"
-                                    className="text-white font-medium text-sm mb-2 block text-left"
+                                    className="text-white font-medium text-sm mb-2 block text-left px-1"
                                 >
-                                    Minimum Date
+                                    From
                                 </label>
                                 <input
                                     type="date"
@@ -77,9 +77,9 @@ const DateDropdown = () => {
                             <div className="flex-col items-start">
                                 <label
                                     htmlFor="max_date"
-                                    className="text-white font-medium text-sm mb-2 block text-left"
+                                    className="text-white font-medium text-sm mb-2 block text-left px-1"
                                 >
-                                    Maximum Date
+                                    To
                                 </label>
                                 <input
                                     type="date"
