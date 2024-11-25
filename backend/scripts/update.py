@@ -1,9 +1,12 @@
 import json
 from datetime import datetime
 
+import geopy
+import geopy.distance
 from explorer.models import Race
 
 SPIDER_DUMP_FILE = "../data/spider_dump.json"
+WEATHER_DUMP_FILE = "../data/weather/daily_normals.json"
 KM_TO_MILE = 1.60934
 
 
@@ -61,6 +64,9 @@ def parse_distance(x: str) -> tuple[str, float]:
 
 
 def run():
+    with open(WEATHER_DUMP_FILE, "r") as f_in:
+        weather = json.load(f_in)
+
     with open(SPIDER_DUMP_FILE, "r") as f_in:
         races = json.load(f_in)
         for race, info in races.items():
@@ -89,5 +95,33 @@ def run():
             if "latitude" in info and "longitude" in info:
                 my_race.latitude = info["latitude"]
                 my_race.longitude = info["longitude"]
+
+                nearby_stations = [
+                    k
+                    for k, v in weather.items()
+                    if abs(my_race.latitude - v["latitude"]) < 5
+                    and abs(my_race.longitude - v["longitude"]) < 5  # noqa: W503
+                ]
+                if not nearby_stations:
+                    continue
+                min_distance = 99999999
+                min_station = None
+                for station in nearby_stations:
+                    distance = geopy.distance.distance(
+                        (my_race.latitude, my_race.longitude),
+                        (weather[station]["latitude"], weather[station]["longitude"]),
+                    ).miles
+                    if distance < min_distance:
+                        min_distance = distance
+                        min_station = station
+
+                nearest_weather = weather[min_station]["weather"][
+                    str(my_race.date.month)
+                ][str(my_race.date.day)]
+                my_race.typical_high = nearest_weather["high"]
+                my_race.typical_low = nearest_weather["low"]
+                my_race.precip_chance = nearest_weather["rain"]
+                my_race.station_name = station
+                my_race.station_distance = min_distance
 
             my_race.save()

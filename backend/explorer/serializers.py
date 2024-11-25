@@ -22,4 +22,9 @@ class RaceSerializer(serializers.ModelSerializer):
             "latitude",
             "longitude",
             "created_at",
+            "typical_high",
+            "typical_low",
+            "precip_chance",
+            "station_name",
+            "station_distance",
         )

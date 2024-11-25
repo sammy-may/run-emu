@@ -20,5 +20,14 @@ class Race(models.Model):
     longitude = models.FloatField(default=0.0)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    # Weather
+    typical_high = models.FloatField(default=0)
+    typical_low = models.FloatField(default=0)
+    precip_chance = models.FloatField(default=0)
+    station_name = models.CharField(max_length=100, default="")
+    station_latitude = models.FloatField(default=0)
+    station_longitude = models.FloatField(default=0)
+    station_distance = models.FloatField(default=0)
+
     def __str__(self):
         return self.name

@@ -18,7 +18,14 @@ enum RaceActionKind {
     POPULATE_RACES = "POPULATE_RACES",
     UPDATE_MAP_RESULTS = "UPDATE_MAP_RESULTS",
     UPDATE_SEARCH_RESULTS = "UPDATE_SEARCH_RESULTS",
+    UPDATE_MAP_COORDS = "UPDATE_MAP_COORDS",
     UPDATE_HOVER = "UPDATE_HOVER",
+}
+
+interface MapCoordsType {
+    latitude: number;
+    longitude: number;
+    zoom: number;
 }
 interface RaceAction {
     type: RaceActionKind;
@@ -29,7 +36,14 @@ interface RaceAction {
     index?: number;
     new_bool?: boolean;
     sort?: boolean;
+    new_coords?: MapCoordsType;
 }
+
+const initMapState: MapCoordsType = {
+    latitude: 40,
+    longitude: -118,
+    zoom: 6,
+};
 interface RaceState {
     allResults: RaceType[];
     searchResults: RaceType[];
@@ -39,6 +53,7 @@ interface RaceState {
     distanceMax: number | null;
     dateMin: Date | null;
     dateMax: Date | null;
+    mapCoords: MapCoordsType;
 }
 
 const initState: RaceState = {
@@ -50,6 +65,7 @@ const initState: RaceState = {
     distanceMax: null,
     dateMin: new Date(),
     dateMax: null,
+    mapCoords: initMapState,
 };
 
 const compareByHover = (a: RaceType, b: RaceType) => {
@@ -111,6 +127,11 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
             return {
                 ...state,
                 searchResults: action.new_races!,
+            };
+        case RaceActionKind.UPDATE_MAP_COORDS:
+            return {
+                ...state,
+                mapCoords: action.new_coords!,
             };
         default:
             return state;
@@ -224,6 +245,13 @@ const useRaceContext = (initState: RaceState) => {
         });
     }, []);
 
+    const updateMapCoords = useCallback((coords: MapCoordsType) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_MAP_COORDS,
+            new_coords: coords,
+        });
+    }, []);
+
     const fetchRaces = async () => {
         try {
             const response = await api.get("", {
@@ -322,6 +350,7 @@ const useRaceContext = (initState: RaceState) => {
         updateDateMax,
         updateMapResults,
         updateSearchResults,
+        updateMapCoords,
         updateHover,
     };
 };
@@ -332,11 +361,14 @@ const initContextState: UseRaceContextType = {
     state: initState,
     updateDistanceMin: () => {},
     updateDistanceMax: () => {},
+    setDistance: () => {},
+    unsetDistance: () => {},
     updateDateMin: () => {},
     updateDateMax: () => {},
     updateSearch: () => {},
     updateMapResults: () => {},
     updateSearchResults: () => {},
+    updateMapCoords: () => {},
     updateHover: () => {},
 };
 

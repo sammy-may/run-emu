@@ -28,6 +28,12 @@ interface RaceType {
     onMap?: boolean;
     isHovered?: boolean;
     valid_distance?: boolean;
+
+    typical_high?: number;
+    typical_low?: number;
+    precip_chance?: number;
+    station_name?: string;
+    station_distance?: number;
 }
 
 export default RaceType;

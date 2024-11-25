@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useContext, useMemo } from "react";
+import React, { useEffect, useRef, useContext, useMemo, useState } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import Map, { MapRef, Marker } from "react-map-gl/maplibre";
 
@@ -7,9 +7,10 @@ import RaceType from "../types/race";
 
 const RaceMap = () => {
     const {
-        state: { allResults, searchResults, mapResults },
+        state: { searchResults, mapResults, mapCoords },
         updateSearchResults,
         updateHover,
+        updateMapCoords,
     } = useContext(RaceContext);
 
     const compareByHover = (a: RaceType, b: RaceType) => {
@@ -31,6 +32,19 @@ const RaceMap = () => {
             races[index].onMap = pointInView(race.latitude, race.longitude);
         });
         updateSearchResults([...races]);
+
+        const lat = mapRef.current?.getCenter().lat ?? 40;
+        const lon = mapRef.current?.getCenter().lng ?? -118;
+        const zoom = mapRef.current?.getZoom() ?? 6;
+        updateMapCoords({
+            latitude: lat,
+            longitude: lon,
+            zoom: zoom,
+        });
+    };
+    const setView = () => {
+        mapRef.current?.setCenter([mapCoords.latitude, mapCoords.longitude]);
+        mapRef.current?.setZoom(mapCoords.zoom);
     };
 
     const markers = useMemo(
@@ -77,17 +91,16 @@ const RaceMap = () => {
                 races matching your criteria.
             </p>
             <Map
-                initialViewState={{
-                    latitude: 36,
-                    longitude: -86,
-                    zoom: 6,
-                }}
+                initialViewState={mapCoords}
                 ref={mapRef}
                 style={{ width: "100%", height: "84vh" }}
                 mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
                 onZoomEnd={() => filterOnMap()}
                 onMoveEnd={() => filterOnMap()}
-                onIdle={() => filterOnMap()}
+                onIdle={() => {
+                    filterOnMap();
+                    setView();
+                }}
             >
                 {markers}
             </Map>

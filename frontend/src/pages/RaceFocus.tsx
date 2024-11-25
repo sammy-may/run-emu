@@ -94,7 +94,8 @@ const RaceFocus = () => {
                             <FaTemperatureArrowUp />
                         </div>
                         <div className="font-medium  text-gray-200">
-                            58{`\u00B0`}
+                            {Math.round(race.typical_high ?? 0)}
+                            {`\u00B0`}
                         </div>
                     </div>
                     <div className="flex items-center space-x-3 px-8 text-gray-400">
@@ -102,30 +103,33 @@ const RaceFocus = () => {
                             <FaTemperatureArrowDown />
                         </div>
                         <div className="font-medium  text-gray-200">
-                            33{`\u00B0`}
+                            {Math.round(race.typical_low ?? 0)}
+                            {`\u00B0`}
                         </div>
                     </div>
                     <div className="flex items-center space-x-3 px-8 text-gray-400">
                         <div>
                             <FaCloudRain />
                         </div>
-                        <div className="font-medium  text-gray-200">23%</div>
+                        <div className="font-medium  text-gray-200">
+                            {Math.round(race.precip_chance ?? 0)}%
+                        </div>
                     </div>
-                    <div className="flex items-center space-x-3 px-8 text-gray-400">
+                    {/*                     <div className="flex items-center space-x-3 px-8 text-gray-400">
                         <div>
                             <FaSnowflake />
                         </div>
                         <div className="font-medium  text-gray-200">8%</div>
-                    </div>
+                    </div> */}
                     <p className="text-sm font-light text-gray-400 px-3">
-                        Based on historical data from{" "}
+                        Based on historical data from weather station{" "}
                         <a
                             href="#"
                             className="font-medium hover:underline text-indigo-500"
                         >
-                            Mather Weather Station
-                        </a>
-                        .
+                            {race.station_name}
+                        </a>{" "}
+                        ({Math.round(race.station_distance ?? 0)} mi away).
                     </p>
                 </div>
             </div>
