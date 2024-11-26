@@ -14,12 +14,14 @@ class USUSpider(Spider):
     DIRECTORY = "data/usu_directory.json"
 
     def __init__(self, urls: list[str], **kwargs):
-        super().__init__(urls, **kwargs)
         self.f_out = "data/usu_spider_dump.json"
+        super().__init__(urls, **kwargs)
 
     def enumerate_pages(self):
         base = self.urls[0]
-        self.urls = [base.replace("XXXX", "{:04d}".format(i)) for i in range(0, 10000)]
+        self.urls = [
+            base.replace("XXXXX", "{:05d}".format(i)) for i in range(10000, 21839)
+        ]
 
     def crawl(self):
         self.enumerate_pages()
@@ -70,6 +72,17 @@ class USUSpider(Spider):
                         ).replace("},", "}")
                         info = json.loads(info)["data"]
                         race["title"] = info["title"]
+                        race_name = self.strip_name(race["title"])
+
+                        if self.reuse:
+                            if race_name in self.races:
+                                logger.info(
+                                    "Option 'reuse' selected, skipping race '{:s}'.".format(
+                                        race_name
+                                    )
+                                )
+                                continue
+
                         title, dists, location, register, website = info["desc"].split(
                             "\n"
                         )
@@ -77,7 +90,7 @@ class USUSpider(Spider):
                         race["distances"] = dists
                         race["location"] = info["location"]
 
-                        loc = self.geo_locator.geocode(race["location"])
+                        loc = self.get_location(race["location"])
                         if loc:
                             race["latitude"] = loc.latitude
                             race["longitude"] = loc.longitude
@@ -85,12 +98,6 @@ class USUSpider(Spider):
                         race["register"] = info["url"]
                         race["date"] = info["time"]["start"]
                         race["website"] = website.split(" ")[-1]
-                        race_name = (
-                            race["title"]
-                            .replace("'", "")
-                            .replace('"', "")
-                            .replace(" ", "_")
-                        )
 
                     except:  # noqa: E722
                         logger.warning("Skipping")

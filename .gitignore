@@ -3,6 +3,7 @@ backend/explorer/migrations/*.py
 
 # my data
 data/*
+frontend/public/images/imgs/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

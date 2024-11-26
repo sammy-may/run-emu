@@ -1,5 +1,6 @@
 import argparse
 
+from backend.spiders.rf_spider import RFSpider
 from backend.spiders.usu_spider import USUSpider
 from backend.utils.logger_utils import setup_logger
 
@@ -21,17 +22,28 @@ def parse_arguments():
         "--log-file", required=False, type=str, help="Name of the log file"
     )
 
+    parser.add_argument(
+        "--site", required=False, default="USU", type=str, help="Which website to parse"
+    )
+
+    parser.add_argument(
+        "--reuse", action="store_true", help="reuse already-dumped results"
+    )
+
     return parser.parse_args()
 
 
 def main(args):
     logger = setup_logger()
 
-    logger.debug("Launching spiders...")
-
     args = {k: v for k, v in vars(args).items() if v is not None}
-    args["urls"] = ["https://ultrasignup.com/register.aspx?did=11XXXX"]
-    spider = USUSpider(**args)
+    args["urls"] = ["https://ultrasignup.com/register.aspx?did=1XXXXX"]
+    if args["site"] == "USU":
+        spider = USUSpider(**args)
+        logger.info("Launching USU spiders.")
+    elif args["site"] == "RF":
+        spider = RFSpider(**args)
+        logger.info("Launching RF spiders.")
     spider.crawl()
 
 
