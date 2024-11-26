@@ -56,8 +56,14 @@ class Spider:
 
         else:  # not in cache, request from src and then store in cache
             logger.info("Requesting page '{:s}' from src.".format(url))
-            response = requests.get(url)
-            raw_html = response.content
+            try:
+                response = requests.get(url)
+                raw_html = response.content
+            except Exception as err:
+                logger.warning(
+                    "Problem with website '{:s}' : {:s}.".format(url, str(err))
+                )
+                raw_html = None
 
             if cache:
                 df = pd.DataFrame({"raw_html": raw_html}, index=[0])
@@ -74,6 +80,8 @@ class Spider:
 
     def get_site_imgs(self, website: str, save_prefix: str):
         raw_html = self.load_url(website, cache=False)
+        if not raw_html:
+            return []
         soup = BeautifulSoup(raw_html, "html.parser")
 
         imgs = []

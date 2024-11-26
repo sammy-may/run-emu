@@ -57,6 +57,10 @@ class RFSpider(Spider):
         self.enumerate_pages()
         for url in self.urls:
             raw_html = self.load_url(url)
+
+            if not raw_html:
+                continue
+
             soup = BeautifulSoup(raw_html, "html.parser")
             lines = str(soup).split("\n")
 
