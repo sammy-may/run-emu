@@ -57,12 +57,12 @@ const RaceMap = () => {
                     onClick={() => {
                         updateHover(race.id!, !race.isHovered, true);
                     }}
-                    className={race.isHovered ? "z-50" : ""}
+                    style={{ zIndex: race.isHovered ? 50 : "unset" }}
                 >
                     {race.isHovered ? (
                         <img
                             src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png"
-                            className="z-50 h-12"
+                            className="h-10"
                             alt="Point"
                         />
                     ) : (
@@ -99,7 +99,6 @@ const RaceMap = () => {
                 onMoveEnd={() => filterOnMap()}
                 onLoad={() => {
                     filterOnMap();
-                    setView();
                 }}
             >
                 {markers}
