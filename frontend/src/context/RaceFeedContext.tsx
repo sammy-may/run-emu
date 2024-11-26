@@ -263,6 +263,7 @@ const useRaceContext = (initState: RaceState) => {
                 isHovered: false,
                 onMap: false,
                 id: index,
+                valid_distance: true,
             }));
             dispatch({
                 type: RaceActionKind.POPULATE_RACES,
