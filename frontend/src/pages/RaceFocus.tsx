@@ -40,8 +40,11 @@ const RaceFocus = () => {
         month: "short",
     });
 
+    const dist = Math.round(race.station_distance ?? 0);
+    const dist_str = dist > 0 ? String(dist) : "<1";
+
     return (
-        <div className="w-full rounded-lg shadow border bg-gray-800 border-gray-700 p-3 space-y-1 mx-auto max-w-4xl pb-6">
+        <div className="w-full rounded-lg shadow border bg-gray-800 border-gray-700 p-6 space-y-1 mx-auto max-w-4xl pb-6">
             <RaceTitle title={race.name} />
             <div className="px-3 pb-3">
                 <Carousel imgs={race.images.data} swiperClass="swiper-big" />
@@ -123,13 +126,10 @@ const RaceFocus = () => {
                     </div> */}
                     <p className="text-sm font-light text-gray-400 px-3">
                         Based on historical data from weather station{" "}
-                        <a
-                            href="#"
-                            className="font-medium hover:underline text-indigo-500"
-                        >
+                        <span className="font-medium text-indigo-500">
                             {race.station_name}
-                        </a>{" "}
-                        ({Math.round(race.station_distance ?? 0)} mi away).
+                        </span>{" "}
+                        ({dist_str} mi away).
                     </p>
                 </div>
             </div>

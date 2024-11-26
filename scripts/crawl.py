@@ -1,6 +1,6 @@
 import argparse
 
-from backend.spiders.spider import Spider
+from backend.spiders.usu_spider import USUSpider
 from backend.utils.logger_utils import setup_logger
 
 
@@ -30,8 +30,8 @@ def main(args):
     logger.debug("Launching spiders...")
 
     args = {k: v for k, v in vars(args).items() if v is not None}
-    args["urls"] = "https://ultrasignup.com/register.aspx?did=11XXXX"
-    spider = Spider(**args)
+    args["urls"] = ["https://ultrasignup.com/register.aspx?did=11XXXX"]
+    spider = USUSpider(**args)
     spider.crawl()
 
 

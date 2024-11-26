@@ -97,7 +97,7 @@ const RaceMap = () => {
                 mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
                 onZoomEnd={() => filterOnMap()}
                 onMoveEnd={() => filterOnMap()}
-                onIdle={() => {
+                onLoad={() => {
                     filterOnMap();
                     setView();
                 }}

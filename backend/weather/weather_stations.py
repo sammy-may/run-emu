@@ -11,7 +11,9 @@ logger = logging.getLogger(__name__)
 class WeatherStationExplorer:
     FIELDS = {
         "high": "DLY-TMAX-NORMAL",
+        "high_std": "DLY-TMAX-STDDEV",
         "low": "DLY-TMIN-NORMAL",
+        "low_std": "DLY-TMIN-STDDEV",
         "rain": "DLY-PRCP-PCTALL-GE025HI",
     }
 
@@ -41,7 +43,9 @@ class WeatherStationExplorer:
 
         for index, row in df.iterrows():
             high = row[self.FIELDS["high"]]
+            high_std = row[self.FIELDS["high_std"]]
             low = row[self.FIELDS["low"]]
+            low_std = row[self.FIELDS["low_std"]]
             rain = row[self.FIELDS["rain"]]
 
             month = row["month"]
@@ -52,7 +56,9 @@ class WeatherStationExplorer:
             if day not in station_res["weather"][month]:
                 station_res["weather"][month][day] = {
                     "high": high,
+                    "high_std": high_std,
                     "low": low,
+                    "low_std": low_std,
                     "rain": rain,
                 }
                 if day == 1:

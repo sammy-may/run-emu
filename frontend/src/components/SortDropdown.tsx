@@ -6,6 +6,7 @@ import { PiPathBold } from "react-icons/pi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { TiSortAlphabetically } from "react-icons/ti";
 import { TbArrowsCross } from "react-icons/tb";
+import { LuArrowDownUp } from "react-icons/lu";
 
 const SortDropdown = () => {
     const {
@@ -76,7 +77,7 @@ const SortDropdown = () => {
 
     return (
         <div className="relative">
-            <div className="flex items-center rounded-md shadow-sm space-x-2">
+            <div className="flex items-center rounded-lg shadow-sm bg-blue-600">
                 <button
                     id="sortInfo"
                     data-dropdown-toggle="dropdownInformation"
@@ -101,14 +102,15 @@ const SortDropdown = () => {
                         />
                     </svg>
                 </button>
+                <div className="border border-white self-stretch my-0.5"></div>
                 <button
                     id="reverse"
                     type="button"
                     onClick={reverse}
                     className="flex text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 space-x-2"
                 >
-                    <div>Reverse</div>
-                    <TbArrowsCross />
+                    <p className="pr-1">Reverse</p>
+                    <LuArrowDownUp />
                 </button>
             </div>
 
