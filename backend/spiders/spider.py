@@ -87,6 +87,8 @@ class Spider:
         imgs = []
         img_tags = soup.find_all("img")
         for idx, img in enumerate(img_tags):
+            if idx >= 3:
+                continue
             img_url = img.get("src")
             if not img_url:
                 continue

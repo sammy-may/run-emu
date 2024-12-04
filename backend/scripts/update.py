@@ -68,6 +68,8 @@ def parse(races: dict, weather: dict):
         my_race, created = Race.objects.get_or_create(name=info["title"])
 
         my_race.name_url = race.replace("/", "_")
+        if "distances" not in info:
+            continue
         my_race.distances = build_distances(info["distances"])
         my_race.distance = len(my_race.distances["data"])
         if not my_race.distances["data"]:
