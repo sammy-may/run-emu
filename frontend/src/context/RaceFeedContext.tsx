@@ -12,6 +12,12 @@ import api from "../api/races";
 enum RaceActionKind {
     UPDATE_DISTANCE_MIN = "UPDATE_DISTANCE_MIN",
     UPDATE_DISTANCE_MAX = "UPDATE_DISTANCE_MAX",
+    UPDATE_HITEMP_MIN = "UPDATE_HITEMP_MIN",
+    UPDATE_HITEMP_MAX = "UPDATE_HITEMP_MAX",
+    UPDATE_LOTEMP_MIN = "UPDATE_LOTEMP_MIN",
+    UPDATE_LOTEMP_MAX = "UPDATE_LOTEMP_MAX",
+    UPDATE_PRECIP_MIN = "UPDATE_PRECIP_MIN",
+    UPDATE_PRECIP_MAX = "UPDATE_PRECIP_MAX",
     UPDATE_DATE_MIN = "UPDATE_DATE_MIN",
     UPDATE_DATE_MAX = "UPDATE_DATE_MAX",
     UPDATE_SEARCH = "UPDATE_SEARCH",
@@ -20,6 +26,13 @@ enum RaceActionKind {
     UPDATE_SEARCH_RESULTS = "UPDATE_SEARCH_RESULTS",
     UPDATE_MAP_COORDS = "UPDATE_MAP_COORDS",
     UPDATE_HOVER = "UPDATE_HOVER",
+
+    CLOSE_DISTANCE_MENU = "CLOSE_DISTANCE_MENU",
+    OPEN_DISTANCE_MENU = "OPEN_DISTANCE_MENU",
+    CLOSE_DATE_MENU = "CLOSE_DATE_MENU",
+    OPEN_DATE_MENU = "OPEN_DATE_MENU",
+    CLOSE_MORE_MENU = "CLOSE_MORE_MENU",
+    OPEN_MORE_MENU = "OPEN_MORE_MENU",
 }
 
 interface MapCoordsType {
@@ -51,9 +64,18 @@ interface RaceState {
     search: string | null;
     distanceMin: number | null;
     distanceMax: number | null;
+    hitempMin: number | null;
+    hitempMax: number | null;
+    lotempMin: number | null;
+    lotempMax: number | null;
+    precipMin: number | null;
+    precipMax: number | null;
     dateMin: Date | null;
     dateMax: Date | null;
     mapCoords: MapCoordsType;
+    distanceMenuOpen: boolean;
+    dateMenuOpen: boolean;
+    moreMenuOpen: boolean;
 }
 
 const initState: RaceState = {
@@ -63,9 +85,18 @@ const initState: RaceState = {
     search: null,
     distanceMin: null,
     distanceMax: null,
+    hitempMin: null,
+    hitempMax: null,
+    lotempMin: null,
+    lotempMax: null,
+    precipMin: null,
+    precipMax: null,
     dateMin: new Date(),
     dateMax: null,
     mapCoords: initMapState,
+    distanceMenuOpen: false,
+    dateMenuOpen: false,
+    moreMenuOpen: false,
 };
 
 const compareByHover = (a: RaceType, b: RaceType) => {
@@ -105,12 +136,36 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
             return { ...state, distanceMin: action.new_distance! };
         case RaceActionKind.UPDATE_DISTANCE_MAX:
             return { ...state, distanceMax: action.new_distance! };
+        case RaceActionKind.UPDATE_HITEMP_MIN:
+            return { ...state, hitempMin: action.new_distance! };
+        case RaceActionKind.UPDATE_HITEMP_MAX:
+            return { ...state, hitempMax: action.new_distance! };
+        case RaceActionKind.UPDATE_LOTEMP_MIN:
+            return { ...state, lotempMin: action.new_distance! };
+        case RaceActionKind.UPDATE_LOTEMP_MAX:
+            return { ...state, lotempMax: action.new_distance! };
+        case RaceActionKind.UPDATE_PRECIP_MIN:
+            return { ...state, precipMin: action.new_distance! };
+        case RaceActionKind.UPDATE_PRECIP_MAX:
+            return { ...state, precipMax: action.new_distance! };
         case RaceActionKind.UPDATE_DATE_MIN:
             return { ...state, dateMin: action.new_date! };
         case RaceActionKind.UPDATE_DATE_MAX:
             return { ...state, dateMax: action.new_date! };
         case RaceActionKind.UPDATE_SEARCH:
             return { ...state, search: action.search! };
+        case RaceActionKind.CLOSE_DISTANCE_MENU:
+            return { ...state, distanceMenuOpen: false };
+        case RaceActionKind.OPEN_DISTANCE_MENU:
+            return { ...state, distanceMenuOpen: true };
+        case RaceActionKind.CLOSE_DATE_MENU:
+            return { ...state, dateMenuOpen: false };
+        case RaceActionKind.OPEN_DATE_MENU:
+            return { ...state, dateMenuOpen: true };
+        case RaceActionKind.CLOSE_MORE_MENU:
+            return { ...state, moreMenuOpen: false };
+        case RaceActionKind.OPEN_MORE_MENU:
+            return { ...state, moreMenuOpen: true };
         case RaceActionKind.POPULATE_RACES:
             return {
                 ...state,
@@ -178,6 +233,33 @@ const useRaceContext = (initState: RaceState) => {
         });
     }, []);
 
+    const unsetWeather = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.UPDATE_HITEMP_MIN,
+            new_distance: null,
+        });
+        dispatch({
+            type: RaceActionKind.UPDATE_HITEMP_MAX,
+            new_distance: null,
+        });
+        dispatch({
+            type: RaceActionKind.UPDATE_LOTEMP_MIN,
+            new_distance: null,
+        });
+        dispatch({
+            type: RaceActionKind.UPDATE_LOTEMP_MAX,
+            new_distance: null,
+        });
+        dispatch({
+            type: RaceActionKind.UPDATE_PRECIP_MIN,
+            new_distance: null,
+        });
+        dispatch({
+            type: RaceActionKind.UPDATE_PRECIP_MAX,
+            new_distance: null,
+        });
+    }, []);
+
     const updateDistanceMin = useCallback(
         (evt: ChangeEvent<HTMLInputElement>) => {
             dispatch({
@@ -202,6 +284,144 @@ const useRaceContext = (initState: RaceState) => {
         []
     );
 
+    const updateHitempMin = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_HITEMP_MIN,
+                new_distance: evt.target.value
+                    ? Number(evt.target.value)
+                    : null,
+            });
+        },
+        []
+    );
+
+    const updateHitempMax = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_HITEMP_MAX,
+                new_distance: evt.target.value
+                    ? Number(evt.target.value)
+                    : null,
+            });
+        },
+        []
+    );
+
+    const updateLotempMin = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_LOTEMP_MIN,
+                new_distance: evt.target.value
+                    ? Number(evt.target.value)
+                    : null,
+            });
+        },
+        []
+    );
+
+    const updateLotempMax = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_LOTEMP_MAX,
+                new_distance: evt.target.value
+                    ? Number(evt.target.value)
+                    : null,
+            });
+        },
+        []
+    );
+
+    const updatePrecipMin = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_PRECIP_MIN,
+                new_distance: evt.target.value
+                    ? Number(evt.target.value)
+                    : null,
+            });
+        },
+        []
+    );
+
+    const updatePrecipMax = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_PRECIP_MAX,
+                new_distance: evt.target.value
+                    ? Number(evt.target.value)
+                    : null,
+            });
+        },
+        []
+    );
+
+    const toggleDistanceMenu = () => {
+        state.distanceMenuOpen ? closeDistanceMenu() : openDistanceMenu();
+    };
+
+    const closeDistanceMenu = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.CLOSE_DISTANCE_MENU,
+        });
+    }, []);
+
+    const openDistanceMenu = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.OPEN_DISTANCE_MENU,
+        });
+        dispatch({
+            type: RaceActionKind.CLOSE_DATE_MENU,
+        });
+        dispatch({
+            type: RaceActionKind.CLOSE_MORE_MENU,
+        });
+    }, []);
+
+    const toggleDateMenu = () => {
+        state.dateMenuOpen ? closeDateMenu() : openDateMenu();
+    };
+
+    const closeDateMenu = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.CLOSE_DATE_MENU,
+        });
+    }, []);
+
+    const openDateMenu = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.OPEN_DATE_MENU,
+        });
+        dispatch({
+            type: RaceActionKind.CLOSE_DISTANCE_MENU,
+        });
+        dispatch({
+            type: RaceActionKind.CLOSE_MORE_MENU,
+        });
+    }, []);
+
+    const toggleMoreMenu = () => {
+        state.moreMenuOpen ? closeMoreMenu() : openMoreMenu();
+    };
+
+    const closeMoreMenu = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.CLOSE_MORE_MENU,
+        });
+    }, []);
+
+    const openMoreMenu = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.OPEN_MORE_MENU,
+        });
+        dispatch({
+            type: RaceActionKind.CLOSE_DATE_MENU,
+        });
+        dispatch({
+            type: RaceActionKind.CLOSE_DISTANCE_MENU,
+        });
+    }, []);
+
     const updateSearch = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
         dispatch({
             type: RaceActionKind.UPDATE_SEARCH,
@@ -209,18 +429,36 @@ const useRaceContext = (initState: RaceState) => {
         });
     }, []);
 
-    const updateDateMin = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
+    const clearDates = useCallback(() => {
         dispatch({
             type: RaceActionKind.UPDATE_DATE_MIN,
-            new_date: new Date(evt.target.value),
+            new_date: null,
         });
+        dispatch({
+            type: RaceActionKind.UPDATE_DATE_MAX,
+            new_date: null,
+        });
+    }, []);
+
+    const updateDateMin = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
+        if (evt.target.value === "") {
+            dispatch({
+                type: RaceActionKind.UPDATE_DATE_MIN,
+                new_date: null,
+            });
+        } else {
+            dispatch({
+                type: RaceActionKind.UPDATE_DATE_MIN,
+                new_date: new Date(evt.target.value),
+            });
+        }
     }, []);
 
     const updateDateMax = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
         if (evt.target.value === "") {
             dispatch({
                 type: RaceActionKind.UPDATE_DATE_MAX,
-                new_date: new Date("3000-01-01"),
+                new_date: null,
             });
         } else {
             dispatch({
@@ -295,6 +533,42 @@ const useRaceContext = (initState: RaceState) => {
             );
         }
 
+        if (state.hitempMin !== null) {
+            races = races.filter(
+                (race) => race.typical_high! >= state.hitempMin!
+            );
+        }
+
+        if (state.hitempMax !== null) {
+            races = races.filter(
+                (race) => race.typical_high! <= state.hitempMax!
+            );
+        }
+
+        if (state.lotempMin !== null) {
+            races = races.filter(
+                (race) => race.typical_low! >= state.lotempMin!
+            );
+        }
+
+        if (state.lotempMax !== null) {
+            races = races.filter(
+                (race) => race.typical_low! <= state.lotempMax!
+            );
+        }
+
+        if (state.precipMin !== null) {
+            races = races.filter(
+                (race) => race.precip_chance! >= state.precipMin!
+            );
+        }
+
+        if (state.precipMax !== null) {
+            races = races.filter(
+                (race) => race.precip_chance! <= state.precipMax!
+            );
+        }
+
         return races;
     };
 
@@ -334,7 +608,17 @@ const useRaceContext = (initState: RaceState) => {
 
     useEffect(() => {
         applyFilters();
-    }, [state.search, state.dateMin, state.dateMax]);
+    }, [
+        state.search,
+        state.dateMin,
+        state.dateMax,
+        state.hitempMin,
+        state.hitempMax,
+        state.lotempMin,
+        state.lotempMax,
+        state.precipMin,
+        state.precipMax,
+    ]);
 
     useEffect(() => {
         applyDistanceFilters();
@@ -344,15 +628,33 @@ const useRaceContext = (initState: RaceState) => {
         state,
         updateDistanceMin,
         updateDistanceMax,
+        updateHitempMin,
+        updateHitempMax,
+        updateLotempMin,
+        updateLotempMax,
+        updatePrecipMin,
+        updatePrecipMax,
+        unsetWeather,
         setDistance,
         unsetDistance,
         updateSearch,
         updateDateMin,
         updateDateMax,
+        clearDates,
         updateMapResults,
         updateSearchResults,
         updateMapCoords,
         updateHover,
+
+        toggleDistanceMenu,
+        closeDistanceMenu,
+        openDistanceMenu,
+        toggleDateMenu,
+        closeDateMenu,
+        openDateMenu,
+        toggleMoreMenu,
+        closeMoreMenu,
+        openMoreMenu,
     };
 };
 
@@ -362,15 +664,33 @@ const initContextState: UseRaceContextType = {
     state: initState,
     updateDistanceMin: () => {},
     updateDistanceMax: () => {},
+    updateHitempMin: () => {},
+    updateHitempMax: () => {},
+    updateLotempMin: () => {},
+    updateLotempMax: () => {},
+    updatePrecipMin: () => {},
+    updatePrecipMax: () => {},
+    unsetWeather: () => {},
     setDistance: () => {},
     unsetDistance: () => {},
     updateDateMin: () => {},
     updateDateMax: () => {},
+    clearDates: () => {},
     updateSearch: () => {},
     updateMapResults: () => {},
     updateSearchResults: () => {},
     updateMapCoords: () => {},
     updateHover: () => {},
+
+    toggleDistanceMenu: () => {},
+    closeDistanceMenu: () => {},
+    openDistanceMenu: () => {},
+    toggleDateMenu: () => {},
+    closeDateMenu: () => {},
+    openDateMenu: () => {},
+    toggleMoreMenu: () => {},
+    closeMoreMenu: () => {},
+    openMoreMenu: () => {},
 };
 
 export const RaceContext = createContext<UseRaceContextType>(initContextState);

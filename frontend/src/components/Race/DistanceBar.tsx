@@ -5,7 +5,7 @@ import RaceType from "../../types/race";
 
 const DistanceBar = ({ race }: { race: RaceType }) => {
     return (
-        <div className="px-3 font-normal text-gray-400 flex items-center space-x-3 overflow-auto">
+        <div className="px-3 font-normal text-gray-400 flex items-center space-x-3 overflow-scroll w-full">
             <div>
                 <PiPathBold />
             </div>

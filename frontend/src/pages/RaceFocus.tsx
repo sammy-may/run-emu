@@ -14,6 +14,7 @@ import { FaTemperatureHigh } from "react-icons/fa";
 import { LuClipboardEdit } from "react-icons/lu";
 import { FaTemperatureArrowUp, FaTemperatureArrowDown } from "react-icons/fa6";
 import { FaSnowflake } from "react-icons/fa";
+import WeatherWidget from "../components/Race/WeatherWidget";
 
 const RaceFocus = () => {
     const { name } = useParams();
@@ -77,61 +78,7 @@ const RaceFocus = () => {
                         <DistanceBar race={race} />
                     </div>
                 </div>
-                <div className="space-y-1">
-                    <h2 className="text-lg font-bold tracking-tight text-gray-200 px-3 ">
-                        Weather
-                    </h2>
-                    <p className="whitespace-nowrap text-sm font-light text-gray-400 px-3">
-                        Typical weather for{" "}
-                        <span className="font-medium text-gray-400">
-                            {race.location}
-                        </span>{" "}
-                        on{" "}
-                        <span className="font-medium text-gray-400">
-                            {day_month}
-                        </span>
-                        :
-                    </p>
-                    <div className="flex items-center space-x-3 px-8 text-gray-400">
-                        <div>
-                            <FaTemperatureArrowUp />
-                        </div>
-                        <div className="font-medium  text-gray-200">
-                            {Math.round(race.typical_high ?? 0)}
-                            {`\u00B0`}
-                        </div>
-                    </div>
-                    <div className="flex items-center space-x-3 px-8 text-gray-400">
-                        <div>
-                            <FaTemperatureArrowDown />
-                        </div>
-                        <div className="font-medium  text-gray-200">
-                            {Math.round(race.typical_low ?? 0)}
-                            {`\u00B0`}
-                        </div>
-                    </div>
-                    <div className="flex items-center space-x-3 px-8 text-gray-400">
-                        <div>
-                            <FaCloudRain />
-                        </div>
-                        <div className="font-medium  text-gray-200">
-                            {Math.round(race.precip_chance ?? 0)}%
-                        </div>
-                    </div>
-                    {/*                     <div className="flex items-center space-x-3 px-8 text-gray-400">
-                        <div>
-                            <FaSnowflake />
-                        </div>
-                        <div className="font-medium  text-gray-200">8%</div>
-                    </div> */}
-                    <p className="text-sm font-light text-gray-400 px-3">
-                        Based on historical data from weather station{" "}
-                        <span className="font-medium text-indigo-500">
-                            {race.station_name}
-                        </span>{" "}
-                        ({dist_str} mi away).
-                    </p>
-                </div>
+                <WeatherWidget race={race} />
             </div>
             <hr className="mx-3 pb-4" />
             <div className="flex items-center">

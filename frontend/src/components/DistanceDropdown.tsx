@@ -6,20 +6,22 @@ import { FaRegTimesCircle } from "react-icons/fa";
 
 const DistanceDropdown = () => {
     const {
-        state: { distanceMin, distanceMax },
+        state: { distanceMin, distanceMax, distanceMenuOpen },
         updateDistanceMin,
         updateDistanceMax,
         setDistance,
         unsetDistance,
+        toggleDistanceMenu,
+        closeDistanceMenu,
     } = useContext(RaceContext);
 
-    const [isOpen, setIsOpen] = useState<boolean>(false);
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
+    const [activeDistance, setActiveDistance] = useState<number>(-1);
+
+    const wrapUnsetDistance = () => {
+        toggleDistance(-1, -1, -1);
+        unsetDistance();
     };
 
-    const [activeDistance, setActiveDistance] = useState<number>(-1);
-    const [distFilter, setDistFilter] = useState<boolean>(false);
     const toggleDistance = (
         index: number,
         dist1: number | null,
@@ -32,7 +34,7 @@ const DistanceDropdown = () => {
             setActiveDistance(-1);
             unsetDistance();
         }
-        toggleDropdown();
+        /*         toggleDistanceMenu(); */
     };
 
     return (
@@ -42,7 +44,7 @@ const DistanceDropdown = () => {
                     id="sortInfo"
                     data-dropdown-toggle="dropdownInformation"
                     type="button"
-                    onClick={toggleDropdown}
+                    onClick={toggleDistanceMenu}
                     className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                 >
                     <div>
@@ -66,20 +68,18 @@ const DistanceDropdown = () => {
                     </svg>
                 </button>
 
-                {isOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-800 border border-gray-700 py-3 px-3 min-w-96 mt-1 space-y-1">
+                {distanceMenuOpen && (
+                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-indigo-400 py-3 px-3 min-w-96 mt-1 space-y-3">
                         <div className="flex items-start place-content-between">
-                            <div className="text-sm font-light text-gray-400 pb-2">
-                                Choose distance:
+                            <div className="text-sm font-light text-gray-300 pb-2">
+                                Select a distance:
                             </div>
-                            <button
-                                onClick={() => {
-                                    setIsOpen(false);
-                                }}
+                            {/*                             <button
+                                onClick={closeDistanceMenu}
                                 className="text-gray-400"
                             >
                                 <FaRegTimesCircle />
-                            </button>
+                            </button> */}
                         </div>
                         <div className="flex items-center place-content-center rounded-full">
                             {[
@@ -100,6 +100,7 @@ const DistanceDropdown = () => {
                                             dist.distance[1]
                                         )
                                     }
+                                    key={"dist_button" + index}
                                 >
                                     <DistanceBadge
                                         title={dist.name}
@@ -109,12 +110,9 @@ const DistanceDropdown = () => {
                                 </button>
                             ))}
                         </div>
-                        {/*                         <div className="py-0.5 rounded-lg text-center text-gray-400">
-                            {" "}
-                            OR{" "}
-                        </div> */}
-                        <div className="text-sm font-light text-gray-400 pt-2 text-center">
-                            OR
+                        {/*                         <hr /> */}
+                        <div className="text-sm font-light text-gray-300 pb-1">
+                            Or, select a range:
                         </div>
                         <div className="rounded-lg">
                             <form
@@ -135,7 +133,7 @@ const DistanceDropdown = () => {
                                         id="min_distance"
                                         placeholder="No Min"
                                         data-dropdown-toggle="dropdownInfoMin"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2 flex"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-2 flex"
                                         value={
                                             distanceMin === null
                                                 ? ""
@@ -158,7 +156,7 @@ const DistanceDropdown = () => {
                                         id="max_distance"
                                         placeholder="No Max"
                                         data-dropdown-toggle="dropdownInfoMax"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2 flex"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-2 flex"
                                         value={
                                             distanceMax === null
                                                 ? ""
@@ -168,6 +166,20 @@ const DistanceDropdown = () => {
                                     />
                                 </div>
                             </form>
+                        </div>
+                        <div className="place-content-end flex items-center w-full space-x-3">
+                            <button
+                                onClick={wrapUnsetDistance}
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                            >
+                                Clear
+                            </button>
+                            <button
+                                onClick={closeDistanceMenu}
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                            >
+                                Done
+                            </button>
                         </div>
                     </div>
                 )}
