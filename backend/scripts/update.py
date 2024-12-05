@@ -67,7 +67,9 @@ def parse(races: dict, weather: dict):
     for race, info in races.items():
         my_race, created = Race.objects.get_or_create(name=info["title"])
 
-        my_race.name_url = race.replace("/", "_")
+        my_race.name_url = my_race.name.replace("/", "_")
+        if not my_race.name_url:
+            continue
         if "distances" not in info:
             continue
         my_race.distances = build_distances(info["distances"])
@@ -135,6 +137,8 @@ def parse(races: dict, weather: dict):
 
 
 def run():
+    Race.objects.all().delete()
+
     with open(WEATHER_DUMP_FILE, "r") as f_in:
         weather = json.load(f_in)
 

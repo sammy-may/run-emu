@@ -61,9 +61,9 @@ const MoreDropdown = () => {
                     </svg>
                 </button>
                 {moreMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-indigo-400 py-3 px-3 min-w-96 mt-1 space-y-3">
+                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-indigo-400 py-3 px-3 min-w-96 mt-1 space-y-4">
                         <div className="rounded-lg">
-                            <div className="text-gray-200 font-medium text-sm flex items-center space-x-2">
+                            <div className="text-gray-200 font-medium text-sm flex items-center space-x-2 pb-1">
                                 <span>
                                     <FaTemperatureArrowUp />
                                 </span>
@@ -84,7 +84,7 @@ const MoreDropdown = () => {
                                         id="min_distance"
                                         placeholder="No Min"
                                         data-dropdown-toggle="dropdownInfoMin"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-1.5 flex w-full"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-1.5 flex w-full"
                                         value={hitempMin ?? ""}
                                         onChange={updateHitempMin}
                                     />
@@ -99,7 +99,7 @@ const MoreDropdown = () => {
                                         id="max_distance"
                                         placeholder="No Max"
                                         data-dropdown-toggle="dropdownInfoMax"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-1.5 flex w-full"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-1.5 flex w-full"
                                         value={hitempMax ?? ""}
                                         onChange={updateHitempMax}
                                     />
@@ -107,7 +107,7 @@ const MoreDropdown = () => {
                             </form>
                         </div>
                         <div className="rounded-lg">
-                            <div className="text-gray-200 font-medium text-sm flex items-center space-x-2">
+                            <div className="text-gray-200 font-medium text-sm flex items-center space-x-2 pb-1">
                                 <span>
                                     <FaTemperatureArrowDown />
                                 </span>
@@ -128,7 +128,7 @@ const MoreDropdown = () => {
                                         id="min_distance"
                                         placeholder="No Min"
                                         data-dropdown-toggle="dropdownInfoMin"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-1.5 flex w-full"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-1.5 flex w-full"
                                         value={lotempMin ?? ""}
                                         onChange={updateLotempMin}
                                     />
@@ -143,7 +143,7 @@ const MoreDropdown = () => {
                                         id="max_distance"
                                         placeholder="No Max"
                                         data-dropdown-toggle="dropdownInfoMax"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-1.5 flex w-full"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-1.5 flex w-full"
                                         value={lotempMax ?? ""}
                                         onChange={updateLotempMax}
                                     />
@@ -151,7 +151,7 @@ const MoreDropdown = () => {
                             </form>
                         </div>
                         <div className="rounded-lg">
-                            <div className="text-gray-200 font-medium text-sm flex items-center space-x-2">
+                            <div className="text-gray-200 font-medium text-sm flex items-center space-x-2 pb-1">
                                 <span>
                                     <FaCloudShowersWater />
                                 </span>
@@ -172,7 +172,7 @@ const MoreDropdown = () => {
                                         id="min_distance"
                                         placeholder="No Min"
                                         data-dropdown-toggle="dropdownInfoMin"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-1.5 flex w-full"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-1.5 flex w-full"
                                         value={precipMin ?? ""}
                                         onChange={updatePrecipMin}
                                     />
@@ -187,7 +187,7 @@ const MoreDropdown = () => {
                                         id="max_distance"
                                         placeholder="No Max"
                                         data-dropdown-toggle="dropdownInfoMax"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-1.5 flex w-full"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-1.5 flex w-full"
                                         value={precipMax ?? ""}
                                         onChange={updatePrecipMax}
                                     />

@@ -28,7 +28,10 @@
     "react-map-gl": "^7.1.7",
     "react-router-dom": "^6.28.0",
     "swiper": "^11.1.15",
-    "tailwindcss": "^3.4.14"
+    "tailwindcss": "^3.4.14",
+    "vike": "^0.4.206",
+    "vike-react": "^0.5.9",
+    "vite-plugin-cjs-interop": "^2.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

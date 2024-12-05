@@ -1,5 +1,3 @@
-import React from "react";
-
 const Login = () => {
     return (
         <div className="w-full rounded-lg shadow border bg-gray-800 border-gray-700 p-6 space-y-4 px-6 py-8 mx-auto max-w-lg">

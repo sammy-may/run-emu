@@ -1,13 +1,9 @@
 import Button from "./Button";
 
-import { useNavigate } from "react-router-dom";
-
-import { FaHome, FaInfoCircle } from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
 import { MdLogin } from "react-icons/md";
 
 const Header = () => {
-    const navigate = useNavigate();
-
     return (
         <>
             <div className="flex items-center h-12 min-w-full mb-8 bg-gray-800 rounded-lg place-content-between">
@@ -21,9 +17,7 @@ const Header = () => {
                                 alt="RunEmu Logo"
                             />
                         }
-                        onClick={() => {
-                            navigate("/");
-                        }}
+                        href={"/"}
                     ></Button>
                 </div>
                 <div className="flex">
@@ -31,18 +25,14 @@ const Header = () => {
                         <Button
                             name={"About"}
                             icon={<FaInfoCircle />}
-                            onClick={() => {
-                                navigate("/about");
-                            }}
+                            href={"/about"}
                         ></Button>
                     </div>
                     <div>
                         <Button
                             name={"Login"}
                             icon={<MdLogin />}
-                            onClick={() => {
-                                navigate("/login");
-                            }}
+                            href={"/login"}
                         ></Button>
                     </div>
                 </div>

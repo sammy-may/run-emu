@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 import { PiPathBold } from "react-icons/pi";
 import DistanceBadge from "./DistanceBadge";
-import { FaRegTimesCircle } from "react-icons/fa";
 
 const DistanceDropdown = () => {
     const {
@@ -133,7 +132,7 @@ const DistanceDropdown = () => {
                                         id="min_distance"
                                         placeholder="No Min"
                                         data-dropdown-toggle="dropdownInfoMin"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-2 flex"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-2 flex"
                                         value={
                                             distanceMin === null
                                                 ? ""
@@ -156,7 +155,7 @@ const DistanceDropdown = () => {
                                         id="max_distance"
                                         placeholder="No Max"
                                         data-dropdown-toggle="dropdownInfoMax"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-700 bg-gray-800 p-2 flex"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-2 flex"
                                         value={
                                             distanceMax === null
                                                 ? ""

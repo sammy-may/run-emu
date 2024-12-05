@@ -1,4 +1,3 @@
-import React from "react";
 import { PiPathBold } from "react-icons/pi";
 import DistanceBadge from "../DistanceBadge";
 import RaceType from "../../types/race";

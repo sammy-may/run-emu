@@ -1,4 +1,3 @@
-import React from "react";
 import RaceType from "../../types/race";
 import {
     FaTemperatureArrowUp,
@@ -7,12 +6,6 @@ import {
 } from "react-icons/fa6";
 
 const WeatherWidget = ({ race }: { race: RaceType }) => {
-    const date = new Date(race.date).toLocaleDateString("en-US", {
-        day: "numeric",
-        month: "short",
-        year: "numeric",
-    });
-
     const day_month = new Date(race.date).toLocaleDateString("en-US", {
         day: "numeric",
         month: "short",

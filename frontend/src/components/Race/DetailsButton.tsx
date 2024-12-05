@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import RaceType from "../../types/race";
 import { FaExpandAlt } from "react-icons/fa";

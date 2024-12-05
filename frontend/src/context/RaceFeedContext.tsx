@@ -111,7 +111,7 @@ const compareByHover = (a: RaceType, b: RaceType) => {
     return 0;
 };
 
-const compareByNone = (a: RaceType, b: RaceType) => {
+const compareByNone = () => {
     return 0;
 };
 

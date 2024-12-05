@@ -1,18 +1,20 @@
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
-import { RaceContext } from "../context/RaceFeedContext";
+import { RaceContext } from "../../../context/RaceFeedContext";
 import { FaLocationDot } from "react-icons/fa6";
 
-import RaceTitle from "../components/Race/RaceTitle";
-import RaceType from "../types/race";
-import Carousel from "../components/Race/Carousel";
-import DistanceBar from "../components/Race/DistanceBar";
+import RaceTitle from "../../../components/Race/RaceTitle";
+import RaceType from "../../../types/race";
+import DistanceBar from "../../../components/Race/DistanceBar";
 import { FaLink, FaRegCalendarAlt } from "react-icons/fa";
 import { LuClipboardEdit } from "react-icons/lu";
-import WeatherWidget from "../components/Race/WeatherWidget";
+import WeatherWidget from "../../../components/Race/WeatherWidget";
 
-const RaceFocus = () => {
-    const { name } = useParams();
+import { useData } from "vike-react/useData";
+import type { Data } from "./+data.ts";
+
+const Page = () => {
+    const name = useData<Data>();
+
     const {
         state: { allResults },
     } = useContext(RaceContext);
@@ -34,10 +36,6 @@ const RaceFocus = () => {
     return (
         <div className="w-full rounded-lg shadow border bg-gray-800 border-gray-700 p-6 space-y-1 mx-auto max-w-4xl pb-6">
             <RaceTitle title={race.name} />
-            <div className="px-3 pb-3">
-                <Carousel imgs={race.images.data} swiperClass="swiper-big" />
-            </div>
-
             <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
                     <h2 className="text-lg font-bold tracking-tight text-gray-200 px-3">
@@ -96,4 +94,4 @@ const RaceFocus = () => {
     );
 };
 
-export default RaceFocus;
+export default Page;

@@ -1,9 +1,6 @@
 # Todo
 
--   [x] Implement context manager in favor of prop drilling.
--   [x] Implement routes for pages
--   [x] Implement map
--   [x] Migrate from `useState` to `useReducer`, clean up state logic
--   [ ] clean up frontend
--   [ ] clean up & extend backend
--   [ ] how to deal with large number of races? (avoid slow searching, etc)
+-   [ ] Integrate `vike` and SSR/SSG into project.
+    -   Vike guide: https://vike.dev/add
+    -   Also, ask ChatGPT: "I have an existing project using Vite + Typescript + React. Please explain in great detail the necessary steps to integrate Vike."
+-   [ ]

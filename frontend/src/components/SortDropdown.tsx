@@ -5,8 +5,8 @@ import { RaceContext } from "../context/RaceFeedContext";
 import { PiPathBold } from "react-icons/pi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { TiSortAlphabetically } from "react-icons/ti";
-import { TbArrowsCross } from "react-icons/tb";
 import { LuArrowDownUp } from "react-icons/lu";
+import { FaSort } from "react-icons/fa";
 
 const SortDropdown = () => {
     const {
@@ -22,8 +22,8 @@ const SortDropdown = () => {
     };
 
     const compareByDistance = (a: RaceType, b: RaceType) => {
-        if (a.distance < b.distance) return -1;
-        if (a.distance > b.distance) return 1;
+        if (a.distance_max < b.distance_max) return -1;
+        if (a.distance_max > b.distance_max) return 1;
         return 0;
     };
 
@@ -77,15 +77,18 @@ const SortDropdown = () => {
 
     return (
         <div className="relative">
-            <div className="flex items-center rounded-lg shadow-sm bg-blue-600">
+            <div className="flex items-center shadow-sm space-x-3">
                 <button
                     id="sortInfo"
                     data-dropdown-toggle="dropdownInformation"
                     type="button"
                     onClick={toggleDropdown}
-                    className="flex whitespace-nowrap text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                    className="flex whitespace-nowrap text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center space-x-2 items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                 >
-                    Sort by {sortText}
+                    <div>
+                        <FaSort />
+                    </div>
+                    <span>Sort by {sortText}</span>
                     <svg
                         className="w-2.5 h-2.5 ms-3"
                         aria-hidden="true"
@@ -102,15 +105,14 @@ const SortDropdown = () => {
                         />
                     </svg>
                 </button>
-                <div className="border border-white self-stretch my-0.5"></div>
                 <button
                     id="reverse"
                     type="button"
                     onClick={reverse}
                     className="flex text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 space-x-2"
                 >
-                    <p className="pr-1">Reverse</p>
                     <LuArrowDownUp />
+                    <p className="">Reverse</p>
                 </button>
             </div>
 

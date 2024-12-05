@@ -1,9 +1,8 @@
-import SearchBar from "../components/SearchBar";
-import OptionsBar from "../components/OptionsBar";
-import RaceFeed from "../components/RaceFeed";
-import RaceMap from "../components/RaceMap";
+import OptionsBar from "../../components/OptionsBar";
+import RaceFeed from "../../components/RaceFeed";
+import RaceMap from "../../components/RaceMap";
 
-const Home = () => {
+const Page = () => {
     return (
         <div>
             <div className="grid grid-cols-2 gap-4">
@@ -19,4 +18,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Page;

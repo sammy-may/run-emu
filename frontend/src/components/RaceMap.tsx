@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useContext, useMemo, useState } from "react";
+import { useRef, useContext, useMemo } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
-import Map, { MapRef, Marker } from "react-map-gl/maplibre";
+import Map, { MapRef, Marker } from "react-map-gl/dist/es5/exports-maplibre.js";
 
 import { RaceContext } from "../context/RaceFeedContext";
-import RaceType from "../types/race";
 
 const RaceMap = () => {
     const {
@@ -13,13 +12,7 @@ const RaceMap = () => {
         updateMapCoords,
     } = useContext(RaceContext);
 
-    const compareByHover = (a: RaceType, b: RaceType) => {
-        if (a.isHovered! > b.isHovered!) return 1;
-        if (a.isHovered! < b.isHovered!) return -1;
-        return 0;
-    };
-
-    const mapRef = useRef<MapRef>();
+    const mapRef = useRef<MapRef>(null);
     const API_KEY = "ehYwgcSh6qkJzmk9kbxG";
 
     const pointInView = (lat: number, lon: number) => {
@@ -41,10 +34,6 @@ const RaceMap = () => {
             longitude: lon,
             zoom: zoom,
         });
-    };
-    const setView = () => {
-        mapRef.current?.setCenter([mapCoords.latitude, mapCoords.longitude]);
-        mapRef.current?.setZoom(mapCoords.zoom);
     };
 
     const markers = useMemo(
@@ -79,17 +68,28 @@ const RaceMap = () => {
 
     return (
         <div className="flex items-center relative pt-2">
-            <p className="absolute -top-6 rounded-lg border px-3 mb-2 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
-                Showing{" "}
-                <span className="text-indigo-200 font-medium px-1">
-                    {mapResults.length}
-                </span>{" "}
-                of{" "}
-                <span className="text-indigo-200 font-medium px-1">
-                    {searchResults.length}
-                </span>
-                races matching your criteria.
-            </p>
+            <div className="absolute -top-6 flex items-center place-content-between w-full">
+                <form onSubmit={(evt) => evt.preventDefault()}>
+                    <label htmlFor="location" className=""></label>
+                    <input
+                        type="text"
+                        placeholder="Try 'Oregon'"
+                        className="rounded-lg border px-3 mb-2 text-sm  bg-gray-700 border-gray-600 text-gray-200 items-center flex w-full"
+                        id="location"
+                    ></input>
+                </form>
+                <p className="rounded-lg border px-3 mb-2 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
+                    Showing{" "}
+                    <span className="text-indigo-200 font-medium px-1">
+                        {mapResults.length}
+                    </span>{" "}
+                    of{" "}
+                    <span className="text-indigo-200 font-medium px-1">
+                        {searchResults.length}
+                    </span>
+                    races matching your criteria.
+                </p>
+            </div>
             <Map
                 initialViewState={mapCoords}
                 ref={mapRef}

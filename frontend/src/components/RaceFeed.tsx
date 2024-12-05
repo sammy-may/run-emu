@@ -1,9 +1,8 @@
 import RaceCard from "./RaceCard";
 
 import { RaceContext } from "../context/RaceFeedContext";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import RaceType from "../types/race";
-import { divIcon } from "leaflet";
 import { useInView } from "react-intersection-observer";
 
 const RaceFeed = () => {
@@ -37,29 +36,9 @@ const RaceFeed = () => {
 
     useEffect(() => {
         if (inView && !isLoading) {
-            console.log("incrementing");
             setPage((prevPage) => prevPage + 1);
         }
     }, [inView, isLoading]);
-
-    /*     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting && !isLoading) {
-                console.log("intersecting");
-                setPage((prevPage) => prevPage + 1);
-            }
-        });
-
-        if (sentinelRef.current) {
-            observer.observe(sentinelRef.current);
-        }
-
-        return () => {
-            if (sentinelRef.current) {
-                observer.unobserve(sentinelRef.current);
-            }
-        };
-    }, []); */
 
     return (
         <div className="mt-3 text-left">

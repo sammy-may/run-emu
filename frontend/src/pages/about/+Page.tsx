@@ -1,6 +1,4 @@
-import React from "react";
-
-const About = () => {
+const Page = () => {
     return (
         <main className="flex flex-row place-content-evenly items-center">
             <div className="basis-1/2">
@@ -36,4 +34,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Page;

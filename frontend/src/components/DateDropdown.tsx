@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
