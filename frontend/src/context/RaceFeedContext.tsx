@@ -9,6 +9,8 @@ import {
 import RaceType from "../types/race";
 import api from "../api/races";
 
+import { clientOnly } from "vike-react/clientOnly";
+
 enum RaceActionKind {
     UPDATE_DISTANCE_MIN = "UPDATE_DISTANCE_MIN",
     UPDATE_DISTANCE_MAX = "UPDATE_DISTANCE_MAX",
@@ -57,6 +59,15 @@ const initMapState: MapCoordsType = {
     longitude: -118,
     zoom: 6,
 };
+
+const getInitMapState = () => {
+    var state = initMapState;
+    if (typeof window !== "undefined") {
+        state = JSON.parse(localStorage.getItem("coords") ?? "");
+    }
+    return state;
+};
+
 interface RaceState {
     allResults: RaceType[];
     searchResults: RaceType[];
@@ -93,7 +104,7 @@ const initState: RaceState = {
     precipMax: null,
     dateMin: new Date(),
     dateMax: null,
-    mapCoords: initMapState,
+    mapCoords: getInitMapState(),
     distanceMenuOpen: false,
     dateMenuOpen: false,
     moreMenuOpen: false,
@@ -488,6 +499,9 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_MAP_COORDS,
             new_coords: coords,
         });
+        if (typeof window !== "undefined") {
+            localStorage.setItem("coords", JSON.stringify(coords));
+        }
     }, []);
 
     const fetchRaces = async () => {

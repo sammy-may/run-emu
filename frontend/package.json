@@ -31,7 +31,8 @@
     "tailwindcss": "^3.4.14",
     "vike": "^0.4.206",
     "vike-react": "^0.5.9",
-    "vite-plugin-cjs-interop": "^2.1.6"
+    "vite-plugin-cjs-interop": "^2.1.6",
+    "world-geojson": "^3.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

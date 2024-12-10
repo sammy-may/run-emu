@@ -5,6 +5,8 @@ import Map, { MapRef, Marker } from "react-map-gl/dist/es5/exports-maplibre.js";
 import { RaceContext } from "../context/RaceFeedContext";
 import { FaLocationDot } from "react-icons/fa6";
 
+import * as geoJson from "world-geojson";
+
 const RaceMap = () => {
     const {
         state: { searchResults, mapResults, mapCoords },
@@ -30,11 +32,13 @@ const RaceMap = () => {
         const lat = mapRef.current?.getCenter().lat ?? 40;
         const lon = mapRef.current?.getCenter().lng ?? -118;
         const zoom = mapRef.current?.getZoom() ?? 6;
-        updateMapCoords({
-            latitude: lat,
-            longitude: lon,
-            zoom: zoom,
-        });
+        if (mapRef.current) {
+            updateMapCoords({
+                latitude: lat,
+                longitude: lon,
+                zoom: zoom,
+            });
+        }
     };
 
     const markers = useMemo(
@@ -69,7 +73,7 @@ const RaceMap = () => {
 
     return (
         <div className="flex items-center relative pt-2">
-            <div className="absolute -top-8 flex items-center place-content-between w-full">
+            <div className="absolute -top-7 flex items-center place-content-between w-full">
                 <div className="flex items-center mb-2">
                     <form onSubmit={(evt) => evt.preventDefault()}>
                         <label htmlFor="location" className=""></label>
