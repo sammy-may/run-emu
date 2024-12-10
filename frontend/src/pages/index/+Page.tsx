@@ -6,7 +6,7 @@ const Page = () => {
     return (
         <div>
             <div className="grid grid-cols-2 gap-4">
-                <div className="overflow-scroll max-h-80p">
+                <div className="overflow-y-auto overflow-x-hidden max-h-80p">
                     <OptionsBar />
                     <RaceFeed />
                 </div>

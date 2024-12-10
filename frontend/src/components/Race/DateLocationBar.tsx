@@ -11,7 +11,7 @@ const DateLocationBar = ({ race }: { race: RaceType }) => {
     });
 
     return (
-        <div className="px-3 pb-3 flex items-center whitespace-nowrap overflow-scroll w-full">
+        <div className="px-3 pb-3 flex items-center whitespace-nowrap overflow-hidden w-full">
             <div className="flex items-center space-x-3 text-gray-400">
                 <div>
                     <FaRegCalendarAlt />

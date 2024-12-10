@@ -34,7 +34,7 @@ const Page = () => {
     });
 
     return (
-        <div className="w-full rounded-lg shadow border bg-gray-800 border-gray-700 p-6 space-y-1 mx-auto max-w-4xl pb-6">
+        <div className="w-full rounded-lg shadow border bg-gray-800 border-gray-700 p-6 space-y-1 mx-auto max-w-4xl">
             <RaceTitle title={race.name} />
             <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">

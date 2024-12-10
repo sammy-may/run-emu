@@ -2,25 +2,33 @@ import Button from "./Button";
 
 import { FaInfoCircle } from "react-icons/fa";
 import { MdLogin } from "react-icons/md";
+import { FiSettings } from "react-icons/fi";
 
 const Header = () => {
     return (
         <>
             <div className="flex items-center h-12 min-w-full mb-8 bg-gray-800 rounded-lg place-content-between">
-                <div>
+                <div className="flex h-full">
                     <Button
                         name={"RunEmu"}
                         icon={
                             <img
                                 src="/images/logos/emu_wb.svg"
-                                className="h-8 filter-"
+                                className="h-6"
                                 alt="RunEmu Logo"
                             />
                         }
                         href={"/"}
                     ></Button>
                 </div>
-                <div className="flex">
+                <div className="flex items-center space-x-3 h-full">
+                    <div>
+                        <Button
+                            name={"Settings"}
+                            icon={<FiSettings />}
+                            href={"#"}
+                        ></Button>
+                    </div>
                     <div>
                         <Button
                             name={"About"}

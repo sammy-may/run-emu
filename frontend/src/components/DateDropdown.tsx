@@ -44,7 +44,7 @@ const DateDropdown = () => {
                 </button>
 
                 {dateMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-indigo-400 py-3 px-2 mt-1 space-y-3">
+                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-indigo-400 py-3 px-3 mt-1 space-y-3">
                         <form
                             className="flex items-center space-x-2 place-content-between"
                             action="#"

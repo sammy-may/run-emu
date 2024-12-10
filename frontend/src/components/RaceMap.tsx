@@ -3,6 +3,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import Map, { MapRef, Marker } from "react-map-gl/dist/es5/exports-maplibre.js";
 
 import { RaceContext } from "../context/RaceFeedContext";
+import { FaLocationDot } from "react-icons/fa6";
 
 const RaceMap = () => {
     const {
@@ -68,16 +69,21 @@ const RaceMap = () => {
 
     return (
         <div className="flex items-center relative pt-2">
-            <div className="absolute -top-6 flex items-center place-content-between w-full">
-                <form onSubmit={(evt) => evt.preventDefault()}>
-                    <label htmlFor="location" className=""></label>
-                    <input
-                        type="text"
-                        placeholder="Try 'Oregon'"
-                        className="rounded-lg border px-3 mb-2 text-sm  bg-gray-700 border-gray-600 text-gray-200 items-center flex w-full"
-                        id="location"
-                    ></input>
-                </form>
+            <div className="absolute -top-8 flex items-center place-content-between w-full">
+                <div className="flex items-center mb-2">
+                    <form onSubmit={(evt) => evt.preventDefault()}>
+                        <label htmlFor="location" className=""></label>
+                        <input
+                            type="text"
+                            placeholder={"Try 'Oregon'"}
+                            className="rounded-lg border px-8 py-1 text-sm  bg-gray-700 border-gray-600 text-gray-200 items-center flex w-full"
+                            id="location"
+                        ></input>
+                    </form>
+                    <div className="text-gray-200 px-3 text-sm absolute -left-1">
+                        <FaLocationDot />
+                    </div>
+                </div>
                 <p className="rounded-lg border px-3 mb-2 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
                     Showing{" "}
                     <span className="text-indigo-200 font-medium px-1">
@@ -97,9 +103,7 @@ const RaceMap = () => {
                 mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
                 onZoomEnd={() => filterOnMap()}
                 onMoveEnd={() => filterOnMap()}
-                onLoad={() => {
-                    filterOnMap();
-                }}
+                onIdle={() => filterOnMap()}
             >
                 {markers}
             </Map>
