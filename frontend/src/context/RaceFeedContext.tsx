@@ -60,12 +60,21 @@ const initMapState: MapCoordsType = {
     zoom: 6,
 };
 
-const getInitMapState = () => {
-    var state = initMapState;
+const getFromLocal = (name: string) => {
     if (typeof window !== "undefined") {
-        state = JSON.parse(localStorage.getItem("coords") ?? "");
+        try {
+            return JSON.parse(localStorage.getItem(name) ?? "");
+        } catch {
+            return null;
+        }
     }
-    return state;
+    return null;
+};
+
+const saveToLocal = (name: string, value: any) => {
+    if (typeof window !== "undefined") {
+        localStorage.setItem(name, JSON.stringify(value));
+    }
 };
 
 interface RaceState {
@@ -104,7 +113,7 @@ const initState: RaceState = {
     precipMax: null,
     dateMin: new Date(),
     dateMax: null,
-    mapCoords: getInitMapState(),
+    mapCoords: getFromLocal("mapCoords") ?? initMapState,
     distanceMenuOpen: false,
     dateMenuOpen: false,
     moreMenuOpen: false,
@@ -178,11 +187,32 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
         case RaceActionKind.OPEN_MORE_MENU:
             return { ...state, moreMenuOpen: true };
         case RaceActionKind.POPULATE_RACES:
+            let searchResults: RaceType[] | null = [];
+            let mapResults: RaceType[] | null = [];
+            searchResults = getFromLocal("searchResults");
+            mapResults = getFromLocal("mapResults");
+
+            if (searchResults) {
+                if (searchResults.length === 0) {
+                    searchResults = action.new_races!;
+                }
+            } else {
+                searchResults = action.new_races!;
+            }
+
+            if (mapResults) {
+                if (mapResults.length === 0) {
+                    mapResults = action.new_races!;
+                }
+            } else {
+                mapResults = action.new_races!;
+            }
+
             return {
                 ...state,
                 allResults: action.new_races!,
-                searchResults: action.new_races!,
-                mapResults: action.new_races!,
+                searchResults: searchResults,
+                mapResults: mapResults,
             };
         case RaceActionKind.UPDATE_MAP_RESULTS:
             return {
@@ -484,6 +514,7 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_SEARCH_RESULTS,
             new_races: races,
         });
+        saveToLocal("searchResults", races);
         updateMapResults([...races.filter((race) => race.onMap)]);
     }, []);
 
@@ -492,6 +523,7 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_MAP_RESULTS,
             new_races: races,
         });
+        saveToLocal("mapResults", races);
     }, []);
 
     const updateMapCoords = useCallback((coords: MapCoordsType) => {
@@ -499,9 +531,7 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_MAP_COORDS,
             new_coords: coords,
         });
-        if (typeof window !== "undefined") {
-            localStorage.setItem("coords", JSON.stringify(coords));
-        }
+        saveToLocal("mapCoords", coords);
     }, []);
 
     const fetchRaces = async () => {
