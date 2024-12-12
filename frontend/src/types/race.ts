@@ -21,6 +21,9 @@ interface RaceType {
     website: string;
     register: string;
     location: string;
+    city: string;
+    state: string;
+    country: string;
     latitude: number;
     longitude: number;
     date: Date;

@@ -93,6 +93,11 @@ class RFSpider(Spider):
                 if loc:
                     race["latitude"] = loc.latitude
                     race["longitude"] = loc.longitude
+                    loc_info = self.get_location_info(loc.latitude, loc.longitude)
+                    for k, v in loc_info.items():
+                        race[k] = v
+                else:
+                    logger.info("some issue with loc")
 
                 race["register"] = content["link"]
                 race["website"] = content["link"]

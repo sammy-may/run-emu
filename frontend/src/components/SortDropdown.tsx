@@ -83,7 +83,7 @@ const SortDropdown = () => {
                     data-dropdown-toggle="dropdownInformation"
                     type="button"
                     onClick={toggleDropdown}
-                    className="flex whitespace-nowrap text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center space-x-2 items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                    className="flex whitespace-nowrap text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1.5 px-3 text-center space-x-2 items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                 >
                     <div>
                         <FaSort />
@@ -109,7 +109,7 @@ const SortDropdown = () => {
                     id="reverse"
                     type="button"
                     onClick={reverse}
-                    className="flex text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 space-x-2"
+                    className="flex text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1.5 px-3 text-center items-center bg-blue-600 border border-blue-500 hover:bg-blue-700 focus:ring-blue-800 space-x-2"
                 >
                     <LuArrowDownUp />
                     <p className="">Reverse</p>

@@ -41,7 +41,7 @@ const RaceFeed = () => {
     }, [inView, isLoading]);
 
     return (
-        <div className="mt-3 text-left">
+        <div className="mt-1 text-left">
             <div className="grid xl:grid-cols-2 grid-cols-1 gap-4 mt-3 z-0">
                 {pageResults.map((race) => {
                     if (race.onMap) {

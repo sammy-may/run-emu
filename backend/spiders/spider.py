@@ -41,6 +41,24 @@ class Spider:
             pass
         return loc
 
+    def get_location_info(self, latitude: float, longitude: float):
+        res = {}
+        try:
+            rvg = self.geo_locator.reverse(
+                "{:s}, {:s}".format(str(latitude), str(longitude)), language="en"
+            ).raw["address"]
+            for key in ["city", "state", "country"]:
+                if key in rvg:
+                    res[key] = rvg[key]
+        except Exception as e:
+            logger.debug(
+                "Issue reverse lookup on {:s}, {:s} : {:s}.".format(
+                    str(latitude), str(longitude), str(e)
+                )
+            )
+            pass
+        return res
+
     def load_url(self, url: str, cache: bool = True):
         """
         First check directory to see if website is cached, otherwise request (and save in cache for next time).

@@ -17,6 +17,7 @@ def build_distances(dist_strs: list[str]) -> dict:
         if name is None or distance is None:
             continue
         res["data"].append({"name": name, "distance": round(distance, 1)})
+    res["data"].sort(key=lambda x: x["distance"], reverse=True)
     return res
 
 
@@ -104,6 +105,12 @@ def parse(races: dict, weather: dict):
         if "latitude" in info and "longitude" in info:
             my_race.latitude = info["latitude"]
             my_race.longitude = info["longitude"]
+            if "city" in info:
+                my_race.city = info["city"]
+            if "state" in info:
+                my_race.state = info["state"]
+            if "country" in info:
+                my_race.country = info["country"]
 
             nearby_stations = [
                 k
@@ -143,6 +150,7 @@ def run():
         weather = json.load(f_in)
 
     for f in SPIDER_DUMP_FILES:
+        print(f)
         with open(f, "r") as f_in:
             races = json.load(f_in)
         parse(races, weather)
