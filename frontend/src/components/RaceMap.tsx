@@ -1,4 +1,4 @@
-import { useRef, useContext, useMemo } from "react";
+import { useRef, useContext, useMemo, useEffect } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import Map, { MapRef, Marker } from "react-map-gl/dist/es5/exports-maplibre.js";
 
@@ -20,6 +20,7 @@ const RaceMap = () => {
         toggleStateMenu,
         closeStateMenu,
         updateActiveArea,
+        updateNeedLoad,
     } = useContext(RaceContext);
 
     const mapRef = useRef<MapRef>(null);
@@ -37,8 +38,10 @@ const RaceMap = () => {
         });
         updateSearchResults([...races]);
 
-        const lat = mapRef.current?.getCenter().lat ?? 40;
-        const lon = mapRef.current?.getCenter().lng ?? -118;
+        const lat =
+            mapRef.current?.getCenter().lat ?? activeArea?.latitude ?? -40;
+        const lon =
+            mapRef.current?.getCenter().lng ?? activeArea?.longitude ?? 118;
         const zoom = mapRef.current?.getZoom() ?? 6;
         if (mapRef.current) {
             updateMapCoords({
@@ -49,15 +52,23 @@ const RaceMap = () => {
         }
     };
 
-    const fly = (state: ActiveArea) => {
+    const fly = () => {
+        let state = activeArea;
+        if (state === null || state === undefined) return;
         if (mapRef.current) {
-            mapRef.current.flyTo({
-                center: [state.longitude, state.latitude],
-                zoom: 5,
-                essential: true,
-            });
+            if (state.state !== "") {
+                mapRef.current.flyTo({
+                    center: [state.longitude, state.latitude],
+                    zoom: 5,
+                    essential: true,
+                });
+            }
         }
     };
+
+    useEffect(() => {
+        fly();
+    }, [activeArea]);
 
     const markers = useMemo(
         () =>
@@ -65,6 +76,7 @@ const RaceMap = () => {
                 <div
                     onMouseEnter={() => updateHover(race.id!, true, false)}
                     onMouseLeave={() => updateHover(race.id!, false, false)}
+                    key={"marker_div" + race.name}
                 >
                     <Marker
                         key={"marker" + race.name}
@@ -94,30 +106,6 @@ const RaceMap = () => {
         [searchResults]
     );
 
-    /*     const ActiveArea = useMemo(
-        () => (
-            <Source id="activearea" type="geojson" data={null}>
-                <Layer
-                    id="activearea-fill"
-                    type="fill"
-                    paint={{
-                        "fill-color": "#374151",
-                        "fill-opacity": 0.5,
-                    }}
-                />
-                <Layer
-                    id="activearea-border"
-                    type="line"
-                    paint={{
-                        "line-color": "#8DA2FB",
-                        "line-width": 2,
-                    }}
-                />
-            </Source>
-        ),
-        []
-    ); */
-
     return (
         <div className="flex items-center relative pt-2">
             <div className="absolute -top-7 flex items-center place-content-between w-full">
@@ -127,7 +115,7 @@ const RaceMap = () => {
                         data-dropdown-toggle="dropdownInformation"
                         type="button"
                         onClick={toggleStateMenu}
-                        className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1.5 px-3 text-center items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                        className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                     >
                         <div>
                             <FaLocationDot />
@@ -167,6 +155,9 @@ const RaceMap = () => {
                                         return (
                                             <a
                                                 href={`/location/${state.state}`}
+                                                key={
+                                                    "link" + state.state + index
+                                                }
                                             >
                                                 <li
                                                     className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full hover:cursor-pointer"
@@ -175,10 +166,6 @@ const RaceMap = () => {
                                                         state.state +
                                                         index
                                                     }
-                                                    onClick={() => {
-                                                        updateActiveArea(state);
-                                                        fly(state);
-                                                    }}
                                                 >
                                                     {state.state}
                                                 </li>
@@ -188,12 +175,14 @@ const RaceMap = () => {
                                 })}
                             </ul>
                             <div className="place-content-center flex items-center w-full space-x-3 py-2">
-                                <button
-                                    onClick={() => updateActiveArea(null)}
-                                    className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-                                >
-                                    Clear
-                                </button>
+                                <a href="/location/all">
+                                    <button
+                                        //onClick={() => updateActiveArea(null)}
+                                        className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                    >
+                                        Clear
+                                    </button>
+                                </a>
                                 <button
                                     onClick={closeStateMenu}
                                     className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
@@ -203,24 +192,6 @@ const RaceMap = () => {
                             </div>
                         </div>
                     )}
-                    {/*                     <form onSubmit={(evt) => evt.preventDefault()}>
-                        <label htmlFor="location" className=""></label>
-                        <datalist id="suggestions">
-                            <option>Oregon</option>
-                            <option>Washington</option>
-                        </datalist>
-                        <input
-                            type="text"
-                            placeholder={"Try 'Oregon'"}
-                            autoComplete="on"
-                            list="suggestions"
-                            className="rounded-lg border px-8 py-1 text-sm  bg-gray-700 border-gray-600 text-gray-200 items-center flex w-full"
-                            id="location"
-                        ></input>
-                    </form>
-                    <div className="text-gray-200 px-3 text-sm absolute -left-1">
-                        <FaLocationDot />
-                    </div> */}
                 </div>
                 <p className="rounded-lg border px-3 mb-2 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
                     Showing{" "}
@@ -241,7 +212,9 @@ const RaceMap = () => {
                 mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
                 onZoomEnd={() => filterOnMap()}
                 onMoveEnd={() => filterOnMap()}
+                onIdle={() => filterOnMap()}
                 onLoad={() => {
+                    fly();
                     filterOnMap();
                 }}
             >

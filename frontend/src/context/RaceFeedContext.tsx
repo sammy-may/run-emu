@@ -37,7 +37,35 @@ enum RaceActionKind {
     OPEN_MORE_MENU = "OPEN_MORE_MENU",
     CLOSE_STATE_MENU = "CLOSE_STATE_MENU",
     OPEN_STATE_MENU = "OPEN_STATE_MENU",
+    UPDATE_NEED_LOAD = "UPDATE_NEED_LOAD",
 }
+
+export const fetchAllRaces = async (
+    state: ActiveArea | null
+): Promise<RaceType[]> => {
+    let races: RaceType[] = [];
+    try {
+        const response = await api.get("", {
+            params: { active_only: true },
+        });
+        races = response.data;
+        races = races.map((race, index) => ({
+            ...race,
+            isHovered: false,
+            onMap: false,
+            id: index,
+            valid_distance: true,
+        }));
+        if (state && state.state.length > 0) {
+            races = races.filter((race) => {
+                return race.state.toLowerCase() === state.state.toLowerCase();
+            });
+        }
+    } catch (err) {
+        console.log(err);
+    }
+    return races;
+};
 
 interface MapCoordsType {
     latitude: number;
@@ -558,6 +586,7 @@ interface RaceState {
     moreMenuOpen: boolean;
     stateMenuOpen: boolean;
     activeArea: ActiveArea | null;
+    needLoad: boolean;
 }
 
 const initState: RaceState = {
@@ -581,6 +610,7 @@ const initState: RaceState = {
     moreMenuOpen: false,
     stateMenuOpen: false,
     activeArea: null,
+    needLoad: true,
 };
 
 const compareByHover = (a: RaceType, b: RaceType) => {
@@ -656,6 +686,8 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
             return { ...state, stateMenuOpen: true };
         case RaceActionKind.UPDATE_ACTIVE_AREA:
             return { ...state, activeArea: action.new_area! };
+        case RaceActionKind.UPDATE_NEED_LOAD:
+            return { ...state, needLoad: !state.needLoad };
         case RaceActionKind.POPULATE_RACES:
             let searchResults: RaceType[] | null = [];
             let mapResults: RaceType[] | null = [];
@@ -914,12 +946,14 @@ const useRaceContext = (initState: RaceState) => {
         dispatch({
             type: RaceActionKind.CLOSE_STATE_MENU,
         });
+        console.log("close");
     }, []);
 
     const openStateMenu = useCallback(() => {
         dispatch({
             type: RaceActionKind.OPEN_STATE_MENU,
         });
+        console.log("open");
     }, []);
 
     const toggleStateMenu = () => {
@@ -1012,6 +1046,13 @@ const useRaceContext = (initState: RaceState) => {
         }
     }, []);
 
+    const updateAllResults = useCallback((races: RaceType[]) => {
+        dispatch({
+            type: RaceActionKind.POPULATE_RACES,
+            new_races: races,
+        });
+    }, []);
+
     const updateSearchResults = useCallback((races: RaceType[]) => {
         dispatch({
             type: RaceActionKind.UPDATE_SEARCH_RESULTS,
@@ -1037,26 +1078,18 @@ const useRaceContext = (initState: RaceState) => {
         saveToLocal("mapCoords", coords);
     }, []);
 
+    const updateNeedLoad = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.UPDATE_NEED_LOAD,
+        });
+    }, []);
+
     const fetchRaces = async () => {
-        try {
-            const response = await api.get("", {
-                params: { active_only: true },
-            });
-            let races: RaceType[] = response.data;
-            races = races.map((race, index) => ({
-                ...race,
-                isHovered: false,
-                onMap: false,
-                id: index,
-                valid_distance: true,
-            }));
-            dispatch({
-                type: RaceActionKind.POPULATE_RACES,
-                new_races: races,
-            });
-        } catch (err) {
-            console.log(err);
-        }
+        let races: RaceType[] = await fetchAllRaces(null);
+        dispatch({
+            type: RaceActionKind.POPULATE_RACES,
+            new_races: races,
+        });
     };
 
     const filterRaces = (races: RaceType[]) => {
@@ -1066,7 +1099,7 @@ const useRaceContext = (initState: RaceState) => {
             );
         }
 
-        if (state.activeArea !== null) {
+        /*         if (state.activeArea !== null) {
             if (state.activeArea!.state.length > 0) {
                 races = races.filter((race) =>
                     race.state
@@ -1074,7 +1107,7 @@ const useRaceContext = (initState: RaceState) => {
                         .includes(state.activeArea!.state.toLowerCase())
                 );
             }
-        }
+        } */
 
         races = races.filter((race) => race.valid_distance!);
 
@@ -1155,13 +1188,13 @@ const useRaceContext = (initState: RaceState) => {
     const applyDistanceFilters = () => {
         const updatedRaces = filterDistances(state.allResults);
         const newSearch = filterRaces(updatedRaces);
-        console.log(newSearch.length);
         updateSearchResults(newSearch);
     };
 
-    useEffect(() => {
+    /*     useEffect(() => {
         fetchRaces();
-    }, []);
+        applyFilters();
+    }, []); */
 
     useEffect(() => {
         applyFilters();
@@ -1201,6 +1234,7 @@ const useRaceContext = (initState: RaceState) => {
         clearDates,
         updateMapResults,
         updateSearchResults,
+        updateAllResults,
         updateMapCoords,
         updateHover,
         updateActiveArea,
@@ -1217,6 +1251,7 @@ const useRaceContext = (initState: RaceState) => {
         closeStateMenu,
         openStateMenu,
         toggleStateMenu,
+        updateNeedLoad,
     };
 };
 
@@ -1241,6 +1276,7 @@ const initContextState: UseRaceContextType = {
     updateSearch: () => {},
     updateMapResults: () => {},
     updateSearchResults: () => {},
+    updateAllResults: () => {},
     updateMapCoords: () => {},
     updateHover: () => {},
     updateActiveArea: () => {},
@@ -1257,6 +1293,7 @@ const initContextState: UseRaceContextType = {
     closeStateMenu: () => {},
     openStateMenu: () => {},
     toggleStateMenu: () => {},
+    updateNeedLoad: () => {},
 };
 
 export const RaceContext = createContext<UseRaceContextType>(initContextState);

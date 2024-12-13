@@ -22,7 +22,7 @@ const RaceCardContent = ({
         <div
             className={`rounded-lg pb-3 shadow border border-gray-700 hover:bg-gray-700 hover:border-indigo-400 ${className}`}
         >
-            <a href={`races/${race.name_url}`}>
+            <a href={`/races/${race.name_url}`}>
                 {/*<Carousel imgs={race.images.data} swiperClass="swiper"/> */}
                 <RaceTitle title={race.name} />
                 <DateLocationBar race={race} />
