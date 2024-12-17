@@ -3,6 +3,7 @@ import Button from "./Button";
 import { FaInfoCircle } from "react-icons/fa";
 import { MdLogin } from "react-icons/md";
 import { FiSettings } from "react-icons/fi";
+import { FaSignInAlt } from "react-icons/fa";
 
 const Header = () => {
     return (
@@ -39,7 +40,7 @@ const Header = () => {
                     <div>
                         <Button
                             name={"Login"}
-                            icon={<MdLogin />}
+                            icon={<FaSignInAlt />}
                             href={"/login"}
                         ></Button>
                     </div>

@@ -11,6 +11,8 @@ import {
     FaCloudShowersWater,
 } from "react-icons/fa6";
 
+import Carousel from "./Race/Carousel";
+
 const RaceCardContent = ({
     race,
     className,
@@ -20,10 +22,10 @@ const RaceCardContent = ({
 }) => {
     return (
         <div
-            className={`rounded-lg pb-3 shadow border border-gray-700 hover:bg-gray-700 hover:border-indigo-400 ${className}`}
+            className={`rounded-lg pb-3 shadow border border-gray-700 hover:bg-gray-700 hover:border-blue-600 ${className}`}
         >
             <a href={`/races/${race.name_url}`}>
-                {/*<Carousel imgs={race.images.data} swiperClass="swiper"/> */}
+                {/*                 <Carousel imgs={race.images.data} swiperClass="swiper"/> */}
                 <RaceTitle title={race.name} />
                 <DateLocationBar race={race} />
                 <DistanceBar race={race} />
@@ -78,7 +80,7 @@ const RaceCard = ({ index, race }: { index: number; race: RaceType }) => {
             {race.isHovered && (
                 <RaceCardContent
                     race={race}
-                    className="bg-gray-700 border-indigo-400"
+                    className="bg-gray-700 border-blue-600"
                 />
             )}
             {!race.isHovered && (

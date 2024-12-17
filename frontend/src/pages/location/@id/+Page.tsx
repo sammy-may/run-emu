@@ -23,8 +23,8 @@ const LocPage = () => {
         })[0];
 
         let races: RaceType[] = await fetchAllRaces(location);
-        updateActiveArea(location ?? null);
         updateAllResults(races);
+        updateActiveArea(location ?? null);
     };
 
     useEffect(() => {

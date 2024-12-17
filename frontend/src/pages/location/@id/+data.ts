@@ -9,7 +9,7 @@ export const data = async (pageContext: PageContext) => {
     const name = pageContext.routeParams.id;
 
     config({
-        title: name,
+        title: "Upcoming Races | " + name,
     });
 
     return name;
