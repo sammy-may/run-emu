@@ -1,7 +1,8 @@
 import { useContext, useEffect } from "react";
 import { RaceContext } from "../../../context/RaceFeedContext";
 
-import { States, ActiveArea } from "../../../context/RaceFeedContext";
+import { ActiveArea } from "../../../context/RaceFeedContext";
+import States from "../../../constants/States.tsx";
 
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data.ts";

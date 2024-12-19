@@ -2,10 +2,20 @@ import { createClient, PostgrestError } from "@supabase/supabase-js";
 import { ActiveArea } from "../context/RaceFeedContext";
 import RaceType from "../types/race";
 
+import { useContext } from "react";
+import { RaceContext } from "../context/RaceFeedContext";
+
 export const supabase = createClient(
     "https://hzbtbujyhfuhbtramttg.supabase.co",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6YnRidWp5aGZ1aGJ0cmFtdHRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM4NTA1OTgsImV4cCI6MjA0OTQyNjU5OH0.4PVn3P1e9tyRJ37DWzHwYxtyy_GhdFzDmw82Qk00QnE"
 );
+
+export const N_MONTHS = 1;
+export const today_plus_n_months = (n: number): string => {
+    const today = new Date();
+    today.setMonth(today.getMonth() + n);
+    return today.toISOString().split('T')[0];
+}
 
 export const fetchRaces = async (state: ActiveArea | null, need_state: boolean): Promise<RaceType[]> => {
     let races: RaceType[] = []
@@ -13,6 +23,7 @@ export const fetchRaces = async (state: ActiveArea | null, need_state: boolean):
     let err: PostgrestError | null = null;
 
     const today = new Date().toISOString().split('T')[0];
+    const n_months = today_plus_n_months(N_MONTHS);
 
     if (state !== null && state.state.length > 0) {
         const {data, error} = await supabase.from("Races").select().eq("state", state?.state).gte("date", today);
@@ -25,7 +36,7 @@ export const fetchRaces = async (state: ActiveArea | null, need_state: boolean):
     }
 
     else {
-        const {data, error} = await supabase.from("Races").select().gte("date", today);
+        const {data, error} = await supabase.from("Races").select().gte("date", today).lte("date", n_months);
         dat = data;
         err = error;
     }

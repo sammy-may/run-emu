@@ -16,7 +16,6 @@ const Page = () => {
     const fetch = async () => {
         if (name === undefined) {
             let races: RaceType[] = await fetchRaces(null, false);
-            //let races: RaceType[] = await fetchAllRaces(null);
             updateAllResults(races);
             updateActiveArea(null);
         }

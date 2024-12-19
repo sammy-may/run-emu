@@ -1,7 +1,7 @@
 export { onBeforePrerenderStart };
 
 import type { OnBeforePrerenderStartAsync } from "vike/types";
-import { States } from "../../../context/RaceFeedContext";
+import States from "../../../constants/States";
 
 const onBeforePrerenderStart: OnBeforePrerenderStartAsync =
     async (): ReturnType<OnBeforePrerenderStartAsync> => {

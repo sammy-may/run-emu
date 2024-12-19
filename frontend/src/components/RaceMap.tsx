@@ -2,9 +2,9 @@ import { useRef, useContext, useMemo, useEffect } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import Map, { MapRef, Marker } from "react-map-gl/dist/es5/exports-maplibre.js";
 
-import { RaceContext, ActiveArea, States } from "../context/RaceFeedContext";
+import { RaceContext } from "../context/RaceFeedContext";
+import States from "../constants/States";
 import { FaLocationDot } from "react-icons/fa6";
-import { MdOutlineCancel } from "react-icons/md";
 
 const RaceMap = () => {
     const {

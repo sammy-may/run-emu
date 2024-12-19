@@ -1,9 +1,7 @@
-# FIXME: not sure if this is right
-backend/explorer/migrations/*.py
-
 # my data
 data/*
 frontend/public/images/imgs/*
+set_env.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
