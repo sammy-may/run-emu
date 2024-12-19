@@ -16,13 +16,17 @@ const DateLocationBar = ({ race }: { race: RaceType }) => {
                 <div>
                     <FaRegCalendarAlt />
                 </div>
-                <div className="text-indigo-200">{date}</div>
+                <div className="flex items-center whitespace-nowrap text-xs font-semibold me-2 px-2.5 py-0.5 rounded-full bg-indigo-900 text-indigo-200">
+                    {date}
+                </div>
             </div>
             <div className="flex items-center space-x-3 px-6 text-gray-400">
                 <div>
                     <FaLocationDot />
                 </div>
-                <div className="text-indigo-200">{race.location}</div>
+                <div className="flex items-center whitespace-nowrap text-xs font-semibold me-2 px-2.5 py-0.5 rounded-full bg-indigo-900 text-indigo-200">
+                    {race.location}
+                </div>
             </div>
         </div>
     );

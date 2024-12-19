@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { fetchAllRaces, RaceContext } from "../../../context/RaceFeedContext";
+import { RaceContext } from "../../../context/RaceFeedContext";
 import { FaLocationDot } from "react-icons/fa6";
 
 import RaceTitle from "../../../components/Race/RaceTitle";
@@ -12,31 +12,24 @@ import WeatherWidget from "../../../components/Race/WeatherWidget";
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data.ts";
 
+import { fetchByName } from "../../../api/races.ts";
+
 const Page = () => {
     const name = useData<Data>();
 
     const [race, setRace] = useState<RaceType | null>(null);
-
-    const {
-        updateAllResults,
-        state: { allResults },
-    } = useContext(RaceContext);
-
-    let date: string = "";
+    const [dateStr, setDateStr] = useState<string>("");
 
     const fetch = async () => {
-        let races: RaceType[] = await fetchAllRaces(null);
-        updateAllResults(races);
-
-        const race_match = races.find((race) => race.name_url === name);
+        const race_match = await fetchByName(name);
         setRace(race_match ?? null);
-
         if (race_match !== undefined && race_match !== null) {
-            date = new Date(race_match.date).toLocaleDateString("en-US", {
+            const date = new Date(race_match.date).toLocaleDateString("en-US", {
                 day: "numeric",
                 month: "short",
                 year: "numeric",
             });
+            setDateStr(date);
         }
     };
 
@@ -50,25 +43,29 @@ const Page = () => {
                 <RaceTitle title={race.name} />
                 <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-1">
-                        <h2 className="text-lg font-bold tracking-tight text-gray-200 px-3">
+                        <h2 className="text-sm font-semibold text-gray-400 px-3">
                             Location
                         </h2>
                         <div className="flex items-center space-x-3 px-3 text-gray-400 pb-3">
                             <div>
                                 <FaLocationDot />
                             </div>
-                            <div>{race.location}</div>
+                            <div className="text-gray-200 font-medium">
+                                {race.location}
+                            </div>
                         </div>
-                        <h2 className="text-lg font-bold tracking-tight text-gray-200 px-3">
+                        <h2 className="text-sm font-semibold text-gray-400 px-3">
                             Date
                         </h2>
                         <div className="flex items-center space-x-3 px-3 text-gray-400 pb-3">
                             <div>
                                 <FaRegCalendarAlt />
                             </div>
-                            <div>{date}</div>
+                            <div className="text-gray-200 font-medium">
+                                {dateStr}
+                            </div>
                         </div>
-                        <h2 className="text-lg font-bold tracking-tight text-gray-200 px-3">
+                        <h2 className="text-sm font-semibold text-gray-400 px-3">
                             Distances
                         </h2>
                         <div className="pb-6">

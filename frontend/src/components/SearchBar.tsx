@@ -1,5 +1,6 @@
 import { useContext, useRef, useEffect } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
+import { IoSearchOutline } from "react-icons/io5";
 
 const SearchBar = () => {
     const {
@@ -45,12 +46,17 @@ const SearchBar = () => {
                     onChange={updateSearch}
                 />
                 {!search && (
-                    <div className="absolute top-0 py-2 px-3 text-sm rounded-lg block text-gray-400">
-                        Type{" "}
-                        <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg bg-gray-600 text-gray-100 border-gray-500">
-                            /
-                        </kbd>{" "}
-                        to search by name
+                    <div className="absolute top-0 py-2 px-3 text-sm rounded-lg flex items-center text-gray-400 space-x-2">
+                        <div className="">
+                            <IoSearchOutline />
+                        </div>
+                        <div className="block text-sm">
+                            Type{" "}
+                            <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg bg-gray-600 text-gray-100 border-gray-500">
+                                /
+                            </kbd>{" "}
+                            to search by name
+                        </div>
                     </div>
                 )}
             </form>

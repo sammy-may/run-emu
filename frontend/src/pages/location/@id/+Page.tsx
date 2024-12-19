@@ -1,17 +1,14 @@
-import { useContext, useEffect, useMemo } from "react";
+import { useContext, useEffect } from "react";
 import { RaceContext } from "../../../context/RaceFeedContext";
 
-import {
-    States,
-    ActiveArea,
-    fetchAllRaces,
-} from "../../../context/RaceFeedContext";
+import { States, ActiveArea } from "../../../context/RaceFeedContext";
 
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data.ts";
 import RaceType from "../../../types/race.ts";
 
 import PageContent from "../../index/+Page.tsx";
+import { fetchRaces } from "../../../api/races.ts";
 
 const LocPage = () => {
     const { updateAllResults, updateActiveArea } = useContext(RaceContext);
@@ -22,7 +19,13 @@ const LocPage = () => {
             return state.state == name;
         })[0];
 
-        let races: RaceType[] = await fetchAllRaces(location);
+        let races: RaceType[] = [];
+        if (name === "all") {
+            races = await fetchRaces(null, false);
+        } else {
+            races = await fetchRaces(location, true);
+        }
+
         updateAllResults(races);
         updateActiveArea(location ?? null);
     };

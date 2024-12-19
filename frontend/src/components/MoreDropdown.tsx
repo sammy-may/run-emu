@@ -61,7 +61,7 @@ const MoreDropdown = () => {
                     </svg>
                 </button>
                 {moreMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-indigo-400 py-3 px-3 min-w-96 mt-1 space-y-4">
+                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-blue-500 py-3 px-3 min-w-96 mt-0.5 space-y-4">
                         <div className="rounded-lg">
                             <div className="text-gray-200 font-medium text-sm flex items-center space-x-2 pb-1">
                                 <span>
@@ -197,13 +197,13 @@ const MoreDropdown = () => {
                         <div className="place-content-end flex items-center w-full space-x-3">
                             <button
                                 onClick={unsetWeather}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 border border-blue-500 hover:bg-blue-700 focus:ring-blue-800"
                             >
                                 Clear
                             </button>
                             <button
                                 onClick={closeMoreMenu}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                             >
                                 Done
                             </button>

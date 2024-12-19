@@ -2,10 +2,11 @@ import { useContext, useEffect } from "react";
 import OptionsBar from "../../components/OptionsBar";
 import RaceFeed from "../../components/RaceFeed";
 import RaceMap from "../../components/RaceMap";
-import { RaceContext, fetchAllRaces } from "../../context/RaceFeedContext";
+import { RaceContext } from "../../context/RaceFeedContext";
 import RaceType from "../../types/race";
 import type { Data } from "./+data.ts";
 import { useData } from "vike-react/useData";
+import { fetchRaces } from "../../api/races.ts";
 
 const Page = () => {
     const { updateAllResults, updateActiveArea } = useContext(RaceContext);
@@ -13,9 +14,12 @@ const Page = () => {
     const name = useData<Data>();
 
     const fetch = async () => {
-        let races: RaceType[] = await fetchAllRaces(null);
-        updateAllResults(races);
-        updateActiveArea(null);
+        if (name === undefined) {
+            let races: RaceType[] = await fetchRaces(null, false);
+            //let races: RaceType[] = await fetchAllRaces(null);
+            updateAllResults(races);
+            updateActiveArea(null);
+        }
     };
 
     useEffect(() => {
@@ -33,7 +37,7 @@ export const PageContent = () => {
                     <OptionsBar />
                     <RaceFeed />
                 </div>
-                <div className="bg-gray-800 border-gray-700 border rounded-lg p-3">
+                <div className="">
                     <RaceMap />
                 </div>
             </div>

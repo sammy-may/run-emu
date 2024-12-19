@@ -28,19 +28,19 @@ const WeatherWidget = ({ race }: { race: RaceType }) => {
     const dist_str = dist > 0 ? String(dist) : "<1";
     return (
         <div className="space-y-1 px-3">
-            <div className="flex items-center place-content-between">
-                <h2 className="text-lg font-bold tracking-tight text-gray-200 px-3 ">
+            <div className="flex items-center">
+                <h2 className="text-sm font-semibold text-gray-400 px-3 ">
                     Weather
                 </h2>
                 <div
-                    className="px-3 relative cursor-pointer"
+                    className="pr-3 relative cursor-pointer text-gray-400 text-sm font-semibold"
                     onMouseEnter={handleMouseOver}
                     onMouseLeave={handleMouseOut}
                     onClick={handleClick}
                 >
                     <IoMdInformationCircleOutline />
                     {isInfoHovered && (
-                        <div className="absolute rounded-lg p-3 border border-indigo-400 bg-gray-700 space-y-3 text-gray-400 text-sm top-0 right-7 ">
+                        <div className="absolute rounded-lg p-3 border border-indigo-400 bg-gray-700 space-y-3 text-gray-400 text-sm top-2 left-2">
                             <p>
                                 Weather information is based on measurements
                                 from over 15,000 weather stations over the past
@@ -56,32 +56,41 @@ const WeatherWidget = ({ race }: { race: RaceType }) => {
                                 dataset provided by <span>NCEI</span>.
                             </p>
                             <p className="flex items-center whitespace-nowrap space-x-2 px-2">
-                                <FaTemperatureArrowUp />
+                                <span className="text-gray-200 font-semibold">
+                                    <FaTemperatureArrowUp />
+                                </span>
                                 <span>
-                                    indicates the average{" "}
+                                    indicates the{" "}
                                     <span className="text-gray-200 font-semibold">
-                                        high temperature
+                                        average high temperature
                                     </span>{" "}
                                     .
                                 </span>
                             </p>
                             <p className="flex items-center whitespace-nowrap space-x-2 px-2">
-                                <FaTemperatureArrowDown />
+                                <span className="text-gray-200 font-semibold">
+                                    <FaTemperatureArrowDown />
+                                </span>
                                 <span>
-                                    indicates the average{" "}
+                                    indicates the{" "}
                                     <span className="text-gray-200 font-semibold">
-                                        low temperature
+                                        average low temperature
                                     </span>{" "}
                                     .
                                 </span>
                             </p>
                             <p className="flex items-center whitespace-nowrap space-x-2 px-2">
-                                <FaTemperatureArrowUp />
+                                <span className="text-gray-200 font-semibold">
+                                    <FaCloudShowersWater />
+                                </span>
                                 <span>
-                                    indicates the probability of receiving at
-                                    least{" "}
+                                    indicates the{" "}
                                     <span className="text-gray-200 font-semibold">
-                                        0.25 inches of precipitation
+                                        probability
+                                    </span>{" "}
+                                    of receiving{" "}
+                                    <span className="text-gray-200 font-semibold">
+                                        at least 0.25 inches of precipitation
                                     </span>{" "}
                                     .
                                 </span>

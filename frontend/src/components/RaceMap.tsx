@@ -4,6 +4,7 @@ import Map, { MapRef, Marker } from "react-map-gl/dist/es5/exports-maplibre.js";
 
 import { RaceContext, ActiveArea, States } from "../context/RaceFeedContext";
 import { FaLocationDot } from "react-icons/fa6";
+import { MdOutlineCancel } from "react-icons/md";
 
 const RaceMap = () => {
     const {
@@ -19,8 +20,6 @@ const RaceMap = () => {
         updateMapCoords,
         toggleStateMenu,
         closeStateMenu,
-        updateActiveArea,
-        updateNeedLoad,
     } = useContext(RaceContext);
 
     const mapRef = useRef<MapRef>(null);
@@ -107,9 +106,9 @@ const RaceMap = () => {
     );
 
     return (
-        <div className="flex items-center relative pt-2">
-            <div className="absolute -top-7 flex items-center place-content-between w-full">
-                <div className="flex items-center mb-2">
+        <div className="flex flex-col items-center relative">
+            <div className="flex items-end place-content-between w-full">
+                <div className="flex items-center">
                     <button
                         id="sortInfo"
                         data-dropdown-toggle="dropdownInformation"
@@ -122,7 +121,17 @@ const RaceMap = () => {
                         </div>
                         <div>
                             {!activeArea && "State"}
-                            {activeArea && "State : " + activeArea.state}
+                            {activeArea && (
+                                <div className="flex items-center space-x-1">
+                                    <p>{"State : " + activeArea.state}</p>
+                                    {/*                                     <a
+                                        href="/location/all"
+                                        className="hover:cursor-pointer"
+                                    >
+                                        <MdOutlineCancel />
+                                    </a> */}
+                                </div>
+                            )}
                         </div>
                         <svg
                             className="w-2.5 h-2.5"
@@ -178,14 +187,14 @@ const RaceMap = () => {
                                 <a href="/location/all">
                                     <button
                                         //onClick={() => updateActiveArea(null)}
-                                        className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                        className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                                     >
                                         Clear
                                     </button>
                                 </a>
                                 <button
                                     onClick={closeStateMenu}
-                                    className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                    className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                                 >
                                     Done
                                 </button>
@@ -193,7 +202,7 @@ const RaceMap = () => {
                         </div>
                     )}
                 </div>
-                <p className="rounded-lg border px-3 mb-2 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
+                <p className="rounded-lg border py-0.5 px-3 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
                     Showing{" "}
                     <span className="text-indigo-200 font-medium px-1">
                         {mapResults.length}
@@ -205,21 +214,24 @@ const RaceMap = () => {
                     races matching your criteria.
                 </p>
             </div>
-            <Map
-                initialViewState={mapCoords}
-                ref={mapRef}
-                style={{ width: "100%", height: "84vh" }}
-                mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
-                onZoomEnd={() => filterOnMap()}
-                onMoveEnd={() => filterOnMap()}
-                onIdle={() => filterOnMap()}
-                onLoad={() => {
-                    fly();
-                    filterOnMap();
-                }}
-            >
-                {markers}
-            </Map>
+            <div className="bg-gray-800 border border-gray-700 rounded-lg w-full p-3">
+                <Map
+                    initialViewState={mapCoords}
+                    ref={mapRef}
+                    maxZoom={7}
+                    style={{ width: "100%", height: "84vh" }}
+                    mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
+                    onZoomEnd={() => filterOnMap()}
+                    onMoveEnd={() => filterOnMap()}
+                    onIdle={() => filterOnMap()}
+                    onLoad={() => {
+                        fly();
+                        filterOnMap();
+                    }}
+                >
+                    {markers}
+                </Map>
+            </div>
         </div>
     );
 };

@@ -7,7 +7,6 @@ import {
     ChangeEvent,
 } from "react";
 import RaceType from "../types/race";
-import api from "../api/races";
 
 enum RaceActionKind {
     UPDATE_DISTANCE_MIN = "UPDATE_DISTANCE_MIN",
@@ -39,33 +38,6 @@ enum RaceActionKind {
     OPEN_STATE_MENU = "OPEN_STATE_MENU",
     UPDATE_NEED_LOAD = "UPDATE_NEED_LOAD",
 }
-
-export const fetchAllRaces = async (
-    state: ActiveArea | null
-): Promise<RaceType[]> => {
-    let races: RaceType[] = [];
-    try {
-        const response = await api.get("", {
-            params: { active_only: true },
-        });
-        races = response.data;
-        races = races.map((race, index) => ({
-            ...race,
-            isHovered: false,
-            onMap: false,
-            id: index,
-            valid_distance: true,
-        }));
-        if (state && state.state.length > 0) {
-            races = races.filter((race) => {
-                return race.state.toLowerCase() === state.state.toLowerCase();
-            });
-        }
-    } catch (err) {
-        console.log(err);
-    }
-    return races;
-};
 
 interface MapCoordsType {
     latitude: number;
@@ -691,8 +663,8 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
         case RaceActionKind.POPULATE_RACES:
             let searchResults: RaceType[] | null = [];
             let mapResults: RaceType[] | null = [];
-            searchResults = getFromLocal("searchResults");
-            mapResults = getFromLocal("mapResults");
+            //searchResults = getFromLocal("searchResults");
+            //mapResults = getFromLocal("mapResults");
 
             if (searchResults) {
                 if (searchResults.length === 0) {
@@ -1083,14 +1055,6 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_NEED_LOAD,
         });
     }, []);
-
-    const fetchRaces = async () => {
-        let races: RaceType[] = await fetchAllRaces(null);
-        dispatch({
-            type: RaceActionKind.POPULATE_RACES,
-            new_races: races,
-        });
-    };
 
     const filterRaces = (races: RaceType[]) => {
         if (state.search !== null) {

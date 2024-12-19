@@ -23,6 +23,21 @@ export default tseslint.config(
                 "warn",
                 { allowConstantExport: true },
             ],
+            // Indentation rule - set to 4 spaces
+            indent: ["error", 4],
+
+            // Sort imports rule - ensure imports are sorted
+            "import/order": [
+                "error",
+                {
+                    groups: [
+                        ["builtin", "external"],
+                        "internal",
+                        ["parent", "sibling", "index"],
+                    ],
+                    "newlines-between": "always",
+                },
+            ],
         },
     }
 );

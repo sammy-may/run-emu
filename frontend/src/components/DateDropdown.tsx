@@ -44,7 +44,7 @@ const DateDropdown = () => {
                 </button>
 
                 {dateMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-indigo-400 py-3 px-3 mt-1 space-y-3">
+                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-blue-500 py-3 px-3 mt-0.5 space-y-3">
                         <form
                             className="flex items-center space-x-2 place-content-between"
                             action="#"
@@ -98,13 +98,13 @@ const DateDropdown = () => {
                         <div className="place-content-end flex items-center w-full space-x-3">
                             <button
                                 onClick={clearDates}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 border border-blue-500 hover:bg-blue-700 focus:ring-blue-800"
                             >
                                 Clear
                             </button>
                             <button
                                 onClick={closeDateMenu}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 border border-blue-500 hover:bg-blue-700 focus:ring-blue-800"
                             >
                                 Done
                             </button>
