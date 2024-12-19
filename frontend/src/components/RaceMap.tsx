@@ -1,10 +1,15 @@
 import { useRef, useContext, useMemo, useEffect } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
-import Map, { MapRef, Marker } from "react-map-gl/dist/es5/exports-maplibre.js";
+import Map, {
+    Layer,
+    MapRef,
+    Marker,
+    Source,
+} from "react-map-gl/dist/es5/exports-maplibre.js";
 
-import { RaceContext } from "../context/RaceFeedContext";
-import States from "../constants/States";
+import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
 import { FaLocationDot } from "react-icons/fa6";
+import { StatesInit } from "../constants/States";
 
 const RaceMap = () => {
     const {
@@ -14,9 +19,12 @@ const RaceMap = () => {
             mapCoords,
             stateMenuOpen,
             activeArea,
+            states,
         },
         updateSearchResults,
         updateHover,
+        updateStates,
+        updateStateHover,
         updateMapCoords,
         toggleStateMenu,
         closeStateMenu,
@@ -69,6 +77,27 @@ const RaceMap = () => {
         fly();
     }, [activeArea]);
 
+    const loadGeoJson = async (state: string) => {
+        if (state === "hawaii") {
+            return {};
+        }
+        const url = `https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/boundaries/${state}.json`;
+        const resp = await fetch(url);
+        const res = await resp.json();
+        return res;
+    };
+
+    useEffect(() => {
+        const updated_states: ActiveArea[] = StatesInit.map((state) => ({
+            ...state,
+            boundary: loadGeoJson(
+                state.state.toLowerCase().replace(/\s+/g, "_")
+            ),
+            isHovered: false,
+        }));
+        updateStates(updated_states);
+    }, []);
+
     const markers = useMemo(
         () =>
             searchResults.map((race) => (
@@ -104,6 +133,51 @@ const RaceMap = () => {
             )),
         [searchResults]
     );
+
+    const Boundaries = useMemo(() => {
+        states.map((state) => {
+            <div
+                onMouseEnter={() => updateStateHover(state.state, true)}
+                onMouseLeave={() => updateStateHover(state.state, false)}
+                key={"state_div" + state.state}
+            >
+                {state.isHovered && (
+                    <Source
+                        key={"src" + state.state}
+                        type="geojson"
+                        data={state.boundary!}
+                    >
+                        <Layer
+                            key={"fill" + state.state}
+                            type="fill"
+                            paint={{
+                                "fill-color": "white",
+                                "fill-opacity": 0.2,
+                                "fill-outline-color": [
+                                    "case",
+                                    [
+                                        "boolean",
+                                        ["feature-state", "hover"],
+                                        false,
+                                    ],
+                                    "red",
+                                    "black",
+                                ],
+                            }}
+                        />
+                        <Layer
+                            key={"outline" + state.state}
+                            type="line"
+                            paint={{
+                                "line-color": "black",
+                                "line-width": 3,
+                            }}
+                        />
+                    </Source>
+                )}
+            </div>;
+        });
+    }, [states]);
 
     return (
         <div className="flex flex-col items-center relative">
@@ -156,7 +230,7 @@ const RaceMap = () => {
                                 className="py-2 text-sm text-gray-200 overflow-y-auto max-h-72"
                                 aria-labelledby="sortInfo"
                             >
-                                {States.map((state, index) => {
+                                {states.map((state, index) => {
                                     if (
                                         state.country === "USA" ||
                                         state.country === "Canada"
@@ -230,6 +304,60 @@ const RaceMap = () => {
                     }}
                 >
                     {markers}
+                    {Boundaries}
+                    {/*                     <div onMouseEnter={() => console.log("engtering")}>
+                        <Source
+                            key="testSource"
+                            type="geojson"
+                            data={{
+                                type: "FeatureCollection",
+                                features: [
+                                    {
+                                        type: "Feature",
+                                        geometry: {
+                                            type: "Polygon",
+                                            coordinates: [
+                                                [
+                                                    [-98.0, 39.0], // Bottom-left corner (Longitude, Latitude)
+                                                    [-98.0, 42.0], // Top-left corner
+                                                    [-95.0, 42.0], // Top-right corner
+                                                    [-95.0, 39.0], // Bottom-right corner
+                                                    [-98.0, 39.0], // Close the polygon
+                                                ],
+                                            ],
+                                        },
+                                    },
+                                ],
+                            }}
+                        >
+                            <Layer
+                                key="testFill"
+                                type="fill"
+                                paint={{
+                                    "fill-color": "red",
+                                    "fill-opacity": [
+                                        "case",
+                                        [
+                                            "boolean",
+                                            ["feature-state", "hover"],
+                                            false,
+                                        ],
+                                        1,
+                                        0.0,
+                                    ],
+                                }}
+                            />
+                            <Layer
+                                key="testOutline"
+                                type="line"
+                                paint={{
+                                    "line-color": "black",
+                                    "line-width": 2,
+                                }}
+                            />
+                        </Source>
+                        ;
+                    </div> */}
                 </Map>
             </div>
         </div>

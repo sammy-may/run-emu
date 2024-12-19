@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { RaceContext } from "../../../context/RaceFeedContext";
 
 import { ActiveArea } from "../../../context/RaceFeedContext";
-import States from "../../../constants/States.tsx";
+import { StatesInit } from "../../../constants/States.tsx";
 
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data.ts";
@@ -16,7 +16,7 @@ const LocPage = () => {
     const name = useData<Data>();
 
     const fetch = async () => {
-        const location: ActiveArea = States.filter((state) => {
+        const location: ActiveArea = StatesInit.filter((state) => {
             return state.state == name;
         })[0];
 

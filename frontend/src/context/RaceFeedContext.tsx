@@ -7,6 +7,7 @@ import {
     ChangeEvent,
 } from "react";
 import RaceType from "../types/race";
+import States from "../constants/States";
 
 enum RaceActionKind {
     UPDATE_DISTANCE_MIN = "UPDATE_DISTANCE_MIN",
@@ -25,6 +26,8 @@ enum RaceActionKind {
     UPDATE_SEARCH_RESULTS = "UPDATE_SEARCH_RESULTS",
     UPDATE_MAP_COORDS = "UPDATE_MAP_COORDS",
     UPDATE_HOVER = "UPDATE_HOVER",
+    UPDATE_STATE_HOVER = "UPDATE_STATE_HOVER",
+    UPDATE_STATES = "UPDATE_STATES",
 
     UPDATE_ACTIVE_AREA = "UPDATE_ACTIVE_AREA",
 
@@ -51,6 +54,8 @@ export interface ActiveArea {
     country: string;
     latitude: number;
     longitude: number;
+    boundary?: any;
+    isHovered?: boolean;
 }
 
 interface RaceAction {
@@ -59,6 +64,7 @@ interface RaceAction {
     new_date?: Date | null;
     search?: string;
     new_races?: RaceType[];
+    new_states?: ActiveArea[];
     index?: number;
     new_bool?: boolean;
     sort?: boolean;
@@ -114,6 +120,7 @@ interface RaceState {
     moreMenuOpen: boolean;
     stateMenuOpen: boolean;
     activeArea: ActiveArea | null;
+    states: ActiveArea[];
     needLoad: boolean;
 }
 
@@ -138,6 +145,7 @@ const initState: RaceState = {
     moreMenuOpen: false,
     stateMenuOpen: false,
     activeArea: null,
+    states: [],
     needLoad: true,
 };
 
@@ -173,6 +181,22 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
                         }
                     })
                     .sort(action.sort! ? compareByHover : compareByNone),
+            };
+        case RaceActionKind.UPDATE_STATE_HOVER:
+            return {
+                ...state,
+                states: state.states.map((x) => {
+                    if (action.search! === x.state) {
+                        return { ...x, isHovered: action.new_bool! };
+                    } else {
+                        return x;
+                    }
+                }),
+            };
+        case RaceActionKind.UPDATE_STATES:
+            return {
+                ...state,
+                states: action.new_states!,
             };
         case RaceActionKind.UPDATE_DISTANCE_MIN:
             return { ...state, distanceMin: action.new_distance! };
@@ -278,6 +302,25 @@ const useRaceContext = (initState: RaceState) => {
         },
         []
     );
+
+    const updateStateHover = useCallback(
+        (state: string, isHovered: boolean) => {
+            dispatch({
+                type: RaceActionKind.UPDATE_STATE_HOVER,
+                search: state,
+                new_bool: isHovered,
+            });
+            console.log(state);
+        },
+        []
+    );
+
+    const updateStates = useCallback((states: ActiveArea[]) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_STATES,
+            new_states: states,
+        });
+    }, []);
 
     const setDistance = useCallback(
         (dist1: number | null, dist2: number | null = dist1) => {
@@ -474,14 +517,12 @@ const useRaceContext = (initState: RaceState) => {
         dispatch({
             type: RaceActionKind.CLOSE_STATE_MENU,
         });
-        console.log("close");
     }, []);
 
     const openStateMenu = useCallback(() => {
         dispatch({
             type: RaceActionKind.OPEN_STATE_MENU,
         });
-        console.log("open");
     }, []);
 
     const toggleStateMenu = () => {
@@ -773,6 +814,8 @@ const useRaceContext = (initState: RaceState) => {
         updateAllResults,
         updateMapCoords,
         updateHover,
+        updateStates,
+        updateStateHover,
         updateActiveArea,
 
         toggleDistanceMenu,
@@ -815,6 +858,8 @@ const initContextState: UseRaceContextType = {
     updateAllResults: () => {},
     updateMapCoords: () => {},
     updateHover: () => {},
+    updateStates: () => {},
+    updateStateHover: () => {},
     updateActiveArea: () => {},
 
     toggleDistanceMenu: () => {},

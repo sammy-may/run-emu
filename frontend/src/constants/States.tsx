@@ -1,6 +1,9 @@
-import { ActiveArea } from "../context/RaceFeedContext";
+import { useContext, useEffect } from "react";
+import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
 
-export const States: ActiveArea[] = [
+// create with e.g. `ls -althr node_modules/world-geojson/states/usa/*.json | awk '{print $NF}' | sed 's|.*/||; s|\.json$||' | paste -sd ',' -`
+
+export const StatesInit: ActiveArea[] = [
     {
         city: "St. John's",
         state: "Newfoundland and Labrador",
@@ -443,5 +446,31 @@ export const States: ActiveArea[] = [
         longitude: -104.8202,
     },
 ].sort((a, b) => a.state.localeCompare(b.state));
+
+const loadGeoJson = async (state: string) => {
+    if (state === "hawaii") {
+        return {};
+    }
+    const url = `https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/boundaries/${state}.json`;
+    const resp = await fetch(url);
+    const res = await resp.json();
+    return res;
+};
+
+export const States = () => {
+    const { updateStates } = useContext(RaceContext);
+
+    const updated_states: ActiveArea[] = StatesInit.map((state) => ({
+        ...state,
+        boundary: loadGeoJson(state.state.toLowerCase().replace(/\s+/g, "_")),
+        isHovered: false,
+    }));
+
+    useEffect(() => {
+        updateStates(updated_states);
+    }, []);
+
+    return updated_states;
+};
 
 export default States;

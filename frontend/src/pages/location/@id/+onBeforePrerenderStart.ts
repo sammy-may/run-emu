@@ -1,12 +1,12 @@
 export { onBeforePrerenderStart };
 
 import type { OnBeforePrerenderStartAsync } from "vike/types";
-import States from "../../../constants/States";
+import { StatesInit } from "../../../constants/States";
 
 const onBeforePrerenderStart: OnBeforePrerenderStartAsync =
     async (): ReturnType<OnBeforePrerenderStartAsync> => {
         return [
-            ...States.map((state) => {
+            ...StatesInit.map((state) => {
                 const url = `/location/${state.state}`;
                 return {
                     url,
