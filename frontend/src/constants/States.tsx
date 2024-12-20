@@ -453,16 +453,19 @@ const loadGeoJson = async (state: string) => {
     }
     const url = `https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/boundaries/${state}.json`;
     const resp = await fetch(url);
-    const res = await resp.json();
+    const res = JSON.stringify(resp);
     return res;
 };
 
 export const States = () => {
     const { updateStates } = useContext(RaceContext);
 
-    const updated_states: ActiveArea[] = StatesInit.map((state) => ({
+    const updated_states: ActiveArea[] = StatesInit.map((state, index) => ({
         ...state,
-        boundary: loadGeoJson(state.state.toLowerCase().replace(/\s+/g, "_")),
+        boundary: {
+            ...loadGeoJson(state.state.toLowerCase().replace(/\s+/g, "_")),
+            id: index,
+        },
         isHovered: false,
     }));
 

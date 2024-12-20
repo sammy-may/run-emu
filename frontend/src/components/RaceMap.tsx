@@ -2,6 +2,7 @@ import { useRef, useContext, useMemo, useEffect } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import Map, {
     Layer,
+    MapLayerMouseEvent,
     MapRef,
     Marker,
     Source,
@@ -10,6 +11,9 @@ import Map, {
 import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
 import { FaLocationDot } from "react-icons/fa6";
 import { StatesInit } from "../constants/States";
+import { MapLayerTouchEvent } from "maplibre-gl";
+import { TiDelete } from "react-icons/ti";
+import { divIcon } from "leaflet";
 
 const RaceMap = () => {
     const {
@@ -88,17 +92,22 @@ const RaceMap = () => {
     };
 
     useEffect(() => {
-        const updated_states: ActiveArea[] = StatesInit.map((state) => ({
-            ...state,
-            boundary: loadGeoJson(
-                state.state.toLowerCase().replace(/\s+/g, "_")
-            ),
-            isHovered: false,
-        }));
-        updateStates(updated_states);
+        const fetchStates = async () => {
+            const updated_states: ActiveArea[] = await Promise.all(
+                StatesInit.map(async (state) => ({
+                    ...state,
+                    boundary: await loadGeoJson(
+                        state.state.toLowerCase().replace(/\s+/g, "_")
+                    ),
+                    isHovered: false,
+                }))
+            );
+            updateStates([...updated_states]);
+        };
+        fetchStates();
     }, []);
 
-    const markers = useMemo(
+    const Markers = useMemo(
         () =>
             searchResults.map((race) => (
                 <div
@@ -134,50 +143,103 @@ const RaceMap = () => {
         [searchResults]
     );
 
-    const Boundaries = useMemo(() => {
-        states.map((state) => {
-            <div
-                onMouseEnter={() => updateStateHover(state.state, true)}
-                onMouseLeave={() => updateStateHover(state.state, false)}
-                key={"state_div" + state.state}
-            >
-                {state.isHovered && (
-                    <Source
-                        key={"src" + state.state}
-                        type="geojson"
-                        data={state.boundary!}
-                    >
-                        <Layer
-                            key={"fill" + state.state}
-                            type="fill"
-                            paint={{
-                                "fill-color": "white",
-                                "fill-opacity": 0.2,
-                                "fill-outline-color": [
-                                    "case",
-                                    [
-                                        "boolean",
-                                        ["feature-state", "hover"],
-                                        false,
-                                    ],
-                                    "red",
-                                    "black",
-                                ],
-                            }}
-                        />
-                        <Layer
-                            key={"outline" + state.state}
-                            type="line"
-                            paint={{
-                                "line-color": "black",
-                                "line-width": 3,
-                            }}
-                        />
-                    </Source>
-                )}
-            </div>;
-        });
-    }, [states]);
+    const layer_ids = StatesInit.map((state) => {
+        return "fill" + state.state;
+    });
+
+    const handleMouse = (evt: MapLayerMouseEvent) => {
+        if (mapRef.current && evt.features && evt.features.length > 0) {
+            const state = evt.features[0]["source"].replace(/^src/, "");
+            updateStateHover(state, true);
+        }
+    };
+
+    const clickLink = (url: string) => {
+        const link = document.createElement("a");
+        link.href = url;
+        link.target = "_self";
+
+        document.body.appendChild(link);
+        link.click();
+
+        document.body.removeChild(link);
+    };
+
+    const handleClick = (evt: MapLayerMouseEvent) => {
+        if (mapRef.current && evt.features && evt.features.length > 0) {
+            const state = evt.features[0]["source"].replace(/^src/, "");
+            clickLink("/location/" + state);
+        }
+    };
+
+    const Boundaries = useMemo(
+        () =>
+            states.map((state) => {
+                const active =
+                    state.state.toLowerCase() ===
+                        activeArea?.state.toLowerCase() || state.isHovered;
+                if (!state.boundary || !state.boundary["features"]) {
+                    return;
+                } else if (!active) {
+                    return (
+                        <Source
+                            key={"src" + state.state}
+                            id={"src" + state.state}
+                            type="geojson"
+                            data={state.boundary!["features"][0]}
+                        >
+                            <Layer
+                                key={"fill" + state.state}
+                                id={"fill" + state.state}
+                                type="fill"
+                                paint={{
+                                    "fill-color": "blue",
+                                    "fill-opacity": 0.0,
+                                }}
+                            />
+                            <Layer
+                                key={"outline" + state.state}
+                                id={"outline" + state.state}
+                                type="line"
+                                paint={{
+                                    "line-color": "blue",
+                                    "line-width": 0,
+                                }}
+                            />
+                        </Source>
+                    );
+                } else {
+                    return (
+                        <Source
+                            key={"src" + state.state}
+                            id={"src" + state.state}
+                            type="geojson"
+                            data={state.boundary!["features"][0]}
+                        >
+                            <Layer
+                                key={"fill" + state.state}
+                                id={"fill" + state.state}
+                                type="fill"
+                                paint={{
+                                    "fill-color": "blue",
+                                    "fill-opacity": 0.1,
+                                }}
+                            />
+                            <Layer
+                                key={"outline" + state.state}
+                                id={"outline" + state.state}
+                                type="line"
+                                paint={{
+                                    "line-color": "blue",
+                                    "line-width": 2,
+                                }}
+                            />
+                        </Source>
+                    );
+                }
+            }),
+        [states, activeArea]
+    );
 
     return (
         <div className="flex flex-col items-center relative">
@@ -223,6 +285,23 @@ const RaceMap = () => {
                             />
                         </svg>
                     </button>
+
+                    {activeArea && (
+                        <div
+                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-14 right-6 text-blue-100 border-blue-500 bg-blue-600 px-3 py-1 text-sm font-semibold hover:bg-blue-700 hover:cursor-pointer"
+                            onClick={() => {
+                                clickLink("/location/all");
+                            }}
+                            onMouseEnter={() => {
+                                updateStateHover("", false);
+                            }}
+                        >
+                            <div>Remove boundary</div>
+                            <div className="text-lg">
+                                <TiDelete />
+                            </div>
+                        </div>
+                    )}
 
                     {stateMenuOpen && (
                         <div className="absolute z-50 rounded-lg bg-gray-700 border border-gray-600 top-8 left-0 divide-y divide-gray-600 shadow min-w-44">
@@ -298,66 +377,16 @@ const RaceMap = () => {
                     onZoomEnd={() => filterOnMap()}
                     onMoveEnd={() => filterOnMap()}
                     onIdle={() => filterOnMap()}
+                    onMouseMove={handleMouse}
+                    onClick={handleClick}
+                    interactiveLayerIds={layer_ids}
                     onLoad={() => {
                         fly();
                         filterOnMap();
                     }}
                 >
-                    {markers}
+                    {Markers}
                     {Boundaries}
-                    {/*                     <div onMouseEnter={() => console.log("engtering")}>
-                        <Source
-                            key="testSource"
-                            type="geojson"
-                            data={{
-                                type: "FeatureCollection",
-                                features: [
-                                    {
-                                        type: "Feature",
-                                        geometry: {
-                                            type: "Polygon",
-                                            coordinates: [
-                                                [
-                                                    [-98.0, 39.0], // Bottom-left corner (Longitude, Latitude)
-                                                    [-98.0, 42.0], // Top-left corner
-                                                    [-95.0, 42.0], // Top-right corner
-                                                    [-95.0, 39.0], // Bottom-right corner
-                                                    [-98.0, 39.0], // Close the polygon
-                                                ],
-                                            ],
-                                        },
-                                    },
-                                ],
-                            }}
-                        >
-                            <Layer
-                                key="testFill"
-                                type="fill"
-                                paint={{
-                                    "fill-color": "red",
-                                    "fill-opacity": [
-                                        "case",
-                                        [
-                                            "boolean",
-                                            ["feature-state", "hover"],
-                                            false,
-                                        ],
-                                        1,
-                                        0.0,
-                                    ],
-                                }}
-                            />
-                            <Layer
-                                key="testOutline"
-                                type="line"
-                                paint={{
-                                    "line-color": "black",
-                                    "line-width": 2,
-                                }}
-                            />
-                        </Source>
-                        ;
-                    </div> */}
                 </Map>
             </div>
         </div>

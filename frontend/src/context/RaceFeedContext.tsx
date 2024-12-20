@@ -189,7 +189,7 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
                     if (action.search! === x.state) {
                         return { ...x, isHovered: action.new_bool! };
                     } else {
-                        return x;
+                        return { ...x, isHovered: false };
                     }
                 }),
             };
@@ -310,7 +310,6 @@ const useRaceContext = (initState: RaceState) => {
                 search: state,
                 new_bool: isHovered,
             });
-            console.log(state);
         },
         []
     );
