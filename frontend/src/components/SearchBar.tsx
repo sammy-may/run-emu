@@ -46,7 +46,7 @@ const SearchBar = () => {
                     onChange={updateSearch}
                 />
                 {!search && (
-                    <div className="absolute top-0 py-2 px-3 text-sm rounded-lg flex items-center text-gray-400 space-x-2">
+                    <div className="absolute top-0 py-2 px-3 text-sm rounded-lg flex items-center text-gray-400 space-x-2 pointer-events-none">
                         <div className="">
                             <IoSearchOutline />
                         </div>

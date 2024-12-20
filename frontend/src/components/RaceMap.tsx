@@ -11,9 +11,7 @@ import Map, {
 import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
 import { FaLocationDot } from "react-icons/fa6";
 import { StatesInit } from "../constants/States";
-import { MapLayerTouchEvent } from "maplibre-gl";
 import { TiDelete } from "react-icons/ti";
-import { divIcon } from "leaflet";
 
 const RaceMap = () => {
     const {
@@ -250,7 +248,7 @@ const RaceMap = () => {
                         data-dropdown-toggle="dropdownInformation"
                         type="button"
                         onClick={toggleStateMenu}
-                        className="flex whitespace-nowrap space-x-2 text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                        className="flex whitespace-nowrap space-x-2 text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 hover:border-blue-500 focus:ring-blue-800"
                     >
                         <div>
                             <FaLocationDot />
@@ -288,7 +286,7 @@ const RaceMap = () => {
 
                     {activeArea && (
                         <div
-                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-14 right-6 text-blue-100 border-blue-500 bg-blue-600 px-3 py-1 text-sm font-semibold hover:bg-blue-700 hover:cursor-pointer"
+                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-14 right-6 text-blue-100 border-blue-400 bg-blue-600 px-3 py-1 text-sm font-semibold hover:bg-blue-700 hover:border-blue-500 hover:cursor-pointer"
                             onClick={() => {
                                 clickLink("/location/all");
                             }}
@@ -378,6 +376,9 @@ const RaceMap = () => {
                     onMoveEnd={() => filterOnMap()}
                     onIdle={() => filterOnMap()}
                     onMouseMove={handleMouse}
+                    onMouseOut={() => {
+                        updateStateHover("", false);
+                    }}
                     onClick={handleClick}
                     interactiveLayerIds={layer_ids}
                     onLoad={() => {
