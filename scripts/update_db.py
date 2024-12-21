@@ -24,7 +24,11 @@ def parse_arguments():
     return parser.parse_args()
 
 
-SOURCES = ["data/rf_spider_dump.json", "data/usu_spider_dump.json"]
+SOURCES = [
+    "data/usa_spider_dump.json",
+    "data/rf_spider_dump.json",
+    "data/usu_spider_dump.json",
+]
 
 WEATHER = "data/weather/daily_normals.json"
 

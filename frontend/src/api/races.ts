@@ -2,15 +2,12 @@ import { createClient, PostgrestError } from "@supabase/supabase-js";
 import { ActiveArea } from "../context/RaceFeedContext";
 import RaceType from "../types/race";
 
-import { useContext } from "react";
-import { RaceContext } from "../context/RaceFeedContext";
-
 export const supabase = createClient(
     "https://hzbtbujyhfuhbtramttg.supabase.co",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6YnRidWp5aGZ1aGJ0cmFtdHRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM4NTA1OTgsImV4cCI6MjA0OTQyNjU5OH0.4PVn3P1e9tyRJ37DWzHwYxtyy_GhdFzDmw82Qk00QnE"
 );
 
-export const N_MONTHS = 1;
+export const N_MONTHS = 12;
 export const today_plus_n_months = (n: number): string => {
     const today = new Date();
     today.setMonth(today.getMonth() + n);

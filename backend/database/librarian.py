@@ -251,7 +251,13 @@ class Librarian:
             if "date" not in info:
                 continue
             elif "," in info["date"]:
-                date = datetime.strptime(info["date"], "%B %d, %Y %H:%M:%S")
+                try:
+                    date = datetime.strptime(info["date"], "%B %d, %Y %H:%M:%S")
+                except Exception as err:  # noqa: F841
+                    try:
+                        date = datetime.strptime(info["date"], "%b %d, %Y")
+                    except Exception as err:  # noqa: F841
+                        pass
             else:
                 date = datetime.strptime(info["date"], "%d %b %y")
             race_weather = self.extract_weather(info, date)

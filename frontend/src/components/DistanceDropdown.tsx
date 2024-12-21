@@ -2,6 +2,10 @@ import { useContext, useState } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 import { PiPathBold } from "react-icons/pi";
 import DistanceBadge from "./DistanceBadge";
+import { MdOutlineCancel } from "react-icons/md";
+
+import { FaRegCheckCircle } from "react-icons/fa";
+import { FaR } from "react-icons/fa6";
 
 const DistanceDropdown = () => {
     const {
@@ -44,7 +48,7 @@ const DistanceDropdown = () => {
                     data-dropdown-toggle="dropdownInformation"
                     type="button"
                     onClick={toggleDistanceMenu}
-                    className="flex whitespace-nowrap space-x-2 text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 hover:border-blue-500 focus:ring-blue-800"
+                    className="flex whitespace-nowrap space-x-2 text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 hover:border-blue-500"
                 >
                     <div>
                         <PiPathBold />
@@ -176,15 +180,21 @@ const DistanceDropdown = () => {
                         <div className="place-content-end flex items-center w-full space-x-3">
                             <button
                                 onClick={wrapUnsetDistance}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 border border-blue-500 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-blue-600 border border-blue-400 hover:bg-blue-700 hover:border-blue-500"
                             >
-                                Clear
+                                <div>Clear</div>
+                                <div>
+                                    <MdOutlineCancel />
+                                </div>
                             </button>
                             <button
                                 onClick={closeDistanceMenu}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 border border-blue-500 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-blue-600 border border-blue-400 hover:bg-blue-700 hover:border-blue-500"
                             >
-                                Done
+                                <div>Done</div>
+                                <div>
+                                    <FaRegCheckCircle />
+                                </div>
                             </button>
                         </div>
                     </div>

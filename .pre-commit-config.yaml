@@ -21,7 +21,7 @@ repos:
             name: flake8
             stages: [pre-commit]
             language: system
-            entry: flake8 --ignore=E501,E203 --exclude=frontend/node_modules
+            entry: flake8 --ignore=E501,E203,W503 --exclude=frontend/node_modules
             types: [python]
             always_run: true
 

@@ -1,6 +1,7 @@
 import argparse
 
 from backend.spiders.rf_spider import RFSpider
+from backend.spiders.usa_spider import USASpider
 from backend.spiders.usu_spider import USUSpider
 from backend.utils.logger_utils import setup_logger
 
@@ -44,6 +45,9 @@ def main(args):
     elif args["site"] == "RF":
         spider = RFSpider(**args)
         logger.info("Launching RF spiders.")
+    elif args["site"] == "USA":
+        spider = USASpider(**args)
+        logger.info("Launching USA spiders.")
     spider.crawl()
 
 

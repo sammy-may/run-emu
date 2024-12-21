@@ -73,6 +73,7 @@ const AboutMenu = () => {
                     />
                 </div>
             </div>
+            <div className="h-full border border-gray-800 rounded-lg">a</div>
             <div className="w-3/5 p-3 border border-gray-800 rounded-lg">
                 Mission
             </div>

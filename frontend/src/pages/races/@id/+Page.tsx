@@ -50,7 +50,7 @@ const Page = () => {
                             <div>
                                 <FaLocationDot />
                             </div>
-                            <div className="text-gray-200 font-medium">
+                            <div className="text-indigo-200 text-xs font-semibold bg-indigo-900 border border-indigo-700 rounded-full px-2.5 py-0.5">
                                 {race.location}
                             </div>
                         </div>
@@ -61,7 +61,7 @@ const Page = () => {
                             <div>
                                 <FaRegCalendarAlt />
                             </div>
-                            <div className="text-gray-200 font-medium">
+                            <div className="text-indigo-200 text-xs font-semibold bg-indigo-900 border border-indigo-700 rounded-full px-2.5 py-0.5">
                                 {dateStr}
                             </div>
                         </div>

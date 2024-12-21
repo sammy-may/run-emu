@@ -254,10 +254,10 @@ const RaceMap = () => {
                             <FaLocationDot />
                         </div>
                         <div>
-                            {!activeArea && "State"}
+                            {!activeArea && "Region"}
                             {activeArea && (
                                 <div className="flex items-center space-x-1">
-                                    <p>{"State : " + activeArea.state}</p>
+                                    <p>{"Region : " + activeArea.state}</p>
                                     {/*                                     <a
                                         href="/location/all"
                                         className="hover:cursor-pointer"
@@ -294,7 +294,7 @@ const RaceMap = () => {
                                 updateStateHover("", false);
                             }}
                         >
-                            <div>Remove boundary</div>
+                            <div>{"Remove boundary : " + activeArea.state}</div>
                             <div className="text-lg">
                                 <TiDelete />
                             </div>

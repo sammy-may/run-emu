@@ -2,6 +2,7 @@ import logging
 
 import parse
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 from backend.spiders.spider import Spider
 
@@ -55,7 +56,7 @@ class RFSpider(Spider):
 
     def crawl(self):
         self.enumerate_pages()
-        for url in self.urls:
+        for url in tqdm(self.urls):
             raw_html = self.load_url(url)
 
             if not raw_html:

@@ -10,13 +10,13 @@ import { MdOutlineArticle } from "react-icons/md";
 const Header = () => {
     return (
         <>
-            <div className="flex items-center h-12 min-w-full mb-8 bg-gray-800 rounded-lg place-content-between">
+            <div className="flex items-center h-12 min-w-full mb-8 bg-gray-800 rounded-lg place-content-between w-full">
                 <div className="flex items-center space-x-3 h-full">
                     <Button
                         name={"RunEmu"}
                         icon={
                             <img
-                                src="/images/logos/emu_wb.svg"
+                                src="/images/logos/emu_sym_wb.webp"
                                 className="h-5"
                                 alt="RunEmu Logo"
                             />

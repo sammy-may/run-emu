@@ -16,7 +16,7 @@ const Login = () => {
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="name@company.com"
+                        placeholder="name@example.com"
                         className="border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
                     />
                 </div>
@@ -53,14 +53,14 @@ const Login = () => {
                     </div>
                     <a
                         href="#"
-                        className="text-sm font-medium hover:underline text-indigo-500"
+                        className="text-sm font-medium hover:underline text-blue-500"
                     >
                         Forgot password?
                     </a>
                 </div>
                 <button
                     type="submit"
-                    className="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-800"
+                    className="w-full text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center border border-blue-400 hover:border-blue-500 bg-blue-600 hover:bg-blue-700"
                 >
                     Sign in
                 </button>
@@ -68,7 +68,7 @@ const Login = () => {
                     Don't have an account yet?{" "}
                     <a
                         href="#"
-                        className="font-medium hover:underline text-indigo-500"
+                        className="font-medium hover:underline text-blue-500"
                     >
                         Sign up
                     </a>
