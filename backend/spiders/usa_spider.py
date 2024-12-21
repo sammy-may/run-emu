@@ -146,10 +146,14 @@ class USASpider(Spider):
 
     @staticmethod
     def handle_redirects(url: str) -> str:
-        response = requests.get(
-            url, headers=USASpider.REQUEST_HEADERS, allow_redirects=True
-        )
-        if response.url:
+        try:
+            response = requests.get(
+                url, headers=USASpider.REQUEST_HEADERS, allow_redirects=True
+            )
+        except Exception as err:
+            logger.warning("Problem with url '{:s}' : '{:s}'.".format(url, str(err)))
+            response = None
+        if response and response.url:
             return response.url
         else:
             return url
