@@ -663,7 +663,6 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_SEARCH_RESULTS,
             new_races: races,
         });
-        saveToLocal("searchResults", races);
         updateMapResults([...races.filter((race) => race.onMap)]);
     }, []);
 
@@ -672,7 +671,6 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_MAP_RESULTS,
             new_races: races,
         });
-        saveToLocal("mapResults", races);
     }, []);
 
     const updateMapCoords = useCallback((coords: MapCoordsType) => {
@@ -810,7 +808,7 @@ const useRaceContext = (initState: RaceState) => {
 
     useEffect(() => {
         applyDistanceFilters();
-    }, [state.distanceMin, state.distanceMax]);
+    }, [state.distanceMin, state.distanceMax, state.activeArea]);
 
     return {
         state,
@@ -838,6 +836,8 @@ const useRaceContext = (initState: RaceState) => {
         updateStates,
         updateStateHover,
         updateActiveArea,
+        applyFilters,
+        applyDistanceFilters,
 
         toggleDistanceMenu,
         closeDistanceMenu,
@@ -883,6 +883,8 @@ const initContextState: UseRaceContextType = {
     updateStates: () => {},
     updateStateHover: () => {},
     updateActiveArea: () => {},
+    applyFilters: () => {},
+    applyDistanceFilters: () => {},
 
     toggleDistanceMenu: () => {},
     closeDistanceMenu: () => {},

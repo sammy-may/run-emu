@@ -29,9 +29,6 @@ const LocPage = () => {
             races = await fetchRaces(location, true);
         }
 
-        console.log("active area", location);
-        console.log("name", name);
-
         updateLocSearch("");
         updateAllResults(races);
         updateActiveArea(location ?? null);

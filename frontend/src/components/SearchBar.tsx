@@ -41,6 +41,7 @@ const SearchBar = () => {
                     id="search"
                     type="text"
                     placeholder=""
+                    value={search ?? ""}
                     ref={inputRef}
                     className="border px-3 py-2 text-sm rounded-lg block w-full bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
                     onChange={updateSearch}
