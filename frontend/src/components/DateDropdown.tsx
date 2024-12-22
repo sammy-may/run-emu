@@ -14,7 +14,7 @@ const DateDropdown = () => {
     } = useContext(RaceContext);
 
     return (
-        <div className="relative">
+        <div className="relative pr-2 py-1">
             <div>
                 <ActionButton
                     content={
@@ -22,7 +22,9 @@ const DateDropdown = () => {
                             <div>
                                 <FaRegCalendarAlt />
                             </div>
-                            <p>Date</p>
+                            <p className="max-w-0 absolute -top-96 sm:max-w-36 sm:relative sm:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
+                                Date
+                            </p>
                         </>
                     }
                     dropdown={true}

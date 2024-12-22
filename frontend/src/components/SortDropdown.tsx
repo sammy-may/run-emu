@@ -85,7 +85,9 @@ const SortDropdown = () => {
                             <div>
                                 <FaSort />
                             </div>
-                            <span>Sort by {sortText}</span>
+                            <span className="max-w-0 absolute -top-96 sm:max-w-36 sm:relative sm:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
+                                Sort by {sortText}
+                            </span>
                         </>
                     }
                     dropdown={true}
@@ -95,7 +97,9 @@ const SortDropdown = () => {
                     content={
                         <>
                             <LuArrowDownUp />
-                            <p className="">Reverse</p>
+                            <p className="max-w-0 absolute -top-96 sm:max-w-36 sm:relative sm:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
+                                Reverse
+                            </p>
                         </>
                     }
                     dropdown={false}

@@ -1,7 +1,7 @@
 import RaceCard from "./RaceCard";
 
 import { RaceContext } from "../context/RaceFeedContext";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import RaceType from "../types/race";
 import { useInView } from "react-intersection-observer";
 
@@ -28,6 +28,22 @@ const RaceFeed = () => {
         return results;
     };
 
+    const Results = useMemo(() => {
+        return pageResults.map((race) => {
+            if (race.onMap) {
+                return (
+                    <RaceCard
+                        key={"card" + race.name}
+                        index={race.id!}
+                        race={race}
+                    />
+                );
+            } else {
+                return null;
+            }
+        });
+    }, [pageResults]);
+
     useEffect(() => {
         setIsLoading(true);
         setPageResults(getNRaces(page * 10));
@@ -41,21 +57,9 @@ const RaceFeed = () => {
     }, [inView, isLoading]);
 
     return (
-        <div className="text-left">
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-4 z-0">
-                {pageResults.map((race) => {
-                    if (race.onMap) {
-                        return (
-                            <RaceCard
-                                key={"card" + race.name}
-                                index={race.id!}
-                                race={race}
-                            />
-                        );
-                    } else {
-                        return null;
-                    }
-                })}
+        <div className="text-left h-full">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4 z-0 h-full">
+                {Results}
                 <div ref={ref} className="p-3 text-center"></div>
             </div>
         </div>

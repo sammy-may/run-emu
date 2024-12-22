@@ -9,7 +9,6 @@ import Map, {
 } from "react-map-gl/dist/es5/exports-maplibre.js";
 
 import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
-import { FaLocationDot } from "react-icons/fa6";
 import { StatesInit } from "../constants/States";
 import { TiDelete } from "react-icons/ti";
 import { IoSearchOutline } from "react-icons/io5";
@@ -30,7 +29,6 @@ const RaceMap = () => {
         updateStates,
         updateStateHover,
         updateMapCoords,
-        toggleStateMenu,
         openStateMenu,
         updateLocSearch,
         closeStateMenu,
@@ -85,9 +83,13 @@ const RaceMap = () => {
         fly();
     }, [activeArea]);
 
-    const loadGeoJson = async (state: string, country: string) => {
+    const loadGeoJson = async (state: string) => {
         if (
-            state === "hawaii" //||
+            state === "hawaii" ||
+            state.toLowerCase().includes("canada") ||
+            state.toLowerCase().includes("bissau") ||
+            state.toLowerCase().includes("congo") ||
+            state.toLowerCase().includes("ncipe")
             //!(country === "usa" || country === "canada")
         ) {
             return {};
@@ -104,8 +106,7 @@ const RaceMap = () => {
                 StatesInit.map(async (state) => ({
                     ...state,
                     boundary: await loadGeoJson(
-                        state.state.toLowerCase().replace(/\s+/g, "_"),
-                        state.country.toLowerCase()
+                        state.state.toLowerCase().replace(/\s+/g, "_")
                     ),
                     isHovered: false,
                 }))
@@ -291,7 +292,7 @@ const RaceMap = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center relative">
+        <div className="flex flex-col items-center relative w-full">
             <div className="flex flex-col items-end place-content-start w-full">
                 <div className="flex items-center w-full">
                     <div className="text-left relative w-full">
@@ -438,7 +439,7 @@ const RaceMap = () => {
                         </div>
                     )}
                 </div>
-                <p className="rounded-lg border mt-2 -mb-3 mx-3 px-3 text-sm bg-gray-800 border-gray-600 text-gray-400 items-center flex whitespace-nowrap overflow-x-auto z-10">
+                <p className="rounded-lg border mt-2 -mb-2.5 mx-3 px-3 text-xs font-medium bg-gray-800 border-gray-600 text-gray-400 items-center flex whitespace-nowrap overflow-x-auto z-10">
                     Showing{" "}
                     <span className="text-indigo-200 font-medium px-1">
                         {mapResults.length}

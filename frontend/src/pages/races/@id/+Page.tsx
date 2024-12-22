@@ -9,7 +9,7 @@ import { LuClipboardEdit } from "react-icons/lu";
 import WeatherWidget from "../../../components/Race/WeatherWidget";
 
 import { useData } from "vike-react/useData";
-import type { Data } from "./+data.ts";
+import type { Data } from "./+data.shared.ts";
 
 import { fetchByName } from "../../../api/races.ts";
 

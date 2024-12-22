@@ -22,7 +22,7 @@ const StrongBadge = ({ title, color }: { title: string; color: string }) => {
     );
 };
 
-const Dummy = () => {
+/* const Dummy = () => {
     return (
         <div
             className="
@@ -36,7 +36,7 @@ const Dummy = () => {
         "
         ></div>
     );
-};
+}; */
 
 const Page = () => {
     return (

@@ -2,13 +2,11 @@ import Button from "./Button";
 
 import { FaInfoCircle } from "react-icons/fa";
 import { FaSignInAlt } from "react-icons/fa";
-import { FaRunning } from "react-icons/fa";
-import { MdOutlineArticle } from "react-icons/md";
 
 const Header = () => {
     return (
         <>
-            <div className="flex items-center h-12 min-w-full max-w-full mb-8 bg-gray-800 place-content-between w-full py-2">
+            <div className="flex items-center h-12 min-w-full max-w-full mb-3 bg-gray-800 place-content-between w-full py-2">
                 <div className="flex items-center space-x-3 h-full">
                     <Button
                         name={"RunEmu"}
