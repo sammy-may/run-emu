@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from "react";
-import { RaceContext } from "../../../context/RaceFeedContext";
+import { useEffect, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 
 import RaceTitle from "../../../components/Race/RaceTitle";

@@ -1,8 +1,6 @@
 import Button from "./Button";
 
 import { FaInfoCircle } from "react-icons/fa";
-import { MdLogin } from "react-icons/md";
-import { FiSettings } from "react-icons/fi";
 import { FaSignInAlt } from "react-icons/fa";
 import { FaRunning } from "react-icons/fa";
 import { MdOutlineArticle } from "react-icons/md";

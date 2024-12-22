@@ -11,8 +11,6 @@ import {
     FaCloudShowersWater,
 } from "react-icons/fa6";
 
-import Carousel from "./Race/Carousel";
-
 const RaceCardContent = ({
     race,
     className,

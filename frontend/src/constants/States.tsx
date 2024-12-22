@@ -895,13 +895,6 @@ export const StatesInit: ActiveArea[] = [
     },
     {
         country: "",
-        city: "Tbilisi",
-        state: "Georgia",
-        latitude: 41.7151,
-        longitude: 44.8271,
-    },
-    {
-        country: "",
         city: "Berlin",
         state: "Germany",
         latitude: 52.52,

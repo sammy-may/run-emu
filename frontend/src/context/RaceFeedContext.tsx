@@ -7,7 +7,6 @@ import {
     ChangeEvent,
 } from "react";
 import RaceType from "../types/race";
-import States from "../constants/States";
 
 enum RaceActionKind {
     UPDATE_DISTANCE_MIN = "UPDATE_DISTANCE_MIN",

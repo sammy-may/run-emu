@@ -10,7 +10,7 @@ const onBeforePrerenderStart: OnBeforePrerenderStartAsync =
         let races: RaceType[] = await fetchRaces(null, false);
         return [
             ...races.map((race) => {
-                const url = `/races/${race.name_url}`;
+                const url = `/races/${race.name_url}`.replace("#", "_");
                 return {
                     url,
                     pageContext: {},

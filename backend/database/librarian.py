@@ -93,7 +93,15 @@ def build_distances(dist_strs: list[str]) -> dict:
 
 
 def parse_distance(x: str) -> tuple[str, float]:
-    x = x.lower()
+    x = (
+        x.lower()
+        .replace('"', "")
+        .replace("'", "")
+        .replace("trail run", "")
+        .replace("run", "")
+        .replace("race", "")
+    )
+    x = x.strip()
     units = "".join([ch for ch in x if not (ch.isdigit() or ch == ".")])
     if "marathon" in x:
         if "1/2" in x or "half" in x:
@@ -109,7 +117,7 @@ def parse_distance(x: str) -> tuple[str, float]:
         else:
             distance = float(distance_str)
         name = str(distance) + "M"
-    elif "hr" in x:
+    elif "hr" in x or "hour" in x:
         time_str = "".join([ch for ch in x if ch.isdigit() or ch == "."])
         if not time_str:
             distance = -1
@@ -246,6 +254,7 @@ class Librarian:
             )
         )
         for race, info in results.items():
+            race = race.replace("#", "_")
             self.idx += 1
             date = None
             if "date" not in info:
@@ -267,15 +276,20 @@ class Librarian:
                 info["city"] = ""
             if "state" not in info:
                 info["state"] = ""
+            if "register" not in info and "website" in info:
+                info["register"] = info["website"]
+            if "website" not in info and "register" in info:
+                info["website"] = info["register"]
             try:
                 distances = build_distances(info["distances"])
                 if not distances["data"]:
                     logger.warning(
-                        "Skipping race {:s}, issue extracting valid distances.".format(
-                            race
+                        "Skipping race {:s}, issue extracting valid distances from '{:s}'.".format(
+                            race, str(info["distances"])
                         )
                     )
                     continue
+
                 self.races[race] = {
                     "name": info["title"],
                     "name_url": race,

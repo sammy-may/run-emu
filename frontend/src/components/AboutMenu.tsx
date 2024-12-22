@@ -1,11 +1,6 @@
-import React from "react";
-import { FiSettings } from "react-icons/fi";
 import { FaBookOpen, FaHandshake, FaMedal } from "react-icons/fa";
-import { IoPeopleSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { IoRocket } from "react-icons/io5";
-
-import { FaB } from "react-icons/fa6";
 
 const AboutMenu = () => {
     return (
@@ -73,7 +68,6 @@ const AboutMenu = () => {
                     />
                 </div>
             </div>
-            <div className="h-full border border-gray-800 rounded-lg">a</div>
             <div className="w-3/5 p-3 border border-gray-800 rounded-lg">
                 Mission
             </div>

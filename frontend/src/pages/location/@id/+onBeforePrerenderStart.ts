@@ -7,7 +7,7 @@ const onBeforePrerenderStart: OnBeforePrerenderStartAsync =
     async (): ReturnType<OnBeforePrerenderStartAsync> => {
         return [
             ...StatesInit.map((state) => {
-                const url = `/location/${state.state}`;
+                const url = state.country.length > 0 ? `/location/${state.state}` : `/location/world_${state.state}`;
                 return {
                     url,
                     pageContext: {},

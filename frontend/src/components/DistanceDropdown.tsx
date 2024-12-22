@@ -5,7 +5,6 @@ import DistanceBadge from "./DistanceBadge";
 import { MdOutlineCancel } from "react-icons/md";
 
 import { FaRegCheckCircle } from "react-icons/fa";
-import { FaR } from "react-icons/fa6";
 
 const DistanceDropdown = () => {
     const {
