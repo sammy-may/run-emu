@@ -202,6 +202,15 @@ class USASpider(Spider):
                     if details:
                         if "title" in details:
                             race["title"] = details["title"]
+                            race_name = self.strip_name(race["title"])
+                            if race_name in self.races:
+                                logger.info(
+                                    "Already have entry for race '{:s}' - skipping.".format(
+                                        race["title"]
+                                    )
+                                )
+                                continue
+
                         if "distances" in details:
                             race["distances"] = [
                                 x.strip()
@@ -278,5 +287,4 @@ class USASpider(Spider):
                                 race[field] = self.handle_redirects(race[field])
 
                     if race and "title" in race:
-                        race_name = self.strip_name(race["title"])
                         self.save_result(race_name, race)

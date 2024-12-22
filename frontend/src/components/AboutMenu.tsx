@@ -27,7 +27,7 @@ const AboutMenu = () => {
                             <div className="border-2 py-2 border-gray-900 rounded-lg"></div>
                             <CgProfile />
                             <div className="text-gray-200 font-semibold">
-                                RunEmu team
+                                Meet the team
                             </div>
                         </div>
                     </div>

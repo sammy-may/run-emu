@@ -25,7 +25,7 @@ const Header = () => {
                         <Button
                             name={"Training"}
                             icon={<FaRunning />}
-                            href={"#"}
+                            href={"/training"}
                         ></Button>
                     </div>
                     <div>

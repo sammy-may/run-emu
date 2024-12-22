@@ -79,8 +79,11 @@ const RaceMap = () => {
         fly();
     }, [activeArea]);
 
-    const loadGeoJson = async (state: string) => {
-        if (state === "hawaii") {
+    const loadGeoJson = async (state: string, country: string) => {
+        if (
+            state === "hawaii" ||
+            !(country === "usa" || country === "canada")
+        ) {
             return {};
         }
         const url = `https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/boundaries/${state}.json`;
@@ -95,7 +98,8 @@ const RaceMap = () => {
                 StatesInit.map(async (state) => ({
                     ...state,
                     boundary: await loadGeoJson(
-                        state.state.toLowerCase().replace(/\s+/g, "_")
+                        state.state.toLowerCase().replace(/\s+/g, "_"),
+                        state.country.toLowerCase()
                     ),
                     isHovered: false,
                 }))

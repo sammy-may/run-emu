@@ -102,7 +102,7 @@ def parse_distance(x: str) -> tuple[str, float]:
         .replace("race", "")
     )
     x = x.strip()
-    units = "".join([ch for ch in x if not (ch.isdigit() or ch == ".")])
+    units = "".join([ch for ch in x if not (ch.isdigit() or ch.isspace() or ch == ".")])
     if "marathon" in x:
         if "1/2" in x or "half" in x:
             name = "1/2 Marathon"
@@ -254,7 +254,7 @@ class Librarian:
             )
         )
         for race, info in results.items():
-            race = race.replace("#", "_")
+            race = race.replace("#", "_").replace("&amp;", "and")
             self.idx += 1
             date = None
             if "date" not in info:
