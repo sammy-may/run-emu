@@ -42,7 +42,7 @@ const RaceFeed = () => {
 
     return (
         <div className="text-left">
-            <div className="grid xl:grid-cols-2 grid-cols-1 gap-4 z-0">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4 z-0">
                 {pageResults.map((race) => {
                     if (race.onMap) {
                         return (

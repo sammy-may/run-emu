@@ -12,7 +12,8 @@ import PageContent from "../../index/+Page.tsx";
 import { fetchRaces } from "../../../api/races.ts";
 
 const LocPage = () => {
-    const { updateAllResults, updateActiveArea } = useContext(RaceContext);
+    const { updateAllResults, updateActiveArea, updateLocSearch } =
+        useContext(RaceContext);
     const name = useData<Data>();
 
     const fetch = async () => {
@@ -27,6 +28,7 @@ const LocPage = () => {
             races = await fetchRaces(location, true);
         }
 
+        updateLocSearch("");
         updateAllResults(races);
         updateActiveArea(location ?? null);
     };

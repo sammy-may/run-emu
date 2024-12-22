@@ -1,4 +1,4 @@
-import { useRef, useContext, useMemo, useEffect } from "react";
+import { useRef, useContext, useMemo, useEffect, useState } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import Map, {
     Layer,
@@ -12,6 +12,7 @@ import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
 import { FaLocationDot } from "react-icons/fa6";
 import { StatesInit } from "../constants/States";
 import { TiDelete } from "react-icons/ti";
+import { IoSearchOutline } from "react-icons/io5";
 
 const RaceMap = () => {
     const {
@@ -22,6 +23,7 @@ const RaceMap = () => {
             stateMenuOpen,
             activeArea,
             states,
+            locSearch,
         },
         updateSearchResults,
         updateHover,
@@ -29,8 +31,12 @@ const RaceMap = () => {
         updateStateHover,
         updateMapCoords,
         toggleStateMenu,
+        openStateMenu,
+        updateLocSearch,
         closeStateMenu,
     } = useContext(RaceContext);
+
+    const [oneHover, setOneHover] = useState<boolean>(false);
 
     const mapRef = useRef<MapRef>(null);
     const API_KEY = "ehYwgcSh6qkJzmk9kbxG";
@@ -81,8 +87,8 @@ const RaceMap = () => {
 
     const loadGeoJson = async (state: string, country: string) => {
         if (
-            state === "hawaii" ||
-            !(country === "usa" || country === "canada")
+            state === "hawaii" //||
+            //!(country === "usa" || country === "canada")
         ) {
             return {};
         }
@@ -113,8 +119,14 @@ const RaceMap = () => {
         () =>
             searchResults.map((race) => (
                 <div
-                    onMouseEnter={() => updateHover(race.id!, true, false)}
-                    onMouseLeave={() => updateHover(race.id!, false, false)}
+                    onMouseEnter={() => {
+                        updateHover(race.id!, true, false);
+                        setOneHover(true);
+                    }}
+                    onMouseLeave={() => {
+                        updateHover(race.id!, false, false);
+                        setOneHover(false);
+                    }}
                     key={"marker_div" + race.name}
                 >
                     <Marker
@@ -170,7 +182,9 @@ const RaceMap = () => {
     const handleClick = (evt: MapLayerMouseEvent) => {
         if (mapRef.current && evt.features && evt.features.length > 0) {
             const state = evt.features[0]["source"].replace(/^src/, "");
-            clickLink("/location/" + state);
+            if (!oneHover) {
+                clickLink("/location/" + state);
+            }
         }
     };
 
@@ -182,7 +196,7 @@ const RaceMap = () => {
                         activeArea?.state.toLowerCase() || state.isHovered;
                 if (!state.boundary || !state.boundary["features"]) {
                     return;
-                } else if (!active) {
+                } else if (!active || oneHover) {
                     return (
                         <Source
                             key={"src" + state.state}
@@ -243,11 +257,73 @@ const RaceMap = () => {
         [states, activeArea]
     );
 
+    const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+        if (event.target) {
+            openStateMenu();
+        }
+    };
+
+    const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+        if (event.target) {
+            //closeStateMenu();
+            //updateLocSearch("");
+        }
+    };
+
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        // Define the keydown event handler
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "?" && inputRef.current) {
+                event.preventDefault(); // Prevent the default action of the `/` key (e.g., typing it in)
+                inputRef.current.focus();
+            }
+        };
+
+        // Add event listener
+        window.addEventListener("keydown", handleKeyDown);
+
+        // Cleanup the event listener on unmount
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, []);
+
     return (
         <div className="flex flex-col items-center relative">
-            <div className="flex items-end place-content-between w-full">
-                <div className="flex items-center">
-                    <button
+            <div className="flex flex-col items-end place-content-start w-full">
+                <div className="flex items-center w-full">
+                    <div className="text-left relative w-full">
+                        <form onSubmit={(evt) => evt.preventDefault()}>
+                            <input
+                                id="search"
+                                type="text"
+                                placeholder=""
+                                ref={inputRef}
+                                onFocus={handleFocus}
+                                onBlur={handleBlur}
+                                value={locSearch ?? ""}
+                                className="border px-3 py-2 text-sm rounded-lg block w-full bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+                                onChange={updateLocSearch}
+                            />
+                            {!stateMenuOpen && (
+                                <div className="absolute top-0 py-2 px-3 text-sm rounded-lg flex items-center text-gray-400 space-x-2 pointer-events-none">
+                                    <div className="">
+                                        <IoSearchOutline />
+                                    </div>
+                                    <div className="block text-sm">
+                                        Type{" "}
+                                        <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg bg-gray-600 text-gray-100 border-gray-500">
+                                            ?
+                                        </kbd>{" "}
+                                        to search by region
+                                    </div>
+                                </div>
+                            )}
+                        </form>
+                    </div>
+                    {/*                     <button
                         id="sortInfo"
                         data-dropdown-toggle="dropdownInformation"
                         type="button"
@@ -262,12 +338,6 @@ const RaceMap = () => {
                             {activeArea && (
                                 <div className="flex items-center space-x-1">
                                     <p>{"Region : " + activeArea.state}</p>
-                                    {/*                                     <a
-                                        href="/location/all"
-                                        className="hover:cursor-pointer"
-                                    >
-                                        <MdOutlineCancel />
-                                    </a> */}
                                 </div>
                             )}
                         </div>
@@ -286,11 +356,11 @@ const RaceMap = () => {
                                 d="m1 1 4 4 4-4"
                             />
                         </svg>
-                    </button>
+                    </button> */}
 
                     {activeArea && (
                         <div
-                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-14 right-6 text-blue-100 border-blue-400 bg-blue-600 px-3 py-1 text-sm font-semibold hover:bg-blue-700 hover:border-blue-500 hover:cursor-pointer"
+                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-16 right-0 text-blue-100 border-blue-400 bg-blue-600 px-3 py-1 text-sm font-semibold hover:bg-blue-700 hover:border-blue-500 hover:cursor-pointer m-6"
                             onClick={() => {
                                 clickLink("/location/all");
                             }}
@@ -306,15 +376,23 @@ const RaceMap = () => {
                     )}
 
                     {stateMenuOpen && (
-                        <div className="absolute z-50 rounded-lg bg-gray-700 border border-gray-600 top-8 left-0 divide-y divide-gray-600 shadow min-w-44">
+                        <div className="absolute z-50 rounded-lg bg-gray-700 border border-gray-600 top-9 left-0 divide-y divide-gray-600 shadow min-w-44">
                             <ul
                                 className="py-2 text-sm text-gray-200 overflow-y-auto max-h-72"
                                 aria-labelledby="sortInfo"
                             >
                                 {states.map((state, index) => {
                                     if (
-                                        state.country === "USA" ||
-                                        state.country === "Canada"
+                                        (!locSearch &&
+                                            (state.country === "USA" ||
+                                                true ||
+                                                state.country === "Canada")) ||
+                                        (locSearch &&
+                                            state.state
+                                                .toLowerCase()
+                                                .includes(
+                                                    locSearch.toLowerCase()
+                                                ))
                                     ) {
                                         return (
                                             <a
@@ -339,16 +417,19 @@ const RaceMap = () => {
                                 })}
                             </ul>
                             <div className="place-content-center flex items-center w-full space-x-3 py-2">
-                                <a href="/location/all">
+                                {/*                                 <a href="/location/all">
                                     <button
-                                        //onClick={() => updateActiveArea(null)}
+                                        onClick={() => updateLocSearch("")}
                                         className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                                     >
                                         Clear
                                     </button>
-                                </a>
+                                </a> */}
                                 <button
-                                    onClick={closeStateMenu}
+                                    onClick={() => {
+                                        closeStateMenu();
+                                        updateLocSearch("");
+                                    }}
                                     className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                                 >
                                     Done
@@ -357,7 +438,7 @@ const RaceMap = () => {
                         </div>
                     )}
                 </div>
-                <p className="rounded-lg border py-0.5 px-3 text-sm bg-gray-800 border-gray-700 text-gray-400 items-center flex">
+                <p className="rounded-lg border mt-2 -mb-3 mx-3 px-3 text-sm bg-gray-800 border-gray-600 text-gray-400 items-center flex whitespace-nowrap overflow-x-auto z-10">
                     Showing{" "}
                     <span className="text-indigo-200 font-medium px-1">
                         {mapResults.length}
@@ -366,15 +447,15 @@ const RaceMap = () => {
                     <span className="text-indigo-200 font-medium px-1">
                         {searchResults.length}
                     </span>
-                    races matching your criteria.
+                    <span className="">races matching your criteria.</span>
                 </p>
             </div>
-            <div className="bg-gray-800 border border-gray-700 rounded-lg w-full p-3">
+            <div className="bg-gray-800 border border-gray-700 rounded-lg w-full py-4 px-2">
                 <Map
                     initialViewState={mapCoords}
                     ref={mapRef}
                     maxZoom={7}
-                    style={{ width: "100%", height: "84vh" }}
+                    style={{ width: "100%", height: "80vh" }}
                     mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
                     onZoomEnd={() => filterOnMap()}
                     onMoveEnd={() => filterOnMap()}

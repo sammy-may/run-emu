@@ -20,6 +20,7 @@ enum RaceActionKind {
     UPDATE_DATE_MIN = "UPDATE_DATE_MIN",
     UPDATE_DATE_MAX = "UPDATE_DATE_MAX",
     UPDATE_SEARCH = "UPDATE_SEARCH",
+    UPDATE_LOC_SEARCH = "UPDATE_LOC_SEARCH",
     POPULATE_RACES = "POPULATE_RACES",
     UPDATE_MAP_RESULTS = "UPDATE_MAP_RESULTS",
     UPDATE_SEARCH_RESULTS = "UPDATE_SEARCH_RESULTS",
@@ -103,6 +104,7 @@ interface RaceState {
     searchResults: RaceType[];
     mapResults: RaceType[];
     search: string | null;
+    locSearch: string | null;
     distanceMin: number | null;
     distanceMax: number | null;
     hitempMin: number | null;
@@ -128,6 +130,7 @@ const initState: RaceState = {
     searchResults: [],
     mapResults: [],
     search: null,
+    locSearch: null,
     distanceMin: null,
     distanceMax: null,
     hitempMin: null,
@@ -217,6 +220,8 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
             return { ...state, dateMin: action.new_date! };
         case RaceActionKind.UPDATE_DATE_MAX:
             return { ...state, dateMax: action.new_date! };
+        case RaceActionKind.UPDATE_LOC_SEARCH:
+            return { ...state, locSearch: action.search! };
         case RaceActionKind.UPDATE_SEARCH:
             return { ...state, search: action.search! };
         case RaceActionKind.CLOSE_DISTANCE_MENU:
@@ -567,6 +572,23 @@ const useRaceContext = (initState: RaceState) => {
         });
     }, []);
 
+    const updateLocSearch = useCallback(
+        (evt: ChangeEvent<HTMLInputElement> | string) => {
+            if (typeof evt === "string") {
+                dispatch({
+                    type: RaceActionKind.UPDATE_LOC_SEARCH,
+                    search: evt,
+                });
+            } else {
+                dispatch({
+                    type: RaceActionKind.UPDATE_LOC_SEARCH,
+                    search: evt.target.value,
+                });
+            }
+        },
+        []
+    );
+
     const updateSearch = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
         dispatch({
             type: RaceActionKind.UPDATE_SEARCH,
@@ -804,6 +826,7 @@ const useRaceContext = (initState: RaceState) => {
         setDistance,
         unsetDistance,
         updateSearch,
+        updateLocSearch,
         updateDateMin,
         updateDateMax,
         clearDates,
@@ -851,6 +874,7 @@ const initContextState: UseRaceContextType = {
     updateDateMax: () => {},
     clearDates: () => {},
     updateSearch: () => {},
+    updateLocSearch: () => {},
     updateMapResults: () => {},
     updateSearchResults: () => {},
     updateAllResults: () => {},

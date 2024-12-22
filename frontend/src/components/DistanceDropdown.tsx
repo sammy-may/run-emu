@@ -5,6 +5,7 @@ import DistanceBadge from "./DistanceBadge";
 import { MdOutlineCancel } from "react-icons/md";
 
 import { FaRegCheckCircle } from "react-icons/fa";
+import ActionButton from "./ActionButton";
 
 const DistanceDropdown = () => {
     const {
@@ -42,33 +43,18 @@ const DistanceDropdown = () => {
     return (
         <div className="relative">
             <div>
-                <button
-                    id="sortInfo"
-                    data-dropdown-toggle="dropdownInformation"
-                    type="button"
+                <ActionButton
+                    content={
+                        <>
+                            <div>
+                                <PiPathBold />
+                            </div>
+                            <p>Distance</p>
+                        </>
+                    }
+                    dropdown={true}
                     onClick={toggleDistanceMenu}
-                    className="flex whitespace-nowrap space-x-2 text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 hover:border-blue-500"
-                >
-                    <div>
-                        <PiPathBold />
-                    </div>
-                    <p>Distance</p>
-                    <svg
-                        className="w-2.5 h-2.5"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 10 6"
-                    >
-                        <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="m1 1 4 4 4-4"
-                        />
-                    </svg>
-                </button>
+                />
 
                 {distanceMenuOpen && (
                     <div className="absolute z-50 rounded-lg bg-gray-700 border border-blue-500 py-3 px-3 min-w-96 mt-0.5 space-y-2">

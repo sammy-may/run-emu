@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import ActionButton from "./ActionButton";
 
 const DateDropdown = () => {
     const {
@@ -15,34 +16,18 @@ const DateDropdown = () => {
     return (
         <div className="relative">
             <div>
-                <button
-                    id="sortInfo"
-                    data-dropdown-toggle="dropdownInformation"
-                    type="button"
+                <ActionButton
+                    content={
+                        <>
+                            <div>
+                                <FaRegCalendarAlt />
+                            </div>
+                            <p>Date</p>
+                        </>
+                    }
+                    dropdown={true}
                     onClick={toggleDateMenu}
-                    className="flex whitespace-nowrap space-x-2 text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 hover:border-blue-500 focus:ring-blue-800"
-                >
-                    <div>
-                        <FaRegCalendarAlt />
-                    </div>
-                    <p>Date</p>
-                    <svg
-                        className="w-2.5 h-2.5"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 10 6"
-                    >
-                        <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="m1 1 4 4 4-4"
-                        />
-                    </svg>
-                </button>
-
+                />
                 {dateMenuOpen && (
                     <div className="absolute z-50 rounded-lg bg-gray-700 border border-blue-500 py-3 px-3 mt-0.5 space-y-3">
                         <form

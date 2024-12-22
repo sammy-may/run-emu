@@ -42,8 +42,13 @@ body {
     border-radius: 0.5rem;
     padding: 0.75rem;
 }
-.max-h-80p {
-    max-height: 89vh;
+.max-h-map {
+    max-height: 50vh;
+}
+@media (min_width: 1280px) {
+    .max-h-map {
+        max-height: 90vh;
+    }
 }
 
 .swiper {

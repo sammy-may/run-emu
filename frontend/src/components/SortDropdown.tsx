@@ -7,6 +7,7 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { TiSortAlphabetically } from "react-icons/ti";
 import { LuArrowDownUp } from "react-icons/lu";
 import { FaSort } from "react-icons/fa";
+import ActionButton from "./ActionButton";
 
 const SortDropdown = () => {
     const {
@@ -77,43 +78,29 @@ const SortDropdown = () => {
 
     return (
         <div className="relative">
-            <div className="flex items-center shadow-sm space-x-3">
-                <button
-                    id="sortInfo"
-                    data-dropdown-toggle="dropdownInformation"
-                    type="button"
+            <div className="flex items-center shadow-sm space-x-2">
+                <ActionButton
+                    content={
+                        <>
+                            <div>
+                                <FaSort />
+                            </div>
+                            <span>Sort by {sortText}</span>
+                        </>
+                    }
+                    dropdown={true}
                     onClick={toggleDropdown}
-                    className="flex whitespace-nowrap text-white font-medium rounded-lg text-sm py-1 px-3 text-center space-x-2 items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 hover:border-blue-500 focus:ring-blue-800"
-                >
-                    <div>
-                        <FaSort />
-                    </div>
-                    <span>Sort by {sortText}</span>
-                    <svg
-                        className="w-2.5 h-2.5 ms-3"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 10 6"
-                    >
-                        <path
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="m1 1 4 4 4-4"
-                        />
-                    </svg>
-                </button>
-                <button
-                    id="reverse"
-                    type="button"
+                />
+                <ActionButton
+                    content={
+                        <>
+                            <LuArrowDownUp />
+                            <p className="">Reverse</p>
+                        </>
+                    }
+                    dropdown={false}
                     onClick={reverse}
-                    className="flex text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 border border-blue-400 hover:bg-blue-700 hover:border-blue-500 focus:ring-blue-800 space-x-2"
-                >
-                    <LuArrowDownUp />
-                    <p className="">Reverse</p>
-                </button>
+                />
             </div>
 
             {isOpen && (

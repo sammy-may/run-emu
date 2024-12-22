@@ -27,8 +27,8 @@ const RaceCardContent = ({
                 <RaceTitle title={race.name} />
                 <DateLocationBar race={race} />
                 <DistanceBar race={race} />
-                <div className="flex items-center mt-3">
-                    <div className="flex items-center space-x-3 px-3 text-gray-400 text-sm font-light">
+                <div className="flex items-center mt-3 flex-nowrap overflow-x-auto mr-2">
+                    <div className="flex whitespace-nowrap items-center space-x-3 px-3 text-gray-400 text-sm font-light tracking-tight">
                         Typical weather
                     </div>
                     <div className="flex items-center space-x-3 px-3 text-gray-400">

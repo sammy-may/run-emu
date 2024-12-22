@@ -10,13 +10,13 @@ const OptionsBar = () => {
             <div className="flex items-center min-w-full place-content-start space-x-6">
                 <SearchBar></SearchBar>
             </div>
-            <div className="flex items-end space-x-3 place-content-between py-3">
-                <div className="flex items-center space-x-3">
+            <div className="flex flex-wrap items-center place-items-start md:place-content-between py-1">
+                <div className="flex items-center space-x-2 py-1 pr-3">
                     <DistanceDropdown />
                     <DateDropdown />
                     <MoreDropdown />
                 </div>
-                <div>
+                <div className="py-1 pr-1">
                     <SortDropdown />
                 </div>
             </div>
