@@ -1,5 +1,4 @@
-import { useState, useContext, useEffect } from "react";
-import RaceType from "../types/race";
+import { useState, useContext } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 
 import { PiPathBold } from "react-icons/pi";

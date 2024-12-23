@@ -13,7 +13,9 @@ const onBeforePrerenderStart: OnBeforePrerenderStartAsync =
                 const url = `/races/${race.name_url}`.replace("#", "_");
                 return {
                     url,
-                    pageContext: {},
+                    pageContext: {
+                        data: `${race.name_url}`.replace("#", "_") 
+                    },
                 };
             }),
         ];

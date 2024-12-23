@@ -192,9 +192,6 @@ const RaceMap = () => {
     const Boundaries = useMemo(
         () =>
             states.map((state) => {
-                const active =
-                    state.state.toLowerCase() ===
-                        activeArea?.state.toLowerCase() || state.isHovered;
                 if (!state.boundary || !state.boundary["features"]) {
                     return;
                 } else if (

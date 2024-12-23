@@ -27,7 +27,7 @@ const WeatherWidget = ({ race }: { race: RaceType }) => {
     const dist = Math.round(race.station_distance ?? 0);
     const dist_str = dist > 0 ? String(dist) : "<1";
     return (
-        <div className="space-y-1 px-3">
+        <div className="space-y-1 pr-3">
             <div className="flex items-center">
                 <h2 className="text-sm font-semibold text-gray-400 px-3 ">
                     Weather
@@ -99,7 +99,7 @@ const WeatherWidget = ({ race }: { race: RaceType }) => {
                     )}
                 </div>
             </div>
-            <p className="whitespace-nowrap text-sm font-light text-gray-400 px-3">
+            <p className="text-sm font-light text-gray-400 px-3">
                 Typical weather for{" "}
                 <span className="font-medium text-gray-400">
                     {race.location}
