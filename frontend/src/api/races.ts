@@ -54,6 +54,14 @@ export const fetchRaces = async (state: ActiveArea | null, need_state: boolean):
         });
     } 
 
+    const compareByDate = (a: RaceType, b: RaceType) => {
+        if (a.date > b.date) return 1;
+        if (a.date < b.date) return -1;
+        return 0;
+    };
+
+    races = races.sort(compareByDate);
+
     return races;
 }
 

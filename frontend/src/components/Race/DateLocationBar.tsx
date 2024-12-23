@@ -12,7 +12,7 @@ const DateLocationBar = ({ race }: { race: RaceType }) => {
 
     return (
         <div className="flex flex-wrap px-3 flex-row items-center w-full">
-            <div className="flex items-center space-x-3 text-gray-400 pr-6 pb-3 min-w-40">
+            <div className="flex items-center space-x-3 text-gray-400 pr-6 pb-2 min-w-40">
                 <div>
                     <FaRegCalendarAlt />
                 </div>
@@ -20,7 +20,7 @@ const DateLocationBar = ({ race }: { race: RaceType }) => {
                     {date}
                 </div>
             </div>
-            <div className="flex items-center space-x-3 text-gray-400 pb-3 min-w-44">
+            <div className="flex items-center space-x-3 text-gray-400 pb-2 min-w-44">
                 <div>
                     <FaLocationDot />
                 </div>
