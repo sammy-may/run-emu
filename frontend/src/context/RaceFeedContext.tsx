@@ -175,6 +175,17 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
         case RaceActionKind.UPDATE_HOVER:
             return {
                 ...state,
+                mapResults: state.mapResults
+                    .map((x) => {
+                        if (x.id! == action.index!) {
+                            return { ...x, isHovered: action.new_bool! };
+                        } else if (action.new_bool && x.isHovered) {
+                            return { ...x, isHovered: false };
+                        } else {
+                            return x;
+                        }
+                    })
+                    .sort(action.sort! ? compareByHover : compareByNone),
                 searchResults: state.searchResults
                     .map((x) => {
                         if (x.id! == action.index!) {

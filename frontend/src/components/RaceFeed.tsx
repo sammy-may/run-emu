@@ -58,7 +58,7 @@ const RaceFeed = () => {
 
     return (
         <div className="text-left h-full">
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-4 z-0 h-full">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-x-2 gap-y-1 z-0 h-full">
                 {Results}
                 <div ref={ref} className="p-3 text-center"></div>
             </div>

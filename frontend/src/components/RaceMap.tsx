@@ -121,11 +121,11 @@ const RaceMap = () => {
             mapResults.slice(0, 100).map((race) => (
                 <div
                     onMouseEnter={() => {
-                        updateHover(race.id!, true, false);
+                        updateHover(race.id!, true, true);
                         setOneHover(true);
                     }}
                     onMouseLeave={() => {
-                        updateHover(race.id!, false, false);
+                        updateHover(race.id!, false, true);
                         setOneHover(false);
                     }}
                     key={"marker_div" + race.name}
