@@ -10,7 +10,7 @@ const ActionButton = ({ content, dropdown, onClick }: ActionButtonProps) => {
             id="sortInfo"
             type="button"
             onClick={onClick}
-            className="flex whitespace-nowrap space-x-2 text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 hover:border-blue-500"
+            className="flex whitespace-nowrap space-x-2 text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-700 hover:bg-blue-600 hover:border-blue-400"
         >
             {content}
             {dropdown && (

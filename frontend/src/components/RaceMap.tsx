@@ -118,7 +118,7 @@ const RaceMap = () => {
 
     const Markers = useMemo(
         () =>
-            searchResults.map((race) => (
+            mapResults.slice(0, 100).map((race) => (
                 <div
                     onMouseEnter={() => {
                         updateHover(race.id!, true, false);
@@ -155,7 +155,7 @@ const RaceMap = () => {
                     </Marker>
                 </div>
             )),
-        [searchResults]
+        [mapResults]
     );
 
     const layer_ids = StatesInit.map((state) => {
@@ -197,7 +197,13 @@ const RaceMap = () => {
                         activeArea?.state.toLowerCase() || state.isHovered;
                 if (!state.boundary || !state.boundary["features"]) {
                     return;
-                } else if (!active || oneHover) {
+                } else if (
+                    !(
+                        state.state.toLowerCase() ===
+                        activeArea?.state.toLowerCase()
+                    ) &&
+                    !state.isHovered
+                ) {
                     return (
                         <Source
                             key={"src" + state.state}

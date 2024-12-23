@@ -20,6 +20,7 @@ enum RaceActionKind {
     UPDATE_DATE_MIN = "UPDATE_DATE_MIN",
     UPDATE_DATE_MAX = "UPDATE_DATE_MAX",
     UPDATE_SEARCH = "UPDATE_SEARCH",
+    UPDATE_SORT_METHOD = "UPDATE_SORT_METHOD",
     UPDATE_LOC_SEARCH = "UPDATE_LOC_SEARCH",
     POPULATE_RACES = "POPULATE_RACES",
     UPDATE_MAP_RESULTS = "UPDATE_MAP_RESULTS",
@@ -103,6 +104,7 @@ interface RaceState {
     allResults: RaceType[];
     searchResults: RaceType[];
     mapResults: RaceType[];
+    sortMethod: string | null;
     search: string | null;
     locSearch: string | null;
     distanceMin: number | null;
@@ -129,6 +131,7 @@ const initState: RaceState = {
     allResults: [],
     searchResults: [],
     mapResults: [],
+    sortMethod: "date",
     search: null,
     locSearch: null,
     distanceMin: null,
@@ -224,6 +227,8 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
             return { ...state, locSearch: action.search! };
         case RaceActionKind.UPDATE_SEARCH:
             return { ...state, search: action.search! };
+        case RaceActionKind.UPDATE_SORT_METHOD:
+            return { ...state, sortMethod: action.search! };
         case RaceActionKind.CLOSE_DISTANCE_MENU:
             return { ...state, distanceMenuOpen: false };
         case RaceActionKind.OPEN_DISTANCE_MENU:
@@ -596,6 +601,13 @@ const useRaceContext = (initState: RaceState) => {
         });
     }, []);
 
+    const updateSortMethod = useCallback((method: string) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_SORT_METHOD,
+            search: method,
+        });
+    }, []);
+
     const clearDates = useCallback(() => {
         dispatch({
             type: RaceActionKind.UPDATE_DATE_MIN,
@@ -687,6 +699,36 @@ const useRaceContext = (initState: RaceState) => {
         });
     }, []);
 
+    const compareByDistance = (a: RaceType, b: RaceType) => {
+        if (a.distance_max < b.distance_max) return -1;
+        if (a.distance_max > b.distance_max) return 1;
+        return 0;
+    };
+
+    const compareByName = (a: RaceType, b: RaceType) => {
+        return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+    };
+
+    const compareByDate = (a: RaceType, b: RaceType) => {
+        if (a.date > b.date) return 1;
+        if (a.date < b.date) return -1;
+        return 0;
+    };
+
+    const sortRaces = (races: RaceType[]) => {
+        let compareFn = compareByName;
+        if (!state.sortMethod) {
+            return races;
+        } else if (state.sortMethod === "distance") {
+            compareFn = compareByDistance;
+        } else if (state.sortMethod === "date") {
+            compareFn = compareByDate;
+        } else if (state.sortMethod === "name") {
+            compareFn = compareByName;
+        }
+        return races.sort(compareFn);
+    };
+
     const filterRaces = (races: RaceType[]) => {
         if (state.search !== null) {
             races = races.filter((race) =>
@@ -754,6 +796,8 @@ const useRaceContext = (initState: RaceState) => {
             );
         }
 
+        races = sortRaces(races);
+
         return races;
     };
 
@@ -775,6 +819,11 @@ const useRaceContext = (initState: RaceState) => {
         return races;
     };
 
+    const applySort = () => {
+        const races = sortRaces(state.searchResults);
+        updateSearchResults(races);
+    };
+
     const applyFilters = () => {
         const newSearch = filterRaces(state.allResults);
         updateSearchResults(newSearch);
@@ -790,6 +839,10 @@ const useRaceContext = (initState: RaceState) => {
         fetchRaces();
         applyFilters();
     }, []); */
+
+    useEffect(() => {
+        applySort();
+    }, [state.sortMethod]);
 
     useEffect(() => {
         applyFilters();
@@ -824,6 +877,7 @@ const useRaceContext = (initState: RaceState) => {
         setDistance,
         unsetDistance,
         updateSearch,
+        updateSortMethod,
         updateLocSearch,
         updateDateMin,
         updateDateMax,
@@ -874,6 +928,7 @@ const initContextState: UseRaceContextType = {
     updateDateMax: () => {},
     clearDates: () => {},
     updateSearch: () => {},
+    updateSortMethod: () => {},
     updateLocSearch: () => {},
     updateMapResults: () => {},
     updateSearchResults: () => {},

@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import RaceType from "../types/race";
 import { RaceContext } from "../context/RaceFeedContext";
 
@@ -11,61 +11,18 @@ import ActionButton from "./ActionButton";
 
 const SortDropdown = () => {
     const {
-        state: { allResults, searchResults, mapResults },
+        state: { allResults, searchResults, mapResults, sortMethod },
         updateSearchResults,
+        updateSortMethod,
     } = useContext(RaceContext);
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [sortText, setSortText] = useState<string>("");
-
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
-    const compareByDistance = (a: RaceType, b: RaceType) => {
-        if (a.distance_max < b.distance_max) return -1;
-        if (a.distance_max > b.distance_max) return 1;
-        return 0;
-    };
-
-    const compareByName = (a: RaceType, b: RaceType) => {
-        return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
-    };
-
-    const compareByDate = (a: RaceType, b: RaceType) => {
-        if (a.date > b.date) return 1;
-        if (a.date < b.date) return -1;
-        return 0;
-    };
-
-    const sortByDistance = () => {
-        const sortedRaces = [...searchResults];
-        sortedRaces.sort(compareByDistance);
-        allResults.sort(compareByDistance);
-        mapResults.sort(compareByDistance);
-        updateSearchResults(sortedRaces);
-        setSortText(": Distance");
-        toggleDropdown();
-    };
-
-    const sortByName = () => {
-        const sortedRaces = [...searchResults];
-        sortedRaces.sort(compareByName);
-        allResults.sort(compareByName);
-        mapResults.sort(compareByName);
-        updateSearchResults(sortedRaces);
-        setSortText(": A-Z");
-        toggleDropdown();
-    };
-
-    const sortByDate = () => {
-        const sortedRaces = [...searchResults];
-        sortedRaces.sort(compareByDate);
-        allResults.sort(compareByDate);
-        mapResults.sort(compareByDate);
-        updateSearchResults(sortedRaces);
-        setSortText(": Date");
-        toggleDropdown();
+    const closeDropdown = () => {
+        setIsOpen(false);
     };
 
     const reverse = () => {
@@ -86,7 +43,7 @@ const SortDropdown = () => {
                                 <FaSort />
                             </div>
                             <span className="max-w-0 absolute -top-96 sm:max-w-36 sm:relative sm:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
-                                Sort by {sortText}
+                                Sort by {sortMethod}
                             </span>
                         </>
                     }
@@ -118,7 +75,10 @@ const SortDropdown = () => {
                     >
                         <li>
                             <button
-                                onClick={() => sortByDistance()}
+                                onClick={() => {
+                                    updateSortMethod("distance");
+                                    closeDropdown();
+                                }}
                                 className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full"
                             >
                                 <div className="flex items-center space-x-2">
@@ -131,7 +91,10 @@ const SortDropdown = () => {
                         </li>
                         <li>
                             <button
-                                onClick={() => sortByDate()}
+                                onClick={() => {
+                                    updateSortMethod("date");
+                                    closeDropdown();
+                                }}
                                 className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full"
                             >
                                 <div className="flex items-center space-x-2">
@@ -144,7 +107,10 @@ const SortDropdown = () => {
                         </li>
                         <li>
                             <button
-                                onClick={() => sortByName()}
+                                onClick={() => {
+                                    updateSortMethod("name");
+                                    closeDropdown();
+                                }}
                                 className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full"
                             >
                                 <div className="flex items-center space-x-2">
