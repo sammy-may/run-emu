@@ -1,10 +1,10 @@
 import {
+    ChangeEvent,
     createContext,
-    useEffect,
-    useReducer,
     ReactElement,
     useCallback,
-    ChangeEvent,
+    useEffect,
+    useReducer,
 } from "react";
 import RaceType from "../types/race";
 
@@ -131,17 +131,17 @@ const initState: RaceState = {
     allResults: [],
     searchResults: [],
     mapResults: [],
-    sortMethod: "date",
+    sortMethod: getFromLocal("sortMethod") ?? "date",
     search: null,
     locSearch: null,
-    distanceMin: null,
-    distanceMax: null,
-    hitempMin: null,
-    hitempMax: null,
-    lotempMin: null,
-    lotempMax: null,
-    precipMin: null,
-    precipMax: null,
+    distanceMin: getFromLocal("distanceMin") ?? null,
+    distanceMax: getFromLocal("distanceMax") ?? null,
+    hitempMin: getFromLocal("hitempMin") ?? null,
+    hitempMax: getFromLocal("hitempMax") ?? null,
+    lotempMin: getFromLocal("lotempMin") ?? null,
+    lotempMax: getFromLocal("lotempMax") ?? null,
+    precipMin: getFromLocal("precipMin") ?? null,
+    precipMax: getFromLocal("precipMax") ?? null,
     dateMin: new Date(),
     dateMax: null,
     mapCoords: getFromLocal("mapCoords") ?? initMapState,
@@ -261,32 +261,9 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
         case RaceActionKind.UPDATE_NEED_LOAD:
             return { ...state, needLoad: !state.needLoad };
         case RaceActionKind.POPULATE_RACES:
-            let searchResults: RaceType[] | null = [];
-            let mapResults: RaceType[] | null = [];
-            //searchResults = getFromLocal("searchResults");
-            //mapResults = getFromLocal("mapResults");
-
-            if (searchResults) {
-                if (searchResults.length === 0) {
-                    searchResults = action.new_races!;
-                }
-            } else {
-                searchResults = action.new_races!;
-            }
-
-            if (mapResults) {
-                if (mapResults.length === 0) {
-                    mapResults = action.new_races!;
-                }
-            } else {
-                mapResults = action.new_races!;
-            }
-
             return {
                 ...state,
                 allResults: action.new_races!,
-                searchResults: searchResults,
-                mapResults: mapResults,
             };
         case RaceActionKind.UPDATE_MAP_RESULTS:
             return {
@@ -320,7 +297,7 @@ const useRaceContext = (initState: RaceState) => {
                 sort: sort,
             });
         },
-        []
+        [],
     );
 
     const updateStateHover = useCallback(
@@ -331,7 +308,7 @@ const useRaceContext = (initState: RaceState) => {
                 new_bool: isHovered,
             });
         },
-        []
+        [],
     );
 
     const updateStates = useCallback((states: ActiveArea[]) => {
@@ -351,8 +328,10 @@ const useRaceContext = (initState: RaceState) => {
                 type: RaceActionKind.UPDATE_DISTANCE_MAX,
                 new_distance: dist2,
             });
+            saveToLocal("distanceMin", dist1);
+            saveToLocal("distanceMax", dist2);
         },
-        []
+        [],
     );
 
     const unsetDistance = useCallback(() => {
@@ -364,6 +343,8 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_DISTANCE_MAX,
             new_distance: null,
         });
+        saveToLocal("distanceMin", null);
+        saveToLocal("distanceMax", null);
     }, []);
 
     const unsetWeather = useCallback(() => {
@@ -391,6 +372,12 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_PRECIP_MAX,
             new_distance: null,
         });
+        saveToLocal("hitempMin", null);
+        saveToLocal("hitempMax", null);
+        saveToLocal("lotempMin", null);
+        saveToLocal("lotempMax", null);
+        saveToLocal("precipMin", null);
+        saveToLocal("precipMax", null);
     }, []);
 
     const updateDistanceMin = useCallback(
@@ -401,8 +388,12 @@ const useRaceContext = (initState: RaceState) => {
                     ? Number(evt.target.value)
                     : null,
             });
+            saveToLocal(
+                "distanceMin",
+                evt.target.value ? Number(evt.target.value) : null,
+            );
         },
-        []
+        [],
     );
 
     const updateDistanceMax = useCallback(
@@ -413,8 +404,12 @@ const useRaceContext = (initState: RaceState) => {
                     ? Number(evt.target.value)
                     : null,
             });
+            saveToLocal(
+                "distanceMax",
+                evt.target.value ? Number(evt.target.value) : null,
+            );
         },
-        []
+        [],
     );
 
     const updateHitempMin = useCallback(
@@ -425,8 +420,12 @@ const useRaceContext = (initState: RaceState) => {
                     ? Number(evt.target.value)
                     : null,
             });
+            saveToLocal(
+                "hitempMin",
+                evt.target.value ? Number(evt.target.value) : null,
+            );
         },
-        []
+        [],
     );
 
     const updateHitempMax = useCallback(
@@ -437,8 +436,12 @@ const useRaceContext = (initState: RaceState) => {
                     ? Number(evt.target.value)
                     : null,
             });
+            saveToLocal(
+                "hitempMax",
+                evt.target.value ? Number(evt.target.value) : null,
+            );
         },
-        []
+        [],
     );
 
     const updateLotempMin = useCallback(
@@ -449,8 +452,12 @@ const useRaceContext = (initState: RaceState) => {
                     ? Number(evt.target.value)
                     : null,
             });
+            saveToLocal(
+                "lotempMin",
+                evt.target.value ? Number(evt.target.value) : null,
+            );
         },
-        []
+        [],
     );
 
     const updateLotempMax = useCallback(
@@ -461,8 +468,12 @@ const useRaceContext = (initState: RaceState) => {
                     ? Number(evt.target.value)
                     : null,
             });
+            saveToLocal(
+                "lotempMax",
+                evt.target.value ? Number(evt.target.value) : null,
+            );
         },
-        []
+        [],
     );
 
     const updatePrecipMin = useCallback(
@@ -473,8 +484,12 @@ const useRaceContext = (initState: RaceState) => {
                     ? Number(evt.target.value)
                     : null,
             });
+            saveToLocal(
+                "precipMin",
+                evt.target.value ? Number(evt.target.value) : null,
+            );
         },
-        []
+        [],
     );
 
     const updatePrecipMax = useCallback(
@@ -485,8 +500,12 @@ const useRaceContext = (initState: RaceState) => {
                     ? Number(evt.target.value)
                     : null,
             });
+            saveToLocal(
+                "precipMax",
+                evt.target.value ? Number(evt.target.value) : null,
+            );
         },
-        []
+        [],
     );
 
     const updateActiveArea = useCallback((area: ActiveArea | null) => {
@@ -602,7 +621,7 @@ const useRaceContext = (initState: RaceState) => {
                 });
             }
         },
-        []
+        [],
     );
 
     const updateSearch = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
@@ -617,6 +636,7 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_SORT_METHOD,
             search: method,
         });
+        applySort();
     }, []);
 
     const clearDates = useCallback(() => {
@@ -649,7 +669,7 @@ const useRaceContext = (initState: RaceState) => {
                 });
             }
         },
-        []
+        [],
     );
 
     const updateDateMax = useCallback(
@@ -671,13 +691,21 @@ const useRaceContext = (initState: RaceState) => {
                 });
             }
         },
-        []
+        [],
     );
 
     const updateAllResults = useCallback((races: RaceType[]) => {
+        console.log("urpdating");
         dispatch({
             type: RaceActionKind.POPULATE_RACES,
             new_races: races,
+        });
+        let searchRaces: RaceType[] = races;
+        searchRaces = filterDistances(searchRaces);
+        searchRaces = filterRaces(searchRaces);
+        dispatch({
+            type: RaceActionKind.UPDATE_SEARCH_RESULTS,
+            new_races: searchRaces,
         });
     }, []);
 
@@ -743,7 +771,7 @@ const useRaceContext = (initState: RaceState) => {
     const filterRaces = (races: RaceType[]) => {
         if (state.search !== null) {
             races = races.filter((race) =>
-                race.name.toLowerCase().includes(state.search!.toLowerCase())
+                race.name.toLowerCase().includes(state.search!.toLowerCase()),
             );
         }
 
@@ -761,49 +789,49 @@ const useRaceContext = (initState: RaceState) => {
 
         if (state.dateMax !== null) {
             races = races.filter(
-                (race) => new Date(race.date) <= state.dateMax!
+                (race) => new Date(race.date) <= state.dateMax!,
             );
         }
 
         if (state.dateMin !== null) {
             races = races.filter(
-                (race) => new Date(race.date) >= state.dateMin!
+                (race) => new Date(race.date) >= state.dateMin!,
             );
         }
 
         if (state.hitempMin !== null) {
             races = races.filter(
-                (race) => race.typical_high! >= state.hitempMin!
+                (race) => race.typical_high! >= state.hitempMin!,
             );
         }
 
         if (state.hitempMax !== null) {
             races = races.filter(
-                (race) => race.typical_high! <= state.hitempMax!
+                (race) => race.typical_high! <= state.hitempMax!,
             );
         }
 
         if (state.lotempMin !== null) {
             races = races.filter(
-                (race) => race.typical_low! >= state.lotempMin!
+                (race) => race.typical_low! >= state.lotempMin!,
             );
         }
 
         if (state.lotempMax !== null) {
             races = races.filter(
-                (race) => race.typical_low! <= state.lotempMax!
+                (race) => race.typical_low! <= state.lotempMax!,
             );
         }
 
         if (state.precipMin !== null) {
             races = races.filter(
-                (race) => race.precip_chance! >= state.precipMin!
+                (race) => race.precip_chance! >= state.precipMin!,
             );
         }
 
         if (state.precipMax !== null) {
             races = races.filter(
-                (race) => race.precip_chance! <= state.precipMax!
+                (race) => race.precip_chance! <= state.precipMax!,
             );
         }
 
@@ -824,7 +852,7 @@ const useRaceContext = (initState: RaceState) => {
                 };
             });
             races[r_index].valid_distance = race.distances.data.some(
-                (dist) => dist.match!
+                (dist) => dist.match!,
             );
         });
         return races;

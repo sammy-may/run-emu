@@ -12,6 +12,7 @@ import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
 import { StatesInit } from "../constants/States";
 import { TiDelete } from "react-icons/ti";
 import { IoSearchOutline } from "react-icons/io5";
+import { IoMdInformationCircleOutline } from "react-icons/io";
 
 const RaceMap = () => {
     const {
@@ -33,6 +34,18 @@ const RaceMap = () => {
         updateLocSearch,
         closeStateMenu,
     } = useContext(RaceContext);
+
+    // for info button
+    const [isInfoHovered, setIsInfoHovered] = useState(false);
+    const handleInfoMouseOver = () => {
+        setIsInfoHovered(true);
+    };
+    const handleInfoMouseOut = () => {
+        setIsInfoHovered(false);
+    };
+    const handleInfoClick = () => {
+        setIsInfoHovered(!isInfoHovered);
+    };
 
     const [oneHover, setOneHover] = useState<boolean>(false);
 
@@ -106,10 +119,10 @@ const RaceMap = () => {
                 StatesInit.map(async (state) => ({
                     ...state,
                     boundary: await loadGeoJson(
-                        state.state.toLowerCase().replace(/\s+/g, "_")
+                        state.state.toLowerCase().replace(/\s+/g, "_"),
                     ),
                     isHovered: false,
-                }))
+                })),
             );
             updateStates([...updated_states]);
         };
@@ -134,6 +147,7 @@ const RaceMap = () => {
                         key={"marker" + race.name}
                         longitude={race.longitude}
                         latitude={race.latitude}
+                        anchor="bottom"
                         onClick={() => {
                             updateHover(race.id!, true, true);
                         }}
@@ -142,7 +156,7 @@ const RaceMap = () => {
                         {race.isHovered ? (
                             <img
                                 src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png"
-                                className="h-10"
+                                className="h-16"
                                 alt="Point"
                             />
                         ) : (
@@ -155,7 +169,7 @@ const RaceMap = () => {
                     </Marker>
                 </div>
             )),
-        [mapResults]
+        [mapResults],
     );
 
     const layer_ids = StatesInit.map((state) => {
@@ -258,7 +272,7 @@ const RaceMap = () => {
                     );
                 }
             }),
-        [states, activeArea]
+        [states, activeArea],
     );
 
     const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
@@ -395,7 +409,7 @@ const RaceMap = () => {
                                             state.state
                                                 .toLowerCase()
                                                 .includes(
-                                                    locSearch.toLowerCase()
+                                                    locSearch.toLowerCase(),
                                                 ))
                                     ) {
                                         return (
@@ -442,17 +456,98 @@ const RaceMap = () => {
                         </div>
                     )}
                 </div>
-                <p className="rounded-lg border mt-2 -mb-2.5 mx-3 px-3 text-xs font-medium bg-gray-800 border-gray-600 text-gray-400 items-center flex whitespace-nowrap overflow-x-auto z-10">
+                <p className="relative rounded-lg border mt-2 -mb-2.5 mx-3 px-3 text-xs font-medium bg-gray-800 border-gray-600 text-gray-400 items-center flex whitespace-nowrap overflow-x-auto z-10">
                     Showing{" "}
-                    <span className="text-indigo-200 font-medium px-1">
+                    <span className="text-green-200 font-medium px-1">
                         {mapResults.length}
                     </span>{" "}
                     of{" "}
                     <span className="text-indigo-200 font-medium px-1">
                         {searchResults.length}
                     </span>
-                    <span className="">races matching your criteria.</span>
+                    <span className="">races matching your criteria</span>
+                    <span
+                        className="hover:cursor-pointer pl-1 hover:text-indigo-200"
+                        onMouseEnter={handleInfoMouseOver}
+                        onMouseLeave={handleInfoMouseOut}
+                        onClick={handleInfoClick}
+                    >
+                        <IoMdInformationCircleOutline />
+                    </span>
                 </p>
+                {isInfoHovered && (
+                    <div className="flex flex-col absolute top-16 right-8 z-50 bg-gray-800 border border-gray-600 rounded-lg space-y-3 text-sm text-gray-400 p-3">
+                        <span>
+                            There are{" "}
+                            <span className="text-indigo-200 font-medium">
+                                {searchResults.length}
+                            </span>{" "}
+                            races in the RunEmu database that{" "}
+                            <span className="text-indigo-200 font-medium">
+                                match your search criteria
+                            </span>
+                            .
+                        </span>
+                        <span>
+                            Of those,{" "}
+                            <span className="text-green-200 font-medium">
+                                {mapResults.length}
+                            </span>{" "}
+                            are{" "}
+                            <span className="text-green-200 font-medium">
+                                within
+                            </span>{" "}
+                            the{" "}
+                            <span className="text-green-200 font-medium">
+                                map bounds
+                            </span>{" "}
+                            and/or highlighted{" "}
+                            <span className="text-green-200 font-medium">
+                                map boundary
+                            </span>
+                            ; these{" "}
+                            <span className="text-green-200 font-medium">
+                                races are shown in your feed
+                            </span>
+                            .
+                        </span>
+                        <span>
+                            <span className="text-blue-200 font-medium">
+                                Map markers
+                            </span>{" "}
+                            are displayed for up to the next{" "}
+                            <span className="text-blue-200 font-medium">
+                                100
+                            </span>{" "}
+                            of these races. We limit the number of markers to
+                            ensure a fast and responsive experience for all
+                            users.
+                        </span>
+                        <span className="">
+                            <span className="font-gray-200 font-medium pr-1">
+                                Tips:
+                            </span>
+                            narrow your search results by
+                            <ul className="list-disc px-6">
+                                <li>
+                                    selecting a region from the dropdown menu,
+                                    by clicking or by typing{" "}
+                                    <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg bg-gray-600 text-gray-100 border-gray-500">
+                                        ?
+                                    </kbd>
+                                </li>
+                                <li>
+                                    selecting a region by clicking its
+                                    highlighted border on the map
+                                </li>
+                                <li>
+                                    zooming and dragging the map to your region
+                                    of interest
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
+                )}
             </div>
             <div className="bg-gray-800 border border-gray-700 rounded-lg w-full py-4 px-2">
                 <Map

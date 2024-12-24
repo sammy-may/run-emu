@@ -12,6 +12,7 @@ const Page = () => {
     const name = useData<Data>();
 
     const fetch = async () => {
+        console.log("fetchin");
         if (name === undefined) {
             let races: RaceType[] = await fetchRaces(null, false);
             updateAllResults(races);

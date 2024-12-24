@@ -1,4 +1,5 @@
 import React from "react";
+import LinkableHeading from "../../components/LinkableHeading";
 
 const PrivacyPolicy: React.FC = () => (
     <div className="max-w-screen-lg px-3">
@@ -17,10 +18,8 @@ const PrivacyPolicy: React.FC = () => (
             outlined in this Privacy Policy.
         </p>
 
-        <h2 className="text-xl font-semibold text-white pt-5">
-            Information We Collect
-        </h2>
-        <p className="pt-3">
+        <LinkableHeading text={"Information We Collect"} />
+        <p className="">
             Personal Data is collected from you directly, automatically from
             your device, and from third parties. Below, we detail the
             information we collect through various methods.
@@ -73,9 +72,8 @@ const PrivacyPolicy: React.FC = () => (
             </li>
         </ul>
 
-        <h2 className="text-xl font-semibold text-white pt-5">
-            How We Use Your Information
-        </h2>
+        <LinkableHeading text={"How We Use Your Information"} />
+        <p>Your information may be used to:</p>
         <ul className="list-disc px-6">
             <li>Provide and improve the Service.</li>
             <li>
@@ -92,10 +90,8 @@ const PrivacyPolicy: React.FC = () => (
             <li>Ensure security and prevent fraud.</li>
         </ul>
 
-        <h2 className="text-xl font-semibold text-white pt-5">
-            Sharing Your Information
-        </h2>
-        <p className="pt-3">
+        <LinkableHeading text={"Sharing Your Information"} />
+        <p className="">
             RunEmu will never sell your data to anyone. Your data will be shared
             only under the circumstances detailed below.
         </p>
@@ -126,11 +122,9 @@ const PrivacyPolicy: React.FC = () => (
             transaction.
         </p>
 
-        <h2 className="text-xl font-semibold text-white pt-5">
-            Your Rights and Choices
-        </h2>
+        <LinkableHeading text={"Your Rights and Choices"} />
 
-        <h3 className="font-semibold text-white pt-3">Access and Update</h3>
+        <h3 className="font-semibold text-white">Access and Update</h3>
         <p>
             You can access and update your personal information by logging into
             your account or contacting us.
@@ -156,16 +150,14 @@ const PrivacyPolicy: React.FC = () => (
             when cookies are being used.
         </p>
 
-        <h2 className="text-xl font-semibold text-white pt-5">Security</h2>
+        <LinkableHeading text={"Security"} />
         <p>
             We use industry-standard security measures to protect your
             information. However, no system is entirely secure, and we cannot
             guarantee absolute security.
         </p>
 
-        <h2 className="text-xl font-semibold text-white pt-5">
-            Children's Privacy
-        </h2>
+        <LinkableHeading text={"Children's Privacy"} />
         <p>
             The Service is not intended for children under 13 years of age. We
             do not knowingly collect personal information from children. If we
@@ -173,23 +165,24 @@ const PrivacyPolicy: React.FC = () => (
             child, we will delete it promptly.
         </p>
 
-        <h2 className="text-xl font-semibold text-white pt-5">
-            Changes to This Privacy Policy
-        </h2>
+        <LinkableHeading text={"Changes to This Privacy Policy"} />
         <p>
             We may update this Privacy Policy from time to time. We will notify
             you of significant changes by posting a notice on the Service or
             emailing you.
         </p>
 
-        <h2 className="text-xl font-semibold text-white pt-5">Contact Us</h2>
+        <LinkableHeading text={"Contact Us"} />
         <p>
             If you have any questions or concerns about this Privacy Policy,
             please contact us at:
         </p>
         <address>
             <strong>Email:</strong>{" "}
-            <a href="mailto:support@RunEmu.com">support@RunEmu.com</a>
+            <p>
+                support <span className="font-bold text-gray-400">at</span>{" "}
+                RunEmu.com
+            </p>
         </address>
     </div>
 );

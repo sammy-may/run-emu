@@ -2,9 +2,6 @@ import { useContext, useState } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 import { PiPathBold } from "react-icons/pi";
 import DistanceBadge from "./DistanceBadge";
-import { MdOutlineCancel } from "react-icons/md";
-
-import { FaRegCheckCircle } from "react-icons/fa";
 import ActionButton from "./ActionButton";
 
 const DistanceDropdown = () => {
@@ -170,18 +167,12 @@ const DistanceDropdown = () => {
                                 className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-blue-600 border border-blue-400 hover:bg-blue-700 hover:border-blue-500"
                             >
                                 <div>Clear</div>
-                                <div>
-                                    <MdOutlineCancel />
-                                </div>
                             </button>
                             <button
                                 onClick={closeDistanceMenu}
                                 className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-blue-600 border border-blue-400 hover:bg-blue-700 hover:border-blue-500"
                             >
                                 <div>Done</div>
-                                <div>
-                                    <FaRegCheckCircle />
-                                </div>
                             </button>
                         </div>
                     </div>
