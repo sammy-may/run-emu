@@ -35,6 +35,27 @@ const RaceMap = () => {
         closeStateMenu,
     } = useContext(RaceContext);
 
+    const [windowWidth, setWindowWidth] = useState(1024);
+
+    useEffect(() => {
+        // Function to update the window width
+        const handleResize = () => {
+            if (typeof window !== undefined) {
+                setWindowWidth(window.innerWidth);
+            }
+        };
+
+        // Add event listener
+        window.addEventListener("resize", handleResize);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    const mapHeight = windowWidth >= 1024 ? "80vh" : "35vh";
+
     // for info button
     const [isInfoHovered, setIsInfoHovered] = useState(false);
     const handleInfoMouseOver = () => {
@@ -554,7 +575,7 @@ const RaceMap = () => {
                     initialViewState={mapCoords}
                     ref={mapRef}
                     maxZoom={7}
-                    style={{ width: "100%", height: "80vh" }}
+                    style={{ width: "100%", height: mapHeight }}
                     mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
                     onZoomEnd={() => filterOnMap()}
                     onMoveEnd={() => filterOnMap()}

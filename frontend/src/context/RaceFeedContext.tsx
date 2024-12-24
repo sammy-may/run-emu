@@ -41,6 +41,7 @@ enum RaceActionKind {
     CLOSE_STATE_MENU = "CLOSE_STATE_MENU",
     OPEN_STATE_MENU = "OPEN_STATE_MENU",
     UPDATE_NEED_LOAD = "UPDATE_NEED_LOAD",
+    UPDATE_NEED_SORT = "UPDATE_NEED_SORT",
 }
 
 interface MapCoordsType {
@@ -125,6 +126,7 @@ interface RaceState {
     activeArea: ActiveArea | null;
     states: ActiveArea[];
     needLoad: boolean;
+    needSort: boolean;
 }
 
 const initState: RaceState = {
@@ -152,6 +154,7 @@ const initState: RaceState = {
     activeArea: null,
     states: [],
     needLoad: true,
+    needSort: true,
 };
 
 const compareByHover = (a: RaceType, b: RaceType) => {
@@ -260,6 +263,8 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
             return { ...state, activeArea: action.new_area! };
         case RaceActionKind.UPDATE_NEED_LOAD:
             return { ...state, needLoad: !state.needLoad };
+        case RaceActionKind.UPDATE_NEED_SORT:
+            return { ...state, needSort: !state.needSort };
         case RaceActionKind.POPULATE_RACES:
             return {
                 ...state,
@@ -636,7 +641,6 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_SORT_METHOD,
             search: method,
         });
-        applySort();
     }, []);
 
     const clearDates = useCallback(() => {
@@ -695,7 +699,6 @@ const useRaceContext = (initState: RaceState) => {
     );
 
     const updateAllResults = useCallback((races: RaceType[]) => {
-        console.log("urpdating");
         dispatch({
             type: RaceActionKind.POPULATE_RACES,
             new_races: races,
@@ -735,6 +738,12 @@ const useRaceContext = (initState: RaceState) => {
     const updateNeedLoad = useCallback(() => {
         dispatch({
             type: RaceActionKind.UPDATE_NEED_LOAD,
+        });
+    }, []);
+
+    const updateNeedSort = useCallback(() => {
+        dispatch({
+            type: RaceActionKind.UPDATE_NEED_SORT,
         });
     }, []);
 
@@ -863,6 +872,10 @@ const useRaceContext = (initState: RaceState) => {
         updateSearchResults(races);
     };
 
+    useEffect(() => {
+        applySort();
+    }, [state.needSort]);
+
     const applyFilters = () => {
         const newSearch = filterRaces(state.allResults);
         updateSearchResults(newSearch);
@@ -878,10 +891,6 @@ const useRaceContext = (initState: RaceState) => {
         fetchRaces();
         applyFilters();
     }, []); */
-
-    useEffect(() => {
-        applySort();
-    }, [state.sortMethod]);
 
     useEffect(() => {
         applyFilters();
@@ -945,6 +954,7 @@ const useRaceContext = (initState: RaceState) => {
         openStateMenu,
         toggleStateMenu,
         updateNeedLoad,
+        updateNeedSort,
     };
 };
 
@@ -993,6 +1003,7 @@ const initContextState: UseRaceContextType = {
     openStateMenu: () => {},
     toggleStateMenu: () => {},
     updateNeedLoad: () => {},
+    updateNeedSort: () => {},
 };
 
 export const RaceContext = createContext<UseRaceContextType>(initContextState);
