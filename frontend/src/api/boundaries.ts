@@ -14,3 +14,10 @@ export const loadGeoJson = async (state: string) => {
     const res = await resp.json();
     return res;
 };
+
+export const loadAllGeoJson = async () => {
+    const url = "https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/boundaries/merged_boundaries.json";
+    const resp = await fetch(url);
+    const res = await resp.json();
+    return res;
+}

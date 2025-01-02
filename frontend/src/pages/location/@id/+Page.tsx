@@ -20,8 +20,10 @@ const LocPage = () => {
 
     const fetch = async () => {
         const location: ActiveArea = StatesInit.filter((state) => {
-            return state && state.state && state.state === name;
+            return state && state.state && state.state.toLowerCase() === name;
         })[0];
+
+        console.log("name", name);
 
         let races: RaceType[] = [];
         if (!name || name === "" || name === "all") {

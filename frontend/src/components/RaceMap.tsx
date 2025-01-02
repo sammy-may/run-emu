@@ -8,7 +8,9 @@ import {
 } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import Map, {
+    FillLayer,
     Layer,
+    LineLayer,
     MapLayerMouseEvent,
     MapRef,
     Marker,
@@ -24,6 +26,7 @@ import { IoMdInformationCircleOutline } from "react-icons/io";
 
 import { Protocol } from "pmtiles";
 import layers from "protomaps-themes-base";
+import { loadAllGeoJson } from "../api/boundaries";
 
 const RaceMap = () => {
     const {
@@ -78,6 +81,18 @@ const RaceMap = () => {
     }, []);
 
     const mapHeight = windowWidth >= 1024 ? "80vh" : "35vh";
+
+    const [geoJsonData, setGeoJsonData] = useState<any>({
+        type: "FeatureCollection",
+        features: [],
+    });
+    useEffect(() => {
+        const loadGeoJson = async () => {
+            const data = await loadAllGeoJson();
+            setGeoJsonData(data);
+        };
+        loadGeoJson();
+    }, []);
 
     // for info button
     const [isInfoHovered, setIsInfoHovered] = useState(false);
@@ -215,16 +230,17 @@ const RaceMap = () => {
         [mapResults],
     );
 
-    const layer_ids = StatesInit.map((state) => {
-        return "fill" + state.state;
-    });
-
     const handleMouse = useCallback((evt: MapLayerMouseEvent) => {
         if (mapRef.current && evt.features && evt.features.length > 0) {
-            const state = evt.features[0]["source"].replace(/^src/, "");
-            if (state !== hoveredState) {
-                setHoveredState(state);
-            }
+            evt.features.forEach((feat) => {
+                const state = feat["properties"]["state"];
+                if (
+                    !(state === "usa" || state === "canada") &&
+                    state !== hoveredState
+                ) {
+                    setHoveredState(state);
+                }
+            });
         }
     }, []);
 
@@ -239,140 +255,24 @@ const RaceMap = () => {
         document.body.removeChild(link);
     };
 
-    const handleClick = useCallback((evt: MapLayerMouseEvent) => {
-        if (mapRef.current && evt.features && evt.features.length > 0) {
-            const state = evt.features[0]["source"].replace(/^src/, "");
-            if (!oneHover) {
-                clickLink("/location/" + state);
+    const handleClick = useCallback(
+        (evt: MapLayerMouseEvent) => {
+            if (mapRef.current && evt.features && evt.features.length > 0) {
+                evt.features.forEach((feat) => {
+                    const state = feat["properties"]["state"];
+                    if (
+                        !(state === "usa" || state === "canada") &&
+                        state !== hoveredState
+                    ) {
+                        if (!oneHover) {
+                            clickLink("/location/" + state);
+                        }
+                    }
+                });
             }
-        }
-    }, []);
-
-    const ActiveBoundary = useMemo(() => {
-        if (
-            !activeArea ||
-            !activeArea.boundary ||
-            !activeArea.boundary["geometries"]
-        ) {
-            return <></>;
-        }
-        return (
-            <Source
-                key={"src_ac" + activeArea.state}
-                id={"src_ac" + activeArea.state}
-                type="geojson"
-                data={activeArea.boundary!["geometries"][0]}
-            >
-                <Layer
-                    key={"fill_ac" + activeArea.state}
-                    id={"fill_ac" + activeArea.state}
-                    type="fill"
-                    paint={{
-                        "fill-color": "white",
-                        "fill-opacity": 0.5,
-                    }}
-                />
-                <Layer
-                    key={"outline_ac" + activeArea.state}
-                    id={"outline_ac" + activeArea.state}
-                    type="line"
-                    paint={{
-                        "line-color": "white",
-                        "line-width": 3,
-                    }}
-                />
-            </Source>
-        );
-    }, [activeArea]);
-
-    const HiddenBoundaries = useMemo(() => {
-        return states.map((state) => {
-            if (!state.boundary || !state.boundary["geometries"]) {
-                return <div key={state.state}></div>;
-            } else if (
-                activeArea &&
-                activeArea.state &&
-                activeArea.state === state.state
-            ) {
-                return <div key={state.state}></div>;
-            }
-            return (
-                <Source
-                    key={"src" + state.state}
-                    id={"src" + state.state}
-                    type="geojson"
-                    data={state.boundary!["geometries"][0]}
-                >
-                    <Layer
-                        key={"fill" + state.state}
-                        id={"fill" + state.state}
-                        type="fill"
-                        paint={{
-                            "fill-color": "pink",
-                            "fill-opacity": 0,
-                        }}
-                    />
-                    <Layer
-                        key={"outline" + state.state}
-                        id={"outline" + state.state}
-                        type="line"
-                        paint={{
-                            "line-color": "pink",
-                            "line-width": 0,
-                        }}
-                    />
-                </Source>
-            );
-        });
-    }, [states]);
-
-    const HighlightedBoundary = useMemo(() => {
-        const match = states.filter((state) => {
-            return state.state === hoveredState;
-        })[0];
-        if (
-            !hoveredState ||
-            !match ||
-            !match.boundary ||
-            !match.boundary["geometries"]
-        ) {
-            return <></>;
-        }
-        if (
-            activeArea &&
-            activeArea.state.toLowerCase() === match.state.toLowerCase()
-        ) {
-            return <></>;
-        }
-
-        return (
-            <Source
-                key={"src_hl" + hoveredState}
-                id={"src_hl" + hoveredState}
-                type="geojson"
-                data={match.boundary!["geometries"][0]}
-            >
-                <Layer
-                    key={"fill_hl" + match.state}
-                    id={"fill_hl" + match.state}
-                    type="fill"
-                    paint={{
-                        "fill-color": "pink",
-                        "fill-opacity": 0.5,
-                    }}
-                />
-                <Layer
-                    key={"outline_hl" + match.state}
-                    id={"outline_hl" + match.state}
-                    type="line"
-                    paint={{
-                        "line-color": "pink",
-                        "line-width": 3,
-                    }}
-                />
-            </Source>
-        );
-    }, [hoveredState]);
+        },
+        [oneHover],
+    );
 
     const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
         if (event.target) {
@@ -385,6 +285,91 @@ const RaceMap = () => {
             //closeStateMenu();
             //updateLocSearch("");
         }
+    };
+
+    const highlightLayer: FillLayer = useMemo(
+        () => ({
+            id: "highlight-layer",
+            type: "fill",
+            source: "base-layer",
+            paint: {
+                "fill-color": "#b35e75", // dustyRose-600
+                "fill-opacity": 0.5,
+            },
+            filter: ["==", "state", hoveredState], // Highlight only the hovered state
+        }),
+        [hoveredState],
+    );
+
+    const highlightBorder: LineLayer = useMemo(
+        () => ({
+            id: "highlight-border",
+            type: "line",
+            source: "line-layer",
+            paint: {
+                "line-color": "#ee728d", // dustyRose-400
+                "line-width": 2,
+            },
+            filter: ["==", "state", hoveredState],
+        }),
+        [hoveredState],
+    );
+
+    const activeLayer: FillLayer = useMemo(
+        () => ({
+            id: "active-layer",
+            type: "fill",
+            source: "base-layer",
+            paint: {
+                "fill-color": "#8b4759", // dustyRose-700
+                "fill-opacity": 0.5,
+            },
+            filter: [
+                "==",
+                "state",
+                activeArea ? activeArea.state.toLowerCase() : "sdffsdfd",
+            ], // Highlight only the hovered state
+        }),
+        [hoveredState],
+    );
+
+    const activeBorder: LineLayer = useMemo(
+        () => ({
+            id: "active-border",
+            type: "line",
+            source: "line-layer",
+            paint: {
+                "line-color": "#da7b93", // dustyRose-500
+                "line-width": 2,
+            },
+            filter: [
+                "==",
+                "state",
+                activeArea ? activeArea.state.toLowerCase() : "sdffsdfd",
+            ],
+        }),
+        [hoveredState],
+    );
+
+    // Base layer for all states
+    const baseLayer: FillLayer = {
+        id: "base-layer",
+        type: "fill",
+        source: "",
+        paint: {
+            "fill-color": "#0080ff", // Default color
+            "fill-opacity": 0.0,
+        },
+    };
+
+    const baseBorder: LineLayer = {
+        id: "line-layer",
+        type: "line",
+        source: "",
+        paint: {
+            "line-color": "#0080ff",
+            "line-width": 0,
+        },
     };
 
     const version: 8 = 8;
@@ -645,16 +630,25 @@ const RaceMap = () => {
                         setHoveredState("");
                     }}
                     onClick={handleClick}
-                    interactiveLayerIds={layer_ids}
+                    interactiveLayerIds={["base-layer"]}
                     onLoad={() => {
                         fly();
                         filterOnMap();
                     }}
                 >
                     {Markers}
-                    {ActiveBoundary}
-                    {HighlightedBoundary}
-                    {HiddenBoundaries}
+                    <Source
+                        id="state-boundaries"
+                        type="geojson"
+                        data={geoJsonData}
+                    >
+                        <Layer {...baseLayer} />
+                        <Layer {...baseBorder} />
+                        <Layer {...highlightLayer} />
+                        <Layer {...highlightBorder} />
+                        <Layer {...activeLayer} />
+                        <Layer {...activeBorder} />
+                    </Source>
                 </Map>
             </div>
         </div>
