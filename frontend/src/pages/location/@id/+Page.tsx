@@ -10,6 +10,7 @@ import RaceType from "../../../types/race.ts";
 
 import MainContent from "../../../components/MainContent.tsx";
 import { fetchRaces } from "../../../api/races.ts";
+import { loadGeoJson } from "../../../api/boundaries.ts";
 
 const LocPage = () => {
     const { updateAllResults, updateActiveArea, updateLocSearch } =
@@ -31,6 +32,12 @@ const LocPage = () => {
 
         updateLocSearch("");
         updateAllResults(races);
+
+        if (location) {
+            location.boundary = await loadGeoJson(
+                location.state.toLowerCase().replace(/\s+/g, "_"),
+            );
+        }
         updateActiveArea(location ?? null);
     };
 

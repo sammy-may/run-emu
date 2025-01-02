@@ -24,7 +24,7 @@ const RaceCardContent = ({
 }) => {
     return (
         <div
-            className={`rounded-lg mb-1 pb-3 shadow border border-gray-600 hover:bg-gray-700 hover:border-gray-500 ${className}`}
+            className={`rounded-lg mb-1 pb-3 shadow border bg-gray-800 border-gray-600 hover:border-dustyRose-600 hover:bg-gray-700 ${className}`}
         >
             <a href={`/races/${race.name_url}`}>
                 {/*                 <Carousel imgs={race.images.data} swiperClass="swiper"/> */}
@@ -58,7 +58,14 @@ const RaceCardContent = ({
                             <FaCloudShowersWater />
                         </div>
                         <div className="font-medium  text-gray-200">
-                            {Math.round(race.precip_chance ?? 0)}%
+                            {Math.round(
+                                race.precip_chance
+                                    ? race.precip_chance > 0
+                                        ? race.precip_chance
+                                        : 0
+                                    : 0,
+                            )}
+                            %
                         </div>
                     </div>
                 </div>
@@ -96,12 +103,10 @@ const RaceCard = ({ index, race }: { index: number; race: RaceType }) => {
             {race.isHovered && (
                 <RaceCardContent
                     race={race}
-                    className="bg-gray-700 border-blue-600"
+                    className="border-dustyRose-600 bg-gray-700"
                 />
             )}
-            {!race.isHovered && (
-                <RaceCardContent race={race} className="bg-gray-800" />
-            )}
+            {!race.isHovered && <RaceCardContent race={race} className="" />}
         </div>
     );
 };

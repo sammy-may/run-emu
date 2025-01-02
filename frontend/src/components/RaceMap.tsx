@@ -1,4 +1,11 @@
-import { useRef, useContext, useMemo, useEffect, useState } from "react";
+import {
+    useRef,
+    useContext,
+    useMemo,
+    useEffect,
+    useState,
+    useCallback,
+} from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import Map, {
     Layer,
@@ -7,12 +14,16 @@ import Map, {
     Marker,
     Source,
 } from "react-map-gl/dist/es5/exports-maplibre.js";
+import maplibregl, { StyleSpecification } from "maplibre-gl";
 
 import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
 import { StatesInit } from "../constants/States";
 import { TiDelete } from "react-icons/ti";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdInformationCircleOutline } from "react-icons/io";
+
+import { Protocol } from "pmtiles";
+import layers from "protomaps-themes-base";
 
 const RaceMap = () => {
     const {
@@ -35,7 +46,19 @@ const RaceMap = () => {
         closeStateMenu,
     } = useContext(RaceContext);
 
-    const [windowWidth, setWindowWidth] = useState(1024);
+    useEffect(() => {
+        let protocol = new Protocol();
+        maplibregl.addProtocol("pmtiles", protocol.tile);
+        return () => {
+            maplibregl.removeProtocol("pmtiles");
+        };
+    }, []);
+
+    // Hovered state
+    const [hoveredState, setHoveredState] = useState<string>("");
+
+    // Resize map based on window width
+    const [windowWidth, setWindowWidth] = useState<number>(1024);
 
     useEffect(() => {
         // Function to update the window width
@@ -71,7 +94,6 @@ const RaceMap = () => {
     const [oneHover, setOneHover] = useState<boolean>(false);
 
     const mapRef = useRef<MapRef>(null);
-    const API_KEY = "ehYwgcSh6qkJzmk9kbxG";
 
     const pointInView = (lat: number, lon: number) => {
         return mapRef.current?.getBounds().contains([lon, lat]);
@@ -176,7 +198,7 @@ const RaceMap = () => {
                     >
                         {race.isHovered ? (
                             <img
-                                src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png"
+                                src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png"
                                 className="h-16"
                                 alt="Point"
                             />
@@ -197,12 +219,14 @@ const RaceMap = () => {
         return "fill" + state.state;
     });
 
-    const handleMouse = (evt: MapLayerMouseEvent) => {
+    const handleMouse = useCallback((evt: MapLayerMouseEvent) => {
         if (mapRef.current && evt.features && evt.features.length > 0) {
             const state = evt.features[0]["source"].replace(/^src/, "");
-            updateStateHover(state, true);
+            if (state !== hoveredState) {
+                setHoveredState(state);
+            }
         }
-    };
+    }, []);
 
     const clickLink = (url: string) => {
         const link = document.createElement("a");
@@ -215,86 +239,140 @@ const RaceMap = () => {
         document.body.removeChild(link);
     };
 
-    const handleClick = (evt: MapLayerMouseEvent) => {
+    const handleClick = useCallback((evt: MapLayerMouseEvent) => {
         if (mapRef.current && evt.features && evt.features.length > 0) {
             const state = evt.features[0]["source"].replace(/^src/, "");
             if (!oneHover) {
                 clickLink("/location/" + state);
             }
         }
-    };
+    }, []);
 
-    const Boundaries = useMemo(
-        () =>
-            states.map((state) => {
-                if (!state.boundary || !state.boundary["features"]) {
-                    return;
-                } else if (
-                    !(
-                        state.state.toLowerCase() ===
-                        activeArea?.state.toLowerCase()
-                    ) &&
-                    !state.isHovered
-                ) {
-                    return (
-                        <Source
-                            key={"src" + state.state}
-                            id={"src" + state.state}
-                            type="geojson"
-                            data={state.boundary!["features"][0]}
-                        >
-                            <Layer
-                                key={"fill" + state.state}
-                                id={"fill" + state.state}
-                                type="fill"
-                                paint={{
-                                    "fill-color": "blue",
-                                    "fill-opacity": 0.0,
-                                }}
-                            />
-                            <Layer
-                                key={"outline" + state.state}
-                                id={"outline" + state.state}
-                                type="line"
-                                paint={{
-                                    "line-color": "blue",
-                                    "line-width": 0,
-                                }}
-                            />
-                        </Source>
-                    );
-                } else {
-                    return (
-                        <Source
-                            key={"src" + state.state}
-                            id={"src" + state.state}
-                            type="geojson"
-                            data={state.boundary!["features"][0]}
-                        >
-                            <Layer
-                                key={"fill" + state.state}
-                                id={"fill" + state.state}
-                                type="fill"
-                                paint={{
-                                    "fill-color": "blue",
-                                    "fill-opacity": 0.1,
-                                }}
-                            />
-                            <Layer
-                                key={"outline" + state.state}
-                                id={"outline" + state.state}
-                                type="line"
-                                paint={{
-                                    "line-color": "blue",
-                                    "line-width": 2,
-                                }}
-                            />
-                        </Source>
-                    );
-                }
-            }),
-        [states, activeArea],
-    );
+    const ActiveBoundary = useMemo(() => {
+        if (
+            !activeArea ||
+            !activeArea.boundary ||
+            !activeArea.boundary["geometries"]
+        ) {
+            return <></>;
+        }
+        return (
+            <Source
+                key={"src_ac" + activeArea.state}
+                id={"src_ac" + activeArea.state}
+                type="geojson"
+                data={activeArea.boundary!["geometries"][0]}
+            >
+                <Layer
+                    key={"fill_ac" + activeArea.state}
+                    id={"fill_ac" + activeArea.state}
+                    type="fill"
+                    paint={{
+                        "fill-color": "white",
+                        "fill-opacity": 0.5,
+                    }}
+                />
+                <Layer
+                    key={"outline_ac" + activeArea.state}
+                    id={"outline_ac" + activeArea.state}
+                    type="line"
+                    paint={{
+                        "line-color": "white",
+                        "line-width": 3,
+                    }}
+                />
+            </Source>
+        );
+    }, [activeArea]);
+
+    const HiddenBoundaries = useMemo(() => {
+        return states.map((state) => {
+            if (!state.boundary || !state.boundary["geometries"]) {
+                return <div key={state.state}></div>;
+            } else if (
+                activeArea &&
+                activeArea.state &&
+                activeArea.state === state.state
+            ) {
+                return <div key={state.state}></div>;
+            }
+            return (
+                <Source
+                    key={"src" + state.state}
+                    id={"src" + state.state}
+                    type="geojson"
+                    data={state.boundary!["geometries"][0]}
+                >
+                    <Layer
+                        key={"fill" + state.state}
+                        id={"fill" + state.state}
+                        type="fill"
+                        paint={{
+                            "fill-color": "pink",
+                            "fill-opacity": 0,
+                        }}
+                    />
+                    <Layer
+                        key={"outline" + state.state}
+                        id={"outline" + state.state}
+                        type="line"
+                        paint={{
+                            "line-color": "pink",
+                            "line-width": 0,
+                        }}
+                    />
+                </Source>
+            );
+        });
+    }, [states]);
+
+    const HighlightedBoundary = useMemo(() => {
+        const match = states.filter((state) => {
+            return state.state === hoveredState;
+        })[0];
+        if (
+            !hoveredState ||
+            !match ||
+            !match.boundary ||
+            !match.boundary["geometries"]
+        ) {
+            return <></>;
+        }
+        if (
+            activeArea &&
+            activeArea.state.toLowerCase() === match.state.toLowerCase()
+        ) {
+            return <></>;
+        }
+
+        return (
+            <Source
+                key={"src_hl" + hoveredState}
+                id={"src_hl" + hoveredState}
+                type="geojson"
+                data={match.boundary!["geometries"][0]}
+            >
+                <Layer
+                    key={"fill_hl" + match.state}
+                    id={"fill_hl" + match.state}
+                    type="fill"
+                    paint={{
+                        "fill-color": "pink",
+                        "fill-opacity": 0.5,
+                    }}
+                />
+                <Layer
+                    key={"outline_hl" + match.state}
+                    id={"outline_hl" + match.state}
+                    type="line"
+                    paint={{
+                        "line-color": "pink",
+                        "line-width": 3,
+                    }}
+                />
+            </Source>
+        );
+    }, [hoveredState]);
 
     const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
         if (event.target) {
@@ -307,6 +385,22 @@ const RaceMap = () => {
             //closeStateMenu();
             //updateLocSearch("");
         }
+    };
+
+    const version: 8 = 8;
+    const mapStyle: StyleSpecification = {
+        version: version,
+        glyphs: "https://cdn.protomaps.com/fonts/pbf/{fontstack}/{range}.pbf",
+        sprite: "https://protomaps.github.io/basemaps-assets/sprites/v4/dark",
+        sources: {
+            protomaps: {
+                attribution:
+                    '<a href="https://github.com/protomaps/basemaps">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>',
+                type: "vector",
+                url: "pmtiles://https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/map-tiles/my_area.pmtiles?t=2024-12-31T19%3A58%3A20.088Z",
+            },
+        },
+        layers: layers("protomaps", "dark", "en"),
     };
 
     const inputRef = useRef<HTMLInputElement>(null);
@@ -362,44 +456,10 @@ const RaceMap = () => {
                             )}
                         </form>
                     </div>
-                    {/*                     <button
-                        id="sortInfo"
-                        data-dropdown-toggle="dropdownInformation"
-                        type="button"
-                        onClick={toggleStateMenu}
-                        className="flex whitespace-nowrap space-x-2 text-white font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-400 bg-blue-600 hover:bg-blue-700 hover:border-blue-500 focus:ring-blue-800"
-                    >
-                        <div>
-                            <FaLocationDot />
-                        </div>
-                        <div>
-                            {!activeArea && "Region"}
-                            {activeArea && (
-                                <div className="flex items-center space-x-1">
-                                    <p>{"Region : " + activeArea.state}</p>
-                                </div>
-                            )}
-                        </div>
-                        <svg
-                            className="w-2.5 h-2.5"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 10 6"
-                        >
-                            <path
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="m1 1 4 4 4-4"
-                            />
-                        </svg>
-                    </button> */}
 
                     {activeArea && (
                         <div
-                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-16 right-0 text-blue-100 border-blue-400 bg-blue-600 px-3 py-1 text-sm font-semibold hover:bg-blue-700 hover:border-blue-500 hover:cursor-pointer m-6"
+                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-16 right-0 text-dustyRose-50 border-dustyRose-500 bg-dustyRose-700 px-3 py-1 text-sm font-semibold hover:bg-dustyRose-600 hover:border-dustyRose-400 hover:cursor-pointer m-6"
                             onClick={() => {
                                 clickLink("/location/all");
                             }}
@@ -576,13 +636,13 @@ const RaceMap = () => {
                     ref={mapRef}
                     maxZoom={7}
                     style={{ width: "100%", height: mapHeight }}
-                    mapStyle={`https://api.maptiler.com/maps/outdoor/style.json?key=${API_KEY}`}
+                    mapStyle={mapStyle}
                     onZoomEnd={() => filterOnMap()}
                     onMoveEnd={() => filterOnMap()}
-                    onIdle={() => filterOnMap()}
+                    //onIdle={() => filterOnMap()}
                     onMouseMove={handleMouse}
                     onMouseOut={() => {
-                        updateStateHover("", false);
+                        setHoveredState("");
                     }}
                     onClick={handleClick}
                     interactiveLayerIds={layer_ids}
@@ -592,7 +652,9 @@ const RaceMap = () => {
                     }}
                 >
                     {Markers}
-                    {Boundaries}
+                    {ActiveBoundary}
+                    {HighlightedBoundary}
+                    {HiddenBoundaries}
                 </Map>
             </div>
         </div>

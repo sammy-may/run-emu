@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 import { PiPathBold } from "react-icons/pi";
 import DistanceBadge from "./DistanceBadge";
@@ -25,7 +25,7 @@ const DistanceDropdown = () => {
     const toggleDistance = (
         index: number,
         dist1: number | null,
-        dist2: number | null = dist1
+        dist2: number | null = dist1,
     ) => {
         if (activeDistance !== index) {
             setActiveDistance(index);
@@ -36,6 +36,19 @@ const DistanceDropdown = () => {
         }
         /*         toggleDistanceMenu(); */
     };
+
+    useEffect(() => {
+        if (distanceMin && distanceMax) {
+            if (distanceMin === distanceMax) {
+                if (distanceMin === 3.1) setActiveDistance(0);
+                else if (distanceMin === 6.2) setActiveDistance(1);
+                else if (distanceMin === 13.1) setActiveDistance(2);
+                else if (distanceMin === 26.2) setActiveDistance(3);
+            } else if (distanceMin > 26.2 && distanceMax > 26.2) {
+                setActiveDistance(4);
+            }
+        }
+    }, []);
 
     return (
         <div className="relative pr-2 py-1">
@@ -84,7 +97,7 @@ const DistanceDropdown = () => {
                                         toggleDistance(
                                             index,
                                             dist.distance[0],
-                                            dist.distance[1]
+                                            dist.distance[1],
                                         )
                                     }
                                     key={"dist_button" + index}

@@ -40,7 +40,7 @@ const WeatherWidget = ({ race }: { race: RaceType }) => {
                 >
                     <IoMdInformationCircleOutline />
                     {isInfoHovered && (
-                        <div className="absolute rounded-lg p-3 border border-indigo-400 bg-gray-700 space-y-3 text-gray-400 text-sm top-2 left-2">
+                        <div className="absolute rounded-lg p-3 font-light border border-indigo-400 bg-gray-700 space-y-3 text-gray-300 text-sm top-2 left-2">
                             <p>
                                 Weather information is based on measurements
                                 from over 15,000 weather stations over the past
@@ -130,7 +130,14 @@ const WeatherWidget = ({ race }: { race: RaceType }) => {
                     <FaCloudShowersWater />
                 </div>
                 <div className="font-medium  text-gray-200">
-                    {Math.round(race.precip_chance ?? 0)}%
+                    {Math.round(
+                        race.precip_chance
+                            ? race.precip_chance > 0
+                                ? race.precip_chance
+                                : 0
+                            : 0,
+                    )}
+                    %
                 </div>
             </div>
             {/*                     <div className="flex items-center space-x-3 px-8 text-gray-400">
@@ -140,7 +147,7 @@ const WeatherWidget = ({ race }: { race: RaceType }) => {
                         <div className="font-medium  text-gray-200">8%</div>
                     </div> */}
             <p className="text-sm font-light text-gray-400 px-3">
-                Based on historical data from weather station{" "}
+                Based on historical measurements from weather station{" "}
                 <span className="font-medium text-indigo-500">
                     {race.station_name}
                 </span>{" "}

@@ -13,7 +13,7 @@ const DistanceBadge = ({
     if (active) {
         return (
             <span
-                className={`flex items-center whitespace-nowrap text-xs font-semibold me-2 px-2.5 py-0.5 rounded-full bg-green-900 text-green-200 border-green-700 border ${hover}`}
+                className={`flex items-center whitespace-nowrap text-xs font-semibold me-2 px-2.5 py-0.5 rounded-full bg-mintGreen-700 text-mintGreen-50 border-mintGreen-500 border ${hover}`}
             >
                 {title}
             </span>
