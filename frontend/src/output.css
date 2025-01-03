@@ -666,6 +666,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
 .-mb-2\.5 {
   margin-bottom: -0.625rem;
 }

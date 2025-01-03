@@ -254,7 +254,12 @@ class Librarian:
             )
         )
         for race, info in results.items():
-            race = race.replace("#", "_").replace("&amp;", "and")
+            race = (
+                race.replace("#", "_")
+                .replace("&amp;", "and")
+                .replace("amp;", "")
+                .replace("&", "and")
+            )
             self.idx += 1
             date = None
             if "date" not in info:
