@@ -8,8 +8,6 @@ import { useInView } from "react-intersection-observer";
 const RaceFeed = ({ initResults }: { initResults: RaceType[] }) => {
     const {
         state: { searchResults },
-        updateAllResults,
-        updateSearchResults,
     } = useContext(RaceContext);
 
     const [page, setPage] = useState<number>(0);

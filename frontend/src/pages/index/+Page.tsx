@@ -5,8 +5,7 @@ import { useData } from "vike-react/useData";
 import MainContent from "../../components/MainContent.tsx";
 
 const Page = () => {
-    const { updateAllResults, updateSearchResults, updateActiveArea } =
-        useContext(RaceContext);
+    const { updateAllResults, updateActiveArea } = useContext(RaceContext);
 
     const { name, races } = useData<Data>();
 
