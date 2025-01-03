@@ -1441,6 +1441,11 @@ video {
   line-height: 2rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1574,6 +1579,11 @@ video {
   color: rgb(254 215 170 / var(--tw-text-opacity));
 }
 
+.text-periwinkleBlue-200 {
+  --tw-text-opacity: 1;
+  color: rgb(187 199 239 / var(--tw-text-opacity));
+}
+
 .text-periwinkleBlue-50 {
   --tw-text-opacity: 1;
   color: rgb(238 241 251 / var(--tw-text-opacity));
@@ -1597,11 +1607,6 @@ video {
 .text-zinc-200 {
   --tw-text-opacity: 1;
   color: rgb(228 228 231 / var(--tw-text-opacity));
-}
-
-.text-periwinkleBlue-200 {
-  --tw-text-opacity: 1;
-  color: rgb(187 199 239 / var(--tw-text-opacity));
 }
 
 .placeholder-gray-400::-moz-placeholder {

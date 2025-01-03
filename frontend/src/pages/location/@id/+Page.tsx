@@ -6,10 +6,8 @@ import { StatesInit } from "../../../constants/States.tsx";
 
 import { useData } from "vike-react/useData";
 import type { Data } from "./+data.ts";
-import RaceType from "../../../types/race.ts";
 
 import MainContent from "../../../components/MainContent.tsx";
-import { fetchRaces } from "../../../api/races.ts";
 import { loadGeoJson } from "../../../api/boundaries.ts";
 
 const slugify = (text: string) => {

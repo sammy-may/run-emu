@@ -21,6 +21,7 @@ enum RaceActionKind {
     UPDATE_DATE_MAX = "UPDATE_DATE_MAX",
     UPDATE_SEARCH = "UPDATE_SEARCH",
     UPDATE_SORT_METHOD = "UPDATE_SORT_METHOD",
+    UPDATE_HOVERED_STATE = "UPDATE_HOVERED_STATE",
     UPDATE_LOC_SEARCH = "UPDATE_LOC_SEARCH",
     POPULATE_RACES = "POPULATE_RACES",
     UPDATE_MAP_RESULTS = "UPDATE_MAP_RESULTS",
@@ -107,6 +108,7 @@ interface RaceState {
     mapResults: RaceType[];
     sortMethod: string | null;
     search: string | null;
+    hoveredState: string;
     locSearch: string | null;
     distanceMin: number | null;
     distanceMax: number | null;
@@ -136,6 +138,7 @@ const initState: RaceState = {
     sortMethod: getFromLocal("sortMethod") ?? "date",
     search: null,
     locSearch: null,
+    hoveredState: "",
     distanceMin: getFromLocal("distanceMin") ?? null,
     distanceMax: getFromLocal("distanceMax") ?? null,
     hitempMin: getFromLocal("hitempMin") ?? null,
@@ -240,6 +243,8 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
         case RaceActionKind.UPDATE_LOC_SEARCH:
             return { ...state, locSearch: action.search! };
         case RaceActionKind.UPDATE_SEARCH:
+            return { ...state, search: action.search! };
+        case RaceActionKind.UPDATE_HOVERED_STATE:
             return { ...state, search: action.search! };
         case RaceActionKind.UPDATE_SORT_METHOD:
             return { ...state, sortMethod: action.search! };
@@ -636,6 +641,13 @@ const useRaceContext = (initState: RaceState) => {
         });
     }, []);
 
+    const updateHoveredState = useCallback((state: string) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_HOVERED_STATE,
+            search: state,
+        });
+    }, []);
+
     const updateSortMethod = useCallback((method: string) => {
         dispatch({
             type: RaceActionKind.UPDATE_SORT_METHOD,
@@ -925,6 +937,7 @@ const useRaceContext = (initState: RaceState) => {
         setDistance,
         unsetDistance,
         updateSearch,
+        updateHoveredState,
         updateSortMethod,
         updateLocSearch,
         updateDateMin,
@@ -977,6 +990,7 @@ const initContextState: UseRaceContextType = {
     updateDateMax: () => {},
     clearDates: () => {},
     updateSearch: () => {},
+    updateHoveredState: () => {},
     updateSortMethod: () => {},
     updateLocSearch: () => {},
     updateMapResults: () => {},

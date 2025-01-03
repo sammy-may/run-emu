@@ -27,6 +27,7 @@ import { IoMdInformationCircleOutline } from "react-icons/io";
 import { Protocol } from "pmtiles";
 import layers from "protomaps-themes-base";
 import { loadAllGeoJson } from "../api/boundaries";
+import { FaLocationDot } from "react-icons/fa6";
 
 const slugify = (text: string) => {
     return text
@@ -121,7 +122,7 @@ const RaceMap = () => {
         return mapRef.current?.getBounds().contains([lon, lat]);
     };
 
-    const filterOnMap = () => {
+    const filterOnMap = useCallback(() => {
         const races = searchResults;
 
         races.forEach((race, index) => {
@@ -141,9 +142,9 @@ const RaceMap = () => {
                 zoom: zoom,
             });
         }
-    };
+    }, [searchResults, activeArea, mapCoords]);
 
-    const fly = () => {
+    const fly = useCallback(() => {
         let state = activeArea;
         if (state === null || state === undefined) return;
         if (mapRef.current) {
@@ -155,11 +156,20 @@ const RaceMap = () => {
                 });
             }
         }
-    };
+    }, [activeArea]);
+
+    const flyAndFilter = useCallback(() => {
+        fly();
+        filterOnMap();
+    }, [fly, filterOnMap]);
 
     useEffect(() => {
         fly();
     }, [activeArea]);
+
+    const clearHover = useCallback(() => {
+        setHoveredState("");
+    }, [setHoveredState]);
 
     const loadGeoJson = async (state: string) => {
         if (
@@ -219,17 +229,23 @@ const RaceMap = () => {
                         style={{ zIndex: race.isHovered ? 50 : "unset" }}
                     >
                         {race.isHovered ? (
-                            <img
+                            <div className="text-4xl text-dustyRose-200">
+                                <FaLocationDot />
+                            </div>
+                        ) : (
+                            /*                             <img
                                 src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png"
                                 className="h-16"
                                 alt="Point"
-                            />
-                        ) : (
-                            <img
+                            /> */
+                            <div className="text-xl">
+                                <FaLocationDot />
+                            </div>
+                            /*                             <img
                                 src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png"
                                 className="h-8"
                                 alt="Point"
-                            />
+                            /> */
                         )}
                     </Marker>
                 </div>
@@ -360,25 +376,31 @@ const RaceMap = () => {
     );
 
     // Base layer for all states
-    const baseLayer: FillLayer = {
-        id: "base-layer",
-        type: "fill",
-        source: "",
-        paint: {
-            "fill-color": "#0080ff", // Default color
-            "fill-opacity": 0.0,
-        },
-    };
+    const baseLayer: FillLayer = useMemo(
+        () => ({
+            id: "base-layer",
+            type: "fill",
+            source: "",
+            paint: {
+                "fill-color": "#0080ff", // Default color
+                "fill-opacity": 0.0,
+            },
+        }),
+        [],
+    );
 
-    const baseBorder: LineLayer = {
-        id: "line-layer",
-        type: "line",
-        source: "",
-        paint: {
-            "line-color": "#0080ff",
-            "line-width": 0,
-        },
-    };
+    const baseBorder: LineLayer = useMemo(
+        () => ({
+            id: "line-layer",
+            type: "line",
+            source: "",
+            paint: {
+                "line-color": "#0080ff",
+                "line-width": 0,
+            },
+        }),
+        [],
+    );
 
     const version: 8 = 8;
     const mapStyle: StyleSpecification = {
@@ -622,19 +644,14 @@ const RaceMap = () => {
                     maxZoom={7}
                     style={{ width: "100%", height: mapHeight }}
                     mapStyle={mapStyle}
-                    onZoomEnd={() => filterOnMap()}
-                    onMoveEnd={() => filterOnMap()}
+                    onZoomEnd={filterOnMap}
+                    onMoveEnd={filterOnMap}
                     //onIdle={() => filterOnMap()}
                     onMouseMove={handleMouse}
-                    onMouseOut={() => {
-                        setHoveredState("");
-                    }}
+                    onMouseOut={clearHover}
                     onClick={handleClick}
                     interactiveLayerIds={["base-layer"]}
-                    onLoad={() => {
-                        fly();
-                        filterOnMap();
-                    }}
+                    onLoad={flyAndFilter}
                 >
                     {Markers}
                     {geoJsonData && (

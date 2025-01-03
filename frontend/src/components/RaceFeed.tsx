@@ -5,14 +5,6 @@ import { useContext, useEffect, useMemo, useState } from "react";
 import RaceType from "../types/race";
 import { useInView } from "react-intersection-observer";
 
-const LoadingSpinner: React.FC = () => {
-    return (
-        <div className="flex justify-center items-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
-        </div>
-    );
-};
-
 const RaceFeed = () => {
     const {
         state: { searchResults },

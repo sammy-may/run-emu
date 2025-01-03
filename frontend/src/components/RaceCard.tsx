@@ -24,7 +24,7 @@ const RaceCardContent = ({
 }) => {
     return (
         <div
-            className={`rounded-lg mb-1 pb-3 shadow border bg-gray-800 border-gray-600 hover:border-dustyRose-600 hover:bg-gray-700 ${className}`}
+            className={`rounded-lg mb-1 pb-3 shadow border hover:border-dustyRose-600 hover:bg-gray-700 ${className}`}
         >
             <a href={`/races/${race.name_url}`}>
                 {/*                 <Carousel imgs={race.images.data} swiperClass="swiper"/> */}
@@ -106,7 +106,12 @@ const RaceCard = ({ index, race }: { index: number; race: RaceType }) => {
                     className="border-dustyRose-600 bg-gray-700"
                 />
             )}
-            {!race.isHovered && <RaceCardContent race={race} className="" />}
+            {!race.isHovered && (
+                <RaceCardContent
+                    race={race}
+                    className="bg-gray-800 border-gray-600"
+                />
+            )}
         </div>
     );
 };
