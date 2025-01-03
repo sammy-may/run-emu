@@ -4,3 +4,9 @@ export const slugify = (text: string) => {
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/(^-|-$)/g, "");
 };
+
+export const capitalize = (text: string) => {
+    if (!text)
+        return text;
+    return text.charAt(0).toLocaleUpperCase() + text.slice(1);
+}
