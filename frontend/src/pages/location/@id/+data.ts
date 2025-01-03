@@ -4,15 +4,9 @@ import { fetchRaces } from "../../../api/races";
 import RaceType from "../../../types/race";
 import { StatesInit } from "../../../constants/States";
 import { ActiveArea } from "../../../context/RaceFeedContext";
+import { slugify } from "../../../utils/url_utils";
 
 export type Data = Awaited<ReturnType<typeof data>>;
-
-const slugify = (text: string) => {
-    return text
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-};
 
 export const data = async (pageContext: PageContext) => {
     const config = useConfig();

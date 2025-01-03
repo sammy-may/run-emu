@@ -6,6 +6,7 @@ import { ActiveArea } from "../../../context/RaceFeedContext";
 import { fetchRaces } from "../../../api/races";
 import RaceType from "../../../types/race";
 import type { Data } from "./+data";
+import { slugify } from "../../../utils/url_utils";
 
 const onBeforePrerenderStart: OnBeforePrerenderStartAsync<Data> = async () : ReturnType<OnBeforePrerenderStartAsync<Data>> => {
     let states: ActiveArea[] = StatesInit;
@@ -23,7 +24,7 @@ const onBeforePrerenderStart: OnBeforePrerenderStartAsync<Data> = async () : Ret
             }
         },
         ...states.map(async (state) => {
-            const url = state.country.length > 0 ? `/location/${state.state}` : `/location/world_${state.state}`;
+            const url = state.country.length > 0 ? `/location/${slugify(state.state)}` : `/location/world_${slugify(state.state)}`;
             const races: RaceType[] = await fetchRaces(state, true);
             return {
                 url,

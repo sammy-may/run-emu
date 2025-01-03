@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { slugify } from "../../utils/url_utils";
 
 interface MenuButtonProps {
     icon: JSX.Element;
@@ -14,13 +15,6 @@ interface MenuCatProps {
 interface FullMenuProps {
     cats: MenuCatProps[];
 }
-
-const slugify = (text: string) => {
-    return text
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-};
 
 const FullMenu = ({ cats }: FullMenuProps) => {
     const MenuButton = ({ icon, text }: MenuButtonProps) => {

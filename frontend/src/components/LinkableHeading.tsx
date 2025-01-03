@@ -1,15 +1,10 @@
 import React from "react";
 import { FaLink } from "react-icons/fa";
+import { slugify } from "../utils/url_utils";
 
 type HeadingProps = {
     text: string;
 };
-
-const slugify = (text: string) =>
-    text
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
 
 const LinkableHeading: React.FC<HeadingProps> = ({ text }) => {
     const id = slugify(text);

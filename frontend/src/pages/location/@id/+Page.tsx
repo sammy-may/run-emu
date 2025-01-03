@@ -9,13 +9,7 @@ import type { Data } from "./+data.ts";
 
 import MainContent from "../../../components/MainContent.tsx";
 import { loadGeoJson } from "../../../api/boundaries.ts";
-
-const slugify = (text: string) => {
-    return text
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-};
+import { slugify } from "../../../utils/url_utils.ts";
 
 const LocPage = () => {
     const { updateAllResults, updateActiveArea, updateLocSearch } =

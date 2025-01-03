@@ -10,10 +10,6 @@ import {
     FaTemperatureArrowDown,
     FaCloudShowersWater,
 } from "react-icons/fa6";
-import { FaRegHeart } from "react-icons/fa";
-import { FaRegEyeSlash } from "react-icons/fa";
-
-import { LuSend } from "react-icons/lu";
 
 const RaceCardContent = ({
     race,
@@ -31,7 +27,7 @@ const RaceCardContent = ({
                 <RaceTitle title={race.name} />
                 <DateLocationBar race={race} />
                 <DistanceBar race={race} />
-                <div className="flex items-center mt-2 flex-nowrap overflow-x-auto mr-2 pb-3">
+                <div className="flex items-center mt-2 flex-nowrap overflow-x-auto mr-2 pb-1">
                     <div className="flex whitespace-nowrap items-center space-x-3 px-3 text-gray-400 text-sm font-light tracking-tight">
                         Typical weather
                     </div>
@@ -69,10 +65,7 @@ const RaceCardContent = ({
                         </div>
                     </div>
                 </div>
-                {/*                 <div className="px-6 pb-2">
-                    <div className="border border-gray-500 w-full px-3"></div>
-                </div> */}
-                <div className="flex items-center place-content-start space-x-3 px-3 text-lg text-gray-50">
+                {/*                 <div className="flex items-center place-content-start space-x-3 px-3 text-lg text-gray-50">
                     <div className="hover:text-red-500">
                         <FaRegHeart />
                     </div>
@@ -82,7 +75,7 @@ const RaceCardContent = ({
                     <div className="hover:text-blue-500">
                         <LuSend />
                     </div>
-                </div>
+                </div> */}
             </a>
         </div>
     );

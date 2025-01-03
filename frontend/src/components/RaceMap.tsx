@@ -28,13 +28,7 @@ import { Protocol } from "pmtiles";
 import layers from "protomaps-themes-base";
 import { loadAllGeoJson } from "../api/boundaries";
 import { FaLocationDot } from "react-icons/fa6";
-
-const slugify = (text: string) => {
-    return text
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-};
+import { slugify } from "../utils/url_utils";
 
 const RaceMap = () => {
     const {
@@ -510,7 +504,7 @@ const RaceMap = () => {
                                     ) {
                                         return (
                                             <a
-                                                href={`/location/${state.state}`}
+                                                href={`/location/${slugify(state.state)}`}
                                                 key={
                                                     "link" + state.state + index
                                                 }
@@ -641,7 +635,7 @@ const RaceMap = () => {
                 <Map
                     initialViewState={mapCoords}
                     ref={mapRef}
-                    maxZoom={7}
+                    maxZoom={9}
                     style={{ width: "100%", height: mapHeight }}
                     mapStyle={mapStyle}
                     onZoomEnd={filterOnMap}
