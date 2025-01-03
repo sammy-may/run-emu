@@ -42,7 +42,7 @@ const SortDropdown = () => {
                             <div>
                                 <FaSort />
                             </div>
-                            <span className="max-w-0 absolute -top-96 sm:max-w-36 sm:relative sm:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
+                            <span className="max-w-0 absolute -top-96 md:max-w-36 md:relative md:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
                                 Sort by :{" "}
                                 {sortMethod
                                     ? sortMethod?.charAt(0).toUpperCase() +
@@ -58,7 +58,7 @@ const SortDropdown = () => {
                     content={
                         <>
                             <LuArrowDownUp />
-                            <p className="max-w-0 absolute -top-96 sm:max-w-36 sm:relative sm:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
+                            <p className="max-w-0 absolute -top-96 md:max-w-36 md:relative md:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
                                 Reverse
                             </p>
                         </>
@@ -71,7 +71,7 @@ const SortDropdown = () => {
             {isOpen && (
                 <div
                     id="dropdownInformation"
-                    className=" divide-y divide-gray-600 rounded-lg shadow w-44 bg-gray-700 absolute z-50"
+                    className=" divide-y divide-gray-600 rounded-lg shadow w-44 bg-gray-700 absolute z-50 right-0 xl:left-0"
                 >
                     <ul
                         className="py-2 text-sm text-gray-200"

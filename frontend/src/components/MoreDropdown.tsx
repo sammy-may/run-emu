@@ -40,7 +40,7 @@ const MoreDropdown = () => {
                             <div>
                                 <IoOptions />
                             </div>
-                            <p className="max-w-0 absolute -top-96 sm:max-w-36 sm:relative sm:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
+                            <p className="max-w-0 absolute -top-96 md:max-w-36 md:relative md:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
                                 More
                             </p>
                         </>
@@ -49,7 +49,7 @@ const MoreDropdown = () => {
                     onClick={toggleMoreMenu}
                 />
                 {moreMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-blue-500 py-3 px-3 min-w-96 mt-0.5 space-y-4">
+                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-dustyRose-500 py-3 px-3 min-w-80 mt-0.5 -right-36 space-y-4">
                         <div className="rounded-lg">
                             <div className="text-gray-200 font-medium text-sm flex items-center space-x-2 pb-1">
                                 <span>
@@ -62,7 +62,7 @@ const MoreDropdown = () => {
                                 action="#"
                                 onSubmit={(evt) => evt.preventDefault()}
                             >
-                                <span className="text-sm text-gray-400 pl-6">
+                                <span className="text-sm text-gray-400 sm:pl-6">
                                     between
                                 </span>
                                 <div className="flex-col items-start">
@@ -106,7 +106,7 @@ const MoreDropdown = () => {
                                 action="#"
                                 onSubmit={(evt) => evt.preventDefault()}
                             >
-                                <span className="text-sm text-gray-400 pl-6">
+                                <span className="text-sm text-gray-400 sm:pl-6">
                                     between
                                 </span>
                                 <div className="flex-col items-start">
@@ -150,7 +150,7 @@ const MoreDropdown = () => {
                                 action="#"
                                 onSubmit={(evt) => evt.preventDefault()}
                             >
-                                <span className="text-sm text-gray-400 pl-6">
+                                <span className="text-sm text-gray-400 sm:pl-6">
                                     between
                                 </span>
                                 <div className="flex-col items-start">
@@ -185,13 +185,13 @@ const MoreDropdown = () => {
                         <div className="place-content-end flex items-center w-full space-x-3">
                             <button
                                 onClick={unsetWeather}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 border border-blue-500 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-dustyRose-600 border border-dustyRose-500 hover:bg-dustyRose-700 focus:ring-dustyRose-800"
                             >
                                 Clear
                             </button>
                             <button
                                 onClick={closeMoreMenu}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-dustyRose-500 bg-dustyRose-600 hover:bg-dustyRose-700 focus:ring-dustyRose-800"
                             >
                                 Done
                             </button>

@@ -22,7 +22,7 @@ const DateDropdown = () => {
                             <div>
                                 <FaRegCalendarAlt />
                             </div>
-                            <p className="max-w-0 absolute -top-96 sm:max-w-36 sm:relative sm:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
+                            <p className="max-w-0 absolute -top-96 md:max-w-36 md:relative md:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
                                 Date
                             </p>
                         </>
@@ -31,13 +31,13 @@ const DateDropdown = () => {
                     onClick={toggleDateMenu}
                 />
                 {dateMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-blue-500 py-3 px-3 mt-0.5 space-y-3">
+                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-dustyRose-500 py-3 px-3 mt-0.5 space-y-3 max-w-48 min-w-48 sm:max-w-80 sm:min-w-80">
                         <form
-                            className="flex items-center space-x-2 place-content-between"
+                            className="flex flex-wrap items-center place-content-between"
                             action="#"
                             onSubmit={(evt) => evt.preventDefault()}
                         >
-                            <div className="flex-col items-start">
+                            <div className="flex-col items-start pt-2">
                                 <label
                                     htmlFor="min_date"
                                     className="text-white font-medium text-sm mb-2 block text-left px-1"
@@ -59,7 +59,7 @@ const DateDropdown = () => {
                                     onChange={updateDateMin}
                                 />
                             </div>
-                            <div className="flex-col items-start">
+                            <div className="flex-col items-start pt-2">
                                 <label
                                     htmlFor="max_date"
                                     className="text-white font-medium text-sm mb-2 block text-left px-1"
@@ -85,13 +85,13 @@ const DateDropdown = () => {
                         <div className="place-content-end flex items-center w-full space-x-3">
                             <button
                                 onClick={clearDates}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 border border-blue-500 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-dustyRose-600 border border-dustyRose-500 hover:bg-dustyRose-700 focus:ring-dustyRose-800"
                             >
                                 Clear
                             </button>
                             <button
                                 onClick={closeDateMenu}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-blue-600 border border-blue-500 hover:bg-blue-700 focus:ring-blue-800"
+                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-dustyRose-600 border border-dustyRose-500 hover:bg-dustyRose-700 focus:ring-dustyRose-800"
                             >
                                 Done
                             </button>

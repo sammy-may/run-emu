@@ -59,7 +59,7 @@ const DistanceDropdown = () => {
                             <div>
                                 <PiPathBold />
                             </div>
-                            <p className="max-w-0 absolute -top-96 sm:max-w-36 sm:relative sm:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
+                            <p className="max-w-0 absolute -top-96 md:max-w-36 md:relative md:top-0 lg:max-w-0 lg:absolute lg:-top-96 xl:max-w-36 xl:relative xl:top-0">
                                 Distance
                             </p>
                         </>
@@ -69,7 +69,7 @@ const DistanceDropdown = () => {
                 />
 
                 {distanceMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-blue-500 py-3 px-3 mt-0.5 space-y-2 max-w-72 min-w-72 sm:max-w-96 sm:min-w-96">
+                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-dustyRose-500 py-3 px-3 mt-0.5 space-y-2 max-w-72 min-w-72 sm:max-w-96 sm:min-w-96">
                         <div className="flex items-start place-content-between">
                             <div className="text-sm font-light text-gray-300">
                                 Select a distance:
@@ -178,13 +178,13 @@ const DistanceDropdown = () => {
                         <div className="place-content-end flex items-center w-full space-x-3">
                             <button
                                 onClick={wrapUnsetDistance}
-                                className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-blue-600 border border-blue-400 hover:bg-blue-700 hover:border-blue-500"
+                                className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-dustyRose-600 border border-dustyRose-400 hover:bg-dustyRose-700 hover:border-dustyRose-500"
                             >
                                 <div>Clear</div>
                             </button>
                             <button
                                 onClick={closeDistanceMenu}
-                                className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-blue-600 border border-blue-400 hover:bg-blue-700 hover:border-blue-500"
+                                className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-dustyRose-600 border border-dustyRose-400 hover:bg-dustyRose-700 hover:border-dustyRose-500"
                             >
                                 <div>Done</div>
                             </button>
