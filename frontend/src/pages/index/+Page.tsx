@@ -5,7 +5,8 @@ import { useData } from "vike-react/useData";
 import MainContent from "../../components/MainContent.tsx";
 
 const Page = () => {
-    const { updateAllResults, updateActiveArea } = useContext(RaceContext);
+    const { updateAllResults, updateSearchResults, updateActiveArea } =
+        useContext(RaceContext);
 
     const { name, races } = useData<Data>();
 
@@ -16,7 +17,7 @@ const Page = () => {
 
     useEffect(() => {
         fetch();
-    }, [name]);
+    }, [name, races]);
 
     return <MainContent initResults={races} />;
 };

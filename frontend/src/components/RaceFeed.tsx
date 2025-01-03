@@ -9,13 +9,13 @@ const RaceFeed = ({ initResults }: { initResults: RaceType[] }) => {
     const {
         state: { searchResults },
         updateAllResults,
+        updateSearchResults,
     } = useContext(RaceContext);
 
     const [page, setPage] = useState<number>(0);
     const [pageResults, setPageResults] = useState<RaceType[]>(
         initResults.slice(0, 20),
     );
-    const [hasLoaded, setHasLoaded] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const { ref, inView } = useInView();
 
@@ -34,7 +34,7 @@ const RaceFeed = ({ initResults }: { initResults: RaceType[] }) => {
 
     const Results = useMemo(() => {
         return pageResults.map((race) => {
-            if (!hasLoaded || race.onMap) {
+            if (race.onMap) {
                 return (
                     <RaceCard
                         key={"card" + race.name}
@@ -49,15 +49,10 @@ const RaceFeed = ({ initResults }: { initResults: RaceType[] }) => {
     }, [pageResults]);
 
     useEffect(() => {
-        if (initResults.length >= 1) {
-            setHasLoaded(true);
-            updateAllResults(initResults);
-            return;
-        }
         setIsLoading(true);
-        setPageResults(getNRaces(page * 10));
+        let pageRaces: RaceType[] = getNRaces(page * 10);
+        setPageResults(pageRaces);
         setIsLoading(false);
-        setHasLoaded(true);
     }, [page, searchResults]);
 
     useEffect(() => {

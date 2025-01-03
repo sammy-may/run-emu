@@ -33,6 +33,7 @@ import { slugify } from "../utils/url_utils";
 const RaceMap = () => {
     const {
         state: {
+            allResults,
             searchResults,
             mapResults,
             mapCoords,
@@ -119,10 +120,12 @@ const RaceMap = () => {
     const filterOnMap = useCallback(() => {
         const races = searchResults;
 
-        races.forEach((race, index) => {
-            races[index].onMap = pointInView(race.latitude, race.longitude);
-        });
-        updateSearchResults([...races]);
+        if (searchResults.length >= 1) {
+            races.forEach((race, index) => {
+                races[index].onMap = pointInView(race.latitude, race.longitude);
+            });
+            updateSearchResults([...races]);
+        }
 
         const lat =
             mapRef.current?.getCenter().lat ?? activeArea?.latitude ?? -40;
@@ -136,7 +139,7 @@ const RaceMap = () => {
                 zoom: zoom,
             });
         }
-    }, [searchResults, activeArea, mapCoords]);
+    }, [searchResults, activeArea, mapCoords, allResults]);
 
     const fly = useCallback(() => {
         let state = activeArea;

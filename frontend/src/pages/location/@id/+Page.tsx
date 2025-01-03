@@ -37,7 +37,7 @@ const LocPage = () => {
 
     useEffect(() => {
         fetch();
-    }, [name]);
+    }, [name, races]);
 
     return <MainContent initResults={races} />;
 };

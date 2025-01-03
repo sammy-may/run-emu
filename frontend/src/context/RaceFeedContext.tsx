@@ -880,8 +880,10 @@ const useRaceContext = (initState: RaceState) => {
     };
 
     const applySort = () => {
-        const races = sortRaces(state.searchResults);
-        updateSearchResults(races);
+        if (state.searchResults.length >= 2) {
+            const races = sortRaces(state.searchResults);
+            updateSearchResults(races);
+        }
     };
 
     useEffect(() => {
@@ -889,14 +891,20 @@ const useRaceContext = (initState: RaceState) => {
     }, [state.needSort]);
 
     const applyFilters = () => {
-        const newSearch = filterRaces(state.allResults);
-        updateSearchResults(newSearch);
+        if (state.allResults.length >= 1) {
+            const newSearch = filterRaces(state.allResults);
+            console.log("updating filters", newSearch.length);
+            updateSearchResults(newSearch);
+        }
     };
 
     const applyDistanceFilters = () => {
-        const updatedRaces = filterDistances(state.allResults);
-        const newSearch = filterRaces(updatedRaces);
-        updateSearchResults(newSearch);
+        if (state.allResults.length >= 1) {
+            const updatedRaces = filterDistances(state.allResults);
+            const newSearch = filterRaces(updatedRaces);
+            console.log("updating dist filters", newSearch.length);
+            updateSearchResults(newSearch);
+        }
     };
 
     /*     useEffect(() => {
