@@ -12,5 +12,7 @@ export const data = async (pageContext: PageContext) => {
         title: "Upcoming Races | " + name,
     });
 
-    return name;
+    return { 
+        name: name,
+    }
 };

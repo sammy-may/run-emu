@@ -28,6 +28,13 @@ import { Protocol } from "pmtiles";
 import layers from "protomaps-themes-base";
 import { loadAllGeoJson } from "../api/boundaries";
 
+const slugify = (text: string) => {
+    return text
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+};
+
 const RaceMap = () => {
     const {
         state: {
@@ -233,11 +240,12 @@ const RaceMap = () => {
     const handleMouse = useCallback((evt: MapLayerMouseEvent) => {
         if (mapRef.current && evt.features && evt.features.length > 0) {
             evt.features.forEach((feat) => {
-                const state = feat["properties"]["state"];
+                const state = slugify(feat["properties"]["state"]);
                 if (
                     !(state === "usa" || state === "canada") &&
                     state !== hoveredState
                 ) {
+                    console.log("hovering", state);
                     setHoveredState(state);
                 }
             });
@@ -259,7 +267,7 @@ const RaceMap = () => {
         (evt: MapLayerMouseEvent) => {
             if (mapRef.current && evt.features && evt.features.length > 0) {
                 evt.features.forEach((feat) => {
-                    const state = feat["properties"]["state"];
+                    const state = slugify(feat["properties"]["state"]);
                     if (
                         !(state === "usa" || state === "canada") &&
                         state !== hoveredState
@@ -330,7 +338,7 @@ const RaceMap = () => {
                 activeArea ? activeArea.state.toLowerCase() : "sdffsdfd",
             ], // Highlight only the hovered state
         }),
-        [hoveredState],
+        [activeArea],
     );
 
     const activeBorder: LineLayer = useMemo(
@@ -348,7 +356,7 @@ const RaceMap = () => {
                 activeArea ? activeArea.state.toLowerCase() : "sdffsdfd",
             ],
         }),
-        [hoveredState],
+        [activeArea],
     );
 
     // Base layer for all states
@@ -524,11 +532,11 @@ const RaceMap = () => {
                 </div>
                 <p className="relative rounded-lg border mt-2 -mb-2.5 mx-3 px-3 text-xs font-medium bg-gray-800 border-gray-600 text-gray-400 items-center flex whitespace-nowrap overflow-x-auto z-10">
                     Showing{" "}
-                    <span className="text-green-200 font-medium px-1">
+                    <span className="text-dustyRose-200 font-medium px-1">
                         {mapResults.length}
                     </span>{" "}
                     of{" "}
-                    <span className="text-indigo-200 font-medium px-1">
+                    <span className="text-periwinkleBlue-200 font-medium px-1">
                         {searchResults.length}
                     </span>
                     <span className="">races matching your criteria</span>
@@ -545,37 +553,29 @@ const RaceMap = () => {
                     <div className="flex flex-col absolute top-16 right-8 z-50 bg-gray-800 border border-gray-600 rounded-lg space-y-3 text-sm text-gray-400 p-3">
                         <span>
                             There are{" "}
-                            <span className="text-indigo-200 font-medium">
+                            <span className="text-periwinkleBlue-200 font-medium">
                                 {searchResults.length}
                             </span>{" "}
                             races in the RunEmu database that{" "}
-                            <span className="text-indigo-200 font-medium">
+                            <span className="text-periwinkleBlue-200 font-medium">
                                 match your search criteria
                             </span>
                             .
                         </span>
                         <span>
                             Of those,{" "}
-                            <span className="text-green-200 font-medium">
+                            <span className="text-dustyRose-200 font-medium">
                                 {mapResults.length}
                             </span>{" "}
                             are{" "}
-                            <span className="text-green-200 font-medium">
+                            <span className="text-dustyRose-200 font-medium">
                                 within
                             </span>{" "}
                             the{" "}
-                            <span className="text-green-200 font-medium">
-                                map bounds
-                            </span>{" "}
-                            and/or highlighted{" "}
-                            <span className="text-green-200 font-medium">
-                                map boundary
+                            <span className="text-dustyRose-200 font-medium">
+                                map bounds and/or boundary
                             </span>
-                            ; these{" "}
-                            <span className="text-green-200 font-medium">
-                                races are shown in your feed
-                            </span>
-                            .
+                            ; these races are shown in your feed .
                         </span>
                         <span>
                             <span className="text-blue-200 font-medium">
@@ -637,18 +637,20 @@ const RaceMap = () => {
                     }}
                 >
                     {Markers}
-                    <Source
-                        id="state-boundaries"
-                        type="geojson"
-                        data={geoJsonData}
-                    >
-                        <Layer {...baseLayer} />
-                        <Layer {...baseBorder} />
-                        <Layer {...highlightLayer} />
-                        <Layer {...highlightBorder} />
-                        <Layer {...activeLayer} />
-                        <Layer {...activeBorder} />
-                    </Source>
+                    {geoJsonData && (
+                        <Source
+                            id="state-boundaries"
+                            type="geojson"
+                            data={geoJsonData}
+                        >
+                            <Layer {...baseLayer} />
+                            <Layer {...baseBorder} />
+                            <Layer {...highlightLayer} />
+                            <Layer {...highlightBorder} />
+                            <Layer {...activeLayer} />
+                            <Layer {...activeBorder} />
+                        </Source>
+                    )}
                 </Map>
             </div>
         </div>

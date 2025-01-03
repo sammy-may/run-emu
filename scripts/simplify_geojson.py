@@ -2,8 +2,13 @@ import argparse
 import glob
 import json
 import os
+import re
 
 from backend.utils.logger_utils import setup_logger
+
+
+def slugify(text: str) -> str:
+    return re.sub(r"(^-|-?$)", "", re.sub(r"[^a-z0-9]+", "-", text.lower()))
 
 
 def parse_arguments():
@@ -83,7 +88,7 @@ def main(args):
                     "type": "Polygon",
                     "coordinates": data["geometries"][0]["coordinates"],
                 },
-                "properties": {"state": x.split("/")[-1].replace(".json", "")},
+                "properties": {"state": slugify(x.split("/")[-1].replace(".json", ""))},
             }
             merged_data["features"].append(res)
 
