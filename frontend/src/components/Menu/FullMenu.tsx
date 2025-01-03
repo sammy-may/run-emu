@@ -53,7 +53,7 @@ const FullMenu = ({ cats }: FullMenuProps) => {
                 <div className="px-4 text-sm font-semibold text-gray-400">
                     {title}
                 </div>
-                <div className="flex flex-col items-start w-72">
+                <div className="flex flex-col items-start min-w-40">
                     {buttons.map((butt) => {
                         return (
                             <MenuButton
@@ -103,8 +103,8 @@ const FullMenu = ({ cats }: FullMenuProps) => {
     };
 
     return (
-        <div className="flex items-start px-6 max-w-screen-lg min-w-[1024px]">
-            <div className="w-2/5 p-3 flex flex-col space-y-2 items-start">
+        <div className="flex items-start max-w-screen-lg w-full p-1 h-full">
+            <div className="w-2/5 p-3 flex flex-col space-y-2 items-center place-content-between">
                 <div className="flex flex-col items-start space-y-2">
                     {cats.map((cat) => {
                         return (
@@ -112,17 +112,20 @@ const FullMenu = ({ cats }: FullMenuProps) => {
                         );
                     })}
                 </div>
-                <div className="flex items-start">
+                <div className="">
                     <img
                         src="/images/logos/emu_color_crop.webp.png"
                         alt="RunEmu Logo"
-                        className=""
+                        className="h-24"
                     />
                 </div>
             </div>
-            <div className="w-3/5 p-3">
-                {contents().map((cont) => {
-                    const visible = cont.id === visibleId;
+            <div className="w-3/5 p-3 h-full">
+                {contents().map((cont, index) => {
+                    const visible =
+                        cont.id === visibleId ||
+                        ((visibleId === null || visibleId === "") &&
+                            index === 0);
                     if (visible) {
                         return <>{cont.content}</>;
                     } else {
