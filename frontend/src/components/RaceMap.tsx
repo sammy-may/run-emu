@@ -335,7 +335,7 @@ const RaceMap = () => {
             filter: [
                 "==",
                 "state",
-                activeArea ? activeArea.state.toLowerCase() : "sdffsdfd",
+                activeArea ? slugify(activeArea.state) : "sdffsdfd",
             ], // Highlight only the hovered state
         }),
         [activeArea],
@@ -353,7 +353,7 @@ const RaceMap = () => {
             filter: [
                 "==",
                 "state",
-                activeArea ? activeArea.state.toLowerCase() : "sdffsdfd",
+                activeArea ? slugify(activeArea.state) : "sdffsdfd",
             ],
         }),
         [activeArea],

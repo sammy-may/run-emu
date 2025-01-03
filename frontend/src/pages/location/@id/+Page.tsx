@@ -23,19 +23,14 @@ const LocPage = () => {
     const { updateAllResults, updateActiveArea, updateLocSearch } =
         useContext(RaceContext);
 
-    const { name } = useData<Data>();
+    const { name, races } = useData<Data>();
 
     const fetch = async () => {
         const location: ActiveArea = StatesInit.filter((state) => {
-            return state && state.state && slugify(state.state) === name;
+            return (
+                state && state.state && slugify(state.state) === slugify(name)
+            );
         })[0];
-
-        let races: RaceType[] = [];
-        if (!name || name === "" || name === "all") {
-            races = await fetchRaces(null, false);
-        } else {
-            races = await fetchRaces(location, true);
-        }
 
         updateLocSearch("");
         updateAllResults(races);
