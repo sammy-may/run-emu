@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import re
 from datetime import datetime
 
 import geopy
@@ -159,6 +160,10 @@ class Librarian:
         self.idx = 0
 
     @staticmethod
+    def slugify(text: str) -> str:
+        return re.sub(r"(^-|-?$)", "", re.sub(r"[^a-z0-9]+", "-", text.lower()))
+
+    @staticmethod
     def format_location(city: str, state: str, country: str) -> str:
         if city and state:
             if state.strip().title() in STATE_ABBREV:
@@ -254,12 +259,10 @@ class Librarian:
             )
         )
         for race, info in results.items():
-            race = (
-                race.replace("#", "_")
-                .replace("&amp;", "and")
-                .replace("amp;", "")
-                .replace("&", "and")
-            )
+            race = self.slugify(race.replace("&amp;", "and"))
+            if race == "test":
+                continue
+            info["title"] = info["title"].replace("&amp;", "and")
             self.idx += 1
             date = None
             if "date" not in info:
