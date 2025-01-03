@@ -449,15 +449,15 @@ const RaceMap = () => {
                                 onFocus={handleFocus}
                                 onBlur={handleBlur}
                                 value={locSearch ?? ""}
-                                className="border px-3 py-2 text-sm rounded-lg block w-full bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+                                className="border px-3 py-2 text-base rounded-lg block w-full bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
                                 onChange={updateLocSearch}
                             />
                             {!stateMenuOpen && (
-                                <div className="absolute top-0 py-2 px-3 text-sm rounded-lg flex items-center text-gray-400 space-x-2 pointer-events-none">
+                                <div className="absolute top-0 py-2 px-3 text-base rounded-lg flex items-center text-gray-400 space-x-2 pointer-events-none">
                                     <div className="">
                                         <IoSearchOutline />
                                     </div>
-                                    <div className="block text-sm">
+                                    <div className="block text-base">
                                         Type{" "}
                                         <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg bg-gray-600 text-gray-100 border-gray-500">
                                             ?
