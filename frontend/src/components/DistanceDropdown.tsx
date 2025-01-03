@@ -69,7 +69,7 @@ const DistanceDropdown = () => {
                 />
 
                 {distanceMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-blue-500 py-3 px-3 min-w-96 mt-0.5 space-y-2">
+                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-blue-500 py-3 px-3 mt-0.5 space-y-2 max-w-72 min-w-72 sm:max-w-96 sm:min-w-96">
                         <div className="flex items-start place-content-between">
                             <div className="text-sm font-light text-gray-300">
                                 Select a distance:
@@ -81,7 +81,7 @@ const DistanceDropdown = () => {
                                 <FaRegTimesCircle />
                             </button> */}
                         </div>
-                        <div className="flex items-center place-content-center rounded-full pb-2">
+                        <div className="flex flex-wrap items-center place-content-center rounded-full pb-1">
                             {[
                                 { name: "5K", distance: [3.1, 3.1] },
                                 { name: "10K", distance: [6.2, 6.2] },
@@ -101,6 +101,7 @@ const DistanceDropdown = () => {
                                         )
                                     }
                                     key={"dist_button" + index}
+                                    className="pb-1"
                                 >
                                     <DistanceBadge
                                         title={dist.name}
@@ -123,11 +124,11 @@ const DistanceDropdown = () => {
                         </div>
                         <div className="rounded-lg">
                             <form
-                                className="flex items-center space-x-2"
+                                className="flex flex-wrap items-center"
                                 action="#"
                                 onSubmit={(evt) => evt.preventDefault()}
                             >
-                                <div className="flex-col items-start">
+                                <div className="flex-col items-start px-1">
                                     <label
                                         htmlFor="min_distance"
                                         className="text-gray-200 font-medium text-sm m-1 block text-left"
@@ -148,9 +149,9 @@ const DistanceDropdown = () => {
                                         }
                                         onChange={updateDistanceMin}
                                     />
+                                    <span className="pl-12">to</span>
                                 </div>
-                                <span className="pt-6">to</span>
-                                <div className="flex-col items-start">
+                                <div className="flex-col items-start px-1">
                                     <label
                                         htmlFor="max_distance"
                                         className="text-gray-200 font-medium text-sm m-1 block text-left"

@@ -899,6 +899,10 @@ video {
   min-width: 9rem;
 }
 
+.min-w-72 {
+  min-width: 18rem;
+}
+
 .max-w-0 {
   max-width: 0px;
 }
@@ -917,6 +921,10 @@ video {
 
 .max-w-screen-xl {
   max-width: 1280px;
+}
+
+.max-w-72 {
+  max-width: 18rem;
 }
 
 @keyframes spin {
@@ -1481,6 +1489,10 @@ video {
   padding-top: 1.5rem;
 }
 
+.pl-12 {
+  padding-left: 3rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1932,8 +1944,16 @@ body {
     top: 0px;
   }
 
+  .sm\:min-w-96 {
+    min-width: 24rem;
+  }
+
   .sm\:max-w-36 {
     max-width: 9rem;
+  }
+
+  .sm\:max-w-96 {
+    max-width: 24rem;
   }
 
   .sm\:px-6 {

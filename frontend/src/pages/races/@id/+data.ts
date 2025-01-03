@@ -3,7 +3,6 @@ import { useConfig } from "vike-react/useConfig";
 
 import { fetchByName } from "../../../api/races";
 import RaceType from "../../../types/race";
-import { capitalize } from "../../../utils/url_utils";
 
 export type Data = Awaited<ReturnType<typeof data>>;
 
@@ -12,7 +11,7 @@ export const data = async (pageContext: PageContext) => {
 
     const name = pageContext.routeParams.id;
     config({
-        title: "RunEmu | " + capitalize(name),
+        title: "RunEmu | " + name,
     })
 
     let race: RaceType | null = await fetchByName(name);
