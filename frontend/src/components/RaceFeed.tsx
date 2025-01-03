@@ -5,13 +5,15 @@ import { useContext, useEffect, useMemo, useState } from "react";
 import RaceType from "../types/race";
 import { useInView } from "react-intersection-observer";
 
-const RaceFeed = () => {
+const RaceFeed = ({ initResults }: { initResults: RaceType[] }) => {
     const {
         state: { searchResults },
     } = useContext(RaceContext);
 
     const [page, setPage] = useState<number>(0);
-    const [pageResults, setPageResults] = useState<RaceType[]>([]);
+    const [pageResults, setPageResults] = useState<RaceType[]>(
+        initResults.slice(0, 20),
+    );
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const { ref, inView } = useInView();
 

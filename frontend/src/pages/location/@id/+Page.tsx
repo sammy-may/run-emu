@@ -45,7 +45,7 @@ const LocPage = () => {
         fetch();
     }, [name]);
 
-    return <MainContent />;
+    return <MainContent initResults={races} />;
 };
 
 export default LocPage;

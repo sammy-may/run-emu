@@ -3,18 +3,39 @@ export { onBeforePrerenderStart };
 import type { OnBeforePrerenderStartAsync } from "vike/types";
 import { StatesInit } from "../../../constants/States";
 import { ActiveArea } from "../../../context/RaceFeedContext";
+import { fetchRaces } from "../../../api/races";
+import RaceType from "../../../types/race";
+import type { Data } from "./+data";
 
-const onBeforePrerenderStart: OnBeforePrerenderStartAsync = async () : ReturnType<OnBeforePrerenderStartAsync> => {
+const onBeforePrerenderStart: OnBeforePrerenderStartAsync<Data> = async () : ReturnType<OnBeforePrerenderStartAsync<Data>> => {
     let states: ActiveArea[] = StatesInit;
-    return [
-        ...states.map((state) => {
+    
+    const allRaces: RaceType[] = await fetchRaces(null, false);
+
+    const res = await Promise.all([
+        {
+            url: '/location/all',
+            pageContext: {
+                data: {
+                    name: "all",
+                    races: allRaces,
+                }
+            }
+        },
+        ...states.map(async (state) => {
             const url = state.country.length > 0 ? `/location/${state.state}` : `/location/world_${state.state}`;
+            const races: RaceType[] = await fetchRaces(state, true);
             return {
                 url,
                 pageContext: {
-                    data: state.country.length > 0 ? `${state.state}` : `world_${state.state}`
+                    data: {
+                        name : state.country.length > 0 ? `${state.state}` : `world_${state.state}`,
+                        races : races,
+                    }
                 },
             }; 
         }),
-    ];
+    ]);
+
+    return res;
 }

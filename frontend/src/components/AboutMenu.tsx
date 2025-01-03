@@ -15,7 +15,9 @@ const AboutMenu = () => {
                             text: "Mission",
                             content: (
                                 <div>
-                                    Hi, I'm Sam. I started RunEmu in 2024.
+                                    Our mission is to help you find the perfect
+                                    race with ease, using our simple and
+                                    intuitive race explorer.
                                 </div>
                             ),
                         },
