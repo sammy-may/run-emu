@@ -229,7 +229,7 @@ const RaceMap = () => {
                         style={{ zIndex: race.isHovered ? 50 : "unset" }}
                     >
                         {race.isHovered ? (
-                            <div className="text-4xl dark:text-dustyRose-200 text-dustyRose-800">
+                            <div className="text-4xl dark:text-dustyRose-200 text-dustyRose-700">
                                 <FaLocationDot />
                             </div>
                         ) : (
@@ -238,7 +238,7 @@ const RaceMap = () => {
                                 className="h-16"
                                 alt="Point"
                             /> */
-                            <div className="text-xl">
+                            <div className="text-xl text-gray-600 dark:text-white">
                                 <FaLocationDot />
                             </div>
                             /*                             <img

@@ -1927,6 +1927,11 @@ video {
   color: rgb(17 42 26 / var(--tw-text-opacity));
 }
 
+.text-dustyRose-600 {
+  --tw-text-opacity: 1;
+  color: rgb(179 94 117 / var(--tw-text-opacity));
+}
+
 .placeholder-gray-400::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(156 163 175 / var(--tw-placeholder-opacity));
