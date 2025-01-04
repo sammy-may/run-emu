@@ -34,7 +34,7 @@ type ChildrenType = {
 export const UserSettingsProvider = ({
     children,
 }: ChildrenType): ReactElement => {
-    const [theme, setTheme] = useState<"light" | "dark">("light");
+    const [theme, setTheme] = useState<"light" | "dark">("dark");
 
     // Load the saved theme from localStorage
     useEffect(() => {

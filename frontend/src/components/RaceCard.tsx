@@ -20,7 +20,7 @@ const RaceCardContent = ({
 }) => {
     return (
         <div
-            className={`rounded-lg mb-1 pb-3 shadow border hover:dark:border-dustyRose-600 border-dustyRose-400 hover:dark:bg-gray-700 bg-gray-300 ${className}`}
+            className={`rounded-lg mb-1 pb-3 shadow border hover:dark:border-dustyRose-600 border-dustyRose-400 hover:dark:bg-gray-700 bg-gray-200 ${className}`}
         >
             <a href={`/races/${race.name_url}`}>
                 {/*                 <Carousel imgs={race.images.data} swiperClass="swiper"/> */}
