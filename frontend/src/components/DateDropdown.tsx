@@ -31,7 +31,7 @@ const DateDropdown = () => {
                     onClick={toggleDateMenu}
                 />
                 {dateMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-dustyRose-500 py-3 px-3 mt-0.5 space-y-3 max-w-48 min-w-48 sm:max-w-80 sm:min-w-80">
+                    <div className="absolute z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 mt-0.5 space-y-3 max-w-48 min-w-48 sm:max-w-80 sm:min-w-80">
                         <form
                             className="flex flex-wrap items-center place-content-between"
                             action="#"
@@ -40,7 +40,7 @@ const DateDropdown = () => {
                             <div className="flex-col items-start pt-2">
                                 <label
                                     htmlFor="min_date"
-                                    className="text-white font-medium text-sm mb-2 block text-left px-1"
+                                    className="text-black dark:text-white font-medium text-sm mb-2 block text-left px-1"
                                 >
                                     From
                                 </label>
@@ -50,7 +50,7 @@ const DateDropdown = () => {
                                     id="min_date"
                                     placeholder="No Min"
                                     data-dropdown-toggle="dropdownInfoMin"
-                                    className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-2.5 w-full block"
+                                    className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-black dark:text-white dark:placeholder-gray-400 placeholder-gray-600 dark:border-gray-600 border-gray-400 dark:bg-gray-800 bg-gray-200 p-2.5 w-full block"
                                     value={
                                         dateMin === null
                                             ? ""
@@ -62,7 +62,7 @@ const DateDropdown = () => {
                             <div className="flex-col items-start pt-2">
                                 <label
                                     htmlFor="max_date"
-                                    className="text-white font-medium text-sm mb-2 block text-left px-1"
+                                    className="text-black dark:text-white font-medium text-sm mb-2 block text-left px-1"
                                 >
                                     To
                                 </label>
@@ -72,7 +72,7 @@ const DateDropdown = () => {
                                     id="max_date"
                                     placeholder="No Max"
                                     data-dropdown-toggle="dropdownInfoMax"
-                                    className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-2.5 w-full block"
+                                    className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-black dark:text-white dark:placeholder-gray-400 placeholder-gray-600 dark:border-gray-600 border-gray-400 dark:bg-gray-800 bg-gray-200 p-2.5 w-full block"
                                     value={
                                         dateMax === null
                                             ? ""
@@ -85,13 +85,13 @@ const DateDropdown = () => {
                         <div className="place-content-end flex items-center w-full space-x-3">
                             <button
                                 onClick={clearDates}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-dustyRose-600 border border-dustyRose-500 hover:bg-dustyRose-700 focus:ring-dustyRose-800"
+                                className="flex whitespace-nowrap space-x-2 text-black dark:text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center dark:bg-dustyRose-600 hover:bg-dustyRose-400 border dark:border-dustyRose-500 border-dustyRose-500 hover:dark:bg-dustyRose-700 bg-dustyRose-300 focus:dark:ring-dustyRose-800 ring-dustyRose-200"
                             >
                                 Clear
                             </button>
                             <button
                                 onClick={closeDateMenu}
-                                className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center bg-dustyRose-600 border border-dustyRose-500 hover:bg-dustyRose-700 focus:ring-dustyRose-800"
+                                className="flex whitespace-nowrap space-x-2 text-black dark:text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center dark:bg-dustyRose-600 hover:bg-dustyRose-400 border dark:border-dustyRose-500 border-dustyRose-500 hover:dark:bg-dustyRose-700 bg-dustyRose-300 focus:dark:ring-dustyRose-800 ring-dustyRose-200"
                             >
                                 Done
                             </button>

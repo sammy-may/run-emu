@@ -89,6 +89,8 @@ def transform_string(input_str):
 
     transformed_str.replace("text-white", "dark:text-white text-black").replace(
         "bg-white", "dark:bg-white bg-black"
+    ).replace("text-black", "dark:text-black text-white").replace(
+        "bg-black", "dark:bg-black bg-white"
     )
 
     return transformed_str
@@ -99,13 +101,19 @@ def rewrite_file(src: str):
         lines = f_in.readlines()
 
     new_lines = []
+    n_change = 0
     for idx, line in enumerate(lines):
         if "className" in line:
-            print(line)
-            print(transform_string(line))
-        new_lines.append(line)
+            new_lines.append(transform_string(line))
+            n_change += 1
+        else:
+            new_lines.append(line)
 
-    return new_lines
+    with open(src, "w") as f_out:
+        for line in new_lines:
+            f_out.write(line)
+
+    return n_change
 
 
 def main(args):
@@ -117,8 +125,10 @@ def main(args):
         targets += files
 
     for x in targets:
-        logger.info("Reformatting file '{:s}'.".format(x))
-        rewrite_file(x)
+        n_change = rewrite_file(x)
+        logger.info(
+            "Reformatted file '{:s}' with {:d} changed lines.".format(x, n_change)
+        )
 
 
 if __name__ == "__main__":

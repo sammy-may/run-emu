@@ -13,7 +13,7 @@ const MainContent = ({ initResults }: { initResults: RaceType[] }) => {
                             <OptionsBar />
                             <RaceFeed initResults={initResults} />
                         </div>
-                        <div className="w-full pb-2 lg:pr-6 lg:pl-2 px-2 sm:px-6 border-t-2 border-t-gray-700 pt-4 mt-4 lg:border-t-0 lg:pt-0 lg:mt-0 max-w-screen-xl">
+                        <div className="w-full pb-2 lg:pr-6 lg:pl-2 px-2 sm:px-6 border-t-2 border-dark:t-gray-700 t-gray-300 pt-4 mt-4 lg:border-t-0 lg:pt-0 lg:mt-0 max-w-screen-xl">
                             <RaceMap />
                         </div>
                     </div>

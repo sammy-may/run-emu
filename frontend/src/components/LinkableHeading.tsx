@@ -11,10 +11,10 @@ const LinkableHeading: React.FC<HeadingProps> = ({ text }) => {
 
     return (
         <div className="flex flex-col items-start">
-            <div className="w-full border border-gray-400 mt-6"></div>
+            <div className="w-full border dark:border-gray-400 border-gray-600 mt-6"></div>
             <h2
                 id={id}
-                className="flex items-center space-x-2 pt-6 pb-5 text-xl font-semibold text-white"
+                className="flex items-center space-x-2 pt-6 pb-5 text-xl font-semibold dark:text-white text-black"
             >
                 <span>{text} </span>
                 <a

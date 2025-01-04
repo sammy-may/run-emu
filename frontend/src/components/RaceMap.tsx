@@ -29,6 +29,7 @@ import layers from "protomaps-themes-base";
 import { loadAllGeoJson } from "../api/boundaries";
 import { FaLocationDot } from "react-icons/fa6";
 import { slugify } from "../utils/url_utils";
+import { useUserSettings } from "../context/UserSettingsContext";
 
 const RaceMap = () => {
     const {
@@ -51,6 +52,8 @@ const RaceMap = () => {
         updateLocSearch,
         closeStateMenu,
     } = useContext(RaceContext);
+
+    const { theme } = useUserSettings();
 
     useEffect(() => {
         let protocol = new Protocol();
@@ -226,7 +229,7 @@ const RaceMap = () => {
                         style={{ zIndex: race.isHovered ? 50 : "unset" }}
                     >
                         {race.isHovered ? (
-                            <div className="text-4xl text-dustyRose-200">
+                            <div className="text-4xl dark:text-dustyRose-200 text-dustyRose-800">
                                 <FaLocationDot />
                             </div>
                         ) : (
@@ -412,7 +415,7 @@ const RaceMap = () => {
                 url: "pmtiles://https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/map-tiles/my_area.pmtiles?t=2024-12-31T19%3A58%3A20.088Z",
             },
         },
-        layers: layers("protomaps", "dark", "en"),
+        layers: layers("protomaps", theme, "en"),
     };
 
     const inputRef = useRef<HTMLInputElement>(null);
@@ -449,17 +452,17 @@ const RaceMap = () => {
                                 onFocus={handleFocus}
                                 onBlur={handleBlur}
                                 value={locSearch ?? ""}
-                                className="border px-3 py-2 text-base rounded-lg block w-full bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+                                className="border px-3 py-2 text-base rounded-lg block w-full dark:bg-gray-700 bg-gray-300 dark:border-gray-600 border-gray-400 dark:placeholder-gray-400 placeholder-gray-600 dark:text-white text-black"
                                 onChange={updateLocSearch}
                             />
                             {!stateMenuOpen && (
-                                <div className="absolute top-0 py-2 px-3 text-base rounded-lg flex items-center text-gray-400 space-x-2 pointer-events-none">
+                                <div className="absolute top-0 py-2 px-3 text-base rounded-lg flex items-center dark:text-gray-400 text-gray-600 space-x-2 pointer-events-none">
                                     <div className="">
                                         <IoSearchOutline />
                                     </div>
                                     <div className="block text-base">
                                         Type{" "}
-                                        <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg bg-gray-600 text-gray-100 border-gray-500">
+                                        <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg dark:bg-gray-600 bg-gray-400 dark:text-gray-100 text-gray-900 dark:border-gray-500 border-gray-500">
                                             ?
                                         </kbd>{" "}
                                         to search by region
@@ -471,7 +474,7 @@ const RaceMap = () => {
 
                     {activeArea && (
                         <div
-                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-16 right-0 text-dustyRose-50 border-dustyRose-500 bg-dustyRose-700 px-3 py-1 text-sm font-semibold hover:bg-dustyRose-600 hover:border-dustyRose-400 hover:cursor-pointer m-6"
+                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-16 right-0 dark:text-dustyRose-50 text-dustyRose-900 dark:border-dustyRose-500 border-dustyRose-500 dark:bg-dustyRose-700 bg-dustyRose-300 px-3 py-1 text-sm font-semibold hover:dark:bg-dustyRose-600 hover:bg-dustyRose-400 hover:dark:border-dustyRose-400 hover:border-dustyRose-600 hover:cursor-pointer m-6"
                             onClick={() => {
                                 clickLink("/location/all");
                             }}
@@ -487,9 +490,9 @@ const RaceMap = () => {
                     )}
 
                     {stateMenuOpen && (
-                        <div className="absolute z-50 rounded-lg bg-gray-700 border border-gray-600 top-9 left-0 divide-y divide-gray-600 shadow min-w-44">
+                        <div className="absolute z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-gray-600 border-gray-400 top-9 left-0 divide-y dark:divide-gray-600 divide-gray-400 shadow min-w-44">
                             <ul
-                                className="py-2 text-sm text-gray-200 overflow-y-auto max-h-72"
+                                className="py-2 text-sm dark:text-gray-200 text-gray-800 overflow-y-auto max-h-72"
                                 aria-labelledby="sortInfo"
                             >
                                 {states.map((state, index) => {
@@ -513,7 +516,7 @@ const RaceMap = () => {
                                                 }
                                             >
                                                 <li
-                                                    className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full hover:cursor-pointer"
+                                                    className="flex px-4 py-2 bg-gray-300 hover:bg-gray-400 dark:hover:bg-gray-600 dark:bg-gray-700 hover:text-black dark:hover:text-white w-full hover:cursor-pointer"
                                                     key={
                                                         "li" +
                                                         state.state +
@@ -531,7 +534,7 @@ const RaceMap = () => {
                                 {/*                                 <a href="/location/all">
                                     <button
                                         onClick={() => updateLocSearch("")}
-                                        className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                        className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border dark:border-blue-500 border-blue-500 dark:bg-blue-600 bg-blue-400 hover:dark:bg-blue-700 bg-blue-300 focus:dark:ring-blue-800 ring-blue-200"
                                     >
                                         Clear
                                     </button>
@@ -541,7 +544,7 @@ const RaceMap = () => {
                                         closeStateMenu();
                                         updateLocSearch("");
                                     }}
-                                    className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border border-blue-500 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                                    className="flex whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center border dark:border-dustyRose-500 border-dustyRose-500 dark:bg-dustyRose-600 bg-dustyRose-400 hover:dark:bg-dustyRose-700 hover:bg-dustyRose-300 focus:dark:ring-dustyRose-800 ring-dustyRose-200"
                                 >
                                     Done
                                 </button>
@@ -549,13 +552,13 @@ const RaceMap = () => {
                         </div>
                     )}
                 </div>
-                <p className="relative rounded-lg border mt-2 -mb-2.5 mx-3 px-3 text-xs font-medium bg-gray-800 border-gray-600 text-gray-400 items-center flex whitespace-nowrap overflow-x-auto z-10">
+                <p className="relative rounded-lg border mt-2 -mb-2.5 mx-3 px-3 text-xs font-medium dark:bg-gray-800 bg-gray-200 dark:border-gray-600 border-gray-400 dark:text-gray-400 text-gray-600 items-center flex whitespace-nowrap overflow-x-auto z-10">
                     Showing{" "}
-                    <span className="text-dustyRose-200 font-medium px-1">
+                    <span className="dark:text-dustyRose-200 text-dustyRose-800 font-medium px-1">
                         {mapResults.length}
                     </span>{" "}
                     of{" "}
-                    <span className="text-periwinkleBlue-200 font-medium px-1">
+                    <span className="dark:text-periwinkleBlue-200 text-periwinkleBlue-800 font-medium px-1">
                         {searchResults.length}
                     </span>
                     <span className="">races matching your criteria</span>
@@ -569,39 +572,39 @@ const RaceMap = () => {
                     </span>
                 </p>
                 {isInfoHovered && (
-                    <div className="flex flex-col absolute top-16 right-8 z-50 bg-gray-800 border border-gray-600 rounded-lg space-y-3 text-sm text-gray-400 p-3">
+                    <div className="flex flex-col absolute top-16 right-8 z-50 dark:bg-gray-800 bg-gray-200 border dark:border-gray-600 border-gray-400 rounded-lg space-y-3 text-sm dark:text-gray-400 text-gray-600 p-3">
                         <span>
                             There are{" "}
-                            <span className="text-periwinkleBlue-200 font-medium">
+                            <span className="dark:text-periwinkleBlue-200 text-periwinkleBlue-800 font-medium">
                                 {searchResults.length}
                             </span>{" "}
                             races in the RunEmu database that{" "}
-                            <span className="text-periwinkleBlue-200 font-medium">
+                            <span className="dark:text-periwinkleBlue-200 text-periwinkleBlue-800 font-medium">
                                 match your search criteria
                             </span>
                             .
                         </span>
                         <span>
                             Of those,{" "}
-                            <span className="text-dustyRose-200 font-medium">
+                            <span className="dark:text-dustyRose-200 text-dustyRose-800 font-medium">
                                 {mapResults.length}
                             </span>{" "}
                             are{" "}
-                            <span className="text-dustyRose-200 font-medium">
+                            <span className="dark:text-dustyRose-200 text-dustyRose-800 font-medium">
                                 within
                             </span>{" "}
                             the{" "}
-                            <span className="text-dustyRose-200 font-medium">
+                            <span className="dark:text-dustyRose-200 text-dustyRose-800 font-medium">
                                 map bounds and/or boundary
                             </span>
                             ; these races are shown in your feed .
                         </span>
                         <span>
-                            <span className="text-blue-200 font-medium">
+                            <span className="dark:text-blue-200 text-blue-800 font-medium">
                                 Map markers
                             </span>{" "}
                             are displayed for up to the next{" "}
-                            <span className="text-blue-200 font-medium">
+                            <span className="dark:text-blue-200 text-blue-800 font-medium">
                                 100
                             </span>{" "}
                             of these races. We limit the number of markers to
@@ -609,7 +612,7 @@ const RaceMap = () => {
                             users.
                         </span>
                         <span className="">
-                            <span className="font-gray-200 font-medium pr-1">
+                            <span className="dark:font-gray-200 font-gray-800 font-medium pr-1">
                                 Tips:
                             </span>
                             narrow your search results by
@@ -617,7 +620,7 @@ const RaceMap = () => {
                                 <li>
                                     selecting a region from the dropdown menu,
                                     by clicking or by typing{" "}
-                                    <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg bg-gray-600 text-gray-100 border-gray-500">
+                                    <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg dark:bg-gray-600 bg-gray-400 dark:text-gray-100 text-gray-900 dark:border-gray-500 border-gray-500">
                                         ?
                                     </kbd>
                                 </li>
@@ -634,7 +637,7 @@ const RaceMap = () => {
                     </div>
                 )}
             </div>
-            <div className="bg-gray-800 border border-gray-700 rounded-lg w-full py-4 px-2">
+            <div className="dark:bg-gray-800 bg-gray-200 border dark:border-gray-700 border-gray-300 rounded-lg w-full py-4 px-2">
                 <Map
                     initialViewState={mapCoords}
                     ref={mapRef}

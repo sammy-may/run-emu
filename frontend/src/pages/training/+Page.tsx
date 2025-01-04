@@ -42,11 +42,11 @@ const Page = () => {
     return (
         <main className="flex items-center place-content-center">
             <div className="flex flex-col items-start px-3 max-w-screen-xl w-full">
-                <h1 className="text-gray-200 text-xl font-medium">
+                <h1 className="dark:text-gray-200 text-gray-800 text-xl font-medium">
                     My Training Plan
                 </h1>
-                <div className="border border-gray-700 w-full my-3 mr-3 rounded-lg"></div>
-                <div className="grid grid-cols-10 text-gray-400 text-sm w-full">
+                <div className="border dark:border-gray-700 border-gray-300 w-full my-3 mr-3 rounded-lg"></div>
+                <div className="grid grid-cols-10 dark:text-gray-400 text-gray-600 text-sm w-full">
                     <div className="flex items-center place-content-center col-span-1">
                         <FaDumbbell />
                     </div>
@@ -54,14 +54,14 @@ const Page = () => {
                         Workouts on Dec 15, 2024
                     </span>
                     <div className="flex items-center place-content-center">
-                        <div className="h-full border border-gray-700 col-span-1 mt-3"></div>
+                        <div className="h-full border dark:border-gray-700 border-gray-300 col-span-1 mt-3"></div>
                     </div>
-                    <div className="col-span-9 border bg-gray-800 border-gray-600 hover:bg-gray-700 hover:border-gray-500 rounded-lg p-2 m-2">
+                    <div className="col-span-9 border dark:bg-gray-800 bg-gray-200 dark:border-gray-600 border-gray-400 hover:dark:bg-gray-700 bg-gray-300 hover:dark:border-gray-500 border-gray-500 rounded-lg p-2 m-2">
                         <div className="flex items-center">
-                            <div className="text-gray-400 font-semibold py-1 text-xs">
+                            <div className="dark:text-gray-400 text-gray-600 font-semibold py-1 text-xs">
                                 AM
                             </div>
-                            <div className="text-gray-200 font-semibold py-1 px-2">
+                            <div className="dark:text-gray-200 text-gray-800 font-semibold py-1 px-2">
                                 Dancing with the Devil
                             </div>
                             <div className="">
@@ -123,14 +123,14 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex items-center place-content-center">
-                        <div className="h-full border border-gray-700 col-span-1"></div>
+                        <div className="h-full border dark:border-gray-700 border-gray-300 col-span-1"></div>
                     </div>
-                    <div className="col-span-9 border bg-gray-800 border-gray-600 hover:bg-gray-700 hover:border-gray-500 rounded-lg p-2 m-2">
+                    <div className="col-span-9 border dark:bg-gray-800 bg-gray-200 dark:border-gray-600 border-gray-400 hover:dark:bg-gray-700 bg-gray-300 hover:dark:border-gray-500 border-gray-500 rounded-lg p-2 m-2">
                         <div className="flex items-center">
-                            <div className="text-gray-400 font-semibold py-1 text-xs">
+                            <div className="dark:text-gray-400 text-gray-600 font-semibold py-1 text-xs">
                                 PM
                             </div>
-                            <div className="text-gray-200 font-semibold py-1 px-2">
+                            <div className="dark:text-gray-200 text-gray-800 font-semibold py-1 px-2">
                                 Recovery
                             </div>
                             <div className="">

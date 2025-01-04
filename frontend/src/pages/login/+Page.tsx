@@ -1,8 +1,10 @@
 const Login = () => {
     return (
         <div className="w-full px-3 flex flex-col items-center">
-            <h1 className="text-xl font-bold text-white py-2">Coming soon!</h1>
-            {/*             <div className="w-full rounded-lg shadow border bg-gray-800 border-gray-700 p-6 space-y-4 px-6 py-8 max-w-lg">
+            <h1 className="text-xl font-bold dark:text-white text-black py-2">
+                Coming soon!
+            </h1>
+            {/*             <div className="w-full rounded-lg shadow border dark:bg-gray-800 bg-gray-200 dark:border-gray-700 border-gray-300 p-6 space-y-4 px-6 py-8 max-w-lg">
                 <h1 className="text-xl font-bold leading-tight tracking-tight text-white text-left">
                     Sign in to your account
                 </h1>
@@ -19,7 +21,7 @@ const Login = () => {
                             name="email"
                             id="email"
                             placeholder="name@example.com"
-                            className="border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
+                            className="border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white dark:placeholder-gray-400 placeholder-gray-600 dark:border-gray-600 border-gray-400 dark:bg-gray-700 bg-gray-300 p-2.5 w-full block"
                         />
                     </div>
                     <div>
@@ -34,7 +36,7 @@ const Login = () => {
                             name="password"
                             id="password"
                             placeholder="••••••••••••"
-                            className="border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-700 p-2.5 w-full block"
+                            className="border rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white dark:placeholder-gray-400 placeholder-gray-600 dark:border-gray-600 border-gray-400 dark:bg-gray-700 bg-gray-300 p-2.5 w-full block"
                         />
                     </div>
                     <div className="flex items-center justify-between">
@@ -44,7 +46,7 @@ const Login = () => {
                                     type="checkbox"
                                     id="remember"
                                     aria-describedby="remember"
-                                    className="w-4 h-4 border rounded focus:ring-3 bg-gray-700 border-gray-600 ring-offset-gray-800 focus:ring-indigo-600"
+                                    className="w-4 h-4 border rounded focus:ring-3 dark:bg-gray-700 bg-gray-300 dark:border-gray-600 border-gray-400 ring-dark:offset-gray-800 offset-gray-200 focus:ring-indigo-600"
                                 />
                             </div>
                             <div className="ml-3 text-sm">
@@ -58,22 +60,22 @@ const Login = () => {
                         </div>
                         <a
                             href="#"
-                            className="text-sm font-medium hover:underline text-blue-500"
+                            className="text-sm font-medium hover:underline dark:text-blue-500 text-blue-500"
                         >
                             Forgot password?
                         </a>
                     </div>
                     <button
                         type="submit"
-                        className="w-full text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center border border-blue-400 hover:border-blue-500 bg-blue-600 hover:bg-blue-700"
+                        className="w-full text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center border dark:border-blue-400 border-blue-600 hover:dark:border-blue-500 border-blue-500 dark:bg-blue-600 bg-blue-400 hover:dark:bg-blue-700 bg-blue-300"
                     >
                         Sign in
                     </button>
-                    <p className="text-sm font-light text-gray-400">
+                    <p className="text-sm font-light dark:text-gray-400 text-gray-600">
                         Don't have an account yet?{" "}
                         <a
                             href="#"
-                            className="font-medium hover:underline text-blue-500"
+                            className="font-medium hover:underline dark:text-blue-500 text-blue-500"
                         >
                             Sign up
                         </a>

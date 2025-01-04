@@ -2,8 +2,8 @@ import React from "react";
 import LinkableHeading from "../../components/LinkableHeading";
 
 const PrivacyPolicy: React.FC = () => (
-    <div className="max-w-screen-lg px-3">
-        <h1 className="text-2xl font-semibold text-white pt-6">
+    <div className="max-w-screen-lg px-3 dark:text-white text-black">
+        <h1 className="text-2xl font-semibold pt-6">
             RunEmu Privacy Statement
         </h1>
         <p className="py-4">
@@ -25,7 +25,7 @@ const PrivacyPolicy: React.FC = () => (
             information we collect through various methods.
         </p>
 
-        <h3 className="font-semibold text-white pt-3">From You</h3>
+        <h3 className="font-semibold pt-3">From You</h3>
         <ul className="list-disc px-6">
             <li>
                 <strong>Account Information:</strong> If you create an account,
@@ -39,7 +39,7 @@ const PrivacyPolicy: React.FC = () => (
             </li>
         </ul>
 
-        <h3 className="font-semibold text-white pt-3">Automatically</h3>
+        <h3 className="font-semibold pt-3">Automatically</h3>
         <ul className="list-disc px-6">
             <li>
                 <strong>Device Information:</strong> Includes your IP address,
@@ -63,7 +63,7 @@ const PrivacyPolicy: React.FC = () => (
             </li>
         </ul>
 
-        <h3 className="font-semibold text-white pt-3">Third-Party Data</h3>
+        <h3 className="font-semibold pt-3">Third-Party Data</h3>
         <ul className="list-disc px-6">
             <li>
                 If you connect your account with third-party services such as
@@ -96,26 +96,26 @@ const PrivacyPolicy: React.FC = () => (
             only under the circumstances detailed below.
         </p>
 
-        <h3 className="font-semibold text-white pt-3">With Your Consent</h3>
+        <h3 className="font-semibold pt-3">With Your Consent</h3>
         <p>
             If you authorize us to share your data with third parties for
             specific purposes.
         </p>
 
-        <h3 className="font-semibold text-white pt-3">Service Providers</h3>
+        <h3 className="font-semibold pt-3">Service Providers</h3>
         <p>
             We may share information with third-party vendors who assist in
             operating the Service (e.g., hosting, analytics, email
             communication).
         </p>
 
-        <h3 className="font-semibold text-white pt-3">Legal Obligations</h3>
+        <h3 className="font-semibold pt-3">Legal Obligations</h3>
         <p>
             We may disclose information if required by law or to protect our
             legal rights.
         </p>
 
-        <h3 className="font-semibold text-white pt-3">Business Transfers</h3>
+        <h3 className="font-semibold pt-3">Business Transfers</h3>
         <p>
             If RunEmu.com is involved in a merger, acquisition, or sale of
             assets, your information may be transferred as part of the
@@ -130,21 +130,19 @@ const PrivacyPolicy: React.FC = () => (
             your account or contacting us.
         </p>
 
-        <h3 className="font-semibold text-white pt-3">Delete Your Data</h3>
+        <h3 className="font-semibold pt-3">Delete Your Data</h3>
         <p>
             You may request that we delete your account and associated data,
             subject to legal or operational requirements.
         </p>
 
-        <h3 className="font-semibold text-white pt-3">
-            Opt-Out of Communications
-        </h3>
+        <h3 className="font-semibold pt-3">Opt-Out of Communications</h3>
         <p>
             You can unsubscribe from promotional emails by clicking the
             "unsubscribe" link in the email.
         </p>
 
-        <h3 className="font-semibold text-white pt-3">Manage Cookies</h3>
+        <h3 className="font-semibold pt-3">Manage Cookies</h3>
         <p>
             You can adjust your browser settings to refuse cookies or alert you
             when cookies are being used.

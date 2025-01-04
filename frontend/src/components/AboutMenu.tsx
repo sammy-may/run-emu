@@ -13,8 +13,8 @@ const AboutMenu = () => {
                             icon: <FaMedal />,
                             text: "Mission",
                             content: (
-                                <div className="h-full">
-                                    <h1 className="text-2xl font-semibold text-white pb-3">
+                                <div className="h-full dark:text-white text-black">
+                                    <h1 className="text-2xl font-semibold dark:text-white text-black pb-3">
                                         Our Mission
                                     </h1>
                                     <p className="pb-3">
@@ -25,7 +25,7 @@ const AboutMenu = () => {
                                     </p>
                                     <a
                                         href="/"
-                                        className="hover:text-dustyRose-200 hover:underline text-white"
+                                        className="hover:dark:text-dustyRose-200 hover:text-dustyRose-800 hover:underline dark:text-white text-black"
                                     >
                                         <h2 className="text-lg font-semibold pb-3">
                                             Race Explorer
@@ -51,8 +51,8 @@ const AboutMenu = () => {
                             icon: <FaBookOpen />,
                             text: "Story",
                             content: (
-                                <div className="h-full">
-                                    <h1 className="text-2xl font-semibold text-white pb-3">
+                                <div className="h-full dark:text-white text-black">
+                                    <h1 className="text-2xl font-semibold dark:text-white text-black pb-3">
                                         Our Story
                                     </h1>
                                     <p className="pb-3">
@@ -103,8 +103,8 @@ const AboutMenu = () => {
                             icon: <IoRocket />,
                             text: "Promote",
                             content: (
-                                <div className="h-full">
-                                    <h1 className="text-2xl font-semibold text-white pb-3">
+                                <div className="h-full dark:text-white text-black">
+                                    <h1 className="text-2xl font-semibold dark:text-white text-black pb-3">
                                         Promote your races
                                     </h1>
                                     <p className="pb-3">
@@ -126,8 +126,8 @@ const AboutMenu = () => {
                             icon: <FaHandshake />,
                             text: "Partner",
                             content: (
-                                <div className="h-full">
-                                    <h1 className="text-2xl font-semibold text-white pb-3">
+                                <div className="h-full dark:text-white text-black">
+                                    <h1 className="text-2xl font-semibold dark:text-white text-black pb-3">
                                         Partner with RunEmu
                                     </h1>
                                     <p className="pb-3">

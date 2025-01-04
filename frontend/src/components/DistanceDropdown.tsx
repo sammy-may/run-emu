@@ -69,14 +69,14 @@ const DistanceDropdown = () => {
                 />
 
                 {distanceMenuOpen && (
-                    <div className="absolute z-50 rounded-lg bg-gray-700 border border-dustyRose-500 py-3 px-3 mt-0.5 space-y-2 max-w-72 min-w-72 sm:max-w-96 sm:min-w-96">
+                    <div className="absolute z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 mt-0.5 space-y-2 max-w-72 min-w-72 sm:max-w-96 sm:min-w-96">
                         <div className="flex items-start place-content-between">
-                            <div className="text-sm font-light text-gray-300">
+                            <div className="text-sm font-light dark:text-gray-300 text-gray-700">
                                 Select a distance:
                             </div>
                             {/*                             <button
                                 onClick={closeDistanceMenu}
-                                className="text-gray-400"
+                                className="dark:text-gray-400 text-gray-600"
                             >
                                 <FaRegTimesCircle />
                             </button> */}
@@ -113,13 +113,13 @@ const DistanceDropdown = () => {
                         </div>
                         {/*                         <hr /> */}
                         <div className="flex items-center">
-                            <hr className="px-6 border border-gray-500 w-full" />
-                            <div className="rounded-full border-gray-500 px-2 text-gray-400 text-sm font-semibold border-2">
+                            <hr className="px-6 border dark:border-gray-500 border-gray-500 w-full" />
+                            <div className="rounded-full dark:border-gray-500 border-gray-500 px-2 dark:text-gray-400 text-gray-600 text-sm font-semibold border-2">
                                 OR
                             </div>
-                            <hr className="px-6 border border-gray-500 w-full" />
+                            <hr className="px-6 border dark:border-gray-500 border-gray-500 w-full" />
                         </div>
-                        <div className="pt-2 text-sm font-light text-gray-300">
+                        <div className="pt-2 text-sm font-light dark:text-gray-300 text-gray-700">
                             Select a range:
                         </div>
                         <div className="rounded-lg">
@@ -131,7 +131,7 @@ const DistanceDropdown = () => {
                                 <div className="flex-col items-start px-1">
                                     <label
                                         htmlFor="min_distance"
-                                        className="text-gray-200 font-medium text-sm m-1 block text-left"
+                                        className="dark:text-gray-200 text-gray-800 font-medium text-sm m-1 block text-left"
                                     >
                                         Min Distance (mi)
                                     </label>
@@ -141,7 +141,7 @@ const DistanceDropdown = () => {
                                         id="min_distance"
                                         placeholder="No Min"
                                         data-dropdown-toggle="dropdownInfoMin"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-2 flex"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-black dark:text-white dark:placeholder-gray-400 placeholder-gray-600 dark:border-gray-600 border-gray-400 dark:bg-gray-800 bg-gray-200 p-2 flex"
                                         value={
                                             distanceMin === null
                                                 ? ""
@@ -154,7 +154,7 @@ const DistanceDropdown = () => {
                                 <div className="flex-col items-start px-1">
                                     <label
                                         htmlFor="max_distance"
-                                        className="text-gray-200 font-medium text-sm m-1 block text-left"
+                                        className="dark:text-gray-200 text-gray-800 font-medium text-sm m-1 block text-left"
                                     >
                                         Max Distance (mi)
                                     </label>
@@ -164,7 +164,7 @@ const DistanceDropdown = () => {
                                         id="max_distance"
                                         placeholder="No Max"
                                         data-dropdown-toggle="dropdownInfoMax"
-                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 border-gray-600 bg-gray-800 p-2 flex"
+                                        className="border text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-black dark:text-white dark:placeholder-gray-400 placeholder-gray-600 dark:border-gray-600 border-gray-400 dark:bg-gray-800 bg-gray-200 p-2 flex"
                                         value={
                                             distanceMax === null
                                                 ? ""
@@ -178,13 +178,13 @@ const DistanceDropdown = () => {
                         <div className="place-content-end flex items-center w-full space-x-3">
                             <button
                                 onClick={wrapUnsetDistance}
-                                className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-dustyRose-600 border border-dustyRose-400 hover:bg-dustyRose-700 hover:border-dustyRose-500"
+                                className="flex text-sm whitespace-nowrap space-x-2 text-black dark:text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center dark:bg-dustyRose-600 hover:bg-dustyRose-400 border dark:border-dustyRose-400 hover:border-dustyRose-600 hover:dark:bg-dustyRose-700 bg-dustyRose-300 hover:dark:border-dustyRose-500 border-dustyRose-500"
                             >
                                 <div>Clear</div>
                             </button>
                             <button
                                 onClick={closeDistanceMenu}
-                                className="flex text-sm whitespace-nowrap space-x-2 text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center bg-dustyRose-600 border border-dustyRose-400 hover:bg-dustyRose-700 hover:border-dustyRose-500"
+                                className="flex text-sm whitespace-nowrap space-x-2 text-black dark:text-white focus:ring-4 focus:outline-none font-medium rounded-lg py-1 px-3 text-center items-center dark:bg-dustyRose-600 hover:bg-dustyRose-400 border dark:border-dustyRose-400 hover:border-dustyRose-600 hover:dark:bg-dustyRose-700 bg-dustyRose-300 hover:dark:border-dustyRose-500 border-dustyRose-500"
                             >
                                 <div>Done</div>
                             </button>

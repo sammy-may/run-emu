@@ -8,7 +8,7 @@ import { useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const Header = () => {
-    const { toggleTheme } = useUserSettings();
+    const { theme, toggleTheme } = useUserSettings();
     const [settingsMenuOpen, setSettingsMenuOpen] = useState<boolean>(false);
 
     const toggleSettingsMenu = () => {
@@ -17,13 +17,17 @@ const Header = () => {
 
     return (
         <>
-            <div className="flex items-center h-12 min-w-full max-w-full mb-3 bg-gray-800 place-content-between w-full py-2">
+            <div className="flex items-center h-12 min-w-full max-w-full mb-3 dark:bg-gray-800 bg-gray-200 place-content-between w-full py-2">
                 <div className="flex items-center space-x-3 h-full">
                     <Button
                         name={"RunEmu"}
                         icon={
                             <img
-                                src="/images/logos/emu_wb.svg"
+                                src={
+                                    theme === "dark"
+                                        ? "/images/logos/emu_wb.svg"
+                                        : "/images/logos/emu_bw.svg"
+                                }
                                 className="h-5"
                                 alt="RunEmu Logo"
                             />
@@ -55,13 +59,13 @@ const Header = () => {
                     </div> */}
                     <div className="relative flex">
                         <button
-                            className="h-full rounded-lg flex items-center space-x-3 px-3 py-2 border border-gray-800 bg-gray-800 hover:border-dustyRose-500 hover:bg-dustyRose-700 hover:text-dustyRose-50 text-gray-200 text-sm md:text-base"
+                            className="h-full rounded-lg flex items-center space-x-3 px-3 py-2 border dark:border-gray-800 border-gray-200 dark:bg-gray-800 bg-gray-200 hover:dark:border-dustyRose-500 hover:border-dustyRose-500 hover:dark:bg-dustyRose-700 hover:bg-dustyRose-300 hover:text-dustyRose-900 dark:text-gray-200 text-gray-800 text-sm md:text-base"
                             onClick={toggleSettingsMenu}
                         >
                             <div>
                                 <FiSettings />
                             </div>
-                            <div>Settings</div>
+                            <div className="hidden sm:block">Settings</div>
                             <div>
                                 <svg
                                     className="w-2.5 h-2.5"
@@ -81,19 +85,31 @@ const Header = () => {
                             </div>
                         </button>
                         {settingsMenuOpen && (
-                            <div className="absolute top-11 right-0 rounded-lg bg-gray-700 z-50 flex flex-col space-y-2">
-                                <div
-                                    className="py-2 px-3 flex items-center space-x-2 text-xl place-content-center hover:cursor-pointer hover:bg-gray-600 rounded-lg"
-                                    onClick={toggleTheme}
-                                >
+                            <div className="absolute top-11 right-0 rounded-lg z-50 flex flex-col space-y-2">
+                                <div className="py-2 px-3 flex items-center space-x-2 text-xl place-content-center dark:bg-gray-800 bg-gray-200 rounded-lg">
                                     <div className="dark:text-white text-gray-400">
                                         <MdDarkMode />
                                     </div>
-                                    <div className=" dark:text-gray-400 text-yellow-100">
+                                    <div
+                                        onClick={toggleTheme}
+                                        className={`w-16 h-8 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ${
+                                            theme === "light"
+                                                ? "bg-blue-500"
+                                                : "bg-blue-500"
+                                        }`}
+                                    >
+                                        <div
+                                            className={`w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
+                                                theme === "light"
+                                                    ? "transform translate-x-8"
+                                                    : ""
+                                            }`}
+                                        ></div>
+                                    </div>
+                                    <div className=" dark:text-gray-500 text-black">
                                         <MdLightMode />
                                     </div>
                                 </div>
-                                <div className="py-1 px-3">Miles/km</div>
                             </div>
                         )}
                     </div>

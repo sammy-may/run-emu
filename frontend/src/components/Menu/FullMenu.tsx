@@ -25,11 +25,13 @@ const FullMenu = ({ cats }: FullMenuProps) => {
                 <a
                     id={id}
                     href={`#${id}`}
-                    className="group flex items-center space-x-3 hover:bg-gray-800 hover:border-gray-700 hover:cursor-pointer py-1 border border-gray-900 rounded-lg w-full"
+                    className="group flex items-center space-x-3 hover:dark:bg-gray-800 hover:dark:border-gray-700 border-white hover:cursor-pointer py-1 border dark:border-gray-900 rounded-lg w-full"
                 >
-                    <div className="border-2 py-2 border-gray-900 rounded-lg group-hover:border-gray-800"></div>
-                    <div>{icon}</div>
-                    <div className="text-gray-200 font-semibold">{text}</div>
+                    <div className="border-2 py-2 dark:border-gray-900 rounded-lg group-hover:dark:border-gray-800 border-white"></div>
+                    <div className="text-black dark:text-white">{icon}</div>
+                    <div className="dark:text-gray-200 text-gray-800 font-semibold">
+                        {text}
+                    </div>
                 </a>
             );
         } else {
@@ -37,11 +39,13 @@ const FullMenu = ({ cats }: FullMenuProps) => {
                 <a
                     id={id}
                     href={`#${id}`}
-                    className="group flex items-center space-x-3 hover:bg-gray-800 hover:border-gray-700 hover:cursor-pointer py-1 border border-gray-900 rounded-lg w-full"
+                    className="group flex items-center space-x-3 hover:dark:bg-gray-800 bg-white dark:bg-gray-900 hover:dark:border-gray-700 hover:cursor-pointer py-1 border dark:border-gray-900 border-white rounded-lg w-full"
                 >
-                    <div className="border-2 py-2 border-dustyRose-500 rounded-lg"></div>
-                    <div>{icon}</div>
-                    <div className="text-gray-200 font-semibold">{text}</div>
+                    <div className="border-2 py-2 dark:border-dustyRose-500 border-dustyRose-500 rounded-lg"></div>
+                    <div className="text-black dark:text-white">{icon}</div>
+                    <div className="dark:text-gray-200 text-gray-800 font-semibold">
+                        {text}
+                    </div>
                 </a>
             );
         }
@@ -50,7 +54,7 @@ const FullMenu = ({ cats }: FullMenuProps) => {
     const MenuCat = ({ title, buttons }: MenuCatProps) => {
         return (
             <div className="space-y-1 pb-2">
-                <div className="px-4 text-sm font-semibold text-gray-400">
+                <div className="px-4 text-sm font-semibold dark:text-gray-400 text-gray-600">
                     {title}
                 </div>
                 <div className="flex flex-col items-start min-w-40">

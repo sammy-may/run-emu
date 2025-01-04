@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <UserSettingsProvider>
             <RaceDataProvider>
-                <div className="flex flex-col items-center place-content-start max-h-screen min-h-screen">
+                <div className="flex flex-col items-center place-content-start min-h-screen bg-white dark:bg-gray-900">
                     <Header />
                     {children}
                     <Analytics />

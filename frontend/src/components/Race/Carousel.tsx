@@ -26,7 +26,7 @@ const Carousel = ({
                     >
                         <img
                             key={"img" + img}
-                            className="block rounded-lg border border-gray-700 bg-gray-800"
+                            className="block rounded-lg border dark:border-gray-700 border-gray-300 dark:bg-gray-800 bg-gray-200"
                             src={img}
                             alt="race image"
                         />

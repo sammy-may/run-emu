@@ -71,10 +71,10 @@ const SortDropdown = () => {
             {isOpen && (
                 <div
                     id="dropdownInformation"
-                    className=" divide-y divide-gray-600 rounded-lg shadow w-44 bg-gray-700 absolute z-50 right-0 xl:left-0"
+                    className=" divide-y dark:divide-gray-600 divide-gray-400 rounded-lg shadow w-44 dark:bg-gray-700 bg-gray-300 absolute z-50 right-0 xl:left-0"
                 >
                     <ul
-                        className="py-2 text-sm text-gray-200"
+                        className="py-2 text-sm dark:text-gray-200 text-gray-800"
                         aria-labelledby="sortInfo"
                     >
                         <li>
@@ -84,7 +84,7 @@ const SortDropdown = () => {
                                     updateNeedSort();
                                     closeDropdown();
                                 }}
-                                className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full"
+                                className="flex px-4 py-2 dark:hover:bg-gray-600 dark:bg-gray-700 bg-gray-300 hover:text-black hover:bg-gray-400 dark:hover:text-white w-full"
                             >
                                 <div className="flex items-center space-x-2">
                                     <div>
@@ -101,7 +101,7 @@ const SortDropdown = () => {
                                     updateNeedSort();
                                     closeDropdown();
                                 }}
-                                className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full"
+                                className="flex px-4 py-2 hover:dark:bg-gray-600 dark:bg-gray-700 bg-gray-300 hover:bg-gray-400 hover:text-black dark:hover:text-white w-full"
                             >
                                 <div className="flex items-center space-x-2">
                                     <div>
@@ -118,7 +118,7 @@ const SortDropdown = () => {
                                     updateNeedSort();
                                     closeDropdown();
                                 }}
-                                className="flex px-4 py-2 hover:bg-gray-600 hover:text-white w-full"
+                                className="flex px-4 py-2 hover:dark:bg-gray-600 dark:bg-gray-700 bg-gray-300 hover:bg-gray-400 hover:text-black dark:hover:text-white w-full"
                             >
                                 <div className="flex items-center space-x-2">
                                     <div>
