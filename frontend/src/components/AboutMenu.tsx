@@ -56,18 +56,30 @@ const AboutMenu = () => {
                                         Our Story
                                     </h1>
                                     <p className="pb-3">
-                                        Hi, I'm Sam. In 2024, I quit my job in
-                                        quantitative finance in New York City
-                                        and moved to South Lake Tahoe with my
-                                        wife. I fell in love with trail running
-                                        around Tahoe and soon wanted to sign up
-                                        for a race.
+                                        Hi, I'm Sam. In 2024, I made a big
+                                        change -- I traded loud nights in New
+                                        York City for quiet mornings in the
+                                        Sierra Nevada wilderness when I moved to
+                                        South Lake Tahoe with my wife. I quickly
+                                        fell in love with running on the trails
+                                        around Lake Tahoe. And, I soon wanted to
+                                        sign up for a race.
                                     </p>
                                     <p className="pb-3">
-                                        However, I found the experience of
-                                        finding a race frustrating: directories
-                                        with poorly designed user interfaces,
-                                        pop-up ads, and slow response times.
+                                        To my disappointment, the experience of
+                                        finding a race was frustrating: slow
+                                        webpages, pop-up ads galore, poor user
+                                        interfaces. Finding a race should be the
+                                        easy part. I decided I would build the
+                                        tool I wanted: fast, sophisticated, and
+                                        most importantly, easy to use.
+                                    </p>
+                                    <p>
+                                        What started as a personal project to
+                                        learn web development turned into
+                                        RunEmu. I hope RunEmu makes finding your
+                                        next challenge a breeze, whether it's
+                                        your first 5k or your next ultra.
                                     </p>
                                 </div>
                             ),
@@ -119,14 +131,17 @@ const AboutMenu = () => {
                                         Partner with RunEmu
                                     </h1>
                                     <p className="pb-3">
-                                        Interested in partnering with RunEmu?
-                                        Reach out to{" "}
+                                        Interested in partnering with RunEmu to
+                                        reach runners all over the world
+                                        searching for their next race? Reach out
+                                        to{" "}
+                                    </p>
+                                    <address className="pb-3">
                                         <span className="font-mono">
                                             sam@runemu.com
-                                        </span>{" "}
-                                        to learn how you can reach runners all
-                                        over the world.
-                                    </p>
+                                        </span>
+                                    </address>{" "}
+                                    <p className="pb-3">to learn more.</p>
                                 </div>
                             ),
                         },

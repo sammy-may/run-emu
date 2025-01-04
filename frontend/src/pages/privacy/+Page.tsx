@@ -178,11 +178,7 @@ const PrivacyPolicy: React.FC = () => (
             please contact us at:
         </p>
         <address>
-            <strong>Email:</strong>{" "}
-            <p>
-                support <span className="font-bold text-gray-400">at</span>{" "}
-                RunEmu.com
-            </p>
+            <p className="font-mono py-3">sam@runemu.com</p>
         </address>
     </div>
 );
