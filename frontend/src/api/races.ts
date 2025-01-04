@@ -22,24 +22,29 @@ export const fetchRaces = async (state: ActiveArea | null, need_state: boolean):
     const today = new Date().toISOString().split('T')[0];
     const n_months = today_plus_n_months(N_MONTHS);
 
-    if (state !== null && state.state.length > 0) {
-        const {data, error} = await supabase.from("Races").select().eq("state", state?.state).gte("date", today);
-        dat = data;
-        err = error;
-    }
+    try {
+        if (state !== null && state.state.length > 0) {
+            const {data, error} = await supabase.from("Races").select().eq("state", state?.state).gte("date", today);
+            dat = data;
+            err = error;
+        }
 
-    else if (need_state) {
+        else if (need_state) {
+            return [];
+        }
+
+        else {
+            const {data, error} = await supabase.from("Races").select().gte("date", today).lte("date", n_months);
+            dat = data;
+            err = error;
+        }
+    } catch (error) {
+        console.log("Error fetching races", error);
         return [];
     }
 
-    else {
-        const {data, error} = await supabase.from("Races").select().gte("date", today).lte("date", n_months);
-        dat = data;
-        err = error;
-    }
-
     if (err) {
-        throw new Error(err.message);
+        console.log("Error fetching races", err);
     }
 
     if (dat && dat.length >= 1) {
