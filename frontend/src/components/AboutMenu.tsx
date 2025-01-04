@@ -92,11 +92,16 @@ const AboutMenu = () => {
                             text: "Promote",
                             content: (
                                 <div className="h-full">
-                                    <h1>Coming soon!</h1>
-                                    <div>
-                                        Promote your events to increase
-                                        visiblity.
-                                    </div>
+                                    <h1 className="text-2xl font-semibold text-white pb-3">
+                                        Promote your races
+                                    </h1>
+                                    <p className="pb-3">
+                                        Are you a race organizer looking to
+                                        attract more runners to your next event?
+                                        Check back soon to create a free RunEmu
+                                        account to claim your existing events,
+                                        add new events, and more.
+                                    </p>
                                 </div>
                             ),
                         },
@@ -110,12 +115,18 @@ const AboutMenu = () => {
                             text: "Partner",
                             content: (
                                 <div className="h-full">
-                                    <h1>Coming soon!</h1>
-                                    <div>
+                                    <h1 className="text-2xl font-semibold text-white pb-3">
+                                        Partner with RunEmu
+                                    </h1>
+                                    <p className="pb-3">
                                         Interested in partnering with RunEmu?
-                                        Reach out to sam at runemu.com to learn
-                                        more.
-                                    </div>
+                                        Reach out to{" "}
+                                        <span className="font-mono">
+                                            sam@runemu.com
+                                        </span>{" "}
+                                        to learn how you can reach runners all
+                                        over the world.
+                                    </p>
                                 </div>
                             ),
                         },

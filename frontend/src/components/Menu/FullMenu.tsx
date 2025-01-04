@@ -39,7 +39,7 @@ const FullMenu = ({ cats }: FullMenuProps) => {
                     href={`#${id}`}
                     className="group flex items-center space-x-3 hover:bg-gray-800 hover:border-gray-700 hover:cursor-pointer py-1 border border-gray-900 rounded-lg w-full"
                 >
-                    <div className="border-2 py-2 border-blue-500 rounded-lg"></div>
+                    <div className="border-2 py-2 border-dustyRose-500 rounded-lg"></div>
                     <div>{icon}</div>
                     <div className="text-gray-200 font-semibold">{text}</div>
                 </a>
