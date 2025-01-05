@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="flex items-center h-12 min-w-full max-w-full mb-3 dark:bg-gray-800 bg-gray-200 place-content-between w-full py-2">
+            <div className="flex items-center h-12 min-w-full max-w-full mb-3 lg:mb-3 dark:bg-gray-800 bg-gray-200 place-content-between w-full py-2">
                 <div className="flex items-center space-x-3 h-full">
                     <Button
                         name={"RunEmu"}
