@@ -51,12 +51,15 @@ const SearchBar = () => {
                         <div className="">
                             <IoSearchOutline />
                         </div>
-                        <div className="block text-base m-auto">
+                        <div className="hidden md:block text-base m-auto">
                             Type{" "}
                             <kbd className="px-2 py-1.5 text-sm font-semibold border rounded-lg dark:bg-gray-600 bg-gray-400 dark:text-gray-100 text-gray-900 dark:border-gray-500 border-gray-500">
                                 /
                             </kbd>{" "}
                             to search by name
+                        </div>
+                        <div className="block md:hidden text-base m-auto">
+                            Search by name
                         </div>
                     </div>
                 )}

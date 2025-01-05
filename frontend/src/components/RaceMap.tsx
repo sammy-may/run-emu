@@ -460,12 +460,32 @@ const RaceMap = () => {
                                     <div className="">
                                         <IoSearchOutline />
                                     </div>
-                                    <div className="block text-base">
+                                    <div className="hidden md:block text-base">
                                         Type{" "}
                                         <kbd className="px-2 py-1.5 text-xs font-semibold border rounded-lg dark:bg-gray-600 bg-gray-400 dark:text-gray-100 text-gray-900 dark:border-gray-500 border-gray-500">
                                             ?
                                         </kbd>{" "}
                                         to search by region
+                                    </div>
+                                    <div className="block md:hidden text-base">
+                                        Search by region
+                                    </div>
+                                    <div>
+                                        <svg
+                                            className="w-2.5 h-2.5"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 10 6"
+                                        >
+                                            <path
+                                                stroke="currentColor"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="m1 1 4 4 4-4"
+                                            />
+                                        </svg>
                                     </div>
                                 </div>
                             )}

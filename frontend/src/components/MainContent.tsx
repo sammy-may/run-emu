@@ -8,7 +8,7 @@ const MainContent = ({ initResults }: { initResults: RaceType[] }) => {
         <>
             <div className="flex items-center place-content-center w-full px-3">
                 {
-                    <div className="flex flex-col items-center place-content-center lg:flex-row lg:items-start w-full">
+                    <div className="flex flex-col-reverse items-center place-content-center lg:flex-row lg:items-start w-full">
                         <div className="overflow-y-auto overflow-x-hidden min-h-[42vh] lg:min-h-[90vh] max-h-[42vh] lg:max-h-[90vh] w-full lg:pl-6 lg:pr-2 sm:px-6 px-2 max-w-screen-xl">
                             <OptionsBar />
                             <RaceFeed initResults={initResults} />
