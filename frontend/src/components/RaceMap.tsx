@@ -317,12 +317,12 @@ const RaceMap = () => {
             type: "fill",
             source: "base-layer",
             paint: {
-                "fill-color": "#b35e75", // dustyRose-600
-                "fill-opacity": 0.5,
+                "fill-color": theme === "dark" ? "#b35e75" : "#ee728d", // dustyRose-600/400
+                "fill-opacity": oneHover ? 0.0 : 0.5,
             },
             filter: ["==", "state", hoveredState], // Highlight only the hovered state
         }),
-        [hoveredState],
+        [hoveredState, oneHover, theme],
     );
 
     const highlightBorder: LineLayer = useMemo(
@@ -331,12 +331,12 @@ const RaceMap = () => {
             type: "line",
             source: "line-layer",
             paint: {
-                "line-color": "#ee728d", // dustyRose-400
-                "line-width": 2,
+                "line-color": theme === "dark" ? "#ee728d" : "#b35e75", // dustyRose-400/600
+                "line-width": oneHover ? 0 : 2,
             },
             filter: ["==", "state", hoveredState],
         }),
-        [hoveredState],
+        [hoveredState, oneHover, theme],
     );
 
     const activeLayer: FillLayer = useMemo(
@@ -345,8 +345,8 @@ const RaceMap = () => {
             type: "fill",
             source: "base-layer",
             paint: {
-                "fill-color": "#8b4759", // dustyRose-700
-                "fill-opacity": 0.5,
+                "fill-color": theme === "dark" ? "#8b4759" : "#f296a9", // dustyRose-700/300
+                "fill-opacity": 0.0,
             },
             filter: [
                 "==",
@@ -354,7 +354,7 @@ const RaceMap = () => {
                 activeArea ? slugify(activeArea.state) : "sdffsdfd",
             ], // Highlight only the hovered state
         }),
-        [activeArea],
+        [activeArea, theme],
     );
 
     const activeBorder: LineLayer = useMemo(
