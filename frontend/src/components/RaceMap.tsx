@@ -67,7 +67,7 @@ const RaceMap = () => {
     const [hoveredState, setHoveredState] = useState<string>("");
 
     // Resize map based on window width
-    const [windowWidth, setWindowWidth] = useState<number>(1024);
+    const [windowWidth, setWindowWidth] = useState<number>(1023);
 
     useEffect(() => {
         // Function to update the window width
