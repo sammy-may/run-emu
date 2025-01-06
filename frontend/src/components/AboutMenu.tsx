@@ -35,14 +35,9 @@ const AboutMenu = () => {
                                         The RunEmu database contains thousands
                                         of races all around the world. Our race
                                         exploration tool makes it easy to find
-                                        the exact one for you. To our knowledge,
-                                        we provide{" "}
-                                        <strong>
-                                            the only race directory that allows
-                                            users to view and filter by typical
-                                            weather conditions
-                                        </strong>{" "}
-                                        for each race.
+                                        the exact one for you. Filter by
+                                        locations, distances, dates, typical
+                                        weather, and more.
                                     </p>
                                 </div>
                             ),
