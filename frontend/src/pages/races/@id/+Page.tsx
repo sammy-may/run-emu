@@ -26,7 +26,7 @@ const Page = () => {
                                 <div>
                                     <FaRegCalendarAlt />
                                 </div>
-                                <div className="text-periwinkleBlue-50 text-xs font-semibold dark:bg-periwinkleBlue-700 bg-periwinkleBlue-300 border dark:border-periwinkleBlue-500 border-periwinkleBlue-500 rounded-full px-2.5 py-0.5">
+                                <div className="dark:text-periwinkleBlue-50 text-periwinkleBlue-900 text-xs font-semibold dark:bg-periwinkleBlue-700 bg-periwinkleBlue-300 border dark:border-periwinkleBlue-500 border-periwinkleBlue-500 rounded-full px-2.5 py-0.5">
                                     {date}
                                 </div>
                             </div>
@@ -37,7 +37,7 @@ const Page = () => {
                                 <div>
                                     <FaLocationDot />
                                 </div>
-                                <div className="text-periwinkleBlue-50 text-xs font-semibold dark:bg-periwinkleBlue-700 bg-periwinkleBlue-300 border dark:border-periwinkleBlue-500 border-periwinkleBlue-500 rounded-full px-2.5 py-0.5">
+                                <div className="dark:text-periwinkleBlue-50 text-periwinkleBlue-900 text-xs font-semibold dark:bg-periwinkleBlue-700 bg-periwinkleBlue-300 border dark:border-periwinkleBlue-500 border-periwinkleBlue-500 rounded-full px-2.5 py-0.5">
                                     {race.location}
                                 </div>
                             </div>

@@ -18,8 +18,7 @@ import Map, {
 } from "react-map-gl/dist/es5/exports-maplibre.js";
 import maplibregl, { StyleSpecification } from "maplibre-gl";
 
-import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
-import { StatesInit } from "../constants/States";
+import { RaceContext } from "../context/RaceFeedContext";
 import { TiDelete } from "react-icons/ti";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdInformationCircleOutline } from "react-icons/io";
@@ -30,6 +29,7 @@ import { loadAllGeoJson } from "../api/boundaries";
 import { FaLocationDot } from "react-icons/fa6";
 import { slugify } from "../utils/url_utils";
 import { useUserSettings } from "../context/UserSettingsContext";
+import { StatesInit } from "../constants/States";
 
 const RaceMap = () => {
     const {
@@ -40,12 +40,10 @@ const RaceMap = () => {
             mapCoords,
             stateMenuOpen,
             activeArea,
-            states,
             locSearch,
         },
         updateSearchResults,
         updateHover,
-        updateStates,
         updateStateHover,
         updateMapCoords,
         openStateMenu,
@@ -171,39 +169,6 @@ const RaceMap = () => {
     const clearHover = useCallback(() => {
         setHoveredState("");
     }, [setHoveredState]);
-
-    const loadGeoJson = async (state: string) => {
-        if (
-            state === "hawaii" ||
-            state.toLowerCase().includes("canada") ||
-            state.toLowerCase().includes("bissau") ||
-            state.toLowerCase().includes("congo") ||
-            state.toLowerCase().includes("ncipe")
-            //!(country === "usa" || country === "canada")
-        ) {
-            return {};
-        }
-        const url = `https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/boundaries/${state}.json`;
-        const resp = await fetch(url);
-        const res = await resp.json();
-        return res;
-    };
-
-    useEffect(() => {
-        const fetchStates = async () => {
-            const updated_states: ActiveArea[] = await Promise.all(
-                StatesInit.map(async (state) => ({
-                    ...state,
-                    boundary: await loadGeoJson(
-                        state.state.toLowerCase().replace(/\s+/g, "_"),
-                    ),
-                    isHovered: false,
-                })),
-            );
-            updateStates([...updated_states]);
-        };
-        fetchStates();
-    }, []);
 
     const Markers = useMemo(
         () =>
@@ -516,7 +481,7 @@ const RaceMap = () => {
                                 className="py-2 text-sm dark:text-gray-200 text-gray-800 overflow-y-auto max-h-72"
                                 aria-labelledby="sortInfo"
                             >
-                                {states.map((state, index) => {
+                                {StatesInit.map((state, index) => {
                                     if (
                                         (!locSearch &&
                                             (state.country === "USA" ||
