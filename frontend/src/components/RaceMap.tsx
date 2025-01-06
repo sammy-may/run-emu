@@ -290,7 +290,7 @@ const RaceMap = () => {
                         state !== hoveredState
                     ) {
                         if (!oneHover) {
-                            clickLink("/location/" + state);
+                            clickLink("/location/" + slugify(state));
                         }
                     }
                 });
