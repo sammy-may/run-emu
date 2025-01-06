@@ -27,9 +27,6 @@ const onBeforePrerenderStart: OnBeforePrerenderStartAsync<Data> = async () : Ret
         ...states.map(async (state) => {
             const url = `/location/${slugify(state.state)}`;
             const races: RaceType[] = await fetchRaces(state, false);
-            if (races.length === 0) {
-                return null;
-            }
             return {
                 url,
                 pageContext: {
