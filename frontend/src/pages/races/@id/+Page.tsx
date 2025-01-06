@@ -16,7 +16,7 @@ const Page = () => {
         race && (
             <div className="px-3">
                 <div className="w-full rounded-lg border dark:bg-gray-800 bg-gray-200 dark:border-gray-700 border-gray-300 px-6 py-6 space-y-1 max-w-screen-lg">
-                    <RaceTitle title={race.name} />
+                    <RaceTitle title={race.name} className="" />
                     <div className="flex flex-col items-start place-content-start md:grid md:grid-cols-2 md:gap-4 md:pr-3">
                         <div className="space-y-1">
                             <h2 className="text-sm font-semibold dark:text-gray-400 text-gray-600 px-3">

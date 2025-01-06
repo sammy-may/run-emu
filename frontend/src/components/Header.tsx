@@ -1,7 +1,7 @@
 import Button from "./Button";
 
-import { FaInfoCircle } from "react-icons/fa";
-import { FaSignInAlt } from "react-icons/fa";
+//import { FaInfoCircle } from "react-icons/fa";
+//import { FaSignInAlt } from "react-icons/fa";
 import { useUserSettings } from "../context/UserSettingsContext";
 import { FiSettings } from "react-icons/fi";
 import { useState } from "react";
@@ -113,7 +113,7 @@ const Header = () => {
                             </div>
                         )}
                     </div>
-                    <div>
+                    {/*                     <div>
                         <Button
                             name={"About"}
                             icon={<FaInfoCircle />}
@@ -126,7 +126,7 @@ const Header = () => {
                             icon={<FaSignInAlt />}
                             href={"/login"}
                         ></Button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

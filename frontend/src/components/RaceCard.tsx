@@ -24,7 +24,7 @@ const RaceCardContent = ({
         >
             <a href={`/races/${race.name_url}`}>
                 {/*                 <Carousel imgs={race.images.data} swiperClass="swiper"/> */}
-                <RaceTitle title={race.name} />
+                <RaceTitle title={race.name} className="whitespace-nowrap" />
                 <DateLocationBar race={race} />
                 <DistanceBar race={race} />
                 <div className="flex items-center mt-2 flex-nowrap overflow-x-auto mr-2">
