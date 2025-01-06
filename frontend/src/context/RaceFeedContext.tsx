@@ -76,9 +76,9 @@ interface RaceAction {
 }
 
 const initMapState: MapCoordsType = {
-    latitude: 40,
+    latitude: 38,
     longitude: -118,
-    zoom: 6,
+    zoom: 4,
 };
 
 const getFromLocal = (name: string) => {
