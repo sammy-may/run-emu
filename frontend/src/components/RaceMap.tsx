@@ -130,10 +130,10 @@ const RaceMap = () => {
         }
 
         const lat =
-            mapRef.current?.getCenter().lat ?? activeArea?.latitude ?? -40;
+            mapRef.current?.getCenter().lat ?? activeArea?.latitude ?? -38;
         const lon =
-            mapRef.current?.getCenter().lng ?? activeArea?.longitude ?? 118;
-        const zoom = mapRef.current?.getZoom() ?? 6;
+            mapRef.current?.getCenter().lng ?? activeArea?.longitude ?? 120;
+        const zoom = mapRef.current?.getZoom() ?? 4;
         if (mapRef.current) {
             updateMapCoords({
                 latitude: lat,
