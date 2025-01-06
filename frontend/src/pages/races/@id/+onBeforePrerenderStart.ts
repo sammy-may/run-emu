@@ -22,8 +22,9 @@ const onBeforePrerenderStart: OnBeforePrerenderStartAsync<Data> =
                             date: new Date(race.date).toLocaleDateString("en-US", {
                                 day: "numeric",
                                 month: "short",
-                             year: "numeric"
-                            })
+                             year: "numeric",
+                            }),
+                            title: "RunEmu | " + race.name,
                         }
                     },
                 };

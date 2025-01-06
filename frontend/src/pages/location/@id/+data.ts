@@ -1,5 +1,4 @@
 import type { PageContext } from "vike/types";
-import { useConfig } from "vike-react/useConfig";
 import { fetchRaces } from "../../../api/races";
 import RaceType from "../../../types/race";
 import { StatesInit } from "../../../constants/States";
@@ -9,13 +8,7 @@ import { capitalize, slugify } from "../../../utils/url_utils";
 export type Data = Awaited<ReturnType<typeof data>>;
 
 export const data = async (pageContext: PageContext) => {
-    const config = useConfig();
-
     const name = pageContext.routeParams.id;
-
-    config({
-        title: "Upcoming Races | " + capitalize(name),
-    });
 
     const location: ActiveArea = StatesInit.filter((state) => {
         return (
@@ -32,6 +25,7 @@ export const data = async (pageContext: PageContext) => {
 
     return { 
         name: name,
-        races: races
+        races: races,
+        title: "RunEmu | Upcoming races in " + capitalize(name),
     }
 };

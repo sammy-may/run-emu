@@ -1,18 +1,11 @@
 import type { PageContext } from "vike/types";
-import { useConfig } from "vike-react/useConfig";
-
 import { fetchByName } from "../../../api/races";
 import RaceType from "../../../types/race";
 
 export type Data = Awaited<ReturnType<typeof data>>;
 
 export const data = async (pageContext: PageContext) => {
-    const config = useConfig();
-
     const name = pageContext.routeParams.id;
-    config({
-        title: "RunEmu | " + name,
-    })
 
     let race: RaceType | null = await fetchByName(name);
     let date: string = "";
@@ -27,6 +20,7 @@ export const data = async (pageContext: PageContext) => {
     return {
         name: name,
         race: race,
-        date: date
+        date: date,
+        title: "RunEmu | " + race === null ? "" : race!.name,
     }
 };
