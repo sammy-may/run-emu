@@ -32,7 +32,7 @@ const onBeforePrerenderStart: OnBeforePrerenderStartAsync<Data> = async () : Ret
                 pageContext: {
                     data: {
                         name : state.state,
-                        title: "RunEmu | Upcoming races in" + capitalize(state.state),
+                        title: "RunEmu | Upcoming races in " + capitalize(state.state),
                         races : races,
                     }
                 },

@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
                 <hr className="my-6 dark:border-gray-700 border-gray-300" />
                 <span className="block text-sm dark:text-gray-400 text-gray-600">
-                    © 2024{" "}
+                    © 2025{" "}
                     <a href="#" className="hover:underline">
                         RunEmu™
                     </a>
