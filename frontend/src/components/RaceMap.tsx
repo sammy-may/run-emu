@@ -444,7 +444,7 @@ const RaceMap = () => {
                                 onFocus={handleFocus}
                                 onBlur={handleBlur}
                                 value={locSearch ?? ""}
-                                className="border px-3 py-2 text-base rounded-lg block w-full dark:bg-gray-700 bg-gray-300 dark:border-gray-600 border-gray-400 dark:placeholder-gray-400 placeholder-gray-600 dark:text-white text-black"
+                                className="border px-3 py-2 text-base rounded-lg block w-full dark:bg-gray-700 bg-gray-300 dark:border-gray-600 border-gray-400 dark:placeholder-gray-400 placeholder-gray-600 dark:text-white text-black hover:border-dustyRose-500 focus:border-dustyRose-500 focus:ring-0 focus:outline-none dark:hover:border-dustyRose-500 dark:focus:border-dustyRose-500"
                                 onChange={updateLocSearch}
                             />
                             {!stateMenuOpen && (
