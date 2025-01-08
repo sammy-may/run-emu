@@ -742,6 +742,10 @@ video {
   z-index: 50;
 }
 
+.z-\[200\] {
+  z-index: 200;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -934,6 +938,10 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-16 {

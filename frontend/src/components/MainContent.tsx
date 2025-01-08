@@ -19,7 +19,7 @@ const MainContent = ({ initResults }: { initResults: RaceType[] }) => {
 
     return (
         <>
-            <div className="flex items-center place-content-start w-full px-3">
+            <div className="flex items-center place-content-start w-full px-3 h-full">
                 {
                     <div className="flex flex-col-reverse items-center place-content-start lg:flex-row lg:items-start w-full">
                         <div className="overflow-x-hidden min-h-[42vh] lg:min-h-[90vh] max-h-[42vh] lg:max-h-[90vh] w-full lg:pl-6 lg:pr-2 sm:px-6 px-2 max-w-screen-xl relative">
@@ -35,7 +35,7 @@ const MainContent = ({ initResults }: { initResults: RaceType[] }) => {
                                     </div>
                                 </div>
                             )}
-                            <div className="overflow-y-auto">
+                            <div className="overflow-y-auto min-h-[42vh] lg:min-h-[90vh] max-h-[42vh] lg:max-h-[90vh]">
                                 <div ref={optionsBoxRef}>
                                     <OptionsBar />
                                 </div>
