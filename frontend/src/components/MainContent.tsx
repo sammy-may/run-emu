@@ -28,7 +28,7 @@ const MainContent = ({ initResults }: { initResults: RaceType[] }) => {
                                 <div className="sticky top-0 left-1/2 z-50 flex items-center place-content-center">
                                     <div
                                         onClick={scrollToTop}
-                                        className="text-center flex items-center place-content-center p-2 m-1 rounded-full z-50 dark:bg-gray-700 bg-gray-300 border border-gray-300 dark:border-gray-700 w-min hover:cursor-pointer text-black dark:text-white hover:border-dustyRose-500 dark:hover:border-dustyRose-500"
+                                        className="text-center flex items-center place-content-center p-2 m-1 rounded-full z-50 dark:bg-gray-700 bg-gray-300 border border-gray-200 dark:border-gray-800 w-min hover:cursor-pointer text-black dark:text-white hover:border-dustyRose-500 dark:hover:border-dustyRose-500"
                                     >
                                         {" "}
                                         <FaAngleUp />{" "}
