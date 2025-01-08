@@ -20,8 +20,8 @@ const DateDropdown = () => {
 
     const [activeButton, setActiveButton] = useState<number>(-1);
     const periods: PeriodType[] = [
-        { name: "This week", duration: 7 },
-        { name: "This month", duration: 30 },
+        { name: "Next week", duration: 7 },
+        { name: "Next month", duration: 30 },
         { name: "Next 3 months", duration: 90 },
     ];
 

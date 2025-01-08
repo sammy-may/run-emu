@@ -24,6 +24,7 @@ const DistanceBadge = ({
                 title === "Ultra"
             )
                 return title;
+            if (title.toLowerCase().includes("hr")) return title;
             if (title.toLowerCase().includes("k")) {
                 if (distUnits === "K") return title;
                 else
