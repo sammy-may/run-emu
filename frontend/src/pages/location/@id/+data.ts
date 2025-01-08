@@ -17,15 +17,17 @@ export const data = async (pageContext: PageContext) => {
     })[0];
 
     let races: RaceType[] = [];
-        if (!name || name === "" || name === "all") {
-            races = await fetchRaces(null, false);
-        } else {
-            races = await fetchRaces(location, true);
-        }
+    if (!name || name === "" || name === "all") {
+        races = await fetchRaces(null, false);
+    } else {
+        races = await fetchRaces(location, true);
+    }
+    const allRaces: RaceType[] = await fetchRaces(null, false);
 
     return { 
         name: name,
         races: races,
+        allRaces: allRaces,
         title: "RunEmu | Upcoming races in " + capitalize(name),
     }
 };

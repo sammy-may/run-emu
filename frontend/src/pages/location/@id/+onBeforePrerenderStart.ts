@@ -20,6 +20,7 @@ const onBeforePrerenderStart: OnBeforePrerenderStartAsync<Data> = async () : Ret
                 data: {
                     name: "all",
                     races: allRaces,
+                    allRaces: allRaces,
                     title: "RunEmu | Upcoming races all over the world!"
                 }
             }
@@ -34,6 +35,7 @@ const onBeforePrerenderStart: OnBeforePrerenderStartAsync<Data> = async () : Ret
                         name : state.state,
                         title: "RunEmu | Upcoming races in " + capitalize(state.state),
                         races : races,
+                        allRaces: allRaces
                     }
                 },
             }; 

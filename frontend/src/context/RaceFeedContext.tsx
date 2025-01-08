@@ -25,6 +25,7 @@ enum RaceActionKind {
     UPDATE_HOVERED_STATE = "UPDATE_HOVERED_STATE",
     UPDATE_LOC_SEARCH = "UPDATE_LOC_SEARCH",
     POPULATE_RACES = "POPULATE_RACES",
+    UPDATE_GLOBAL_RESULTS = "UPDATE_GLOBAL_RESULTS",
     UPDATE_MAP_RESULTS = "UPDATE_MAP_RESULTS",
     UPDATE_SEARCH_RESULTS = "UPDATE_SEARCH_RESULTS",
     UPDATE_MAP_COORDS = "UPDATE_MAP_COORDS",
@@ -113,6 +114,7 @@ const saveToLocal = (name: string, value: any) => {
 
 interface RaceState {
     allResults: RaceType[];
+    globalResults: RaceType[];
     searchResults: RaceType[];
     mapResults: RaceType[];
     sortMethod: string | null;
@@ -142,6 +144,7 @@ interface RaceState {
 
 const initState: RaceState = {
     allResults: [],
+    globalResults: [],
     searchResults: [],
     mapResults: [],
     sortMethod: getFromLocal("sortMethod") ?? "date",
@@ -283,6 +286,11 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
             return {
                 ...state,
                 allResults: action.new_races!,
+            };
+        case RaceActionKind.UPDATE_GLOBAL_RESULTS:
+            return {
+                ...state,
+                globalResults: action.new_races!,
             };
         case RaceActionKind.UPDATE_MAP_RESULTS:
             return {
@@ -741,6 +749,13 @@ const useRaceContext = (initState: RaceState) => {
         });
     }, []);
 
+    const updateGlobalResults = useCallback((races: RaceType[]) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_GLOBAL_RESULTS,
+            new_races: races,
+        });
+    }, []);
+
     const updateSearchResults = useCallback((races: RaceType[]) => {
         dispatch({
             type: RaceActionKind.UPDATE_SEARCH_RESULTS,
@@ -909,7 +924,6 @@ const useRaceContext = (initState: RaceState) => {
 
     const applyFilters = () => {
         if (state.allResults.length >= 1) {
-            console.log("filtering", state.dateMax);
             const newSearch = filterRaces(state.allResults);
             updateSearchResults(newSearch);
         }
@@ -968,12 +982,12 @@ const useRaceContext = (initState: RaceState) => {
         const updated_states: ActiveArea[] = StatesInit.map((reg) => ({
             ...reg,
             isHovered: false,
-            n_races: state.allResults.filter(
+            n_races: state.globalResults.filter(
                 (race) => race.state.toLowerCase() === reg.state.toLowerCase(),
             ).length,
         })).sort((a, b) => sortByRaces(a, b));
         updateStates(updated_states);
-    }, [state.allResults]);
+    }, [state.globalResults]);
 
     return {
         state,
@@ -996,6 +1010,7 @@ const useRaceContext = (initState: RaceState) => {
         updateDateMax,
         clearDates,
         updateMapResults,
+        updateGlobalResults,
         updateSearchResults,
         updateAllResults,
         updateMapCoords,
@@ -1046,6 +1061,7 @@ const initContextState: UseRaceContextType = {
     updateSortMethod: () => {},
     updateLocSearch: () => {},
     updateMapResults: () => {},
+    updateGlobalResults: () => {},
     updateSearchResults: () => {},
     updateAllResults: () => {},
     updateMapCoords: () => {},

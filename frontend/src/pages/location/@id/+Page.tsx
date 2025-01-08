@@ -11,10 +11,14 @@ import MainContent from "../../../components/MainContent.tsx";
 import { slugify } from "../../../utils/url_utils.ts";
 
 const LocPage = () => {
-    const { updateAllResults, updateActiveArea, updateLocSearch } =
-        useContext(RaceContext);
+    const {
+        updateAllResults,
+        updateGlobalResults,
+        updateActiveArea,
+        updateLocSearch,
+    } = useContext(RaceContext);
 
-    const { name, races } = useData<Data>();
+    const { name, races, allRaces } = useData<Data>();
 
     const fetch = async () => {
         const location: ActiveArea = StatesInit.filter((state) => {
@@ -25,6 +29,7 @@ const LocPage = () => {
 
         updateLocSearch("");
         updateAllResults(races);
+        updateGlobalResults(allRaces);
 
         updateActiveArea(location ?? null);
     };

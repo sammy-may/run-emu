@@ -5,12 +5,14 @@ import { useData } from "vike-react/useData";
 import MainContent from "../../components/MainContent.tsx";
 
 const Page = () => {
-    const { updateAllResults, updateActiveArea } = useContext(RaceContext);
+    const { updateAllResults, updateGlobalResults, updateActiveArea } =
+        useContext(RaceContext);
 
     const { name, races } = useData<Data>();
 
     const fetch = async () => {
         updateAllResults(races);
+        updateGlobalResults(races);
         updateActiveArea(null);
     };
 
