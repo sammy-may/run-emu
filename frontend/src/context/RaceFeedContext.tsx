@@ -8,6 +8,7 @@ import {
 } from "react";
 import RaceType from "../types/race";
 import { StatesInit } from "../constants/States";
+import { fetchRaces } from "../api/races";
 
 enum RaceActionKind {
     UPDATE_DISTANCE_MIN = "UPDATE_DISTANCE_MIN",
@@ -976,6 +977,14 @@ const useRaceContext = (initState: RaceState) => {
             return 1;
         }
         return 0;
+    }, []);
+
+    useEffect(() => {
+        const loadGlobalResults = async () => {
+            const data = await fetchRaces(null, false);
+            updateGlobalResults(data);
+        };
+        loadGlobalResults();
     }, []);
 
     useEffect(() => {

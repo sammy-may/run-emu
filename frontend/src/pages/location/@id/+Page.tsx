@@ -9,15 +9,10 @@ import type { Data } from "./+data.ts";
 
 import MainContent from "../../../components/MainContent.tsx";
 import { slugify } from "../../../utils/url_utils.ts";
-import { fetchRaces } from "../../../api/races.ts";
 
 const LocPage = () => {
-    const {
-        updateAllResults,
-        updateGlobalResults,
-        updateActiveArea,
-        updateLocSearch,
-    } = useContext(RaceContext);
+    const { updateAllResults, updateActiveArea, updateLocSearch } =
+        useContext(RaceContext);
 
     const { name, races } = useData<Data>();
 
@@ -30,9 +25,6 @@ const LocPage = () => {
 
         updateLocSearch("");
         updateAllResults(races);
-
-        const allRaces = await fetchRaces(null, false);
-        updateGlobalResults(allRaces);
 
         updateActiveArea(location ?? null);
     };
