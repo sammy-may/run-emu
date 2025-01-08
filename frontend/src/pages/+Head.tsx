@@ -1,11 +1,10 @@
 // https://vike.dev/Head
-
-import logoUrl from "/images/logos/emu_wb.svg";
+import runemu_logo from "../../public/images/logos/emu_color_crop.webp.png";
 
 export default function HeadDefault() {
     return (
         <>
-            <link rel="icon" href={logoUrl} />
+            <link rel="icon" href={runemu_logo} />
         </>
     );
 }

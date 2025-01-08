@@ -31,9 +31,10 @@ const outputPath = path.join(__dirname, '/public/sitemap.xml');
 try {
     const xmls: string[] = [];
     xmls.push(sitemapContent({path:"", freq:"daily", priority:"1.0"}));
-    xmls.push(sitemapContent({path:"/about", freq:"daily", priority:"0.9"}));
-    xmls.push(sitemapContent({path:"/privacy", freq:"daily", priority:"0.1"}));
+    xmls.push(sitemapContent({path:"/about", freq:"monthly", priority:"0.9"}));
+    xmls.push(sitemapContent({path:"/privacy", freq:"monthly", priority:"0.1"}));
     xmls.push(sitemapContent({path:"/login", freq:"daily", priority:"0.9"}));
+    xmls.push(sitemapContent({path:"/contact", freq:"monthly", priority:"0.9"}));
 
 
     StatesInit.forEach((state) => {
