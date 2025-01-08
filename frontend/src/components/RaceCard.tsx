@@ -92,6 +92,12 @@ const RaceCard = ({ index, race }: { index: number; race: RaceType }) => {
             onMouseLeave={() => {
                 updateHover(index, false, false);
             }}
+            onTouchStart={() => {
+                updateHover(index, true, false);
+            }}
+            onTouchEnd={() => {
+                updateHover(index, false, false);
+            }}
         >
             {race.isHovered && (
                 <RaceCardContent
