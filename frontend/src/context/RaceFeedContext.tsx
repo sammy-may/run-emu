@@ -973,7 +973,7 @@ const useRaceContext = (initState: RaceState) => {
             ).length,
         })).sort((a, b) => sortByRaces(a, b));
         updateStates(updated_states);
-    });
+    }, []);
 
     return {
         state,
