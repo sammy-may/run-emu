@@ -227,7 +227,6 @@ const RaceMap = () => {
                     !(state === "usa" || state === "canada") &&
                     state !== hoveredState
                 ) {
-                    console.log("hovering", state);
                     setHoveredState(state);
                 }
             });
@@ -368,21 +367,48 @@ const RaceMap = () => {
         [],
     );
 
+    /*     const Sources1 = useMemo(() => {
+        return (
+            <Source
+                id="state-boundaries-highlight"
+                type="geojson"
+                data={geoJsonData}
+            >
+                <Layer {...highlightLayer} />
+                <Layer {...highlightBorder} />
+            </Source>
+        );
+    }, [highlightLayer, highlightBorder]);
+
+    const Sources2 = useMemo(() => {
+        return (
+            <Source id="state-boundaries" type="geojson" data={geoJsonData}>
+                <Layer {...baseLayer} />
+                <Layer {...baseBorder} />
+                <Layer {...activeLayer} />
+                <Layer {...activeBorder} />
+            </Source>
+        );
+    }, [baseLayer, baseBorder, activeLayer, activeBorder]); */
+
     const version: 8 = 8;
-    const mapStyle: StyleSpecification = {
-        version: version,
-        glyphs: "https://cdn.protomaps.com/fonts/pbf/{fontstack}/{range}.pbf",
-        sprite: "https://protomaps.github.io/basemaps-assets/sprites/v4/dark",
-        sources: {
-            protomaps: {
-                attribution:
-                    '<a href="https://github.com/protomaps/basemaps">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>',
-                type: "vector",
-                url: "pmtiles://https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/map-tiles/my_area.pmtiles?t=2024-12-31T19%3A58%3A20.088Z",
+    const mapStyle: StyleSpecification = useMemo(
+        () => ({
+            version: version,
+            glyphs: "https://cdn.protomaps.com/fonts/pbf/{fontstack}/{range}.pbf",
+            sprite: "https://protomaps.github.io/basemaps-assets/sprites/v4/dark",
+            sources: {
+                protomaps: {
+                    attribution:
+                        '<a href="https://github.com/protomaps/basemaps">Protomaps</a> © <a href="https://openstreetmap.org">OpenStreetMap</a>',
+                    type: "vector",
+                    url: "pmtiles://https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/map-tiles/my_area.pmtiles?t=2024-12-31T19%3A58%3A20.088Z",
+                },
             },
-        },
-        layers: layers("protomaps", theme, "en"),
-    };
+            layers: layers("protomaps", theme, "en"),
+        }),
+        [theme, version],
+    );
 
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -640,19 +666,23 @@ const RaceMap = () => {
                     onLoad={flyAndFilter}
                 >
                     {Markers}
+                    {/*                     {Sources1}
+                    {Sources2} */}
                     {geoJsonData && (
-                        <Source
-                            id="state-boundaries"
-                            type="geojson"
-                            data={geoJsonData}
-                        >
-                            <Layer {...baseLayer} />
-                            <Layer {...baseBorder} />
-                            <Layer {...highlightLayer} />
-                            <Layer {...highlightBorder} />
-                            <Layer {...activeLayer} />
-                            <Layer {...activeBorder} />
-                        </Source>
+                        <div key="source-geojson">
+                            <Source
+                                id="state-boundaries"
+                                type="geojson"
+                                data={geoJsonData}
+                            >
+                                <Layer {...baseLayer} />
+                                <Layer {...baseBorder} />
+                                <Layer {...highlightLayer} />
+                                <Layer {...highlightBorder} />
+                                <Layer {...activeLayer} />
+                                <Layer {...activeBorder} />
+                            </Source>
+                        </div>
                     )}
                 </Map>
             </div>
