@@ -1,19 +1,27 @@
-import { useContext, useEffect, useState } from "react";
+import {
+    ChangeEvent,
+    useCallback,
+    useContext,
+    useEffect,
+    useState,
+} from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 import { PiPathBold } from "react-icons/pi";
 import DistanceBadge from "./DistanceBadge";
 import ActionButton from "./ActionButton";
+import { useUserSettings } from "../context/UserSettingsContext";
 
 const DistanceDropdown = () => {
     const {
         state: { distanceMin, distanceMax, distanceMenuOpen },
-        updateDistanceMin,
-        updateDistanceMax,
         setDistance,
         unsetDistance,
         toggleDistanceMenu,
         closeDistanceMenu,
     } = useContext(RaceContext);
+
+    const { distUnits } = useUserSettings();
+    const units: string = distUnits === "M" ? "Mi" : "Km";
 
     const [activeDistance, setActiveDistance] = useState<number>(-1);
 
@@ -37,6 +45,36 @@ const DistanceDropdown = () => {
         /*         toggleDistanceMenu(); */
     };
 
+    const setDistanceMin = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            const val = evt.target.value ? Number(evt.target.value) : null;
+            if (val === null) {
+                setDistance(val, distanceMax === null ? null : distanceMax);
+                return;
+            }
+            setDistance(
+                distUnits === "M" ? val : val * 0.621,
+                distanceMax === null ? null : distanceMax,
+            );
+        },
+        [distUnits, distanceMin, distanceMax],
+    );
+
+    const setDistanceMax = useCallback(
+        (evt: ChangeEvent<HTMLInputElement>) => {
+            const val = evt.target.value ? Number(evt.target.value) : null;
+            if (val === null) {
+                setDistance(distanceMin === null ? null : distanceMin, null);
+                return;
+            }
+            setDistance(
+                distanceMin === null ? null : distanceMin,
+                distUnits === "M" ? val : val * 0.621,
+            );
+        },
+        [distUnits, distanceMin, distanceMax],
+    );
+
     useEffect(() => {
         if (distanceMin && distanceMax) {
             if (distanceMin === distanceMax) {
@@ -48,7 +86,7 @@ const DistanceDropdown = () => {
                 setActiveDistance(4);
             }
         }
-    }, []);
+    }, [distanceMin, distanceMax]);
 
     return (
         <div className="relative pr-2 py-1">
@@ -136,7 +174,7 @@ const DistanceDropdown = () => {
                                         htmlFor="min_distance"
                                         className="dark:text-gray-200 text-gray-800 font-medium text-sm m-1 block text-left"
                                     >
-                                        Min Distance (mi)
+                                        Min Distance ({units})
                                     </label>
                                     <input
                                         type="text"
@@ -148,9 +186,16 @@ const DistanceDropdown = () => {
                                         value={
                                             distanceMin === null
                                                 ? ""
-                                                : distanceMin
+                                                : distUnits === "M"
+                                                  ? Math.round(
+                                                        distanceMin * 10,
+                                                    ) / 10
+                                                  : Math.round(
+                                                        (distanceMin * 10) /
+                                                            0.621,
+                                                    ) / 10
                                         }
-                                        onChange={updateDistanceMin}
+                                        onChange={setDistanceMin}
                                     />
                                     <span className="pl-12">to</span>
                                 </div>
@@ -159,7 +204,7 @@ const DistanceDropdown = () => {
                                         htmlFor="max_distance"
                                         className="dark:text-gray-200 text-gray-800 font-medium text-sm m-1 block text-left"
                                     >
-                                        Max Distance (mi)
+                                        Max Distance ({units})
                                     </label>
                                     <input
                                         type="text"
@@ -171,9 +216,16 @@ const DistanceDropdown = () => {
                                         value={
                                             distanceMax === null
                                                 ? ""
-                                                : distanceMax
+                                                : distUnits === "M"
+                                                  ? Math.round(
+                                                        distanceMax * 10,
+                                                    ) / 10
+                                                  : Math.round(
+                                                        (distanceMax * 10) /
+                                                            0.621,
+                                                    ) / 10
                                         }
-                                        onChange={updateDistanceMax}
+                                        onChange={setDistanceMax}
                                     />
                                 </div>
                             </form>

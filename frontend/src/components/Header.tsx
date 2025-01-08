@@ -8,7 +8,14 @@ import { useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const Header = () => {
-    const { theme, degrees, toggleTheme, toggleDegrees } = useUserSettings();
+    const {
+        theme,
+        degrees,
+        distUnits,
+        toggleTheme,
+        toggleDegrees,
+        toggleDistUnits,
+    } = useUserSettings();
     const [settingsMenuOpen, setSettingsMenuOpen] = useState<boolean>(false);
 
     const toggleSettingsMenu = () => {
@@ -136,6 +143,34 @@ const Header = () => {
                                         className={` text-black text-base font-semibold w-6 ${degrees === "C" ? "dark:text-gray-500 text-gray-500" : "dark:text-white text-black"}`}
                                     >
                                         °F
+                                    </div>
+                                </div>
+                                <div className="py-2 px-3 flex items-center space-x-2 text-xl place-content-center">
+                                    <div
+                                        className={` text-base font-semibold w-6 ${distUnits === "M" ? "dark:text-gray-500 text-gray-500" : "dark:text-white text-black"}`}
+                                    >
+                                        Km
+                                    </div>
+                                    <div
+                                        onClick={toggleDistUnits}
+                                        className={`w-16 h-8 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ${
+                                            distUnits === "M"
+                                                ? "bg-dustyRose-300"
+                                                : "bg-dustyRose-700"
+                                        }`}
+                                    >
+                                        <div
+                                            className={`w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
+                                                distUnits === "M"
+                                                    ? "transform translate-x-8"
+                                                    : ""
+                                            }`}
+                                        ></div>
+                                    </div>
+                                    <div
+                                        className={` text-black text-base font-semibold w-6 ${distUnits === "K" ? "dark:text-gray-500 text-gray-500" : "dark:text-white text-black"}`}
+                                    >
+                                        Mi
                                     </div>
                                 </div>
                             </div>

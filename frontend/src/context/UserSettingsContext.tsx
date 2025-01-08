@@ -10,8 +10,10 @@ import {
 interface UserSettingsContextType {
     theme: "light" | "dark";
     degrees: "C" | "F";
+    distUnits: "K" | "M";
     toggleTheme: () => void;
     toggleDegrees: () => void;
+    toggleDistUnits: () => void;
 }
 
 // Create the context
@@ -38,6 +40,7 @@ export const UserSettingsProvider = ({
 }: ChildrenType): ReactElement => {
     const [theme, setTheme] = useState<"light" | "dark">("dark");
     const [degrees, setDegrees] = useState<"C" | "F">("F");
+    const [distUnits, setDistUnits] = useState<"K" | "M">("M");
 
     // Load the saved theme from localStorage
     useEffect(() => {
@@ -62,6 +65,14 @@ export const UserSettingsProvider = ({
         if (savedDegrees) {
             setDegrees(savedDegrees);
         }
+
+        const savedDistUnits = localStorage.getItem("distUnits") as
+            | "K"
+            | "M"
+            | null;
+        if (savedDistUnits) {
+            setDistUnits(savedDistUnits);
+        }
     }, []);
 
     useEffect(() => {
@@ -85,15 +96,29 @@ export const UserSettingsProvider = ({
         localStorage.setItem("degrees", degrees);
     }, [degrees]);
 
+    useEffect(() => {
+        localStorage.setItem("distUnits", distUnits);
+    }, [distUnits]);
+
     const toggleTheme = () =>
         setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
     const toggleDegrees = () =>
         setDegrees((prev) => (prev === "F" ? "C" : "F"));
 
+    const toggleDistUnits = () =>
+        setDistUnits((prev) => (prev === "M" ? "K" : "M"));
+
     return (
         <UserSettingsContext.Provider
-            value={{ theme, degrees, toggleTheme, toggleDegrees }}
+            value={{
+                theme,
+                degrees,
+                distUnits,
+                toggleTheme,
+                toggleDegrees,
+                toggleDistUnits,
+            }}
         >
             {children}
         </UserSettingsContext.Provider>
