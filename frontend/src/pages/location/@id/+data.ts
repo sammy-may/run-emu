@@ -22,12 +22,10 @@ export const data = async (pageContext: PageContext) => {
     } else {
         races = await fetchRaces(location, true);
     }
-    const allRaces: RaceType[] = await fetchRaces(null, false);
 
     return { 
         name: name,
         races: races,
-        allRaces: allRaces,
         title: "RunEmu | Upcoming races in " + capitalize(name),
     }
 };

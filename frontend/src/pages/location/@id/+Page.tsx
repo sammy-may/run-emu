@@ -9,6 +9,7 @@ import type { Data } from "./+data.ts";
 
 import MainContent from "../../../components/MainContent.tsx";
 import { slugify } from "../../../utils/url_utils.ts";
+import { fetchRaces } from "../../../api/races.ts";
 
 const LocPage = () => {
     const {
@@ -18,7 +19,7 @@ const LocPage = () => {
         updateLocSearch,
     } = useContext(RaceContext);
 
-    const { name, races, allRaces } = useData<Data>();
+    const { name, races } = useData<Data>();
 
     const fetch = async () => {
         const location: ActiveArea = StatesInit.filter((state) => {
@@ -29,6 +30,8 @@ const LocPage = () => {
 
         updateLocSearch("");
         updateAllResults(races);
+
+        const allRaces = await fetchRaces(null, false);
         updateGlobalResults(allRaces);
 
         updateActiveArea(location ?? null);
