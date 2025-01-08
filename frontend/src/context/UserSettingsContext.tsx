@@ -9,7 +9,9 @@ import {
 // Define the shape of the theme context
 interface UserSettingsContextType {
     theme: "light" | "dark";
+    degrees: "C" | "F";
     toggleTheme: () => void;
+    toggleDegrees: () => void;
 }
 
 // Create the context
@@ -35,6 +37,7 @@ export const UserSettingsProvider = ({
     children,
 }: ChildrenType): ReactElement => {
     const [theme, setTheme] = useState<"light" | "dark">("dark");
+    const [degrees, setDegrees] = useState<"C" | "F">("F");
 
     // Load the saved theme from localStorage
     useEffect(() => {
@@ -50,6 +53,14 @@ export const UserSettingsProvider = ({
                 "(prefers-color-scheme: dark)",
             ).matches;
             setTheme(prefersDark ? "dark" : "light");
+        }
+
+        const savedDegrees = localStorage.getItem("degrees") as
+            | "C"
+            | "F"
+            | null;
+        if (savedDegrees) {
+            setDegrees(savedDegrees);
         }
     }, []);
 
@@ -70,11 +81,20 @@ export const UserSettingsProvider = ({
         localStorage.setItem("theme", theme);
     }, [theme]);
 
+    useEffect(() => {
+        localStorage.setItem("degrees", degrees);
+    }, [degrees]);
+
     const toggleTheme = () =>
         setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
+    const toggleDegrees = () =>
+        setDegrees((prev) => (prev === "F" ? "C" : "F"));
+
     return (
-        <UserSettingsContext.Provider value={{ theme, toggleTheme }}>
+        <UserSettingsContext.Provider
+            value={{ theme, degrees, toggleTheme, toggleDegrees }}
+        >
             {children}
         </UserSettingsContext.Provider>
     );

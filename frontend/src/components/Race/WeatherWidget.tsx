@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import RaceType from "../../types/race";
 import {
     FaTemperatureArrowUp,
@@ -6,8 +6,23 @@ import {
     FaCloudShowersWater,
 } from "react-icons/fa6";
 import { IoMdInformationCircleOutline } from "react-icons/io";
+import { useUserSettings } from "../../context/UserSettingsContext";
 
 const WeatherWidget = ({ race }: { race: RaceType }) => {
+    const { degrees } = useUserSettings();
+
+    const convertTemp = useCallback(
+        (temp: number) => {
+            if (degrees === "F") {
+                return temp;
+            } else if (degrees === "C") {
+                return ((temp - 32) * 5) / 9;
+            }
+            return temp;
+        },
+        [degrees],
+    );
+
     const [isInfoHovered, setIsInfoHovered] = useState(false);
     const handleMouseOver = () => {
         setIsInfoHovered(true);
@@ -105,14 +120,17 @@ const WeatherWidget = ({ race }: { race: RaceType }) => {
                     {race.location}
                 </span>{" "}
                 on{" "}
-                <span className="font-medium dark:text-gray-400 text-gray-600">{day_month}</span>:
+                <span className="font-medium dark:text-gray-400 text-gray-600">
+                    {day_month}
+                </span>
+                :
             </p>
             <div className="flex items-center space-x-3 px-8 dark:text-gray-400 text-gray-600">
                 <div>
                     <FaTemperatureArrowUp />
                 </div>
                 <div className="font-medium  dark:text-gray-200 text-gray-800">
-                    {Math.round(race.typical_high ?? 0)}
+                    {Math.round(convertTemp(race.typical_high ?? 0))}
                     {`\u00B0`}
                 </div>
             </div>
@@ -121,7 +139,7 @@ const WeatherWidget = ({ race }: { race: RaceType }) => {
                     <FaTemperatureArrowDown />
                 </div>
                 <div className="font-medium  dark:text-gray-200 text-gray-800">
-                    {Math.round(race.typical_low ?? 0)}
+                    {Math.round(convertTemp(race.typical_low ?? 0))}
                     {`\u00B0`}
                 </div>
             </div>

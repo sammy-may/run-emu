@@ -8,7 +8,7 @@ import { useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const Header = () => {
-    const { theme, toggleTheme } = useUserSettings();
+    const { theme, degrees, toggleTheme, toggleDegrees } = useUserSettings();
     const [settingsMenuOpen, setSettingsMenuOpen] = useState<boolean>(false);
 
     const toggleSettingsMenu = () => {
@@ -85,17 +85,17 @@ const Header = () => {
                             </div>
                         </button>
                         {settingsMenuOpen && (
-                            <div className="absolute top-8 sm:top-11 right-0 rounded-lg z-50 flex flex-col space-y-2">
-                                <div className="py-2 px-3 flex items-center space-x-2 text-xl place-content-center dark:bg-gray-800 bg-gray-200 rounded-lg">
-                                    <div className="dark:text-white text-gray-400">
+                            <div className="absolute top-8 sm:top-11 right-0 rounded-lg z-[100] flex flex-col dark:bg-gray-800 bg-gray-200 dark:divide-gray-700 divide-y-2 dark:border-gray-700 border border-gray-300 divide-gray-300">
+                                <div className="py-2 px-3 flex items-center space-x-2 text-xl place-content-center">
+                                    <div className="dark:text-white text-gray-400 w-6">
                                         <MdDarkMode />
                                     </div>
                                     <div
                                         onClick={toggleTheme}
                                         className={`w-16 h-8 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ${
                                             theme === "light"
-                                                ? "bg-blue-500"
-                                                : "bg-blue-500"
+                                                ? "bg-dustyRose-300"
+                                                : "bg-dustyRose-700"
                                         }`}
                                     >
                                         <div
@@ -106,8 +106,36 @@ const Header = () => {
                                             }`}
                                         ></div>
                                     </div>
-                                    <div className=" dark:text-gray-500 text-black">
+                                    <div className=" dark:text-gray-500 text-black w-6">
                                         <MdLightMode />
+                                    </div>
+                                </div>
+                                <div className="py-2 px-3 flex items-center space-x-2 text-xl place-content-center">
+                                    <div
+                                        className={` text-base font-semibold w-6 ${degrees === "F" ? "dark:text-gray-500 text-gray-500" : "dark:text-white text-black"}`}
+                                    >
+                                        °C
+                                    </div>
+                                    <div
+                                        onClick={toggleDegrees}
+                                        className={`w-16 h-8 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ${
+                                            degrees === "F"
+                                                ? "bg-dustyRose-300"
+                                                : "bg-dustyRose-700"
+                                        }`}
+                                    >
+                                        <div
+                                            className={`w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
+                                                degrees === "F"
+                                                    ? "transform translate-x-8"
+                                                    : ""
+                                            }`}
+                                        ></div>
+                                    </div>
+                                    <div
+                                        className={` text-black text-base font-semibold w-6 ${degrees === "C" ? "dark:text-gray-500 text-gray-500" : "dark:text-white text-black"}`}
+                                    >
+                                        °F
                                     </div>
                                 </div>
                             </div>

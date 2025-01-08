@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useCallback, useContext } from "react";
 
 import RaceType from "../types/race";
 import { RaceContext } from "../context/RaceFeedContext";
@@ -10,6 +10,7 @@ import {
     FaTemperatureArrowDown,
     FaCloudShowersWater,
 } from "react-icons/fa6";
+import { useUserSettings } from "../context/UserSettingsContext";
 
 const RaceCardContent = ({
     race,
@@ -18,6 +19,20 @@ const RaceCardContent = ({
     race: RaceType;
     className: string;
 }) => {
+    const { degrees } = useUserSettings();
+
+    const convertTemp = useCallback(
+        (temp: number) => {
+            if (degrees === "F") {
+                return temp;
+            } else if (degrees === "C") {
+                return ((temp - 32) * 5) / 9;
+            }
+            return temp;
+        },
+        [degrees],
+    );
+
     return (
         <div
             className={`rounded-lg mb-1 pb-3 shadow border hover:dark:border-dustyRose-600 border-dustyRose-400 hover:dark:bg-gray-700 bg-gray-200 ${className}`}
@@ -36,7 +51,7 @@ const RaceCardContent = ({
                             <FaTemperatureArrowUp />
                         </div>
                         <div className="font-medium  dark:text-gray-200 text-gray-800">
-                            {Math.round(race.typical_high ?? 0)}
+                            {Math.round(convertTemp(race.typical_high ?? 0))}
                             {`\u00B0`}
                         </div>
                     </div>
@@ -45,7 +60,7 @@ const RaceCardContent = ({
                             <FaTemperatureArrowDown />
                         </div>
                         <div className="font-medium  dark:text-gray-200 text-gray-800">
-                            {Math.round(race.typical_low ?? 0)}
+                            {Math.round(convertTemp(race.typical_low ?? 0))}
                             {`\u00B0`}
                         </div>
                     </div>
