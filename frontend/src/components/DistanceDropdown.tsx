@@ -107,6 +107,9 @@ const DistanceDropdown = () => {
                                         title={dist.name}
                                         active={activeDistance === index}
                                         clickable={true}
+                                        className={
+                                            "dark:hover:bg-mintGreen-600 dark:hover:border-mintGreen-400 hover:bg-mintGreen-400 hover:border-mintGreen-600"
+                                        }
                                     />
                                 </button>
                             ))}
