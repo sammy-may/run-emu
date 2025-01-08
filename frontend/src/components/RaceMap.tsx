@@ -669,20 +669,18 @@ const RaceMap = () => {
                     {/*                     {Sources1}
                     {Sources2} */}
                     {geoJsonData && (
-                        <div key="source-geojson">
-                            <Source
-                                id="state-boundaries"
-                                type="geojson"
-                                data={geoJsonData}
-                            >
-                                <Layer {...baseLayer} />
-                                <Layer {...baseBorder} />
-                                <Layer {...highlightLayer} />
-                                <Layer {...highlightBorder} />
-                                <Layer {...activeLayer} />
-                                <Layer {...activeBorder} />
-                            </Source>
-                        </div>
+                        <Source
+                            id="state-boundaries"
+                            type="geojson"
+                            data={geoJsonData}
+                        >
+                            <Layer {...baseLayer} />
+                            <Layer {...baseBorder} />
+                            <Layer {...highlightLayer} />
+                            <Layer {...highlightBorder} />
+                            <Layer {...activeLayer} />
+                            <Layer {...activeBorder} />
+                        </Source>
                     )}
                 </Map>
             </div>
