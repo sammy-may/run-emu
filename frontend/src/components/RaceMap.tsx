@@ -149,6 +149,7 @@ const RaceMap = () => {
 
     const zoomOut = useCallback(() => {
         if (mapRef.current) {
+            setIsDismissed(true);
             clickLink("/location/all");
             mapRef.current.flyTo({
                 center: [0, 0],
@@ -528,17 +529,17 @@ const RaceMap = () => {
                             !isDismissed && (
                                 <div className="flex items-center place-content-end z-50 dark:bg-gray-700 bg-gray-300 p-2 rounded-xl">
                                     <div className="relative flex flex-wrap z-50 place-content-center w-min">
-                                        <div className="relative flex items-center space-x-2 z-50 border dark:bg-gray-900 dark:border-gray-700 bg-gray-100 border-gray-200 px-3 py-1.5 rounded-full text-sm text-gray-700 dark:text-gray-200 ">
-                                            <div className="text-lg my-1">
+                                        <div className="relative flex items-center space-x-1 z-50 border dark:bg-gray-900 dark:border-gray-700 bg-gray-100 border-gray-200 px-2 py-0.5 rounded-full text-sm text-gray-700 dark:text-gray-200 ">
+                                            <div className="text-lg">
                                                 {" "}
                                                 <IoMdInformationCircleOutline />{" "}
                                             </div>
-                                            <div className="font-semibold my-1 whitespace-nowrap">
+                                            <div className="font-semibold whitespace-nowrap">
                                                 {" "}
                                                 No races within map boundary.{" "}
                                             </div>
                                         </div>
-                                        <div className="relative flex items-center space-x-2 my-2">
+                                        <div className="relative flex items-center space-x-2 mt-2 mb-1">
                                             <div
                                                 onClick={zoomOut}
                                                 className="space-x-2 flex items-center rounded-lg px-2 py-0.5 dark:text-dustyRose-50 text-dustyRose-900 dark:border-dustyRose-500 border-dustyRose-500 dark:bg-dustyRose-700 bg-dustyRose-300 text-sm font-semibold hover:dark:bg-dustyRose-600 hover:bg-dustyRose-400 hover:dark:border-dustyRose-400 hover:border-dustyRose-600 hover:cursor-pointer"

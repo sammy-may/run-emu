@@ -72,7 +72,7 @@ const DateDropdown = () => {
                         <div className="pt-2 text-sm font-light dark:text-gray-300 text-gray-700">
                             Select a period:
                         </div>
-                        <div className="flex flex-wrap items-center place-content-center rounded-full pb-1 space-x-2">
+                        <div className="flex flex-wrap items-center place-content-center rounded-full">
                             {periods.map((period, index) => (
                                 <button
                                     onClick={() => {
@@ -80,8 +80,8 @@ const DateDropdown = () => {
                                     }}
                                     className={
                                         index === activeButton
-                                            ? `text-xs font-semibold px-2 py-0.5 rounded-full dark:bg-periwinkleBlue-700 bg-periwinkleBlue-300 dark:text-periwinkleBlue-50 text-periwinkleBlue-900 border dark:border-periwinkleBlue-500 border-periwinkleBlue-500 dark:hover:bg-periwinkleBlue-600 dark:hover:border-periwinkleBlue-400 hover:bg-periwinkleBlue-400 hover:border-periwinkleBlue-600`
-                                            : `text-xs font-semibold px-2 py-0.5 rounded-full dark:bg-gray-700 bg-gray-300 dark:text-gray-50 text-gray-900 border dark:border-gray-500 border-gray-500 dark:hover:bg-periwinkleBlue-600 dark:hover:border-periwinkleBlue-400 hover:bg-periwinkleBlue-400 hover:border-periwinkleBlue-600`
+                                            ? `text-xs font-semibold px-2 py-0.5 m-1 rounded-full dark:bg-periwinkleBlue-700 bg-periwinkleBlue-300 dark:text-periwinkleBlue-50 text-periwinkleBlue-900 border dark:border-periwinkleBlue-500 border-periwinkleBlue-500 dark:hover:bg-periwinkleBlue-600 dark:hover:border-periwinkleBlue-400 hover:bg-periwinkleBlue-400 hover:border-periwinkleBlue-600`
+                                            : `text-xs font-semibold px-2 py-0.5 m-1 rounded-full dark:bg-gray-700 bg-gray-300 dark:text-gray-50 text-gray-900 border dark:border-gray-500 border-gray-500 dark:hover:bg-periwinkleBlue-600 dark:hover:border-periwinkleBlue-400 hover:bg-periwinkleBlue-400 hover:border-periwinkleBlue-600`
                                     }
                                     key={"period_button" + index}
                                 >
