@@ -69,7 +69,7 @@ const DistanceDropdown = () => {
                 />
 
                 {distanceMenuOpen && (
-                    <div className="absolute z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 mt-0.5 space-y-2 max-w-72 min-w-72 sm:max-w-96 sm:min-w-96">
+                    <div className="absolute z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 space-y-2 max-w-72 min-w-72 sm:max-w-96 sm:min-w-96">
                         <div className="flex items-start place-content-between">
                             <div className="text-sm font-light dark:text-gray-300 text-gray-700">
                                 Select a distance:

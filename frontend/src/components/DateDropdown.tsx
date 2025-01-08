@@ -1,7 +1,12 @@
-import { useContext } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { RaceContext } from "../context/RaceFeedContext";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import ActionButton from "./ActionButton";
+
+interface PeriodType {
+    name: string;
+    duration: number;
+}
 
 const DateDropdown = () => {
     const {
@@ -12,6 +17,38 @@ const DateDropdown = () => {
         closeDateMenu,
         clearDates,
     } = useContext(RaceContext);
+
+    const [activeButton, setActiveButton] = useState<number>(-1);
+    const periods: PeriodType[] = [
+        { name: "This week", duration: 7 },
+        { name: "This month", duration: 30 },
+        { name: "Next 3 months", duration: 90 },
+    ];
+
+    useEffect(() => {
+        if (dateMin === null || dateMax === null) {
+            setActiveButton(-1);
+            return;
+        }
+        const timeDiff = dateMax.getTime() - dateMin.getTime();
+        const dayDiff = Math.round(timeDiff / (1000 * 60 * 60 * 24));
+        periods.forEach((period, index) => {
+            if (dayDiff === period.duration) {
+                setActiveButton(index);
+                return;
+            }
+        });
+    }, [dateMin, dateMax]);
+
+    const handleClick = useCallback((period: PeriodType, index: number) => {
+        const startDate = new Date();
+        const endDate = new Date();
+        endDate.setDate(startDate.getDate() + period.duration);
+
+        updateDateMin(startDate.toISOString());
+        updateDateMax(endDate.toISOString());
+        setActiveButton(index);
+    }, []);
 
     return (
         <div className="relative pr-2 py-1">
@@ -31,7 +68,37 @@ const DateDropdown = () => {
                     onClick={toggleDateMenu}
                 />
                 {dateMenuOpen && (
-                    <div className="absolute z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 mt-0.5 space-y-3 max-w-48 min-w-48 sm:max-w-80 sm:min-w-80">
+                    <div className="absolute flex flex-col z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 space-y-3 max-w-48 min-w-48 sm:max-w-80 sm:min-w-80">
+                        <div className="pt-2 text-sm font-light dark:text-gray-300 text-gray-700">
+                            Select a period:
+                        </div>
+                        <div className="flex flex-wrap items-center place-content-center rounded-full pb-1 space-x-2">
+                            {periods.map((period, index) => (
+                                <button
+                                    onClick={() => {
+                                        handleClick(period, index);
+                                    }}
+                                    className={
+                                        index === activeButton
+                                            ? `text-xs font-semibold px-2 py-0.5 rounded-full dark:bg-periwinkleBlue-700 bg-periwinkleBlue-300 dark:text-periwinkleBlue-50 text-periwinkleBlue-900 border dark:border-periwinkleBlue-500 border-periwinkleBlue-500 dark:hover:bg-periwinkleBlue-600 dark:hover:border-periwinkleBlue-400 hover:bg-periwinkleBlue-400 hover:border-periwinkleBlue-600`
+                                            : `text-xs font-semibold px-2 py-0.5 rounded-full dark:bg-gray-700 bg-gray-300 dark:text-gray-50 text-gray-900 border dark:border-gray-500 border-gray-500 dark:hover:bg-periwinkleBlue-600 dark:hover:border-periwinkleBlue-400 hover:bg-periwinkleBlue-400 hover:border-periwinkleBlue-600`
+                                    }
+                                    key={"period_button" + index}
+                                >
+                                    {period.name}
+                                </button>
+                            ))}
+                        </div>
+                        <div className="flex items-center">
+                            <hr className="px-6 border dark:border-gray-500 border-gray-500 w-full" />
+                            <div className="rounded-full dark:border-gray-500 border-gray-500 px-2 dark:text-gray-400 text-gray-600 text-sm font-semibold border-2">
+                                OR
+                            </div>
+                            <hr className="px-6 border dark:border-gray-500 border-gray-500 w-full" />
+                        </div>
+                        <div className="pt-2 text-sm font-light dark:text-gray-300 text-gray-700">
+                            Select a range:
+                        </div>
                         <form
                             className="flex flex-wrap items-center place-content-between"
                             action="#"
@@ -84,7 +151,10 @@ const DateDropdown = () => {
                         </form>
                         <div className="place-content-end flex items-center w-full space-x-3">
                             <button
-                                onClick={clearDates}
+                                onClick={() => {
+                                    clearDates();
+                                    setActiveButton(-1);
+                                }}
                                 className="flex whitespace-nowrap space-x-2 text-black dark:text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm py-1 px-3 text-center items-center dark:bg-dustyRose-600 hover:bg-dustyRose-400 border dark:border-dustyRose-500 border-dustyRose-500 hover:dark:bg-dustyRose-700 bg-dustyRose-300 focus:dark:ring-dustyRose-800 ring-dustyRose-200"
                             >
                                 Clear

@@ -84,6 +84,11 @@ const initMapState: MapCoordsType = {
 const getFromLocal = (name: string) => {
     if (typeof window !== "undefined") {
         try {
+            if (name === "dateMin" || name === "dateMax") {
+                const value = JSON.parse(sessionStorage.getItem(name) ?? "");
+                if (value) return new Date(value);
+                else return null;
+            }
             return JSON.parse(sessionStorage.getItem(name) ?? "");
         } catch {
             return null;
@@ -95,6 +100,9 @@ const getFromLocal = (name: string) => {
 const saveToLocal = (name: string, value: any) => {
     if (typeof window !== "undefined") {
         try {
+            if (name === "dateMax") {
+                console.log("setting", value);
+            }
             sessionStorage.setItem(name, JSON.stringify(value));
         } catch {
             return;
@@ -148,7 +156,7 @@ const initState: RaceState = {
     precipMin: getFromLocal("precipMin") ?? null,
     precipMax: getFromLocal("precipMax") ?? null,
     dateMin: new Date(),
-    dateMax: null,
+    dateMax: getFromLocal("dateMax") ?? null,
     mapCoords: getFromLocal("mapCoords") ?? initMapState,
     distanceMenuOpen: false,
     dateMenuOpen: false,
@@ -664,6 +672,8 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_DATE_MAX,
             new_date: null,
         });
+        saveToLocal("dateMin", null);
+        saveToLocal("dateMax", null);
     }, []);
 
     const updateDateMin = useCallback(
@@ -673,16 +683,19 @@ const useRaceContext = (initState: RaceState) => {
                     type: RaceActionKind.UPDATE_DATE_MIN,
                     new_date: new Date(evt),
                 });
+                saveToLocal("dateMin", evt);
             } else if (evt.target.value === "") {
                 dispatch({
                     type: RaceActionKind.UPDATE_DATE_MIN,
                     new_date: null,
                 });
+                saveToLocal("dateMin", null);
             } else {
                 dispatch({
                     type: RaceActionKind.UPDATE_DATE_MIN,
                     new_date: new Date(evt.target.value),
                 });
+                saveToLocal("dateMin", evt.target.value);
             }
         },
         [],
@@ -695,16 +708,19 @@ const useRaceContext = (initState: RaceState) => {
                     type: RaceActionKind.UPDATE_DATE_MAX,
                     new_date: new Date(evt),
                 });
+                saveToLocal("dateMax", evt);
             } else if (evt.target.value === "") {
                 dispatch({
                     type: RaceActionKind.UPDATE_DATE_MAX,
                     new_date: null,
                 });
+                saveToLocal("dateMax", null);
             } else {
                 dispatch({
                     type: RaceActionKind.UPDATE_DATE_MAX,
                     new_date: new Date(evt.target.value),
                 });
+                saveToLocal("dateMax", evt.target.value);
             }
         },
         [],
@@ -892,8 +908,8 @@ const useRaceContext = (initState: RaceState) => {
 
     const applyFilters = () => {
         if (state.allResults.length >= 1) {
+            console.log("filtering", state.dateMax);
             const newSearch = filterRaces(state.allResults);
-            console.log("updating filters", newSearch.length);
             updateSearchResults(newSearch);
         }
     };
@@ -902,7 +918,6 @@ const useRaceContext = (initState: RaceState) => {
         if (state.allResults.length >= 1) {
             const updatedRaces = filterDistances(state.allResults);
             const newSearch = filterRaces(updatedRaces);
-            console.log("updating dist filters", newSearch.length);
             updateSearchResults(newSearch);
         }
     };
@@ -925,11 +940,17 @@ const useRaceContext = (initState: RaceState) => {
         state.precipMin,
         state.precipMax,
         state.activeArea,
+        state.allResults,
     ]);
 
     useEffect(() => {
         applyDistanceFilters();
-    }, [state.distanceMin, state.distanceMax, state.activeArea]);
+    }, [
+        state.distanceMin,
+        state.distanceMax,
+        state.activeArea,
+        state.allResults,
+    ]);
 
     return {
         state,
