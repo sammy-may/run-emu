@@ -250,8 +250,8 @@ const RaceMap = () => {
                 evt.features.forEach((feat) => {
                     const state = slugify(feat["properties"]["state"]);
                     if (
-                        !(state === "usa" || state === "canada") &&
-                        state !== hoveredState
+                        !(state === "usa" || state === "canada")
+                        // && state !== hoveredState
                     ) {
                         if (!oneHover) {
                             clickLink("/location/" + slugify(state));
