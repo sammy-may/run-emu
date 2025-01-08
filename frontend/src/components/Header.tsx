@@ -85,7 +85,7 @@ const Header = () => {
                             </div>
                         </button>
                         {settingsMenuOpen && (
-                            <div className="absolute top-8 sm:top-10 right-0 rounded-lg z-50 flex flex-col space-y-2">
+                            <div className="absolute top-8 sm:top-11 right-0 rounded-lg z-50 flex flex-col space-y-2">
                                 <div className="py-2 px-3 flex items-center space-x-2 text-xl place-content-center dark:bg-gray-800 bg-gray-200 rounded-lg">
                                     <div className="dark:text-white text-gray-400">
                                         <MdDarkMode />
