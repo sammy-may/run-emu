@@ -22,6 +22,7 @@ import { RaceContext } from "../context/RaceFeedContext";
 import { TiDelete } from "react-icons/ti";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdInformationCircleOutline } from "react-icons/io";
+import { MdZoomOutMap } from "react-icons/md";
 
 import { Protocol } from "pmtiles";
 import layers from "protomaps-themes-base";
@@ -99,6 +100,9 @@ const RaceMap = () => {
         loadGeoJson();
     }, []);
 
+    // for indicator when 0 races
+    const [isDismissed, setIsDismissed] = useState<boolean>(false);
+
     // for info button
     const [isInfoHovered, setIsInfoHovered] = useState(false);
     const handleInfoMouseOver = () => {
@@ -142,6 +146,21 @@ const RaceMap = () => {
             });
         }
     }, [searchResults, activeArea, mapCoords, allResults]);
+
+    const zoomOut = useCallback(() => {
+        if (mapRef.current) {
+            clickLink("/location/all");
+            mapRef.current.flyTo({
+                center: [0, 0],
+                zoom: 1,
+                essential: true,
+            });
+        }
+    }, []);
+
+    useEffect(() => {
+        setIsDismissed(false);
+    }, [activeArea]);
 
     const fly = useCallback(() => {
         let state = activeArea;
@@ -484,22 +503,72 @@ const RaceMap = () => {
                         </form>
                     </div>
 
-                    {activeArea && (
-                        <div
-                            className="absolute flex items-center space-x-2 z-50 rounded-lg border top-16 right-0 dark:text-dustyRose-50 text-dustyRose-900 dark:border-dustyRose-500 border-dustyRose-500 dark:bg-dustyRose-700 bg-dustyRose-300 px-3 py-1 text-sm font-semibold hover:dark:bg-dustyRose-600 hover:bg-dustyRose-400 hover:dark:border-dustyRose-400 hover:border-dustyRose-600 hover:cursor-pointer m-6"
-                            onClick={() => {
-                                clickLink("/location/all");
-                            }}
-                            onMouseEnter={() => {
-                                updateStateHover("", false);
-                            }}
-                        >
-                            <div>{"Remove boundary : " + activeArea.state}</div>
-                            <div className="text-lg">
-                                <TiDelete />
+                    <div className="absolute flex flex-col items-end space-y-2 top-16 right-0 px-3 pt-4">
+                        {activeArea && (
+                            <div
+                                className="relative flex items-center place-content-end w-fit space-x-2 z-50 rounded-lg border dark:text-dustyRose-50 text-dustyRose-900 dark:border-dustyRose-500 border-dustyRose-500 dark:bg-dustyRose-700 bg-dustyRose-300 px-3 py-1 text-sm font-semibold hover:dark:bg-dustyRose-600 hover:bg-dustyRose-400 hover:dark:border-dustyRose-400 hover:border-dustyRose-600 hover:cursor-pointer"
+                                onClick={() => {
+                                    clickLink("/location/all");
+                                }}
+                                onMouseEnter={() => {
+                                    updateStateHover("", false);
+                                }}
+                            >
+                                <div>
+                                    {"Remove boundary : " + activeArea.state}
+                                </div>
+                                <div className="text-lg">
+                                    <TiDelete />
+                                </div>
                             </div>
-                        </div>
-                    )}
+                        )}
+
+                        {(searchResults.length === 0 ||
+                            mapResults.length === 0) &&
+                            !isDismissed && (
+                                <div className="flex items-center place-content-end z-50 dark:bg-gray-700 bg-gray-300 p-2 rounded-xl">
+                                    <div className="relative flex flex-wrap z-50 place-content-center w-min">
+                                        <div className="relative flex items-center space-x-2 z-50 border dark:bg-gray-900 dark:border-gray-700 bg-gray-100 border-gray-200 px-3 py-1.5 rounded-full text-sm text-gray-700 dark:text-gray-200 ">
+                                            <div className="text-lg my-1">
+                                                {" "}
+                                                <IoMdInformationCircleOutline />{" "}
+                                            </div>
+                                            <div className="font-semibold my-1 whitespace-nowrap">
+                                                {" "}
+                                                No races within map boundary.{" "}
+                                            </div>
+                                        </div>
+                                        <div className="relative flex items-center space-x-2 my-2">
+                                            <div
+                                                onClick={zoomOut}
+                                                className="space-x-2 flex items-center rounded-lg px-2 py-0.5 dark:text-dustyRose-50 text-dustyRose-900 dark:border-dustyRose-500 border-dustyRose-500 dark:bg-dustyRose-700 bg-dustyRose-300 text-sm font-semibold hover:dark:bg-dustyRose-600 hover:bg-dustyRose-400 hover:dark:border-dustyRose-400 hover:border-dustyRose-600 hover:cursor-pointer"
+                                            >
+                                                <div>Zoom Out</div>
+                                                <div>
+                                                    <MdZoomOutMap />
+                                                </div>
+                                            </div>
+                                            <div className="font-semibold">
+                                                or
+                                            </div>
+                                            <div
+                                                onClick={() =>
+                                                    setIsDismissed(true)
+                                                }
+                                                className="flex items-center space-x-1 text-lg hover:cursor-pointer dark:text-dustyRose-50 text-dustyRose-900 dark:border-dustyRose-500 border-dustyRose-500 dark:bg-dustyRose-700 bg-dustyRose-300 hover:dark:bg-dustyRose-600 hover:bg-dustyRose-400 hover:dark:border-dustyRose-400 hover:border-dustyRose-600 rounded-lg px-2 py-0.5"
+                                            >
+                                                <div className="text-sm font-semibold">
+                                                    Dismiss
+                                                </div>
+                                                <div>
+                                                    <TiDelete />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                    </div>
 
                     {stateMenuOpen && (
                         <div className="absolute z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-gray-600 border-gray-400 top-9 left-0 divide-y dark:divide-gray-600 divide-gray-400 shadow min-w-44">
@@ -567,7 +636,9 @@ const RaceMap = () => {
                 <p className="relative rounded-lg border mt-2 -mb-2.5 mx-3 px-3 text-xs font-medium dark:bg-gray-800 bg-gray-200 dark:border-gray-600 border-gray-400 dark:text-gray-400 text-gray-600 items-center flex whitespace-nowrap overflow-x-auto z-10">
                     Showing{" "}
                     <span className="dark:text-dustyRose-200 text-dustyRose-800 font-medium px-1">
-                        {mapResults.length}
+                        {mapResults.length > searchResults.length
+                            ? searchResults.length
+                            : mapResults.length}
                     </span>{" "}
                     of{" "}
                     <span className="dark:text-periwinkleBlue-200 text-periwinkleBlue-800 font-medium px-1">
