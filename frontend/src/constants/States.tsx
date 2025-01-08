@@ -1,5 +1,4 @@
-import { useContext, useEffect } from "react";
-import { ActiveArea, RaceContext } from "../context/RaceFeedContext";
+import { ActiveArea } from "../context/RaceFeedContext";
 
 // create with e.g. `ls -althr node_modules/world-geojson/states/usa/*.json | awk '{print $NF}' | sed 's|.*/||; s|\.json$||' | paste -sd ',' -`
 
@@ -1819,33 +1818,26 @@ export const StatesInit: ActiveArea[] = [
     },
 ].sort((a, b) => a.state.localeCompare(b.state));
 
-const loadGeoJson = async (state: string) => {
-    if (state === "hawaii") {
-        return {};
-    }
-    const url = `https://hzbtbujyhfuhbtramttg.supabase.co/storage/v1/object/public/boundaries/${state}.json`;
-    const resp = await fetch(url);
-    const res = JSON.stringify(resp);
-    return res;
-};
+/* export const States = () => {
+    const {
+        state: { allResults },
+        updateStates,
+    } = useContext(RaceContext);
 
-export const States = () => {
-    const { updateStates } = useContext(RaceContext);
-
-    const updated_states: ActiveArea[] = StatesInit.map((state, index) => ({
+    const updated_states: ActiveArea[] = StatesInit.map((state) => ({
         ...state,
-        boundary: {
-            ...loadGeoJson(state.state.toLowerCase().replace(/\s+/g, "_")),
-            id: index,
-        },
         isHovered: false,
+        n_races: allResults.filter(
+            (race) => race.state.toLowerCase() === state.state.toLowerCase(),
+        ).length,
     }));
 
     useEffect(() => {
         updateStates(updated_states);
-    }, []);
+    }, [allResults]);
 
     return updated_states;
 };
 
 export default States;
+ */

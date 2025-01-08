@@ -7,6 +7,7 @@ import {
     useReducer,
 } from "react";
 import RaceType from "../types/race";
+import { StatesInit } from "../constants/States";
 
 enum RaceActionKind {
     UPDATE_DISTANCE_MIN = "UPDATE_DISTANCE_MIN",
@@ -57,7 +58,7 @@ export interface ActiveArea {
     country: string;
     latitude: number;
     longitude: number;
-    boundary?: any;
+    n_races?: number;
     isHovered?: boolean;
 }
 
@@ -163,7 +164,7 @@ const initState: RaceState = {
     moreMenuOpen: false,
     stateMenuOpen: false,
     activeArea: null,
-    states: [],
+    states: StatesInit,
     needLoad: true,
     needSort: true,
 };
@@ -951,6 +952,28 @@ const useRaceContext = (initState: RaceState) => {
         state.activeArea,
         state.allResults,
     ]);
+
+    const sortByRaces = useCallback((a: ActiveArea, b: ActiveArea) => {
+        if (!a.n_races) return 1;
+        if (!b.n_races) return -1;
+        if (a.n_races > b.n_races) {
+            return -1;
+        } else if (a.n_races < b.n_races) {
+            return 1;
+        }
+        return 0;
+    }, []);
+
+    useEffect(() => {
+        const updated_states: ActiveArea[] = StatesInit.map((reg) => ({
+            ...reg,
+            isHovered: false,
+            n_races: state.allResults.filter(
+                (race) => race.state.toLowerCase() === reg.state.toLowerCase(),
+            ).length,
+        })).sort((a, b) => sortByRaces(a, b));
+        updateStates(updated_states);
+    });
 
     return {
         state,

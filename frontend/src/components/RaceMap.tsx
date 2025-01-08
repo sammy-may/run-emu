@@ -30,7 +30,6 @@ import { loadAllGeoJson } from "../api/boundaries";
 import { FaLocationDot } from "react-icons/fa6";
 import { slugify } from "../utils/url_utils";
 import { useUserSettings } from "../context/UserSettingsContext";
-import { StatesInit } from "../constants/States";
 
 const RaceMap = () => {
     const {
@@ -42,6 +41,7 @@ const RaceMap = () => {
             stateMenuOpen,
             activeArea,
             locSearch,
+            states,
         },
         updateSearchResults,
         updateHover,
@@ -467,7 +467,7 @@ const RaceMap = () => {
                                 className="border px-3 py-2 text-base rounded-lg block w-full dark:bg-gray-700 bg-gray-300 dark:border-gray-600 border-gray-400 dark:placeholder-gray-400 placeholder-gray-600 dark:text-white text-black hover:border-dustyRose-500 focus:border-dustyRose-500 focus:ring-0 focus:outline-none dark:hover:border-dustyRose-500 dark:focus:border-dustyRose-500"
                                 onChange={updateLocSearch}
                             />
-                            {!stateMenuOpen && (
+                            {!stateMenuOpen && !locSearch && (
                                 <div className="absolute top-0 py-2 px-3 text-base rounded-lg flex items-center dark:text-gray-400 text-gray-600 space-x-2 pointer-events-none">
                                     <div className="">
                                         <IoSearchOutline />
@@ -577,7 +577,7 @@ const RaceMap = () => {
                                 className="py-2 text-sm dark:text-gray-200 text-gray-800 overflow-y-auto max-h-72"
                                 aria-labelledby="sortInfo"
                             >
-                                {StatesInit.map((state, index) => {
+                                {states.map((state, index) => {
                                     if (
                                         (!locSearch &&
                                             (state.country === "USA" ||
@@ -598,14 +598,33 @@ const RaceMap = () => {
                                                 }
                                             >
                                                 <li
-                                                    className="flex px-4 py-2 bg-gray-300 hover:bg-gray-400 dark:hover:bg-gray-600 dark:bg-gray-700 hover:text-black dark:hover:text-white w-full hover:cursor-pointer"
+                                                    className="flex items-center place-content-between px-4 py-2 bg-gray-300 hover:bg-gray-400 dark:hover:bg-gray-600 dark:bg-gray-700 hover:text-black dark:hover:text-white w-full hover:cursor-pointer"
                                                     key={
                                                         "li" +
                                                         state.state +
                                                         index
                                                     }
                                                 >
-                                                    {state.state}
+                                                    <div
+                                                        key={
+                                                            "div_state" +
+                                                            state.state +
+                                                            index
+                                                        }
+                                                    >
+                                                        {state.state}
+                                                    </div>
+                                                    <div
+                                                        className="text-xs font-semibold dark:text-gray-400"
+                                                        key={
+                                                            "div_nraces" +
+                                                            state.state +
+                                                            index
+                                                        }
+                                                    >
+                                                        {state.n_races +
+                                                            " races"}
+                                                    </div>
                                                 </li>
                                             </a>
                                         );

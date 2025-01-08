@@ -8,7 +8,6 @@ import { useData } from "vike-react/useData";
 import type { Data } from "./+data.ts";
 
 import MainContent from "../../../components/MainContent.tsx";
-import { loadGeoJson } from "../../../api/boundaries.ts";
 import { slugify } from "../../../utils/url_utils.ts";
 
 const LocPage = () => {
@@ -27,11 +26,6 @@ const LocPage = () => {
         updateLocSearch("");
         updateAllResults(races);
 
-        if (location) {
-            location.boundary = await loadGeoJson(
-                location.state.toLowerCase().replace(/\s+/g, "_"),
-            );
-        }
         updateActiveArea(location ?? null);
     };
 
