@@ -15,7 +15,7 @@ const RaceFeed = ({ initResults }: { initResults: RaceType[] }) => {
         initResults.slice(0, 20),
     );
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const { ref, inView } = useInView();
+    const { ref: bottomRef, inView: bottomInView } = useInView();
 
     const getNRaces = (n_races: number) => {
         let count: number = 0;
@@ -54,16 +54,16 @@ const RaceFeed = ({ initResults }: { initResults: RaceType[] }) => {
     }, [page, searchResults]);
 
     useEffect(() => {
-        if (inView && !isLoading) {
+        if (bottomInView && !isLoading) {
             setPage((prevPage) => prevPage + 1);
         }
-    }, [inView, isLoading]);
+    }, [bottomInView, isLoading]);
 
     return (
-        <div className="text-left h-full">
+        <div className="relative flex flex-col text-left h-full">
             <div className="grid md:grid-cols-2 grid-cols-1 gap-x-2 gap-y-1 z-0 h-full">
                 {Results}
-                <div ref={ref} className="p-3 text-center"></div>
+                <div ref={bottomRef} className="p-3 text-center"></div>
             </div>
         </div>
     );
