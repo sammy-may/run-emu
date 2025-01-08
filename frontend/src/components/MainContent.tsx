@@ -34,7 +34,7 @@ const MainContent = ({ initResults }: { initResults: RaceType[] }) => {
                                     </div>
                                 </div>
                             )}
-                            <div className="overflow-y-auto min-h-[42vh] lg:min-h-[90vh] max-h-[42vh] lg:max-h-[90vh]">
+                            <div className="overflow-y-auto min-h-[42vh] lg:min-h-[90vh] max-h-[42vh] lg:max-h-[90vh] overflow-x-hidden">
                                 <div ref={topRef} className=""></div>
                                 <div ref={optionsBoxRef}>
                                     <OptionsBar />
