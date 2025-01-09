@@ -87,14 +87,6 @@ const RaceMap = () => {
         };
     }, []);
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setWindowWidth(window.innerWidth);
-        }, 1000); // Run every 1 second
-
-        return () => clearInterval(intervalId); // Cleanup on unmount
-    }, []); // Empty dependency array ensures this runs once
-
     const mapHeight = useMemo(() => {
         return windowWidth >= 1024 ? "80vh" : "35vh";
     }, [windowWidth, hoveredState]);
