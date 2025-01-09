@@ -35,9 +35,9 @@ const RaceCardContent = ({
 
     return (
         <div
-            className={`rounded-lg mb-1 pb-3 shadow border hover:dark:border-dustyRose-600 border-dustyRose-400 hover:dark:bg-gray-700 bg-gray-200 ${className}`}
+            className={`relative rounded-lg mb-1 pb-3 shadow border hover:dark:border-dustyRose-600 border-dustyRose-400 hover:dark:bg-gray-700 bg-gray-200 ${className}`}
         >
-            <a href={`/races/${race.name_url}`}>
+            <a href={`/races/${race.name_url}`} className="relative">
                 {/*                 <Carousel imgs={race.images.data} swiperClass="swiper"/> */}
                 <RaceTitle title={race.name} className="whitespace-nowrap" />
                 <DateLocationBar race={race} />
@@ -113,6 +113,7 @@ const RaceCard = ({ index, race }: { index: number; race: RaceType }) => {
             onTouchEnd={() => {
                 updateHover(index, false, false);
             }}
+            className="relative"
         >
             {race.isHovered && (
                 <RaceCardContent
