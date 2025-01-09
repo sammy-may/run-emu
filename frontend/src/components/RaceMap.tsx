@@ -193,6 +193,7 @@ const RaceMap = () => {
 
     const HighlightMarkers = useMemo(() => {
         if (slugify(activeArea?.state ?? "") === hoveredState) return [];
+        if (windowWidth < 768) return [];
         if (activeArea === null) {
             return globalSearchResults
                 .filter((race) => {
@@ -283,7 +284,7 @@ const RaceMap = () => {
                     </div>
                 );
             });
-    }, [hoveredState, activeArea, globalSearchResults]);
+    }, [hoveredState, activeArea, globalSearchResults, windowWidth]);
 
     const Markers = useMemo(() => {
         return mapResults
