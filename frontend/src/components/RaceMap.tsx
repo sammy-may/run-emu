@@ -87,7 +87,17 @@ const RaceMap = () => {
         };
     }, []);
 
-    const mapHeight = windowWidth >= 1024 ? "80vh" : "35vh";
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setWindowWidth(window.innerWidth);
+        }, 1000); // Run every 1 second
+
+        return () => clearInterval(intervalId); // Cleanup on unmount
+    }, []); // Empty dependency array ensures this runs once
+
+    const mapHeight = useMemo(() => {
+        return windowWidth >= 1024 ? "80vh" : "35vh";
+    }, [windowWidth, hoveredState]);
 
     const [geoJsonData, setGeoJsonData] = useState<any>({
         type: "FeatureCollection",
@@ -848,7 +858,7 @@ const RaceMap = () => {
                     mapStyle={mapStyle}
                     onZoomEnd={filterOnMap}
                     onMoveEnd={filterOnMap}
-                    //onIdle={() => filterOnMap()}
+                    onIdle={() => filterOnMap()}
                     onMouseMove={handleMouse}
                     onMouseOut={clearHover}
                     onClick={handleClick}
