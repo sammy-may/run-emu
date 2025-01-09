@@ -4,6 +4,8 @@ import RaceTitle from "../../../components/Race/RaceTitle";
 import DistanceBar from "../../../components/Race/DistanceBar";
 import { FaLink, FaRegCalendarAlt } from "react-icons/fa";
 import { LuClipboardEdit } from "react-icons/lu";
+import { IoArrowBack } from "react-icons/io5";
+
 import WeatherWidget from "../../../components/Race/WeatherWidget";
 
 import { useData } from "vike-react/useData";
@@ -15,7 +17,18 @@ const Page = () => {
     return (
         race && (
             <div className="px-3">
-                <div className="w-full rounded-lg border dark:bg-gray-800 bg-gray-200 dark:border-gray-700 border-gray-300 px-6 py-6 space-y-1 max-w-screen-lg">
+                <div className="w-full rounded-lg border text-black dark:text-white dark:hover:text-dustyRose-50 hover:text-dustyRose-900 dark:bg-gray-800 bg-gray-200 dark:border-gray-700 border-gray-300 px-6 py-6 space-y-1 max-w-screen-lg">
+                    <div className="px-3 flex items-center">
+                        <a
+                            href="/"
+                            className="px-2 py-0.5 rounded-lg flex items-center space-x-2 dark:bg-gray-800 bg-gray-200 border dark:border-gray-800 border-gray-200 dark:hover:bg-dustyRose-600 dark:hover:border-dustyRose-400 hover:bg-dustyRose-400 hover:border-dustyRose-600"
+                        >
+                            <div>
+                                <IoArrowBack />
+                            </div>
+                            <div>Explore more races</div>
+                        </a>
+                    </div>
                     <RaceTitle title={race.name} className="" />
                     <div className="flex flex-col items-start place-content-start md:grid md:grid-cols-2 md:gap-4 md:pr-3">
                         <div className="space-y-1">
