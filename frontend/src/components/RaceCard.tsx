@@ -37,7 +37,7 @@ const RaceCardContent = ({
         <div
             className={`relative rounded-lg mb-1 pb-3 shadow border hover:dark:border-dustyRose-600 border-dustyRose-400 hover:dark:bg-gray-700 bg-gray-200 ${className}`}
         >
-            <a href={`/races/${race.name_url}`} className="relative">
+            <a href={`/races/${race.name_url}`} className="relative z-[100]">
                 {/*                 <Carousel imgs={race.images.data} swiperClass="swiper"/> */}
                 <RaceTitle title={race.name} className="whitespace-nowrap" />
                 <DateLocationBar race={race} />
