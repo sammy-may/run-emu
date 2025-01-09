@@ -738,6 +738,14 @@ video {
   top: 1.5rem;
 }
 
+.-top-4 {
+  top: -1rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -756,6 +764,10 @@ video {
 
 .z-\[100\] {
   z-index: 100;
+}
+
+.z-\[1000\] {
+  z-index: 1000;
 }
 
 .col-span-1 {
@@ -874,6 +886,22 @@ video {
 
 .mr-8 {
   margin-right: 2rem;
+}
+
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
+.-mt-3 {
+  margin-top: -0.75rem;
+}
+
+.-mt-4 {
+  margin-top: -1rem;
+}
+
+.-mt-5 {
+  margin-top: -1.25rem;
 }
 
 .block {
@@ -1258,6 +1286,10 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
 }
 
 .whitespace-nowrap {
