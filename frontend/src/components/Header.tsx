@@ -6,6 +6,7 @@ import { useUserSettings } from "../context/UserSettingsContext";
 import { FiSettings } from "react-icons/fi";
 import { useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
+import { FaHome } from "react-icons/fa";
 
 const Header = () => {
     const {
@@ -29,7 +30,10 @@ const Header = () => {
                     <Button
                         name={"RunEmu"}
                         icon={
-                            <img
+                            <div className="">
+                                <FaHome />
+                            </div>
+                            /*                             <img
                                 src={
                                     theme === "dark"
                                         ? "/images/logos/emu_wb.svg"
@@ -37,7 +41,7 @@ const Header = () => {
                                 }
                                 className="h-5"
                                 alt="RunEmu Logo"
-                            />
+                            /> */
                         }
                         href={"/"}
                     ></Button>

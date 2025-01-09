@@ -49,7 +49,7 @@ const MoreDropdown = () => {
                     onClick={toggleMoreMenu}
                 />
                 {moreMenuOpen && (
-                    <div className="absolute z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 min-w-80 -right-36 space-y-4">
+                    <div className="absolute z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 min-w-80 -right-32 space-y-4">
                         <div className="rounded-lg">
                             <div className="dark:text-gray-200 text-gray-800 font-medium text-sm flex items-center space-x-2 pb-1">
                                 <span>

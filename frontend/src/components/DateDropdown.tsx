@@ -68,7 +68,7 @@ const DateDropdown = () => {
                     onClick={toggleDateMenu}
                 />
                 {dateMenuOpen && (
-                    <div className="absolute flex flex-col z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 space-y-3 max-w-48 min-w-48 sm:max-w-80 sm:min-w-80">
+                    <div className="absolute flex flex-col z-50 rounded-lg dark:bg-gray-700 bg-gray-300 border dark:border-dustyRose-500 border-dustyRose-500 py-3 px-3 space-y-3 max-w-80 min-w-80 -left-16 sm:left-0 sm:max-w-80 sm:min-w-80">
                         <div className="pt-2 text-sm font-light dark:text-gray-300 text-gray-700">
                             Select a period:
                         </div>
