@@ -192,6 +192,7 @@ const RaceMap = () => {
     }, [setHoveredState]);
 
     const HighlightMarkers = useMemo(() => {
+        if (slugify(activeArea?.state ?? "") === hoveredState) return [];
         return globalResults
             .filter((race) => {
                 return slugify(race.state) === hoveredState;
@@ -199,25 +200,12 @@ const RaceMap = () => {
             .slice(0, 100)
             .map((race) => {
                 return (
-                    <div
-                        onMouseEnter={() => {
-                            updateHover(race.id!, true, true);
-                            setOneHover(true);
-                        }}
-                        onMouseLeave={() => {
-                            updateHover(race.id!, false, true);
-                            setOneHover(false);
-                        }}
-                        key={"hl_marker_div" + race.name}
-                    >
+                    <div key={"hl_marker_div" + race.name}>
                         <Marker
                             key={"hl_marker" + race.name}
                             longitude={race.longitude}
                             latitude={race.latitude}
                             anchor="bottom"
-                            onClick={() => {
-                                updateHover(race.id!, true, true);
-                            }}
                             style={{ zIndex: race.isHovered ? 50 : "unset" }}
                         >
                             {race.isHovered ? (
@@ -243,7 +231,7 @@ const RaceMap = () => {
                     </div>
                 );
             });
-    }, [hoveredState]);
+    }, [hoveredState, activeArea]);
 
     const Markers = useMemo(() => {
         return mapResults
