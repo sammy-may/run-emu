@@ -36,7 +36,7 @@ const RaceMap = () => {
         state: {
             allResults,
             searchResults,
-            globalResults,
+            globalSearchResults,
             mapResults,
             mapCoords,
             stateMenuOpen,
@@ -194,7 +194,7 @@ const RaceMap = () => {
     const HighlightMarkers = useMemo(() => {
         if (slugify(activeArea?.state ?? "") === hoveredState) return [];
         if (activeArea === null) {
-            return globalResults
+            return globalSearchResults
                 .filter((race) => {
                     return slugify(race.state) === hoveredState;
                 })
@@ -245,7 +245,7 @@ const RaceMap = () => {
                     );
                 });
         }
-        return globalResults
+        return globalSearchResults
             .filter((race) => {
                 return slugify(race.state) === hoveredState;
             })
@@ -283,7 +283,7 @@ const RaceMap = () => {
                     </div>
                 );
             });
-    }, [hoveredState, activeArea]);
+    }, [hoveredState, activeArea, globalSearchResults]);
 
     const Markers = useMemo(() => {
         return mapResults

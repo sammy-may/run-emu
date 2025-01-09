@@ -27,6 +27,7 @@ enum RaceActionKind {
     UPDATE_LOC_SEARCH = "UPDATE_LOC_SEARCH",
     POPULATE_RACES = "POPULATE_RACES",
     UPDATE_GLOBAL_RESULTS = "UPDATE_GLOBAL_RESULTS",
+    UPDATE_GLOBAL_SEARCH_RESULTS = "UPDATE_GLOBAL_SEARCH_RESULTS",
     UPDATE_MAP_RESULTS = "UPDATE_MAP_RESULTS",
     UPDATE_SEARCH_RESULTS = "UPDATE_SEARCH_RESULTS",
     UPDATE_MAP_COORDS = "UPDATE_MAP_COORDS",
@@ -116,6 +117,7 @@ const saveToLocal = (name: string, value: any) => {
 interface RaceState {
     allResults: RaceType[];
     globalResults: RaceType[];
+    globalSearchResults: RaceType[];
     searchResults: RaceType[];
     mapResults: RaceType[];
     sortMethod: string | null;
@@ -146,6 +148,7 @@ interface RaceState {
 const initState: RaceState = {
     allResults: [],
     globalResults: [],
+    globalSearchResults: [],
     searchResults: [],
     mapResults: [],
     sortMethod: getFromLocal("sortMethod") ?? "date",
@@ -292,6 +295,11 @@ const raceReducer = (state: RaceState, action: RaceAction): RaceState => {
             return {
                 ...state,
                 globalResults: action.new_races!,
+            };
+        case RaceActionKind.UPDATE_GLOBAL_SEARCH_RESULTS:
+            return {
+                ...state,
+                globalSearchResults: action.new_races!,
             };
         case RaceActionKind.UPDATE_MAP_RESULTS:
             return {
@@ -755,6 +763,20 @@ const useRaceContext = (initState: RaceState) => {
             type: RaceActionKind.UPDATE_GLOBAL_RESULTS,
             new_races: races,
         });
+        let globalSearchRaces: RaceType[] = races;
+        globalSearchRaces = filterDistances(globalSearchRaces);
+        globalSearchRaces = filterRaces(globalSearchRaces);
+        dispatch({
+            type: RaceActionKind.UPDATE_GLOBAL_SEARCH_RESULTS,
+            new_races: globalSearchRaces,
+        });
+    }, []);
+
+    const updateGlobalSearchResults = useCallback((races: RaceType[]) => {
+        dispatch({
+            type: RaceActionKind.UPDATE_GLOBAL_SEARCH_RESULTS,
+            new_races: races,
+        });
     }, []);
 
     const updateSearchResults = useCallback((races: RaceType[]) => {
@@ -928,6 +950,10 @@ const useRaceContext = (initState: RaceState) => {
             const newSearch = filterRaces(state.allResults);
             updateSearchResults(newSearch);
         }
+        if (state.globalResults.length >= 1) {
+            const newGlobalSearch = filterRaces(state.globalResults);
+            updateGlobalSearchResults(newGlobalSearch);
+        }
     };
 
     const applyDistanceFilters = () => {
@@ -935,6 +961,11 @@ const useRaceContext = (initState: RaceState) => {
             const updatedRaces = filterDistances(state.allResults);
             const newSearch = filterRaces(updatedRaces);
             updateSearchResults(newSearch);
+        }
+        if (state.globalSearchResults.length >= 1) {
+            const updatedGlobalRaces = filterDistances(state.globalResults);
+            const newGlobalSearch = filterRaces(updatedGlobalRaces);
+            updateGlobalSearchResults(newGlobalSearch);
         }
     };
 
@@ -991,12 +1022,12 @@ const useRaceContext = (initState: RaceState) => {
         const updated_states: ActiveArea[] = StatesInit.map((reg) => ({
             ...reg,
             isHovered: false,
-            n_races: state.globalResults.filter(
+            n_races: state.globalSearchResults.filter(
                 (race) => race.state.toLowerCase() === reg.state.toLowerCase(),
             ).length,
         })).sort((a, b) => sortByRaces(a, b));
         updateStates(updated_states);
-    }, [state.globalResults]);
+    }, [state.globalSearchResults]);
 
     return {
         state,
@@ -1020,6 +1051,7 @@ const useRaceContext = (initState: RaceState) => {
         clearDates,
         updateMapResults,
         updateGlobalResults,
+        updateGlobalSearchResults,
         updateSearchResults,
         updateAllResults,
         updateMapCoords,
@@ -1071,6 +1103,7 @@ const initContextState: UseRaceContextType = {
     updateLocSearch: () => {},
     updateMapResults: () => {},
     updateGlobalResults: () => {},
+    updateGlobalSearchResults: () => {},
     updateSearchResults: () => {},
     updateAllResults: () => {},
     updateMapCoords: () => {},
