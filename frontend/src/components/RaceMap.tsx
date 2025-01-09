@@ -191,52 +191,56 @@ const RaceMap = () => {
     }, [setHoveredState]);
 
     const Markers = useMemo(() => {
-        filterOnMap();
-        return mapResults.slice(0, 100).map((race) => (
-            <div
-                onMouseEnter={() => {
-                    updateHover(race.id!, true, true);
-                    setOneHover(true);
-                }}
-                onMouseLeave={() => {
-                    updateHover(race.id!, false, true);
-                    setOneHover(false);
-                }}
-                key={"marker_div" + race.name}
-            >
-                <Marker
-                    key={"marker" + race.name}
-                    longitude={race.longitude}
-                    latitude={race.latitude}
-                    anchor="bottom"
-                    onClick={() => {
+        return mapResults
+            .filter((race) => {
+                return pointInView(race.latitude, race.longitude);
+            })
+            .slice(0, 100)
+            .map((race) => (
+                <div
+                    onMouseEnter={() => {
                         updateHover(race.id!, true, true);
+                        setOneHover(true);
                     }}
-                    style={{ zIndex: race.isHovered ? 50 : "unset" }}
+                    onMouseLeave={() => {
+                        updateHover(race.id!, false, true);
+                        setOneHover(false);
+                    }}
+                    key={"marker_div" + race.name}
                 >
-                    {race.isHovered ? (
-                        <div className="text-4xl dark:text-dustyRose-200 text-dustyRose-700">
-                            <FaLocationDot />
-                        </div>
-                    ) : (
-                        /*                             <img
+                    <Marker
+                        key={"marker" + race.name}
+                        longitude={race.longitude}
+                        latitude={race.latitude}
+                        anchor="bottom"
+                        onClick={() => {
+                            updateHover(race.id!, true, true);
+                        }}
+                        style={{ zIndex: race.isHovered ? 50 : "unset" }}
+                    >
+                        {race.isHovered ? (
+                            <div className="text-4xl dark:text-dustyRose-200 text-dustyRose-700">
+                                <FaLocationDot />
+                            </div>
+                        ) : (
+                            /*                             <img
                                 src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png"
                                 className="h-16"
                                 alt="Point"
                             /> */
-                        <div className="text-xl text-gray-600 dark:text-white">
-                            <FaLocationDot />
-                        </div>
-                        /*                             <img
+                            <div className="text-xl text-gray-600 dark:text-white">
+                                <FaLocationDot />
+                            </div>
+                            /*                             <img
                                 src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png"
                                 className="h-8"
                                 alt="Point"
                             /> */
-                    )}
-                </Marker>
-            </div>
-        ));
-    }, [mapResults, activeArea]);
+                        )}
+                    </Marker>
+                </div>
+            ));
+    }, [mapResults, searchResults, allResults, activeArea]);
 
     const handleMouse = useCallback((evt: MapLayerMouseEvent) => {
         if (mapRef.current && evt.features && evt.features.length > 0) {
