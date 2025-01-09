@@ -36,6 +36,7 @@ const RaceMap = () => {
         state: {
             allResults,
             searchResults,
+            globalResults,
             mapResults,
             mapCoords,
             stateMenuOpen,
@@ -189,6 +190,60 @@ const RaceMap = () => {
     const clearHover = useCallback(() => {
         setHoveredState("");
     }, [setHoveredState]);
+
+    const HighlightMarkers = useMemo(() => {
+        return globalResults
+            .filter((race) => {
+                return slugify(race.state) === hoveredState;
+            })
+            .slice(0, 100)
+            .map((race) => {
+                return (
+                    <div
+                        onMouseEnter={() => {
+                            updateHover(race.id!, true, true);
+                            setOneHover(true);
+                        }}
+                        onMouseLeave={() => {
+                            updateHover(race.id!, false, true);
+                            setOneHover(false);
+                        }}
+                        key={"hl_marker_div" + race.name}
+                    >
+                        <Marker
+                            key={"hl_marker" + race.name}
+                            longitude={race.longitude}
+                            latitude={race.latitude}
+                            anchor="bottom"
+                            onClick={() => {
+                                updateHover(race.id!, true, true);
+                            }}
+                            style={{ zIndex: race.isHovered ? 50 : "unset" }}
+                        >
+                            {race.isHovered ? (
+                                <div className="text-4xl dark:text-dustyRose-200 text-dustyRose-700">
+                                    <FaLocationDot />
+                                </div>
+                            ) : (
+                                /*                             <img
+                                src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png"
+                                className="h-16"
+                                alt="Point"
+                            /> */
+                                <div className="text-xl text-gray-600 dark:text-white">
+                                    <FaLocationDot />
+                                </div>
+                                /*                             <img
+                                src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png"
+                                className="h-8"
+                                alt="Point"
+                            /> */
+                            )}
+                        </Marker>
+                    </div>
+                );
+            });
+    }, [hoveredState]);
 
     const Markers = useMemo(() => {
         return mapResults
@@ -760,6 +815,7 @@ const RaceMap = () => {
                     onLoad={flyAndFilter}
                 >
                     {Markers}
+                    {HighlightMarkers}
                     {/*                     {Sources1}
                     {Sources2} */}
                     {geoJsonData && (
