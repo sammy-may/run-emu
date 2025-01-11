@@ -23,7 +23,6 @@ import { TiDelete } from "react-icons/ti";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { MdZoomOutMap } from "react-icons/md";
-
 import { Protocol } from "pmtiles";
 import layers from "protomaps-themes-base";
 import { loadAllGeoJson } from "../api/boundaries";
