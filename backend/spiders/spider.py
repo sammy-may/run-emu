@@ -1,27 +1,46 @@
+import copy
 import json
 import logging
 import os
+from datetime import datetime
+from threading import Lock
 from urllib.parse import urljoin
 
-import geopy
-import geopy.geocoders
+import geocoder
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
 logger = logging.getLogger(__name__)
+lock = Lock()
 
 
 class Spider:
     DIRECTORY = None
     IMG_DIR = "data/imgs/"
+    RACE_FORMAT = {
+        "name": "",
+        "name_url": "",
+        "city": "",
+        "state": "",
+        "country": "",
+        "day": -1,
+        "month": -1,
+        "year": -1,
+        "website": "",
+        "register": "",
+        "distances": [],
+        "tags": [],
+    }
 
     def __init__(self, urls: list[str], **kwargs):
         self.urls = urls
         self.races = {}
         self.reuse = kwargs.get("reuse", False)
-
-        self.geo_locator = geopy.geocoders.Nominatim(user_agent="my_geocoder")
+        self.f_geocode_map = kwargs.get("geocode_map", None)
+        self.f_reverse_geocode_map = kwargs.get("reverse_geocode_map", None)
+        self.load_geocode_maps()
+        self.session = requests.Session()
 
         with open(self.DIRECTORY, "r") as f_in:
             self.directory = json.load(f_in)
@@ -30,23 +49,90 @@ class Spider:
             with open(self.f_out, "r") as f_in:
                 self.races = json.load(f_in)
 
-    def get_location(self, location: str):
+    @staticmethod
+    def empty_race():
+        return copy.deepcopy(Spider.RACE_FORMAT)
+
+    def load_geocode_maps(self):
+        with open(self.f_geocode_map, "r") as f_in:
+            self.geocode_map = json.load(f_in)
+        with open(self.f_reverse_geocode_map, "r") as f_in:
+            self.reverse_geocode_map = json.load(f_in)
+
+    def geocode(self, location):
+        if location in self.geocode_map:
+            return self.geocode_map[location]
+
+        try:
+            resp = geocoder.mapbox(location).json
+            if "lat" in resp and "lng" in resp:
+                result = {"lat": resp["lat"], "lng": resp["lng"]}
+                self.save_geocode(location, result)
+            else:
+                logger.warning("Issue getting location '{:s}'.".format(location))
+        except Exception as err:  # noqa: F841
+            resp = None
+        return resp
+
+    def save_geocode(self, location, resp):
+        with open(self.f_geocode_map, "r") as f_in:
+            self.geocode_map = json.load(f_in)
+        self.geocode_map[location] = resp
+        with lock:
+            with open(self.f_geocode_map, "w") as f_out:
+                json.dump(self.geocode_map, f_out, indent=4)
+
+    def reverse_geocode(self, latlng):
+        if str(latlng) in self.reverse_geocode_map:
+            return self.reverse_geocode_map[str(latlng)]
+
+        try:
+            resp = geocoder.mapbox(latlng, method="reverse").json
+            self.save_reverse_geocode(latlng, resp)
+        except Exception as err:  # noqa: F841
+            resp = None
+        return None
+
+    def save_reverse_geocode(self, latlng, resp):
+        result = {}
+        for field in ["city", "state", "country", "lat", "lng"]:
+            if field in resp:
+                result[field] = resp[field]
+        with open(self.f_reverse_geocode_map, "r") as f_in:
+            self.reverse_geocode_map = json.load(f_in)
+        self.reverse_geocode_map[str(latlng)] = result
+        with lock:
+            with open(self.f_reverse_geocode_map, "w") as f_out:
+                json.dump(self.reverse_geocode_map, f_out, indent=4)
+
+    def get_location(self, location: str, race: dict):
         loc = None
         try:
-            loc = self.geo_locator.geocode(location)
+            loc = self.geocode(location)
         except Exception as e:
-            logger.debug(
+            logger.warning(
                 "Issue getting location '{:s}' : {:s}.".format(location, str(e))
             )
-            pass
-        return loc
+
+        if loc is not None:
+            race["latitude"] = round(float(loc["lat"]), 2)
+            race["longitude"] = round(float(loc["lng"]), 2)
+            loc_info = self.get_location_info(race["latitude"], race["longitude"])
+            for k, v in loc_info.items():
+                if v:
+                    race[k] = v
+
+        if "city" not in race or not race["city"]:
+            loc_items = [x.strip() for x in race["location"].split(",")]
+            if len(loc_items) >= 2:
+                race["city"] = loc_items[0]
+
+        return
 
     def get_location_info(self, latitude: float, longitude: float):
         res = {}
         try:
-            rvg = self.geo_locator.reverse(
-                "{:s}, {:s}".format(str(latitude), str(longitude)), language="en"
-            ).raw["address"]
+            rvg = self.reverse_geocode((latitude, longitude))
             for key in ["city", "state", "country"]:
                 if key in rvg:
                     res[key] = rvg[key]
@@ -59,13 +145,24 @@ class Spider:
             pass
         return res
 
-    def load_url(self, url: str, cache: bool = True):
+    def load_url(self, url: str, cache: bool = True, read_from_cache: int = -1):
         """
         First check directory to see if website is cached, otherwise request (and save in cache for next time).
+        If `read_from_cache` is greater than 0, re-request the page from src if it has been more than `read_from_cache` days since it was requested.
         """
         raw_html = None
-        if url in self.directory:  # already in cache, just load
-            logger.info(
+
+        need_reload = False
+        if read_from_cache > 0 and url in self.directory:
+            days_since_cached = (
+                datetime.today()
+                - datetime.fromtimestamp(os.path.getmtime(self.directory[url]))
+            ).days
+            if read_from_cache <= days_since_cached:
+                need_reload = True
+
+        if not need_reload and url in self.directory:  # already in cache, just load
+            logger.debug(
                 "Loading page '{:s}' from directory file '{:s}'.".format(
                     url, self.directory[url]
                 )
@@ -75,7 +172,7 @@ class Spider:
         else:  # not in cache, request from src and then store in cache
             logger.info("Requesting page '{:s}' from src.".format(url))
             try:
-                response = requests.get(url)
+                response = self.session.get(url)
                 raw_html = response.content
             except Exception as err:
                 logger.warning(
@@ -97,6 +194,7 @@ class Spider:
         return raw_html
 
     def get_site_imgs(self, website: str, save_prefix: str):
+        return []
         raw_html = self.load_url(website, cache=False)
         if not raw_html:
             return []
@@ -120,7 +218,7 @@ class Spider:
             img_url = urljoin(website, img_url)
 
             try:
-                img_data = requests.get(img_url).content
+                img_data = self.session.get(img_url).content
                 save_name = os.path.abspath(
                     os.path.join(
                         self.IMG_DIR, "{:s}_img_{:d}.jpg".format(save_prefix, idx + 1)
@@ -151,7 +249,6 @@ class Spider:
         if race_name not in self.races:
             logger.info("Adding race '{:s}'".format(race_name))
             self.races[race_name] = race
-            logger.info(race)
             with open(self.f_out, "w") as f_out:
                 json.dump(self.races, f_out, indent=4)
         else:

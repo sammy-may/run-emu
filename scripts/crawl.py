@@ -39,6 +39,8 @@ def main(args):
 
     args = {k: v for k, v in vars(args).items() if v is not None}
     args["urls"] = ["https://ultrasignup.com/register.aspx?did=1XXXXX"]
+    args["geocode_map"] = "data/geocode_map.json"
+    args["reverse_geocode_map"] = "data/reverse_geocode_map.json"
     if args["site"] == "USU":
         spider = USUSpider(**args)
         logger.info("Launching USU spiders.")

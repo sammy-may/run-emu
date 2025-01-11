@@ -1,12 +1,13 @@
 import json
 import logging
 import os
-import re
 from datetime import datetime
 
 import geopy
 import geopy.distance
+from tqdm import tqdm
 
+from backend.utils import utils
 from supabase import Client, create_client
 
 logger = logging.getLogger(__name__)
@@ -82,29 +83,41 @@ COUNTRY_ABBREV = {
 }
 
 
+TAGS = [
+    "obstacle",
+    "relay",
+    "adventure",
+    "trail",
+    "mud",
+]
+
+
 def build_distances(dist_strs: list[str]) -> dict:
     res = {"data": []}
     for x in dist_strs:
-        name, distance = parse_distance(x)
-        if name is None or distance is None:
+        name, distance, tags = parse_distance(x)
+        if not name or not distance:
             continue
-        res["data"].append({"name": name, "distance": round(distance, 1)})
+        res["data"].append({"name": name, "distance": round(distance, 1), "tags": tags})
     res["data"].sort(key=lambda x: x["distance"], reverse=True)
     return res
 
 
 def parse_distance(x: str) -> tuple[str, float]:
-    x = (
-        x.lower()
-        .replace('"', "")
-        .replace("'", "")
-        .replace("trail run", "")
-        .replace("run", "")
-        .replace("race", "")
-    )
+
+    x = x.lower().replace('"', "").replace("'", "")
+    tags = []
+    for tag in TAGS:
+        if tag in x:
+            tags.append(tag)
+            x = x.replace(tag, "")
+
+    x = x.replace("race", "").replace("run", "").replace("fun", "").replace("ultra", "")
+
     x = x.strip()
     units = "".join([ch for ch in x if not (ch.isdigit() or ch.isspace() or ch == ".")])
-    if "marathon" in x:
+    distance_str = "".join([ch for ch in x if ch.isdigit() or ch == "."])
+    if "marathon" in x or "mar." in x:
         if "1/2" in x or "half" in x:
             name = "1/2 Marathon"
             distance = 13.1
@@ -118,7 +131,10 @@ def parse_distance(x: str) -> tuple[str, float]:
         else:
             distance = float(distance_str)
         name = str(distance) + "M"
-    elif "hr" in x or "hour" in x:
+    elif not distance_str:
+        name = None
+        distance = None
+    elif "hr" in x or "hour" in x or units == "h":
         time_str = "".join([ch for ch in x if ch.isdigit() or ch == "."])
         if not time_str:
             distance = -1
@@ -127,11 +143,11 @@ def parse_distance(x: str) -> tuple[str, float]:
                 100.0 / 24.0
             )  # count 24hr race as <=> 100 miler
         name = time_str + "HR"
-    elif units == "k":
+    elif units == "k" or units == "km":
         distance = float("".join([ch for ch in x if ch.isdigit() or ch == "."]))
         name = str(distance) + "K"
         distance *= 1.0 / KM_TO_MILE
-    elif units == "m":
+    elif units == "m" or units == "" or units == "mi":
         distance = float("".join([ch for ch in x if ch.isdigit() or ch == "."]))
         name = str(distance) + "M"
     else:
@@ -141,7 +157,7 @@ def parse_distance(x: str) -> tuple[str, float]:
     if name is not None:
         name = name.replace(".0", "")
 
-    return name, distance
+    return name, distance, tags
 
 
 class Librarian:
@@ -149,9 +165,13 @@ class Librarian:
     KEY: str = os.environ.get("SUPABASE_SERVICE_KEY")
     TABLE: str = "Races"
 
-    def __init__(self, sources: list[str], weather: str):
+    def __init__(
+        self, sources: list[str], weather: str, output_dir: str, dry_run: bool
+    ):
         self.client: Client = create_client(self.URL, self.KEY)
         self.sources = sources
+        self.output_dir = output_dir
+        self.dry_run = dry_run
 
         with open(weather, "r") as f_in:
             self.weather = json.load(f_in)
@@ -159,9 +179,8 @@ class Librarian:
         self.races = {}
         self.idx = 0
 
-    @staticmethod
-    def slugify(text: str) -> str:
-        return re.sub(r"(^-|-?$)", "", re.sub(r"[^a-z0-9]+", "-", text.lower()))
+        if not os.path.exists(self.output_dir):
+            os.mkdir(self.output_dir)
 
     @staticmethod
     def format_location(city: str, state: str, country: str) -> str:
@@ -193,13 +212,19 @@ class Librarian:
         for src in self.sources:
             self.parse_dump(src)
 
-        logger.info("Upserting all entries to supabase.")
-        resp = (
-            self.client.table(self.TABLE)
-            .upsert([v for k, v in self.races.items()], on_conflict="name_url")
-            .execute()
-        )
-        return resp
+        with open(self.output_dir + "/merged_races.json", "w") as f_out:
+            json.dump(self.races, f_out, sort_keys=True, indent=4)
+
+        if not self.dry_run:
+            logger.info("Upserting all entries to supabase.")
+            resp = (
+                self.client.table(self.TABLE)
+                .upsert([v for k, v in self.races.items()], on_conflict="name_url")
+                .execute()
+            )
+            return resp
+
+        return None
 
     def extract_weather(self, race, date: datetime):
         if not ("latitude" in race and "longitude" in race):
@@ -246,8 +271,23 @@ class Librarian:
             "precip_chance": res["rain"],
             "station_name": min_station,
             "station_distance": min_distance,
+            "station_lat": self.weather[min_station]["latitude"],
+            "station_lng": self.weather[min_station]["longitude"],
         }
         return race_weather
+
+    @staticmethod
+    def create_race_id(race: dict, date: datetime) -> str:
+        return utils.slugify(
+            "-".join(
+                [
+                    utils.slugify(race["title"]),
+                    race["city"],
+                    str(date.month),
+                    str(date.year),
+                ]
+            )
+        )
 
     def parse_dump(self, dump_file: str):
         with open(dump_file, "r") as f_in:
@@ -258,8 +298,9 @@ class Librarian:
                 len(results), dump_file
             )
         )
-        for race, info in results.items():
-            race = self.slugify(race.replace("&amp;", "and"))
+
+        for race, info in tqdm(results.items()):
+            # race = utils.slugify(race.replace("&amp;", "and"))
             if race == "test":
                 continue
             info["title"] = info["title"].replace("&amp;", "and")
@@ -274,7 +315,10 @@ class Librarian:
                     try:
                         date = datetime.strptime(info["date"], "%b %d, %Y")
                     except Exception as err:  # noqa: F841
-                        pass
+                        try:
+                            date = datetime.strptime(info["date"], "%B %d, %Y")
+                        except Exception as err:  # noqa: F841
+                            pass
             else:
                 date = datetime.strptime(info["date"], "%d %b %y")
             race_weather = self.extract_weather(info, date)
@@ -288,19 +332,23 @@ class Librarian:
                 info["register"] = info["website"]
             if "website" not in info and "register" in info:
                 info["website"] = info["register"]
+
             try:
                 distances = build_distances(info["distances"])
                 if not distances["data"]:
-                    logger.warning(
+                    logger.debug(
                         "Skipping race {:s}, issue extracting valid distances from '{:s}'.".format(
                             race, str(info["distances"])
                         )
                     )
                     continue
 
-                self.races[race] = {
+                race_id = self.create_race_id(info, date)
+                if race_id in self.races:
+                    logger.debug("Duplicate: '{:s}'".format(race_id))
+                self.races[race_id] = {
                     "name": info["title"],
-                    "name_url": race,
+                    "name_url": race_id,
                     "city": info["city"],
                     "state": info["state"],
                     "country": info["country"],
@@ -318,6 +366,7 @@ class Librarian:
                     ),
                 }
                 for k, v in race_weather.items():
-                    self.races[race][k] = v
+                    self.races[race_id][k] = v
+
             except Exception as err:
                 logger.error("Problem with race '{:s}' : {:s}".format(race, str(err)))

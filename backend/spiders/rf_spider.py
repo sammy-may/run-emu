@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 from backend.spiders.spider import Spider
+from backend.utils import utils
 
 logger = logging.getLogger(__name__)
 
@@ -67,7 +68,7 @@ class RFSpider(Spider):
 
             for idx, line in enumerate(lines):
                 imgs = []
-                race = {}
+                race = self.empty_race()
 
                 if not all([x in line for x in ["tr", "data-geo", "data-key"]]):
                     continue
@@ -76,7 +77,7 @@ class RFSpider(Spider):
                     logger.info("Issue parsing line '{:s}', skipping.".format(line))
                     continue
                 race["title"] = content["title"]
-                race_name = self.strip_name(race["title"])
+                race_name = utils.slugify(race["title"])
 
                 if self.reuse:
                     if race_name in self.races:
@@ -90,15 +91,7 @@ class RFSpider(Spider):
                 race["distances"] = [x for x in content["events"].split("/")]
                 race["location"] = content["location"].replace(", USA", "")
 
-                loc = self.get_location(race["location"])
-                if loc:
-                    race["latitude"] = loc.latitude
-                    race["longitude"] = loc.longitude
-                    loc_info = self.get_location_info(loc.latitude, loc.longitude)
-                    for k, v in loc_info.items():
-                        race[k] = v
-                else:
-                    logger.info("some issue with loc")
+                self.get_location(race["location"], race)
 
                 race["register"] = content["link"]
                 race["website"] = content["link"]

@@ -21,13 +21,28 @@ def parse_arguments():
         "--log-file", required=False, type=str, help="Name of the log file"
     )
 
+    parser.add_argument(
+        "--dry_run",
+        required=False,
+        action="store_true",
+        help="whether to perform upsertion to supabase",
+    )
+
+    parser.add_argument(
+        "--output_dir",
+        required=False,
+        default="data/",
+        type=str,
+        help="output directory for merged json",
+    )
+
     return parser.parse_args()
 
 
 SOURCES = [
-    "data/usa_spider_dump.json",
     "data/rf_spider_dump.json",
     "data/usu_spider_dump.json",
+    "data/usa_spider_dump.json",
 ]
 
 WEATHER = "data/weather/daily_normals.json"
@@ -37,7 +52,12 @@ def main(args):
     logger = setup_logger()
     logger.info("Running `update_db.py`.")
 
-    lib = Librarian(sources=SOURCES, weather=WEATHER)
+    lib = Librarian(
+        sources=SOURCES,
+        weather=WEATHER,
+        output_dir=args.output_dir,
+        dry_run=args.dry_run,
+    )
     lib.build_database()
 
 

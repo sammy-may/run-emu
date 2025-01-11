@@ -1,11 +1,13 @@
 import json
 import logging
+import random
 
 import parse
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 from backend.spiders.spider import Spider
+from backend.utils import utils
 
 logger = logging.getLogger(__name__)
 
@@ -20,8 +22,9 @@ class USUSpider(Spider):
     def enumerate_pages(self):
         base = self.urls[0]
         self.urls = [
-            base.replace("XXXXX", "{:05d}".format(i)) for i in range(10000, 21839)
+            base.replace("XXXXX", "{:05d}".format(i)) for i in range(10408, 23350)
         ]
+        random.shuffle(self.urls)
 
     def crawl(self):
         self.enumerate_pages()
@@ -33,8 +36,11 @@ class USUSpider(Spider):
             lines = str(soup).split("\n")
 
             imgs = []
-            race = {}
+            race = self.empty_race()
+            skip = False
             for idx, line in enumerate(lines):
+                if skip:
+                    break
                 if ".jpg" in line:
                     if "event_banner" in line:
                         img = parse.parse(
@@ -74,16 +80,16 @@ class USUSpider(Spider):
                         ).replace("},", "}")
                         info = json.loads(info)["data"]
                         race["title"] = info["title"]
-                        race_name = self.strip_name(race["title"])
+                        race_name = utils.slugify(info["title"])
 
-                        if self.reuse:
-                            if race_name in self.races:
-                                logger.info(
-                                    "Option 'reuse' selected, skipping race '{:s}'.".format(
-                                        race_name
-                                    )
-                                )
-                                continue
+                        # if self.reuse:
+                        #    if race_name in self.races:
+                        #        logger.info(
+                        #            "Option 'reuse' selected, skipping race '{:s}'.".format(
+                        #                race_name
+                        #            )
+                        #        )
+                        #        continue
 
                         title, dists, location, register, website = info["desc"].split(
                             "\n"
@@ -92,22 +98,25 @@ class USUSpider(Spider):
                         race["distances"] = dists
                         race["location"] = info["location"]
 
-                        loc = self.get_location(race["location"])
-                        if loc:
-                            race["latitude"] = loc.latitude
-                            race["longitude"] = loc.longitude
-                            loc_info = self.get_location_info(
-                                loc.latitude, loc.longitude
-                            )
-                            for k, v in loc_info.items():
-                                race[k] = v
+                        self.get_location(race["location"], race)
 
                         race["register"] = info["url"]
                         race["date"] = info["time"]["start"]
+                        if ":00" in race["date"] and len(race["date"]) > 8:
+                            race["date"] = race["date"][:-8].strip()
+
+                        year = int(race["date"][-4:])
+                        if year <= 2024:
+                            skip = True
+
                         race["website"] = website.split(" ")[-1]
 
                     except:  # noqa: E722
                         logger.warning("Skipping")
 
             race["images"] = [x.replace(".jpg>", ".jpg") for x in imgs]
-            self.save_result(race_name, race)
+            if not skip and race and "date" in race and "city" in race:
+                self.save_result(
+                    race_name + "-" + str(race["date"]) + "-" + race["city"].lower(),
+                    race,
+                )
