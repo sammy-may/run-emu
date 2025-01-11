@@ -40,7 +40,6 @@ def parse_arguments():
 
 
 SOURCES = [
-    "data/rf_spider_dump.json",
     "data/usu_spider_dump.json",
     "data/usa_spider_dump.json",
 ]
