@@ -35,7 +35,7 @@ const RaceFeed = ({ initResults }: { initResults: RaceType[] }) => {
             if (race.onMap) {
                 return (
                     <RaceCard
-                        key={"card" + race.name}
+                        key={"card" + race.name_url}
                         index={race.id!}
                         race={race}
                     />
