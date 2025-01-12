@@ -328,6 +328,13 @@ class Librarian:
                 info["city"] = ""
             if "state" not in info:
                 info["state"] = ""
+            if info["state"] == "":
+                locs = info["location"].split(",")
+                if len(locs) == 2:
+                    state = locs[1].strip().lower()
+                    for full_state, abbrev in STATE_ABBREV.items():
+                        if state == abbrev.lower():
+                            info["state"] = full_state
             if "register" not in info and "website" in info:
                 info["register"] = info["website"]
             if "website" not in info and "register" in info:
