@@ -288,7 +288,7 @@ const RaceMap = () => {
     }, [hoveredState, activeArea, globalSearchResults, windowWidth]);
 
     const Markers = useMemo(() => {
-        return mapResults
+        return searchResults
             .filter((race) => {
                 return pointInView(race.latitude, race.longitude);
             })
@@ -303,10 +303,10 @@ const RaceMap = () => {
                         updateHover(race.id!, false, true);
                         setOneHover(false);
                     }}
-                    key={"marker_div" + race.name}
+                    key={"marker_div" + race.name_url}
                 >
                     <Marker
-                        key={"marker" + race.name}
+                        key={"marker" + race.name_url}
                         longitude={race.longitude}
                         latitude={race.latitude}
                         anchor="bottom"
@@ -337,7 +337,7 @@ const RaceMap = () => {
                     </Marker>
                 </div>
             ));
-    }, [mapResults, searchResults, allResults, activeArea]);
+    }, [searchResults, allResults, activeArea]);
 
     const handleMouse = useCallback((evt: MapLayerMouseEvent) => {
         if (mapRef.current && evt.features && evt.features.length > 0) {
