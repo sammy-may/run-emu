@@ -7,6 +7,7 @@ import { FiSettings } from "react-icons/fi";
 import { useState } from "react";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
+import { TiDelete } from "react-icons/ti";
 
 const Header = () => {
     const {
@@ -18,6 +19,7 @@ const Header = () => {
         toggleDistUnits,
     } = useUserSettings();
     const [settingsMenuOpen, setSettingsMenuOpen] = useState<boolean>(false);
+    const [bannerDismissed, setBannerDismissed] = useState<boolean>(false);
 
     const toggleSettingsMenu = () => {
         setSettingsMenuOpen((settingsMenuOpen) => !settingsMenuOpen);
@@ -30,7 +32,7 @@ const Header = () => {
                     <Button
                         name={"RunEmu"}
                         icon={
-                            <div className="">
+                            <div className="text-lg">
                                 <FaHome />
                             </div>
                             /*                             <img
@@ -60,6 +62,21 @@ const Header = () => {
                         ></Button>
                     </div> */}
                 </div>
+                {!bannerDismissed && (
+                    <div className="group flex overflow-x-scroll items-center space-x-2 text-gray-700 dark:text-gray-200 dark:bg-gray-700 bg-gray-300 rounded-full px-2">
+                        <h1 className="flex overflow-x-scroll whitespace-nowrap group-hover:text-black dark:group-hover:text-white">
+                            Browse thousands of upcoming running events near you
+                            with our race directory - we have everything from
+                            5k's to ultra marathons.
+                        </h1>
+                        <div
+                            onClick={() => setBannerDismissed(true)}
+                            className="text-lg hover:cursor-pointer hover:text-black dark:hover:text-white"
+                        >
+                            <TiDelete />
+                        </div>
+                    </div>
+                )}
                 <div className="flex items-center space-x-3 h-full">
                     {/*                     <div>
                         <Button
@@ -73,7 +90,7 @@ const Header = () => {
                             className="h-full rounded-lg flex items-center space-x-3 px-3 py-2 border dark:border-gray-800 border-gray-200 dark:bg-gray-800 bg-gray-200 hover:dark:border-dustyRose-500 hover:border-dustyRose-500 hover:dark:bg-dustyRose-700 hover:bg-dustyRose-300 hover:text-dustyRose-900 dark:text-gray-200 text-gray-800 text-sm md:text-base"
                             onClick={toggleSettingsMenu}
                         >
-                            <div>
+                            <div className="text-base">
                                 <FiSettings />
                             </div>
                             <div className="hidden sm:block">Settings</div>

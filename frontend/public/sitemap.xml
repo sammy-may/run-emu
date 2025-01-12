@@ -2554,14 +2554,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/lake-pacawa-parkrun-plover-1-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/10-mile-brewery-run-in-memory-of-ric-diveglio-patchogue-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -2930,14 +2922,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/davidson-dash-crestview-1-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/big-bill-foundation-big-5k-bradenton-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -2955,6 +2939,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/classics-by-the-sea-5k-10k-jupiter-1-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/davidson-dash-crestview-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -3242,7 +3234,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/matanzas-5000-saint-augustine-1-2025</loc>
+        <loc>https://www.runemu.com/races/leakin-park-parkrun-baltimore-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -3258,6 +3250,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/tower-ridge-10k-eau-claire-1-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/howard-temin-lakeshore-path-parkrun-madison-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -3266,7 +3266,15 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/tower-ridge-10k-eau-claire-1-2025</loc>
+        <loc>https://www.runemu.com/races/lake-pacawa-parkrun-plover-1-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/matanzas-5000-saint-augustine-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -3379,14 +3387,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/whiskey-tango-foxtrot-half-marathon-and-5-mile-gibsonville-1-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/leakin-park-parkrun-baltimore-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -3978,6 +3978,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/mlk-day-5k-doraville-1-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/1929-races-eatonton-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -4130,14 +4138,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/la-cuesta-ranch-trail-run-san-luis-obispo-1-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/vegas-polar-plunge-5k-henderson-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -4155,6 +4155,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/folsom-lake-sweetwater-trail-run-folsom-1-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/la-cuesta-ranch-trail-run-san-luis-obispo-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -5034,14 +5042,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/ironbull-ring-of-snow-challenge-wausau-1-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/in-the-woods-30a-50k-santa-rosa-beach-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -5155,6 +5155,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/frosty-5k-waukesha-1-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/ironbull-ring-of-snow-challenge-wausau-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -5634,6 +5642,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/rerun-5-x-5k-trail-run-navasota-1-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/aj-howard-memorial-5k-belton-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -5707,14 +5723,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/ranger-regiment-march-to-the-beat-fort-worth-1-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/rerun-5-x-5k-trail-run-navasota-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -6090,14 +6098,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/new-york-state-parks-winter-run-series-sunken-meadow-state-park-kings-park-1-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/chilly-chili-5k-cazenovia-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -6107,6 +6107,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/hmrrc-winter-series-4-albany-1-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/new-york-state-parks-winter-run-series-sunken-meadow-state-park-kings-park-1-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -6347,6 +6355,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/critz-tybee-run-fest-tybee-island-1-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/livonia-parkrun-livonia-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -6619,14 +6635,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/lillie-parkrun-ann-arbor-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/livonia-parkrun-livonia-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -7194,6 +7202,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/me-strong-5k-deland-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/chimpathon-5k-and-10k-fort-pierce-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -7275,14 +7291,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/love-of-the-horse-5k-ocala-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/me-strong-5k-deland-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -7514,14 +7522,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/subzero-race-series-madison-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/howard-temin-lakeshore-path-parkrun-madison-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -7531,6 +7531,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/lake-pacawa-parkrun-plover-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/subzero-race-series-madison-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -7579,6 +7587,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/crossfit864-run-walk-clinton-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/warrior-spirit-5k-carlsbad-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -7658,6 +7674,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/san-pasqual-valley-trail-race-escondido-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/don-osborne-memorial-run-oakdale-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -7723,22 +7747,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/runnin-to-the-rig-bakersfield-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/san-pasqual-valley-trail-race-escondido-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/warrior-spirit-5k-carlsbad-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -7866,6 +7874,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/red-top-rumble-cartersville-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/the-racing-gnome-snowshoe-race-truckee-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -7875,14 +7891,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/devils-shadow-winter-trail-races-honeoye-falls-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/red-top-rumble-cartersville-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -8362,7 +8370,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/do-it-for-her-5k-temecula-2-2025</loc>
+        <loc>https://www.runemu.com/races/deja-vu-dash-groundhog-day-run-long-beach-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -8370,7 +8378,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/deja-vu-dash-groundhog-day-run-long-beach-2-2025</loc>
+        <loc>https://www.runemu.com/races/do-it-for-her-5k-temecula-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -8426,7 +8434,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/frosty-15-canton-2-2025</loc>
+        <loc>https://www.runemu.com/races/mill-stone-50k-fort-mill-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -8434,7 +8442,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/mill-stone-50k-fort-mill-2-2025</loc>
+        <loc>https://www.runemu.com/races/frosty-15-canton-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -9554,6 +9562,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/leakin-park-parkrun-baltimore-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/wendy-martinez-legacy-5k-10k-love-wins-west-palm-beach-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -9603,14 +9619,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/kensington-parkrun-bethesda-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/leakin-park-parkrun-baltimore-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -9930,6 +9938,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/smhs-pac-gumbo-run-baton-rouge-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/bob-and-peg-andrulis-sweetheart-run-litchfield-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -9939,14 +9955,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/cupid-made-me-do-it-windham-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/smhs-pac-gumbo-run-baton-rouge-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -10426,14 +10434,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/run-your-ice-off-5k-and-8k-races-greenwood-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/building-healthy-communities-5k-charleston-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -10483,6 +10483,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/puppy-love-5k-mount-pleasant-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/run-your-ice-off-5k-and-8k-races-greenwood-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -10738,7 +10746,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/big-one-5k-denton-2-2025</loc>
+        <loc>https://www.runemu.com/races/be-my-valentine-5k-san-antonio-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -10746,7 +10754,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/be-my-valentine-5k-san-antonio-2-2025</loc>
+        <loc>https://www.runemu.com/races/big-one-5k-denton-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -10946,6 +10954,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/tailgater-2-point-conversion-brooklyn-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/valentine-s-5k-valparaiso-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -10963,14 +10979,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/run-for-refugees-new-haven-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/tailgater-2-point-conversion-brooklyn-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -11242,14 +11250,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/run-forest-run-montesano-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/red-dirt-ultra-robeline-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -11282,6 +11282,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/run-forest-run-montesano-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/susitna-100-big-lake-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -11298,7 +11306,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/brave-kindness-run-leesburg-2-2025</loc>
+        <loc>https://www.runemu.com/races/the-ranch-50k-escondido-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -11306,7 +11314,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/the-ranch-50k-escondido-2-2025</loc>
+        <loc>https://www.runemu.com/races/brave-kindness-run-leesburg-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -11770,14 +11778,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/head-for-the-cure-5k-orlando-orlando-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/cleveland-cocoa-run-cleveland-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -11859,6 +11859,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/for-the-love-of-chocolate-5k-winter-garden-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/head-for-the-cure-5k-orlando-orlando-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -12026,6 +12034,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/valentine-5k-perryville-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/healthy-hearts-run-walk-beatrice-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -12059,14 +12075,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/galentine-s-5k-seattle-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/valentine-5k-perryville-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -13610,14 +13618,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/roosevelt-island-dc-parkrun-arlington-2-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/white-lick-creek-parkrun-plainfield-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -13675,6 +13675,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/deep-run-parkrun-richmond-2-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/roosevelt-island-dc-parkrun-arlington-2-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -15914,7 +15922,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/danehy-park-parkrun-cambridge-3-2025</loc>
+        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -15922,7 +15930,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-3-2025</loc>
+        <loc>https://www.runemu.com/races/danehy-park-parkrun-cambridge-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -15955,6 +15963,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/melt-the-trail-westfield-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/ja-fun-run-phoenix-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -16018,30 +16034,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/texas-brewery-running-series-austin-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/texas-brewery-running-series-san-antonio-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/texas-independence-day-5k-lewisville-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/mustang-5k-rainsville-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -16059,6 +16051,30 @@
 
     <url>
         <loc>https://www.runemu.com/races/st-patrick-s-5k-pharr-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/texas-brewery-running-series-austin-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/texas-brewery-running-series-san-antonio-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/texas-independence-day-5k-lewisville-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -16139,14 +16155,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/bring-home-the-cookies-5k-glendale-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/ja-fun-run-phoenix-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -16482,14 +16490,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/st-paul-village-5k-chapel-hill-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/corporate-cup-charlotte-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -16515,6 +16515,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/run-with-your-heart-5k-10k-15k-jacksonville-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/st-paul-village-5k-chapel-hill-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -17626,6 +17634,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/stu-s-30k-road-clinton-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/bigfoot-endurance-trail-runs-elkridge-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -17658,14 +17674,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/4-leaf-rover-4-mile-run-lawrence-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/hyannis-marathon-hyannis-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -17674,7 +17682,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/stu-s-30k-road-clinton-3-2025</loc>
+        <loc>https://www.runemu.com/races/4-leaf-rover-4-mile-run-lawrence-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -17778,6 +17786,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/king-s-runner-10k-honolulu-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/hot-chocolate-15k-5k-seattle-seattle-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -17850,14 +17866,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/homer-epic-homer-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/siuslaw-dunes-florence-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -17867,6 +17875,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/squatchapple-west-orange-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/homer-epic-homer-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -18178,14 +18194,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/prairie-dog-town-lubbock-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/allen-isd-eagle-run-allen-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -18235,6 +18243,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/peticolas-running-club-social-run-walk-march-dallas-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/prairie-dog-town-lubbock-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -18546,6 +18562,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/ohio-and-erie-canal-reservation-parkrun-cleveland-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/time-to-paddy-5k-10k-and-lucky-13-1-columbus-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -18555,14 +18579,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/mansfield-oh-parkrun-mansfield-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/ohio-and-erie-canal-reservation-parkrun-cleveland-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -19826,14 +19842,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/runnin-of-the-green-7k-denver-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/race-3-21-for-down-syndrome-awareness-knoxville-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -19843,6 +19851,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/time-to-paddy-5k-10k-and-lucky-13-1-chattanooga-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/runnin-of-the-green-7k-denver-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -20107,6 +20123,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/pi-day-5k-and-10k-annandale-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/st-patrick-s-run-fairbanks-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/pi-day-new-york-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -20698,6 +20730,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/shamrock-run-bristol-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/catch-a-leprechaun-5k-essex-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -20707,14 +20747,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/o-niantic-5k-niantic-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/shamrock-run-bristol-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -20843,14 +20875,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/pasquale-s-pizza-run-east-aurora-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/pi-day-new-york-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -21114,6 +21138,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/gradurun-5k-ringgold-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/army-rotc-bulldog-battalion-memorial-5k-athens-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -21155,14 +21187,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/fighting-hunger-feeding-hope-5k-summerville-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/gradurun-5k-ringgold-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -22026,22 +22050,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/st-patrick-s-day-5k-bakersfield-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/st-patrick-s-run-fairbanks-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/ales-for-trails-5k-greenwood-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -22179,6 +22187,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/santa-barbara-nine-trails-santa-barbara-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/st-patrick-s-day-5k-bakersfield-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -24250,6 +24266,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/prince-william-telegraph-road-5k-10k-triangle-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/luau-1m-5k-10k-15k-and-half-marathon-colonial-heights-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -24259,14 +24283,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/pcs-patriot-perseverence-5k-williamsburg-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/prince-william-telegraph-road-5k-10k-triangle-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -24322,6 +24338,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/phillies-charities-5k-philadelphia-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/behind-the-rocks-moab-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -24363,14 +24387,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/maple-madness-mud-sweat-and-syrup-warren-center-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/phillies-charities-5k-philadelphia-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -24594,6 +24610,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/shamrock-scramble-5k-wallkill-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/brandywine-red-run-newark-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -24618,22 +24642,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/shamrock-scramble-5k-wallkill-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/middletonian-5k-middletown-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/brain-injury-awareness-5k-columbus-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -24643,6 +24651,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/march-mayhem-maumee-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/middletonian-5k-middletown-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -24986,14 +25002,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/hone-quarry-ultra-dayton-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/folsom-lake-falcon-crest-trail-run-el-dorado-hills-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -25019,6 +25027,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/spring-on-the-trails-endurance-runs-lagrangeville-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/hone-quarry-ultra-dayton-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -25930,6 +25946,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/screen-your-gut-save-your-butt-5k-san-diego-3-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/boardwalk-fun-run-santa-cruz-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -25994,14 +26018,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/screen-your-gut-save-your-butt-5k-san-diego-3-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/uhc-foundation-summer-fun-run-fresno-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -26018,7 +26034,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/red-brick-run-clinton-3-2025</loc>
+        <loc>https://www.runemu.com/races/zebra-run-for-rare-disease-ocean-springs-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -26026,7 +26042,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/zebra-run-for-rare-disease-ocean-springs-3-2025</loc>
+        <loc>https://www.runemu.com/races/red-brick-run-clinton-3-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -26778,6 +26794,46 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/7-mile-bridge-run-marathon-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/steps-for-sos-5k-coconut-creek-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/coon-hill-day-5k-jay-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/ultra-trail-de-honiton-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/glow-run-for-africa-5k-newberg-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/escape-from-prison-hill-carson-city-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -26843,14 +26899,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/q50-races-sunset-gulf-grand-isle-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/ultra-trail-de-honiton-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -27218,14 +27266,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/7-mile-bridge-run-marathon-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/arts-heart-5k-orlando-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -27283,14 +27323,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/victory-marathon-hillsdale-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/glow-run-for-africa-5k-newberg-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -27362,14 +27394,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/evergreen-parkrun-andover-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/lions-run-for-sight-5k-lexington-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -27411,6 +27435,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/ship-bottom-sprint-for-life-5k-ship-bottom-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/evergreen-parkrun-andover-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -27642,14 +27674,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/focus-on-youth-5k-care-walk-run-west-chester-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/bring-lara-back-5k-bay-village-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -27667,6 +27691,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/cleveland-clinic-union-hospital-run-for-home-new-philadelphia-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/focus-on-youth-5k-care-walk-run-west-chester-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -27994,6 +28026,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/eref-5k-east-rockaway-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/fool-s-dual-half-marathon-gloucester-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -28026,6 +28066,22 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/last-chance-s-run-for-the-rescue-hauppauge-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/terrain-race-dallas-forney-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/bridge-2-bridge-run-high-falls-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -28043,22 +28099,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/e-race-cancer-half-marathon-bridgeport-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/eref-5k-east-rockaway-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/last-chance-s-run-for-the-rescue-hauppauge-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -28218,14 +28258,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/steps-for-sos-5k-coconut-creek-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/tampa-firefighters-5k-tampa-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -28243,6 +28275,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/wounded-warfighter-lone-sailor-5k-10k-orlando-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/bare-buns-run-mcdade-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -28330,30 +28370,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/sheetz-to-sheetz-trail-run-king-george-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/soleful-run-series-haymarket-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/terrain-race-dallas-forney-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/the-mammoth-race-at-cleburne-state-park-cleburne-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -28379,6 +28395,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/unified-champions-5k-for-all-buda-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/sheetz-to-sheetz-trail-run-king-george-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/soleful-run-series-haymarket-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -28442,14 +28474,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/winter-running-series-ogden-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/cheap-marathon-derry-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -28474,7 +28498,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/bare-buns-run-mcdade-4-2025</loc>
+        <loc>https://www.runemu.com/races/winter-running-series-ogden-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -29362,6 +29386,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/himmel-parkrun-tucson-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/james-river-trail-runs-gladstone-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -29578,6 +29610,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/rock-creek-trail-parkrun-portland-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/outlands-pilot-hill-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -29595,14 +29635,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/streakers-marathon-provo-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/rocket-5k-little-rock-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -29651,6 +29683,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/pirate-1m-5k-10k-15k-and-half-marathon-little-rock-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/rocket-5k-little-rock-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -30218,14 +30258,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/rock-creek-trail-parkrun-portland-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/boulder-rez-half-boulder-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -30442,14 +30474,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/oriflamme-50k-julian-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/autism-on-the-run-bakersfield-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -30483,6 +30507,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/lake-sonoma-50-healdsburg-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/oriflamme-50k-julian-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -31122,14 +31154,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/himmel-parkrun-tucson-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/black-excellence-5k-lynn-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -31618,14 +31642,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/run-for-tomorrow-s-hope-5k-garden-city-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/international-taste-fest-10k-5k-syracuse-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -31666,6 +31682,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/run-for-tomorrow-s-hope-5k-garden-city-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/soundview-5k-bronx-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -31683,6 +31707,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/the-7-line-7k-new-york-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/tampa-international-airport-5k-on-the-runway-tampa-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -31723,14 +31755,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/rage-against-addiction-recovery-run-bel-air-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/tampa-international-airport-5k-on-the-runway-tampa-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -32018,6 +32042,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/best-in-the-west-5k-fort-worth-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/mill-town-marathon-everett-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -32059,14 +32091,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/bar-z-wine-run-5k-canyon-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/best-in-the-west-5k-fort-worth-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -32130,7 +32154,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/dogwood-azalea-festival-5k-charleston-4-2025</loc>
+        <loc>https://www.runemu.com/races/get-your-rear-in-gear-kansas-city-kansas-city-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -32138,7 +32162,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/get-your-rear-in-gear-kansas-city-kansas-city-4-2025</loc>
+        <loc>https://www.runemu.com/races/dogwood-azalea-festival-5k-charleston-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -32523,6 +32547,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/nhti-delta-dental-5k-concord-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/gene-van-wyk-5k-memorial-run-pella-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -33186,14 +33218,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/tar-heel-10-miler-chapel-hill-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/exodus-run-washington-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -33219,6 +33243,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/step-up-for-soldiers-combat-mud-run-wilmington-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/tar-heel-10-miler-chapel-hill-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -33451,14 +33483,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/drake-road-races-des-moines-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/gene-van-wyk-5k-memorial-run-pella-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -34170,6 +34194,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/easter-bunny-5k-east-meadow-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/boston-marathon-boston-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -34522,6 +34554,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/hells-dells-prescott-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/feral-mtn-100m-50m-ellijay-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -34531,14 +34571,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/the-hilly-goat-half-10k-5k-blair-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/hells-dells-prescott-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -34994,22 +35026,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/she-tris-5-mile-run-winston-salem-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/scotland-memorial-foundation-s-fund-run-laurinburg-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/friends-homes-3k-and-5k-greensboro-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -35074,7 +35090,23 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/scotland-memorial-foundation-s-fund-run-laurinburg-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/she-slays-5k-hendersonville-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/she-tris-5-mile-run-winston-salem-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -35115,6 +35147,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/woodfin-5k-asheville-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/cornerstone-lakes-parkrun-west-chicago-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -35178,14 +35218,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/cornerstone-lakes-parkrun-west-chicago-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/heritage-harbor-parkrun-ottawa-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -35219,14 +35251,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/joe-creason-parkrun-louisville-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/trail-marathon-pinckney-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -35283,6 +35307,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/thumb-coast-ultra-and-relay-caseville-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/trail-marathon-pinckney-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -35666,14 +35698,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/cabin-fever-5k-carrollton-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/brasstown-bald-buster-5k-hiawassee-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -35683,6 +35707,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/briarlake-5k-fun-run-and-roll-decatur-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/cabin-fever-5k-carrollton-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -36266,6 +36298,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/promise-land-50k-bedford-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/gator-wilderness-camp-trail-run-punta-gorda-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -36562,14 +36602,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/promise-land-50k-bedford-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/run-the-tunnel-duffield-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -36802,15 +36834,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/run-with-heart-5k-terre-haute-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/vincennes-historical-half-marathon-vincennes-4-2025</loc>
+        <loc>https://www.runemu.com/races/hopefest-newburgh-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -36850,14 +36874,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/hopefest-newburgh-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/joel-gentz-5k-west-lafayette-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -36890,6 +36906,22 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/run-with-heart-5k-terre-haute-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/vincennes-historical-half-marathon-vincennes-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/wakarusa-maple-syrup-festival-5k-wakarusa-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -36906,7 +36938,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/eastern-trail-parkrun-biddeford-biddeford-4-2025</loc>
+        <loc>https://www.runemu.com/races/ashley-ouellette-memorial-5k-scarborough-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -36914,7 +36946,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/ashley-ouellette-memorial-5k-scarborough-4-2025</loc>
+        <loc>https://www.runemu.com/races/eastern-trail-parkrun-biddeford-biddeford-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -36979,6 +37011,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/hidden-hills-ultra-graham-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/saddleback-marathon-silverado-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -37074,14 +37114,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/saddleback-marathon-silverado-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/super-bulldog-jog-5k-los-angeles-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -37123,14 +37155,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/jack-bristol-lake-waramaug-ultra-races-kent-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/west-island-5k-fairhaven-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -37234,6 +37258,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/west-island-5k-fairhaven-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/equal-access-clinic-network-5k-gainesville-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -37290,7 +37322,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/matt-breman-run-indianapolis-4-2025</loc>
+        <loc>https://www.runemu.com/races/fort-wayne-half-and-full-marathon-fort-wayne-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -37298,7 +37330,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/fort-wayne-half-and-full-marathon-fort-wayne-4-2025</loc>
+        <loc>https://www.runemu.com/races/matt-breman-run-indianapolis-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -37314,7 +37346,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/bookin-for-lookin-5k-newtown-4-2025</loc>
+        <loc>https://www.runemu.com/races/oklahoma-city-memorial-marathon-oklahoma-city-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -37322,7 +37354,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/oklahoma-city-memorial-marathon-oklahoma-city-4-2025</loc>
+        <loc>https://www.runemu.com/races/bookin-for-lookin-5k-newtown-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -37762,22 +37794,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/seneca7-geneva-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/step-up-4-kids-5k-syracuse-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/nycruns-brooklyn-half-marathon-new-york-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -37787,6 +37803,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/rye-derby-5k-rye-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/seneca7-geneva-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/step-up-4-kids-5k-syracuse-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -37930,14 +37962,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/lauren-s-run-atlanta-4-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/loop-the-lakes-5k-vernon-hills-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -37986,7 +38010,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/tear-drop-half-marathon-chatsworth-4-2025</loc>
+        <loc>https://www.runemu.com/races/lauren-s-run-atlanta-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -37994,7 +38018,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/san-diego-donut-run-san-diego-4-2025</loc>
+        <loc>https://www.runemu.com/races/tear-drop-half-marathon-chatsworth-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -38083,6 +38107,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/run-because-you-can-sacramento-4-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/san-diego-donut-run-san-diego-4-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -38306,6 +38338,22 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/heritage-harbor-parkrun-ottawa-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/o24-kirtland-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/hacienda-hills-trail-run-spring-san-jose-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -38379,14 +38427,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/kanawha-trace-trail-run-ona-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/o24-kirtland-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -39298,6 +39338,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/willow-trail-run-hudson-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/lake-monona-20k-and-5k-monona-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -39346,14 +39394,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/willow-trail-run-hudson-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/wisconsin-marathon-kenosha-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -39362,7 +39402,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/heritage-harbor-parkrun-ottawa-5-2025</loc>
+        <loc>https://www.runemu.com/races/lung-force-run-walk-orlando-orlando-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -39443,14 +39483,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/luau-1m-5k-10k-15k-and-half-marathon-venice-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/lung-force-run-walk-orlando-orlando-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -40002,6 +40034,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/silva-strong-superhero-5k-mendota-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/cinco-de-mayo-half-marathon-long-beach-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -40067,14 +40107,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/santa-fe-springs-5k-santa-fe-springs-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/silva-strong-superhero-5k-mendota-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -40754,6 +40786,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/runway-5k-northampton-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/thunder-chicken-100k-stage-races-eureka-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -40946,6 +40986,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/dandelion-dash-and-mushroom-mile-hadley-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/cahill-5k-race-swampscott-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -40978,23 +41026,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/dandelion-dash-and-mushroom-mile-hadley-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/emma-s-run-sharon-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/runway-5k-northampton-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -41442,6 +41474,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/arboretum-bud-break-5k-chaska-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/chicagoland-spring-marathon-half-marathon-and-10k-schaumburg-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -41475,14 +41515,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/grayson-highlands-grayson-highlands-state-park-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/arboretum-bud-break-5k-chaska-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -41682,7 +41714,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/flower-moon-pawhuska-5-2025</loc>
+        <loc>https://www.runemu.com/races/over-the-top-trail-race-pocatello-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -41690,7 +41722,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/over-the-top-trail-race-pocatello-5-2025</loc>
+        <loc>https://www.runemu.com/races/flower-moon-pawhuska-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -41890,6 +41922,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/joe-creason-parkrun-louisville-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/miles-for-mom-cookeville-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -42066,14 +42106,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/ninja-1m-5k-10k-15k-and-half-marathon-henderson-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/pace-marathon-smiths-grove-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -42082,7 +42114,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/joe-creason-parkrun-louisville-5-2025</loc>
+        <loc>https://www.runemu.com/races/ninja-1m-5k-10k-15k-and-half-marathon-henderson-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -42442,14 +42474,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/walk-like-madd-and-madd-dash-fort-myers-5k-fort-myers-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/donut-dash-5k-minnetonka-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -42475,14 +42499,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/unity-in-motion-5k-brooklyn-center-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/run-walk-with-mom-5k-10k-pompano-beach-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -42523,6 +42539,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/raymond-james-spartan-stadion-tampa-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/run-walk-with-mom-5k-10k-pompano-beach-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/walk-like-madd-and-madd-dash-fort-myers-5k-fort-myers-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -43154,14 +43186,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/ct-race-in-the-park-new-britain-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/heart-of-eastford-5k-eastford-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -43171,6 +43195,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/riverside-run-riverside-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/ct-race-in-the-park-new-britain-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -43618,6 +43650,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/kensington-parkrun-bethesda-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/born-to-run-ultra-marathons-los-olivos-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -43843,6 +43883,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/massanutten-mountain-trails-100-mile-run-fort-valley-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/byxbee-parkrun-palo-alto-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -44178,14 +44226,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/tackle-the-tar-rocky-mount-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/pnc-women-run-the-cities-minneapolis-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -44219,14 +44259,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/med-city-marathon-rochester-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/byxbee-parkrun-palo-alto-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -44594,14 +44626,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/habitat-archuleta-s-15-homes-in-5-cedar-park-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/canine-on-the-creek-idaho-springs-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -44611,6 +44635,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/endure-trail-runs-divide-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/habitat-archuleta-s-15-homes-in-5-cedar-park-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -44643,6 +44675,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/boots-and-brews-5k-freeport-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/free-spirit-50k-ultra-leyden-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -44698,23 +44738,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/free-spirit-50k-ultra-leyden-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/dash-around-kampeska-watertown-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/kensington-parkrun-bethesda-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -45426,14 +45450,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/lions-5k-newton-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/runway-5k-keene-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -45578,14 +45594,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/alum-creek-trail-half-marathon-relay-lewis-center-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/cleveland-marathon-cleveland-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -45594,15 +45602,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/rappahannock-cellars-5k-10k-1m-huntly-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/muddy-princess-virginia-beach-5-2025</loc>
+        <loc>https://www.runemu.com/races/alum-creek-trail-half-marathon-relay-lewis-center-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -45635,6 +45635,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/marine-corps-historic-half-fredericksburg-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/muddy-princess-virginia-beach-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/rappahannock-cellars-5k-10k-1m-huntly-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -45738,14 +45754,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/mystic-river-herring-run-somerville-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/evan-s-run-norwell-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -45763,6 +45771,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/horseneck-half-and-3-5m-westport-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/lions-5k-newton-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/mystic-river-herring-run-somerville-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -45939,54 +45963,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/wisepies-pizza-run-albuquerque-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/chicago-spring-half-marathon-chicago-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/dash-for-the-dogs-5k-run-walk-barrington-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/girls-on-the-run-5k-crystal-lake-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/i-got-your-six-bourbonnais-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/michael-j-fox-foundation-run-chicago-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/spring-trail-chase-10k-lemont-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -47074,14 +47050,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/frontline-ocr-byron-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/kenya-wildlife-marathon-machakos-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -47434,6 +47402,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/bolderboulder-10k-boulder-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/stumptown-trail-runs-portland-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -47642,14 +47618,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/bolderboulder-10k-boulder-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/denny-carrigan-memorial-scholarship-5k-for-education-rising-sun-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -47786,14 +47754,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/danehy-park-parkrun-cambridge-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/smith-rock-classic-terrebonne-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -47835,14 +47795,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/sonoma-coast-trail-runs-occidental-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -47963,6 +47915,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/cutler-park-parkrun-needham-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/danehy-park-parkrun-cambridge-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -48522,14 +48490,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/rock-n-roll-san-diego-san-diego-5-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/bakersfield-hot-fudge-sundae-run-bakersfield-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -48563,6 +48523,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/finish-the-run-griffith-park-los-angeles-5-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/rock-n-roll-san-diego-san-diego-5-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -49394,7 +49362,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/festival-of-miles-st-louis-6-2025</loc>
+        <loc>https://www.runemu.com/races/srr-thursday-night-4-06-miler-somerville-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -49402,7 +49370,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/srr-thursday-night-4-06-miler-somerville-6-2025</loc>
+        <loc>https://www.runemu.com/races/festival-of-miles-st-louis-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -49754,23 +49722,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/jesvic-5k-watsontown-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/grasshopper-peak-redwoods-run-honeydew-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/northstar-truckee-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -49858,6 +49810,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/northstar-truckee-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/pi-in-the-sky-phoenix-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -49867,6 +49827,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/mckenzie-river-trail-run-blue-river-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/half-sauer-half-kraut-marathon-philadelphia-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -49890,7 +49858,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/half-sauer-half-kraut-marathon-philadelphia-6-2025</loc>
+        <loc>https://www.runemu.com/races/j-r-taylor-5k-race-and-walk-bethel-park-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -49898,7 +49866,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/j-r-taylor-5k-race-and-walk-bethel-park-6-2025</loc>
+        <loc>https://www.runemu.com/races/jesvic-5k-watsontown-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -49939,14 +49907,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/slate-run-25k-cedar-run-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/girls-on-the-run-5k-manchester-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -50706,6 +50666,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/girls-on-the-run-5k-manchester-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/the-well-5k-bridgewater-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -50874,7 +50842,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/prairie-plains-fun-run-marquette-6-2025</loc>
+        <loc>https://www.runemu.com/races/havelock-run-lincoln-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -50882,7 +50850,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/havelock-run-lincoln-6-2025</loc>
+        <loc>https://www.runemu.com/races/prairie-plains-fun-run-marquette-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -51810,6 +51778,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/rap-river-run-new-port-richey-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/ansonia-six-hour-trail-run-ansonia-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -51939,14 +51915,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/ninja-5k-10k-and-half-marathon-deland-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/rap-river-run-new-port-richey-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -52690,22 +52658,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/white-river-run-anderson-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/ymca-of-dekalb-co-5k-auburn-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/8-hours-of-brown-county-nashville-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -52763,6 +52715,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/necktie-5k-beverly-shores-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/white-river-run-anderson-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/ymca-of-dekalb-co-5k-auburn-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -53978,6 +53946,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/kensington-parkrun-bethesda-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/baltimore-and-annapolis-trail-parkrun-pasadena-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -53987,14 +53963,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/college-park-parkrun-college-park-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/kensington-parkrun-bethesda-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -54026,7 +53994,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/leakin-park-parkrun-baltimore-6-2025</loc>
+        <loc>https://www.runemu.com/races/wild-woman-marathon-trout-lake-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -54034,7 +54002,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/wild-woman-marathon-trout-lake-6-2025</loc>
+        <loc>https://www.runemu.com/races/leakin-park-parkrun-baltimore-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -54234,14 +54202,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/terry-hershey-parkrun-houston-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/marquette-trails-festival-marquette-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -54315,6 +54275,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/vitality-5k-lakeview-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/terry-hershey-parkrun-houston-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -54506,14 +54474,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/a-most-excellent-race-strongsville-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/training-camp-5k-canton-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -54522,15 +54482,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/lobster-roll-4-miler-scarborough-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/muddy-princess-minot-6-2025</loc>
+        <loc>https://www.runemu.com/races/a-most-excellent-race-strongsville-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -54579,6 +54531,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/hometown-half-marathon-saint-paul-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/lobster-roll-4-miler-scarborough-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/muddy-princess-minot-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -54667,6 +54635,38 @@
 
     <url>
         <loc>https://www.runemu.com/races/alaska-relay-anchorage-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/denver-pride-5k-denver-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/courthouse-lake-parkrun-chaska-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/eagan-parkrun-eagan-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/hamlet-park-parkrun-cottage-grove-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -54803,30 +54803,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/race-the-cog-carroll-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/courthouse-lake-parkrun-chaska-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/eagan-parkrun-eagan-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/hamlet-park-parkrun-cottage-grove-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -55002,14 +54978,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/deep-run-parkrun-richmond-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/race-for-open-space-nantucket-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -55019,6 +54987,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/roll-into-summer-cape-cod-challenger-club-5k-osterville-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/deep-run-parkrun-richmond-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -55426,14 +55402,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/denver-pride-5k-denver-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/leadville-trail-marathon-and-heavy-half-leadville-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -55555,14 +55523,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/run-walk-boom-5k-huntington-woods-6-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/freedom-5k-saint-germain-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -55731,6 +55691,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/boulder-sunrise-10k-and-5k-boulder-6-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/freedom-5k-saint-germain-6-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -56482,14 +56450,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/vac-and-dash-3-6-mile-watermelon-run-albemarle-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/4-on-the-fourth-charlotte-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -56499,6 +56459,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/firecracker-4-miler-fayetteville-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/vac-and-dash-3-6-mile-watermelon-run-albemarle-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -57402,7 +57370,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/devil-s-gulch-wenatchee-7-2025</loc>
+        <loc>https://www.runemu.com/races/ubly-homecoming-5k-ubly-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -57427,6 +57395,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/sombrero-sizzler-jacksonville-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/devil-s-gulch-wenatchee-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -57578,23 +57554,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/courthouse-lake-parkrun-chaska-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/ultramook-50k-on-the-tillamook-ridge-tillamook-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/eagan-parkrun-eagan-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -57618,6 +57578,22 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/heritage-harbor-parkrun-ottawa-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/little-sugar-creek-greenway-parkrun-charlotte-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/creekside-parkrun-archdale-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -57627,14 +57603,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/durham-nc-parkrun-durham-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/little-sugar-creek-greenway-parkrun-charlotte-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -57786,14 +57754,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/heritage-harbor-parkrun-ottawa-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/honey-badger-100-cheney-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -57906,7 +57866,15 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/soleful-run-series-haymarket-7-2025</loc>
+        <loc>https://www.runemu.com/races/courthouse-lake-parkrun-chaska-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/eagan-parkrun-eagan-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -57963,6 +57931,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/sherando-park-endurance-athletic-run-8-hour-challenge-stephens-city-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/soleful-run-series-haymarket-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -58538,7 +58514,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/heartland-series-day-6-wi-sparta-7-2025</loc>
+        <loc>https://www.runemu.com/races/storm-the-bastille-milwaukee-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -58546,7 +58522,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/storm-the-bastille-milwaukee-7-2025</loc>
+        <loc>https://www.runemu.com/races/heartland-series-day-6-wi-sparta-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -58634,6 +58610,22 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/tough-mugu-malibu-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/st-eulalia-5k-roaring-brook-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/little-blackfoot-helena-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -58682,6 +58674,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/livonia-parkrun-livonia-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/davis-creek-climb-washoe-valley-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -58707,14 +58707,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/silverton-alpine-runs-silverton-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/tough-mugu-malibu-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -58835,14 +58827,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/lillie-parkrun-ann-arbor-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/livonia-parkrun-livonia-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -59026,14 +59010,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/ashby-appreciation-days-5k-10k-ashby-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/harding-hustle-trail-runs-silverado-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -59051,6 +59027,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/summer-sensation-half-marathon-long-beach-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/ashby-appreciation-days-5k-10k-ashby-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -59586,6 +59570,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/charleston-5k-charleston-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/holly-jolly-july-jog-glassboro-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -59594,7 +59586,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/crazy-mountain-100-martinsdale-7-2025</loc>
+        <loc>https://www.runemu.com/races/la-nuit-dallas-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -59602,7 +59594,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/la-nuit-dallas-7-2025</loc>
+        <loc>https://www.runemu.com/races/crazy-mountain-100-martinsdale-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -60034,14 +60026,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/cms-52-week-5k-series-worcester-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -60059,6 +60043,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/danehy-park-parkrun-cambridge-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -60194,6 +60186,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/penguin-wobble-rome-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/conquer-the-canyon-marathon-race-festival-wellsboro-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -60227,14 +60227,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/georgia-state-parks-red-top-roaster-trail-run-cartersville-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/penguin-wobble-rome-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -60610,14 +60602,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/jordan-s-run-sag-harbor-7-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/jazz-blueberry-trail-run-shelby-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -60627,6 +60611,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/kensington-aloha-runs-milford-7-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/jordan-s-run-sag-harbor-7-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -60826,6 +60818,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/carey-twilight-5k-carey-8-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/blazin-summer-sufferfest-cedar-hill-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -61002,14 +61002,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/run-for-the-oaks-rickreall-8-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/huckleberry-running-festival-welches-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -61019,6 +61011,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/muddy-dash-portland-sandy-8-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/run-for-the-oaks-rickreall-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -61178,14 +61178,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/carey-twilight-5k-carey-8-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/columbus-triathlon-and-multisport-festival-new-holland-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -61298,14 +61290,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/longest-day-24-hour-adventure-race-inlet-8-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/crystal-run-the-lake-crystal-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -61386,6 +61370,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/longest-day-24-hour-adventure-race-inlet-8-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/nyc-summer-half-central-park-new-york-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -61434,6 +61426,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/run-for-east-lake-5k-and-fun-run-atlanta-8-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/glow-run-5k-manheim-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -61451,14 +61451,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/pennsylvania-brewery-running-series-clarion-8-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/run-for-east-lake-5k-and-fun-run-atlanta-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -61819,6 +61811,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/merrie-mill-farm-and-vineyard-5k-and-10k-keswick-8-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/run716-15k-buffalo-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -62442,7 +62442,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/bulldog-chase-5k-batesville-8-2025</loc>
+        <loc>https://www.runemu.com/races/christ-the-king-5k-indianapolis-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -62450,7 +62450,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/christ-the-king-5k-indianapolis-8-2025</loc>
+        <loc>https://www.runemu.com/races/bulldog-chase-5k-batesville-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -62666,7 +62666,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/lance-pfrimmer-memorial-run-rochester-8-2025</loc>
+        <loc>https://www.runemu.com/races/live-brave-5k-saint-paul-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -62674,7 +62674,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/live-brave-5k-saint-paul-8-2025</loc>
+        <loc>https://www.runemu.com/races/lance-pfrimmer-memorial-run-rochester-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -63266,14 +63266,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/lillie-parkrun-ann-arbor-8-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/dino-trail-run-series-southwestway-indianapolis-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -63298,7 +63290,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/mt-sneffels-half-marathon-and-10k-ouray-8-2025</loc>
+        <loc>https://www.runemu.com/races/leadville-trail-100-mile-run-leadville-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -63306,7 +63298,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/leadville-trail-100-mile-run-leadville-8-2025</loc>
+        <loc>https://www.runemu.com/races/mt-sneffels-half-marathon-and-10k-ouray-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -63339,6 +63331,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/summer-sizzler-lansing-8-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/lillie-parkrun-ann-arbor-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -63450,7 +63450,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/q50-bleau-moon-trail-run-mandeville-8-2025</loc>
+        <loc>https://www.runemu.com/races/k-i-a-memorial-roadmarch-kmr-orchard-park-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -63458,7 +63458,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/k-i-a-memorial-roadmarch-kmr-orchard-park-8-2025</loc>
+        <loc>https://www.runemu.com/races/q50-bleau-moon-trail-run-mandeville-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -64506,6 +64506,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/kickoff-6k-canton-8-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/healthy-human-race-rochester-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -64555,14 +64563,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/flusslauf-bedford-8-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/kickoff-6k-canton-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -64874,6 +64874,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/aspen-parkrun-aspen-8-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/tuscazoar-endurance-race-dover-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -65019,14 +65027,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/westerville-donut-run-westerville-8-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/aspen-parkrun-aspen-8-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -65562,7 +65562,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/labor-day-5k-huntsville-9-2025</loc>
+        <loc>https://www.runemu.com/races/fwrc-labor-day-run-fort-worth-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -65570,7 +65570,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/fwrc-labor-day-run-fort-worth-9-2025</loc>
+        <loc>https://www.runemu.com/races/labor-day-5k-huntsville-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -65802,7 +65802,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/lone-star-night-run-weatherford-9-2025</loc>
+        <loc>https://www.runemu.com/races/steep-ultra-corner-brook-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -65810,7 +65810,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/steep-ultra-corner-brook-9-2025</loc>
+        <loc>https://www.runemu.com/races/lone-star-night-run-weatherford-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -66170,7 +66170,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/bra-ha-ha-5k-run-walk-chesapeake-9-2025</loc>
+        <loc>https://www.runemu.com/races/minnesota-brewery-running-series-plymouth-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -66203,6 +66203,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/arlington-police-fire-sheriff-9-11-memorial-5k-arlington-9-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/bra-ha-ha-5k-run-walk-chesapeake-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -66298,7 +66306,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/minnesota-brewery-running-series-plymouth-9-2025</loc>
+        <loc>https://www.runemu.com/races/bird-in-hand-half-marathon-bird-in-hand-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -66315,14 +66323,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/old-bill-s-fun-run-jackson-hole-9-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/bird-in-hand-half-marathon-bird-in-hand-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -66746,6 +66746,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/rock-creek-trail-parkrun-portland-9-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/sugg-farm-ultra-holly-springs-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -66938,14 +66946,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/rock-creek-trail-parkrun-portland-9-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/monster-5k-3k-run-walk-wheeling-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -67018,14 +67018,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/perrigo-parkrun-redmond-9-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/dirty-dozen-5k-obstacle-mud-run-clemmons-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -67043,14 +67035,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/love-durham-run-5k-durham-9-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/renton-parkrun-renton-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -67115,6 +67099,22 @@
 
     <url>
         <loc>https://www.runemu.com/races/fort-ward-parkrun-bainbridge-island-9-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/perrigo-parkrun-redmond-9-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/renton-parkrun-renton-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -68106,7 +68106,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/three-sisters-skyline-sisters-9-2025</loc>
+        <loc>https://www.runemu.com/races/desert-wolf-johnson-city-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -68114,7 +68114,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/desert-wolf-johnson-city-9-2025</loc>
+        <loc>https://www.runemu.com/races/three-sisters-skyline-sisters-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -68970,7 +68970,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/fall-equinox-marathon-fort-collins-9-2025</loc>
+        <loc>https://www.runemu.com/races/farmers-5000-wheat-ridge-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -68978,7 +68978,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/farmers-5000-wheat-ridge-9-2025</loc>
+        <loc>https://www.runemu.com/races/fall-equinox-marathon-fort-collins-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -69746,14 +69746,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/monroe-community-college-5k-run-walk-for-scholarships-rochester-9-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/america-s-vetdogs-run-smithtown-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -69763,6 +69755,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/great-south-bay-run-bay-shore-9-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/monroe-community-college-5k-run-walk-for-scholarships-rochester-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -69794,22 +69794,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/sonder-and-friends-oktoberfest-5k-mason-9-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/big-woods-run-nerstrand-9-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/duluth-women-s-10-mile-duluth-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -69818,7 +69802,23 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/sonder-and-friends-oktoberfest-5k-mason-9-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/isd-197-educational-foundation-warrior-5k-mendota-heights-9-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/big-woods-run-nerstrand-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -69938,14 +69938,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/gimme-s-more-mud-run-boone-9-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/roosevelt-island-dc-parkrun-arlington-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -70050,6 +70042,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/gimme-s-more-mud-run-boone-9-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/river-s-edge-trail-half-marathon-eldora-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -70058,7 +70058,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/himmel-parkrun-tucson-9-2025</loc>
+        <loc>https://www.runemu.com/races/johns-hopkins-children-s-center-miracles-in-motion-5k-baltimore-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -70066,7 +70066,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/johns-hopkins-children-s-center-miracles-in-motion-5k-baltimore-9-2025</loc>
+        <loc>https://www.runemu.com/races/himmel-parkrun-tucson-9-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -70554,6 +70554,22 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/cms-52-week-5k-series-worcester-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/hartz-pt-fall-blast-lititz-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/fire-tower-trail-races-hinckley-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -70754,14 +70770,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/hartz-pt-fall-blast-lititz-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/lisa-s-army-pumpkins-in-the-park-5k-media-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -70842,6 +70850,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/chilly-cheeks-5k-mcdade-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/center-of-the-nation-series-day-6-baker-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -70851,6 +70867,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/zootown-challenge-obstacle-course-race-missoula-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/cutler-park-parkrun-needham-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -71002,7 +71026,15 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/chilly-cheeks-5k-mcdade-10-2025</loc>
+        <loc>https://www.runemu.com/races/danehy-park-parkrun-cambridge-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -71043,38 +71075,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/running-with-the-bulls-waco-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/danehy-park-parkrun-cambridge-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/cms-52-week-5k-series-worcester-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/cutler-park-parkrun-needham-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -72202,14 +72202,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/export-100-trail-run-export-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/forbidden-forest-30-hour-ultra-run-stratford-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -72219,6 +72211,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/cape-fear-24-hour-lillington-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/export-100-trail-run-export-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -72586,7 +72586,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/famously-hot-pink-half-marathon-columbia-10-2025</loc>
+        <loc>https://www.runemu.com/races/battle-of-terrain-half-marathon-series-greenville-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -72594,7 +72594,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/battle-of-terrain-half-marathon-series-greenville-10-2025</loc>
+        <loc>https://www.runemu.com/races/famously-hot-pink-half-marathon-columbia-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -72802,14 +72802,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/cape-fear-24h-endurance-run-lillington-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/fall-foliage-race-waynesboro-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -72867,6 +72859,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/cal-tri-charlotte-statesville-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/cape-fear-24h-endurance-run-lillington-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -73274,6 +73274,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/steamtown-marathon-scranton-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/brunch-run-denver-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -73347,14 +73355,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/green-monster-trail-challenge-wellsboro-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/steamtown-marathon-scranton-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -73602,7 +73602,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/bohemian-alps-endurance-run-half-marathon-brainard-10-2025</loc>
+        <loc>https://www.runemu.com/races/bohemian-alps-50k-brainard-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -73610,7 +73610,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/bohemian-alps-50k-brainard-10-2025</loc>
+        <loc>https://www.runemu.com/races/bohemian-alps-endurance-run-half-marathon-brainard-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -74786,6 +74786,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/college-park-parkrun-college-park-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/kansas-rails-to-trails-extravaganza-ottawa-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -74858,6 +74866,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/rim-to-river-100-edmond-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/ddlm-endurance-run-south-beach-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -74874,22 +74890,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/ozark-trail-100-mile-endurance-run-steelville-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/rim-to-river-100-edmond-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/range-of-light-trail-races-bishop-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -74899,6 +74899,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/carkeek-12-hour-seattle-10-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/ozark-trail-100-mile-endurance-run-steelville-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -75059,14 +75067,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/baltimore-and-annapolis-trail-parkrun-pasadena-10-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/college-park-parkrun-college-park-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -76042,7 +76042,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/michigan-brewery-running-series-south-lyon-10-2025</loc>
+        <loc>https://www.runemu.com/races/head-for-the-cure-5k-phoenix-phoenix-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -76050,7 +76050,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/head-for-the-cure-5k-phoenix-phoenix-10-2025</loc>
+        <loc>https://www.runemu.com/races/michigan-brewery-running-series-south-lyon-10-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -76994,6 +76994,22 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/itc-community-sports-parkrun-novi-11-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/aspen-parkrun-aspen-11-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/thunderbird-trail-run-norman-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -77114,22 +77130,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/itc-community-sports-parkrun-novi-11-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-11-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/outrun-hunger-5k-scott-city-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -77155,6 +77155,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/danehy-park-parkrun-cambridge-11-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/jamaica-pond-parkrun-boston-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -77243,14 +77251,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/pocantico-hills-races-tarrytown-11-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/aspen-parkrun-aspen-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -78026,6 +78026,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/blue-springs-5k-blue-springs-11-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/himmel-parkrun-tucson-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -78051,14 +78059,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/fantasy-5k-madison-11-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/blue-springs-5k-blue-springs-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -78586,6 +78586,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/evergreen-parkrun-green-township-11-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/gobble-wobble-10k-sioux-falls-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -78595,14 +78603,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/delaware-and-raritan-canal-parkrun-somerset-11-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/evergreen-parkrun-green-township-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -79114,7 +79114,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/ymca-turkey-trot-buffalo-11-2025</loc>
+        <loc>https://www.runemu.com/races/sri-chinmoy-thanksgiving-day-5k-and-10k-new-york-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -79122,7 +79122,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/sri-chinmoy-thanksgiving-day-5k-and-10k-new-york-11-2025</loc>
+        <loc>https://www.runemu.com/races/ymca-turkey-trot-buffalo-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -79386,6 +79386,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/shoreline-turkey-trot-5k-west-haven-11-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/birdie-derby-fitchburg-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -79459,14 +79467,6 @@
 
     <url>
         <loc>https://www.runemu.com/races/run-turkey-run-thanksgiving-day-5k-hamden-11-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
-        <loc>https://www.runemu.com/races/shoreline-turkey-trot-5k-west-haven-11-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -80474,14 +80474,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/sippo-lake-parkrun-canton-12-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/warren-county-armco-parkrun-lebanon-12-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -80506,6 +80498,14 @@
     
 
     <url>
+        <loc>https://www.runemu.com/races/sippo-lake-parkrun-canton-12-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
         <loc>https://www.runemu.com/races/dashing-through-the-snow-and-fire-5k-fowlerville-12-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -80514,7 +80514,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/leakin-park-parkrun-baltimore-12-2025</loc>
+        <loc>https://www.runemu.com/races/utah-santa-run-gardner-village-west-jordan-12-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -80522,7 +80522,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/utah-santa-run-gardner-village-west-jordan-12-2025</loc>
+        <loc>https://www.runemu.com/races/baltimore-and-annapolis-trail-parkrun-pasadena-12-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -80546,7 +80546,7 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/baltimore-and-annapolis-trail-parkrun-pasadena-12-2025</loc>
+        <loc>https://www.runemu.com/races/leakin-park-parkrun-baltimore-12-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -81738,14 +81738,6 @@
     
 
     <url>
-        <loc>https://www.runemu.com/races/aspen-parkrun-aspen-12-2025</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-
-    <url>
         <loc>https://www.runemu.com/races/peace-river-100-miler-bartow-12-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
@@ -81803,6 +81795,14 @@
 
     <url>
         <loc>https://www.runemu.com/races/tacky-sweater-5k-greenville-12-2025</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://www.runemu.com/races/aspen-parkrun-aspen-12-2025</loc>
         <lastmod>2025-01-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
