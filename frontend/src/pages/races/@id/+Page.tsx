@@ -5,6 +5,7 @@ import DistanceBar from "../../../components/Race/DistanceBar";
 import { FaLink, FaRegCalendarAlt } from "react-icons/fa";
 import { LuClipboardEdit } from "react-icons/lu";
 import { IoArrowBack } from "react-icons/io5";
+import { IoSparkles } from "react-icons/io5";
 
 import WeatherWidget from "../../../components/Race/WeatherWidget";
 
@@ -65,6 +66,14 @@ const Page = () => {
                         <div className="pb-4">
                             <WeatherWidget race={race} />
                         </div>
+                    </div>
+                    <div className="flex items-center space-x-3 px-3 dark:text-gray-400 text-gray-600 pb-3 text-sm">
+                        <span className="text-normal">
+                            <IoSparkles />
+                        </span>
+                        <span className="font-semibold tracking-tight">
+                            AI-Generated Race Summary [COMING SOON]
+                        </span>
                     </div>
                     <hr className="mx-3 pb-4 border-black dark:border-white" />
                     <div className="flex items-center">
