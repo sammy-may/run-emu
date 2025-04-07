@@ -1,4 +1,4 @@
-# run-emu
+# <img src="frontend/public/images/logos/emu_color_crop.webp.png" width="32"> RunEmu
 
 RunEmu is the easiest way to find your next 5k or ultra marathon.
 
