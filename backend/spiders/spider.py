@@ -161,6 +161,9 @@ class Spider:
             if read_from_cache <= days_since_cached:
                 need_reload = True
 
+        if read_from_cache < 0:
+            need_reload = True
+
         if not need_reload and url in self.directory:  # already in cache, just load
             logger.debug(
                 "Loading page '{:s}' from directory file '{:s}'.".format(

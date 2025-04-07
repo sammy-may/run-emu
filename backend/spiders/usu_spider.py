@@ -22,7 +22,7 @@ class USUSpider(Spider):
     def enumerate_pages(self):
         base = self.urls[0]
         self.urls = [
-            base.replace("XXXXX", "{:05d}".format(i)) for i in range(10408, 23350)
+            base.replace("XXXXX", "{:05d}".format(i)) for i in range(10408, 25860)
         ]
         random.shuffle(self.urls)
 

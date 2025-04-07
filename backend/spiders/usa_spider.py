@@ -97,13 +97,14 @@ class USASpider(Spider):
                 "PAGE_NUM", "1"
             )
 
-            raw_html = self.load_url(state_url, cache=True, read_from_cache=1)
+            raw_html = self.load_url(state_url, cache=True, read_from_cache=-1)
             soup = BeautifulSoup(raw_html, "html.parser")
             lines = str(soup).split("\n")
 
             logger.info(abbrev)
 
             for idx, line in enumerate(lines):
+                print(line)
                 if "span" in line and "glyphicon-adjust-btn-group-sm" in line:
                     results = parse.parse(self.PATTERN_N_ENTRIES, line)
                     if not results:
